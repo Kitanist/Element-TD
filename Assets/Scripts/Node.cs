@@ -26,11 +26,11 @@ public class Node : MonoBehaviour
     {
         if (turret != null)
         {
-            Debug.Log("Gardaþ buraya kule yapaman");
+            Debug.Log("Gardas buraya kule yapaman");
             return;
         }
-        GameObject inþaEdilcekKule = BuildManager.instance.GetTower();
-        turret = Instantiate(inþaEdilcekKule, transform.position - pozisyonOffset , transform.rotation);
+        GameObject insaEdilcekKule = BuildManager.instance.GetTower();
+        turret = Instantiate(insaEdilcekKule, transform.position - pozisyonOffset , transform.rotation);
     }
 
     private void OnMouseExit()

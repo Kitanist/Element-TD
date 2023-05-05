@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float damage=10;
    private void OnCollisionEnter(Collision other) {
-    // hasar ver yok ok
+    if(other.transform.CompareTag("Enemy")){
+        other.transform.GetComponent<HealthComponent>().GetDamage(damage);
+    }
     this.gameObject.SetActive(false);
    }
 }
