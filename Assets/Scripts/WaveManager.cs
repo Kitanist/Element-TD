@@ -35,11 +35,14 @@ public class WaveManager : MonoSingeleton<WaveManager>
    }
    
     public void StartWawe (int waveCount) {
-        if(currentWaveCount<waves.Length){
+        if(currentWaveCount<waves.Length && GameManager.Instance.isGameContinue){
           StartCoroutine(UnitSawnWait(waveCount));
         }
-        else
-        Debug.Log("GameOver");
+        else{
+  Debug.Log("GameOver");
+  GameManager.Instance.isGameContinue=false;
+        }
+      
 
     
 }
@@ -47,7 +50,7 @@ public void EndWave () {
     // dalgayı bitir ve 30 sn bekle
     //eğer dalgadaki bütün düşmanlar ölmüşse diğer dalgaya  hazırlık yap
     Debug.Log(waves[currentWaveCount].WaveUnits.Count);
-    
+        
         StartCoroutine(WaitWave());
         destroyedUnitCount=0;
         Debug.Log("dalga bitmesi bekleni ve siradaki dalga cagirildi");

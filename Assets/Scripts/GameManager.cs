@@ -13,6 +13,7 @@ public class GameManager : MonoSingeleton<GameManager>
 {
    [SerializeField]private float gold=0;
    public bool playerIsAttack=false;
+   public bool isGameContinue=true;
  
   public float Gold
  {
