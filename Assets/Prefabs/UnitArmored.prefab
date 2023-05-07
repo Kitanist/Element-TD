@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: unitDamage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8329024335072651912, guid: 8e57ddfeec746c649be2d84cef2e125c, type: 3}
+      propertyPath: myPoolIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8329024335072651914, guid: 8e57ddfeec746c649be2d84cef2e125c, type: 3}
       propertyPath: m_RootOrder
       value: 0

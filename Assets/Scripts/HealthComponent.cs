@@ -94,9 +94,9 @@ public class HealthComponent : MonoBehaviour
    public void Die () {
     if(isUnit){
         gameObject.SetActive(false);
-      Debug.Log(LayerMask.NameToLayer("Enemy"))  ;
+      
         if(gameObject.layer==LayerMask.NameToLayer("Enemy")){
-            
+            WaveManager.Instance.destroyedUnitCount++;
             GameManager.Instance.Gold+=10;
         }
     }
