@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PathCreation;
 
   public enum Element_Type{
     None,
@@ -14,6 +15,8 @@ public class GameManager : MonoSingeleton<GameManager>
    [SerializeField]private float gold=0;
    public bool playerIsAttack=false;
    public bool isGameContinue=true;
+
+  public PathCreator levelPathCreator;
  
   public float Gold
  {

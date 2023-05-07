@@ -73,6 +73,7 @@ IEnumerator UnitSawnWait(int waveCount){
     if(nextUnitIndex <waves[waveCount].WaveUnits.Count){
      Unit _unit=waves[waveCount].WaveUnits[nextUnitIndex];   
      GameObject unit =ObjectPool.Instance.GetPooledObject(_unit.myPoolIndex);
+     unit.GetComponent<Movement>().pathCreator=GameManager.Instance.levelPathCreator;
      unit.transform.position=unitSpawnTransform.position;
      nextUnitIndex++;
      StartCoroutine(UnitSawnWait(currentWaveCount));
