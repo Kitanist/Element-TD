@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172274064599773091, guid: 9dbbb6d340976584a9db718297295a49, type: 3}
       propertyPath: speed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8172274064599773091, guid: 9dbbb6d340976584a9db718297295a49, type: 3}
       propertyPath: myPoolIndex

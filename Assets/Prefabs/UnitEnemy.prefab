@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 8172274064599773088}
   - component: {fileID: 8172274064599773091}
   - component: {fileID: 8172274064599773090}
+  - component: {fileID: -7219459992401046999}
   m_Layer: 6
   m_Name: UnitEnemy
   m_TagString: Enemy
@@ -325,7 +326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitDamage: 5
-  speed: 5
+  myPoolIndex: 1
+  speed: 3
 --- !u!54 &8172274064599773090
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -342,6 +344,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &-7219459992401046999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8172274064599773093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7be82eedc1d2274c8273d728fb178be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathCreator: {fileID: 0}
 --- !u!1 &8172274064826031032
 GameObject:
   m_ObjectHideFlags: 0
