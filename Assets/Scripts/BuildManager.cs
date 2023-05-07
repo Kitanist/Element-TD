@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    private GameObject insaedilcekturret;
+    private GameObject insaedilcektower;
 
     public static BuildManager instance;
+
     public GameObject ArrowTower;
-    private void Start()
-    {
-        insaedilcekturret = ArrowTower;
-    }
+    public GameObject FireTower;
+
+   
     private void Awake()
     {
         if (instance != null)
@@ -20,8 +20,13 @@ public class BuildManager : MonoBehaviour
         }
         instance = this;
     }
+
+    public void SetTowerToBuild(GameObject turret)
+    {
+        insaedilcektower = turret;
+    }
     public GameObject GetTower()
     {
-        return insaedilcekturret;
+        return insaedilcektower;
     }
 }
