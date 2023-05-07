@@ -6,6 +6,9 @@ using DG.Tweening;
 public class Tower : MonoBehaviour
 {
     public Transform firePos;
+    public Element_Type element_Type;
+    public float Cost=100;
+    public float damage=10;
     public int poolIndex=0;
      public float JumpForce=5;
 
@@ -44,6 +47,8 @@ public class Tower : MonoBehaviour
       public virtual void Fire () {
       
       GameObject bullet=ObjectPool.Instance.GetPooledObject(poolIndex);
+      bullet.GetComponent<Bullet>().element_Type=element_Type;
+      bullet.GetComponent<Bullet>().damage=damage;//merminin elementini kulenin elementi yapıyoruz
       bullet.transform.position=firePos.position;
       bullet.transform.DOJump(target.position,JumpForce,0,(fireRate/bulletSpeed),false).SetEase(easeType);
     

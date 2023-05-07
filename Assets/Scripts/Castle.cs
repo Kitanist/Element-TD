@@ -8,11 +8,12 @@ using UnityEngine;
 public class Castle : MonoBehaviour
 {
 
+
 private void OnTriggerEnter(Collider other) {
       Debug.Log("hiiii");
     Debug.Log("other layer: "+ other.gameObject.layer +"    "+ " sorulan layer: "+LayerMask.NameToLayer("Enemy"));
     if(other.gameObject.layer==LayerMask.NameToLayer("Enemy")){
-        GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage);
+        GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage,other.GetComponent<HealthComponent>().myElement);
         other.gameObject.SetActive(false);
     }
 }

@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePos: {fileID: 6433023777251045489}
+  element_Type: 1
   poolIndex: 0
   JumpForce: 1
   attackRadius: 15
