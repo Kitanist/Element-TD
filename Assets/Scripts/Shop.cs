@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    
     BuildManager BM;
     private void Start()
     {

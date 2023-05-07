@@ -8,6 +8,7 @@ public class BuildManager : MonoBehaviour
 
     public static BuildManager instance;
 
+    
     public GameObject ArrowTower;
     public GameObject FireTower;
 
