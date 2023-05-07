@@ -5,9 +5,9 @@ public class Node : MonoBehaviour
 {
     public Color HoverColor;
     public Vector3 pozisyonOffset;
-    public GameObject ShopInterface;
 
-    private GameObject turret;
+
+    public GameObject turret;
 
     private Renderer rend;
     private Color StartColor;
@@ -16,23 +16,28 @@ public class Node : MonoBehaviour
 
     private void Start()
     {
-        ShopInterface = transform.GetChild(0).transform.GetChild(0).gameObject;
+       
         rend = GetComponent<Renderer>();
         StartColor = rend.material.color;
         BM = BuildManager.instance;
     }
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position + pozisyonOffset;
+    }
     private void OnMouseEnter()
     {
-      if (BM.GetTower() == null)
+        Debug.Log("Girdim");
+      if (!BM.CanBuild)
           return;
       if (EventSystem.current.IsPointerOverGameObject())
           return;
-        ShopInterface.SetActive(true);
+        Debug.Log("Melih");
         rend.material.color = HoverColor;
     }
     private void OnMouseDown()
     {
-        if (BM.GetTower() == null)
+        if (!BM.CanBuild)
             return;
         if (turret != null)
         {
@@ -40,13 +45,12 @@ public class Node : MonoBehaviour
             return;
             // kule menusu buradan açýlacak
         }
-        GameObject insaEdilcekKule = BM.GetTower();
-        turret = Instantiate(insaEdilcekKule, transform.position - pozisyonOffset , transform.rotation);
+        BM.BuildTowerOn(this);
     }
 
     private void OnMouseExit()
     {
-        ShopInterface.SetActive(false);
+       
         rend.material.color = StartColor;
     }
 } 

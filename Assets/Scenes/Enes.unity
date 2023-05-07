@@ -2140,7 +2140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6404631177536855605, guid: d33cd191604abad4c97aad02dd238355, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseFireTower
+      value: SelectFireTower
       objectReference: {fileID: 0}
     - target: {fileID: 6404631177536855605, guid: d33cd191604abad4c97aad02dd238355, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2815,6 +2815,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ef53239a7e1554b8af099c609508ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ArrowTower: {fileID: 3586698720180615971, guid: 9e085eb9428bfad42819e7f87c2501bf, type: 3}
+  FireTower: {fileID: 2660605284479523788, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
 --- !u!114 &1484770621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4545,7 +4547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6404631177536855605, guid: d33cd191604abad4c97aad02dd238355, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseArrowTower
+      value: SelectArrowTower
       objectReference: {fileID: 0}
     - target: {fileID: 6404631177536855605, guid: d33cd191604abad4c97aad02dd238355, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

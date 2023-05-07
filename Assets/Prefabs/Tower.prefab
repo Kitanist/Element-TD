@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6433023776911228998}
   - component: {fileID: 6433023776911228999}
   - component: {fileID: 6433023776911228996}
+  - component: {fileID: 3586698720180615971}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -113,6 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePos: {fileID: 6433023777251045489}
   element_Type: 1
+  Cost: 100
+  damage: 10
   poolIndex: 0
   JumpForce: 1
   attackRadius: 15
@@ -124,6 +127,20 @@ MonoBehaviour:
   easeType: 0
   targets: []
   target: {fileID: 0}
+--- !u!114 &3586698720180615971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433023776911228997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e98070a9dd3504fa0c871995715704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6433023776911228997}
+  cost: 0
 --- !u!1 &6433023777251045494
 GameObject:
   m_ObjectHideFlags: 0

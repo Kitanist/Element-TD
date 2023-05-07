@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    private GameObject insaedilcektower;
+    private TowerBlueprint insaedilcektower;
 
     public static BuildManager instance;
 
     
     public GameObject ArrowTower;
     public GameObject FireTower;
-
+    public bool CanBuild { get { return insaedilcektower != null; } }
    
     private void Awake()
     {
@@ -22,12 +22,14 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    public void SetTowerToBuild(GameObject turret)
+    public void SelectTowerToBuild(TowerBlueprint turret)
     {
         insaedilcektower = turret;
     }
-    public GameObject GetTower()
+    public void BuildTowerOn(Node node)
     {
-        return insaedilcektower;
+      GameObject turret =  (GameObject)Instantiate(insaedilcektower.prefab, node.GetBuildPosition(), Quaternion.identity);
+        node.turret = turret;
     }
+
 }

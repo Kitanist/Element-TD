@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7895575553819616901}
   - component: {fileID: 7895575553819616922}
   - component: {fileID: 7895575553819616923}
+  - component: {fileID: 2660605284479523788}
   m_Layer: 0
   m_Name: TowerFire
   m_TagString: Untagged
@@ -112,6 +113,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePos: {fileID: 7895575553885276527}
+  element_Type: 0
+  Cost: 100
+  damage: 10
   poolIndex: 0
   JumpForce: 5
   attackRadius: 5
@@ -123,6 +127,20 @@ MonoBehaviour:
   easeType: 0
   targets: []
   target: {fileID: 0}
+--- !u!114 &2660605284479523788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895575553819616920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e98070a9dd3504fa0c871995715704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7895575553819616920}
+  cost: 0
 --- !u!1 &7895575553885276524
 GameObject:
   m_ObjectHideFlags: 0
