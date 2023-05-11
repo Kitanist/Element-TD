@@ -130,6 +130,12 @@ MonoBehaviour:
   target: {fileID: 0}
   isBallTower: 0
   rotatObject: {fileID: 0}
+  level: 1
+  maxLevel: 3
+  openWithLevel:
+  - {fileID: 0}
+  - {fileID: 0}
+  DamageCounts: 140000001e000000
 --- !u!114 &3586698720180615971
 MonoBehaviour:
   m_ObjectHideFlags: 0

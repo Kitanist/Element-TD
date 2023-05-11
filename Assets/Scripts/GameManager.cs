@@ -17,6 +17,7 @@ public class GameManager : MonoSingeleton<GameManager>
    public bool isGameContinue=true;
 
   public PathCreator levelPathCreator;
+  public PathCreator attackPathCreator;
  
   public float Gold
  {

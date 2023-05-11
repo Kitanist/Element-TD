@@ -21,6 +21,7 @@ public class WaveManager : MonoSingeleton<WaveManager>
    public float unitSpawnTime=2;
    private int nextUnitIndex=0;
    private bool canStop=false;
+   public float remainingTime;
 
    public Transform unitSpawnTransform;
 
@@ -98,6 +99,7 @@ public void AttackOrSetCameraVision () {
         //butonun sekli degisir
     
         GameManager.Instance.playerIsAttack=true;
+        BattleManager.Instance.StartMyBattle();
         StopAllCoroutines();
         Debug.Log("saldir");
     }else{

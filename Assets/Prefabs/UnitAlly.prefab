@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8172274064599773091, guid: 9dbbb6d340976584a9db718297295a49, type: 3}
+      propertyPath: myPoolIndex
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8172274064599773093, guid: 9dbbb6d340976584a9db718297295a49, type: 3}
       propertyPath: m_Name
       value: UnitAlly
