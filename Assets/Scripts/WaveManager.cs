@@ -79,7 +79,7 @@ public void decreseRemainTime () {
         WaveCountDownText.text = "Kalan Wave \n " + remainingTime.ToString();
         MoneyText.text = "Para : " + PlayerStats.Money.ToString();
     }
-IEnumerator WaitWave(){
+public IEnumerator WaitWave(){
     canStop=true;
     HUD.Instance.setVisionOrAttackHUD.GetComponent<Image>().color=Color.red;
     yield return new WaitForSeconds(waveWaitTime);
@@ -112,8 +112,8 @@ IEnumerator UnitSawnWait(int waveCount){
     
 }
 public void AttackOrSetCameraVision () {
-   
-    if(canStop){
+    if(!GameManager.Instance.playerIsAttack){
+        if(canStop){
         //eger stop wave arasındaysa  butona tıkladığında atağa geçer 
         //butonun sekli degisir
     
@@ -124,7 +124,14 @@ public void AttackOrSetCameraVision () {
     }else{
        Debug.Log("kamera deei");
         //kamera açısı değişir rakip alanı görürüz
+    } 
     }
+    else{
+         Debug.Log("kamera degis");
+        //kamera açısı değişir rakip alanı görürüz
+        BattleManager.Instance.PassOtherScene();
+    }
+   
     
 }
 }

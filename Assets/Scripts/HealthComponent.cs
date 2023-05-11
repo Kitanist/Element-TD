@@ -99,6 +99,9 @@ public class HealthComponent : MonoBehaviour
             WaveManager.Instance.destroyedUnitCount++;
             GameManager.Instance.Gold+=10;
         }
+        else if(gameObject.layer==LayerMask.NameToLayer("Ally")){
+           BattleManager.Instance.killedPlayerUnitCount++;
+        }
     }
     else{
          if(isPlayerBase){
