@@ -14,7 +14,7 @@ public class WaveManager : MonoSingeleton<WaveManager>
        
     }
      [SerializeField] public Wave[] waves;
-    [Header("Değişkenler")]
+    [Header("Variable")]
     public int destroyedUnitCount=0;
     public int currentWaveCount=0;
     public float waveWaitTime = 30;

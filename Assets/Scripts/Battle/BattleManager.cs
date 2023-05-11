@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using PathCreation;
 public class BattleManager : MonoSingeleton<BattleManager>
 {
    public List<Unit> unitList;
    public float spawnTime=2;
-   private int spawnIndex=0;
+   [SerializeField]private int spawnIndex=0;
    private List<GameObject> hideUnitObject;
+   public PathCreator attackPathCreatorOtherSceene;
 
    public void StartMyBattle () {
      StartCoroutine(EnterFight());
@@ -15,7 +16,7 @@ public class BattleManager : MonoSingeleton<BattleManager>
    IEnumerator EnterFight(){
     yield return  new WaitForSeconds(spawnTime);
     if(spawnIndex<unitList.Count){
-     Debug.Log("hi");
+     
      Unit _unit=unitList[spawnIndex];   
      GameObject unit =ObjectPool.Instance.GetPooledObject(_unit.myPoolIndex);
      hideUnitObject.Add(unit);
@@ -23,14 +24,28 @@ public class BattleManager : MonoSingeleton<BattleManager>
      spawnIndex++;
      StartCoroutine(EnterFight());
     }
+   }
+public IEnumerator Fight(){
+    yield return  new WaitForSeconds(spawnTime);
+    if(spawnIndex<unitList.Count){   
+     Unit _unit=unitList[spawnIndex];   
+     GameObject unit =ObjectPool.Instance.GetPooledObject(_unit.myPoolIndex);
+     hideUnitObject.Add(unit);
+     unit.GetComponent<Movement>().pathCreator=attackPathCreatorOtherSceene;
+     spawnIndex++;
+     StartCoroutine(Fight());
+    }
     
    }
+
+   //rakip sahaya geçince once bunu cağır sonra 
     public void PassOtherScene () {
         StopCoroutine(EnterFight());
         spawnIndex=0;
         for(int i = 0; i < hideUnitObject.Count; i++) {
          hideUnitObject[i].SetActive(false);   
         }
+          StartCoroutine(Fight());
 
     }
     public void AddUnit (Unit unit) {
