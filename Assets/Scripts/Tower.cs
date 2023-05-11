@@ -22,7 +22,8 @@ public class Tower : MonoBehaviour
      public Ease easeType;
      [SerializeField] protected Collider [] targets;
      [SerializeField] protected Transform target;
-
+    public bool isBallTower=false;
+    public GameObject rotatObject;
     void Update()
     {
        targets= Physics.OverlapSphere(this.transform.position,attackRadius,EnemyMask);
@@ -36,6 +37,12 @@ public class Tower : MonoBehaviour
         }
        }else{
         target=null;
+       }
+     
+    }
+    private void FixedUpdate() {
+          if(isBallTower&& target){
+        rotatObject.transform.LookAt(target,Vector3.up);
        }
     }
 

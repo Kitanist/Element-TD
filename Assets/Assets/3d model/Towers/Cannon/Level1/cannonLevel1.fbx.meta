@@ -1,8 +1,14 @@
 fileFormatVersion: 2
 guid: 1894ff84205c02d4ab4c1539582f1283
 ModelImporter:
-  serializedVersion: 21300
-  internalIDToNameTable: []
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: 5894491979384236916
+    second: fire
+  - first:
+      74: -5613886638439962020
+    second: Cylinder.003|fire
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -99,7 +105,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

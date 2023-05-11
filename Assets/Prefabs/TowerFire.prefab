@@ -127,6 +127,8 @@ MonoBehaviour:
   easeType: 0
   targets: []
   target: {fileID: 0}
+  isBallTower: 0
+  rotatObject: {fileID: 0}
 --- !u!114 &2660605284479523788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7895575553819616920}
-  cost: 0
+  cost: 300
 --- !u!1 &7895575553885276524
 GameObject:
   m_ObjectHideFlags: 0
