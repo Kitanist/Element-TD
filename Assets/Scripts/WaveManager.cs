@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using TMPro;
  
 public class WaveManager : MonoSingeleton<WaveManager>
 {
@@ -13,15 +14,19 @@ public class WaveManager : MonoSingeleton<WaveManager>
        
     }
      [SerializeField] public Wave[] waves;
+    [Header("Değişkenler")]
+    public int destroyedUnitCount=0;
+    public int currentWaveCount=0;
+    public float waveWaitTime = 30;
+    public float unitSpawnTime = 2;
+    private int nextUnitIndex = 0;
+    private bool canStop = false;
+    public float remainingTime;
+    [Header("Textler")]
+    public TextMeshProUGUI WaveCountDownText;
+    public TextMeshProUGUI MoneyText;
 
- public int destroyedUnitCount=0;
-  public int currentWaveCount=0;
-
-   public float waveWaitTime=30;
-   public float unitSpawnTime=2;
-   private int nextUnitIndex=0;
-   private bool canStop=false;
-   public float remainingTime;
+    
 
    public Transform unitSpawnTransform;
 
@@ -63,11 +68,17 @@ public void EndWave () {
 public void decreseRemainTime () {
     if(remainingTime>=0){
          remainingTime--;
+            UIUpdate();
     }
    
     else
     CancelInvoke();
 }
+    public void UIUpdate()
+    {
+        WaveCountDownText.text = "Kalan Wave \n " + remainingTime.ToString();
+        MoneyText.text = "Para : " + PlayerStats.Money.ToString();
+    }
 IEnumerator WaitWave(){
     canStop=true;
     HUD.Instance.setVisionOrAttackHUD.GetComponent<Image>().color=Color.red;
