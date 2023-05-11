@@ -31,7 +31,7 @@ public class WaveManager : MonoSingeleton<WaveManager>
         EndWave();
     }
    private void Start() {
-
+        remainingTime=waveWaitTime;
       StartCoroutine(WaitWave());
    }
    
@@ -50,8 +50,8 @@ public class WaveManager : MonoSingeleton<WaveManager>
 public void EndWave () {
     // dalgayı bitir ve 30 sn bekle
     //eğer dalgadaki bütün düşmanlar ölmüşse diğer dalgaya  hazırlık yap
-    Debug.Log(waves[currentWaveCount].WaveUnits.Count);
-        
+        Debug.Log(waves[currentWaveCount].WaveUnits.Count);
+        InvokeRepeating("decreseRemainTime",0,1);
         StartCoroutine(WaitWave());
         destroyedUnitCount=0;
         Debug.Log("dalga bitmesi bekleni ve siradaki dalga cagirildi");
@@ -59,6 +59,14 @@ public void EndWave () {
         currentWaveCount++;
    
     
+}
+public void decreseRemainTime () {
+    if(remainingTime>=0){
+         remainingTime--;
+    }
+   
+    else
+    CancelInvoke();
 }
 IEnumerator WaitWave(){
     canStop=true;
