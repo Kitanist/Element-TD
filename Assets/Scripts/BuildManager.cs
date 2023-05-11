@@ -12,7 +12,7 @@ public class BuildManager : MonoBehaviour
     public GameObject ArrowTower;
     public GameObject FireTower;
     public bool CanBuild { get { return insaedilcektower != null; } }
-   
+    public bool HasMoney { get { return PlayerStats.Money >= insaedilcektower.cost; } }
     private void Awake()
     {
         if (instance != null)
@@ -28,8 +28,17 @@ public class BuildManager : MonoBehaviour
     }
     public void BuildTowerOn(Node node)
     {
+        if (PlayerStats.Money < insaedilcektower.cost)
+        {
+            Debug.Log("Kule inþa edemezsin");
+            return;
+        }
+        PlayerStats.Money -= insaedilcektower.cost;
+
       GameObject turret =  (GameObject)Instantiate(insaedilcektower.prefab, node.GetBuildPosition(), Quaternion.identity);
         node.turret = turret;
+
+        Debug.Log("Kule inþa edildi kalan para :" + PlayerStats.Money);
     }
 
 }

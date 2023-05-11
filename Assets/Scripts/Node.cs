@@ -4,6 +4,7 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public Color HoverColor;
+    public Color NotHaveMoneyColor;
     public Vector3 pozisyonOffset;
 
 
@@ -32,8 +33,17 @@ public class Node : MonoBehaviour
           return;
       if (EventSystem.current.IsPointerOverGameObject())
           return;
-        Debug.Log("Melih");
-        rend.material.color = HoverColor;
+
+        if (BM.HasMoney)
+        {
+            rend.material.color = HoverColor;
+        }
+        else
+        {
+            rend.material.color = NotHaveMoneyColor;
+        }
+        
+        
     }
     private void OnMouseDown()
     {
