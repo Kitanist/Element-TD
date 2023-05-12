@@ -10,6 +10,16 @@ public class BattleManager : MonoSingeleton<BattleManager>
    private List<GameObject> hideUnitObject;
    public PathCreator attackPathCreatorOtherSceene;
 
+    public int killedPlayerUnitCount=0;
+
+
+private void Update() {
+    if(killedPlayerUnitCount>=unitList.Count){
+        // atak fail olmustur savas turunu bitir sayacı baslat
+      killedPlayerUnitCount=0;
+        EndAttack();
+    }
+}
    public void StartMyBattle () {
      StartCoroutine(EnterFight());
    }
@@ -50,6 +60,11 @@ public IEnumerator Fight(){
     }
     public void AddUnit (Unit unit) {
         unitList.Add(unit);
+     }
+     public void EndAttack () {
+        
+        WaveManager.Instance.remainingTime= WaveManager.Instance.waveWaitTime;
+      StartCoroutine(WaveManager.Instance.WaitWave());
      }
    
 }
