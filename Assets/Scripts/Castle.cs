@@ -14,13 +14,11 @@ private void OnTriggerEnter(Collider other) {
     Debug.Log("other layer: "+ other.gameObject.layer +"    "+ " sorulan layer: "+LayerMask.NameToLayer("Enemy"));
     if(other.gameObject.layer==LayerMask.NameToLayer("Enemy")){
         GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage,other.GetComponent<HealthComponent>().myElement);
-        other.gameObject.SetActive(false);
+        other.GetComponent<HealthComponent>().GetDamage(other.GetComponent<HealthComponent>().maxHealth,Element_Type.None);// kendisi de hasar yiyerek ölsün
+
     }
 }
-private void OnCollisionEnter(Collision other) {
-    Debug.Log("hiiii");
-     Debug.Log("other layer: "+ other.gameObject.layer +"    "+ " sorulan layer: "+LayerMask.NameToLayer("Enemy"));
-}
+
 
 
 }

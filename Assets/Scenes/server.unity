@@ -405,6 +405,7 @@ MonoBehaviour:
   spawnTime: 2
   spawnIndex: 0
   attackPathCreatorOtherSceene: {fileID: 0}
+  killedPlayerUnitCount: 0
 --- !u!1 &85802292
 GameObject:
   m_ObjectHideFlags: 0
