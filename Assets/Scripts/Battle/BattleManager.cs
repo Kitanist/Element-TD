@@ -7,7 +7,7 @@ public class BattleManager : MonoSingeleton<BattleManager>
    public List<Unit> unitList;
    public float spawnTime=2;
    [SerializeField]private int spawnIndex=0;
-   private List<GameObject> hideUnitObject;
+   public List<GameObject> hideUnitObject;
    public PathCreator attackPathCreatorOtherSceene;
 
     public int killedPlayerUnitCount=0;
@@ -33,6 +33,7 @@ private void Update() {
      unit.GetComponent<Movement>().pathCreator=GameManager.Instance.attackPathCreator;
      spawnIndex++;
      StartCoroutine(EnterFight());
+     Debug.Log("EnterFight");
     }
    }
 public IEnumerator Fight(){
@@ -44,25 +45,29 @@ public IEnumerator Fight(){
      unit.GetComponent<Movement>().pathCreator=attackPathCreatorOtherSceene;
      spawnIndex++;
      StartCoroutine(Fight());
+     Debug.Log("Fight");
     }
     
    }
 
-   //rakip sahaya geçince once bunu cağır sonra 
+   //rakip sahaya geçince once bunu cağır 
     public void PassOtherScene () {
-        StopCoroutine(EnterFight());
+      HUD.Instance.setVisionOrAttackHUD.enabled=false;
+       
         spawnIndex=0;
         for(int i = 0; i < hideUnitObject.Count; i++) {
          hideUnitObject[i].SetActive(false);   
         }
+          StopAllCoroutines();
           StartCoroutine(Fight());
+           
 
     }
     public void AddUnit (Unit unit) {
         unitList.Add(unit);
      }
      public void EndAttack () {
-        
+           HUD.Instance.setVisionOrAttackHUD.enabled=true;
         WaveManager.Instance.remainingTime= WaveManager.Instance.waveWaitTime;
       StartCoroutine(WaveManager.Instance.WaitWave());
      }
