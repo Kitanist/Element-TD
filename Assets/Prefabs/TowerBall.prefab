@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4601695123754124436}
-  cost: 200
+  cost: 50
 --- !u!1 &4601695124506555559
 GameObject:
   m_ObjectHideFlags: 0

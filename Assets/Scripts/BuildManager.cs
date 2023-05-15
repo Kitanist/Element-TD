@@ -2,25 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildManager : MonoBehaviour
+public class BuildManager : MonoSingeleton<BuildManager>
 {
-    private TowerBlueprint insaedilcektower;
+    [SerializeField]private TowerBlueprint insaedilcektower;
 
-    public static BuildManager instance;
+
 
     
     public GameObject ArrowTower;
     public GameObject FireTower;
+    public GameObject BallTower;
     public bool CanBuild { get { return insaedilcektower != null; } }
-    public bool HasMoney { get { return PlayerStats.Money >= insaedilcektower.cost; } }
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            return;
-        }
-        instance = this;
-    }
+    public bool HasMoney { get { return GameManager.Instance.Gold >= insaedilcektower.cost; } }
+    
 
     public void SelectTowerToBuild(TowerBlueprint turret)
     {
@@ -28,17 +22,17 @@ public class BuildManager : MonoBehaviour
     }
     public void BuildTowerOn(Node node)
     {
-        if (PlayerStats.Money < insaedilcektower.cost)
+        if (GameManager.Instance.Gold< insaedilcektower.cost)
         {
-            Debug.Log("Kule inþa edemezsin");
+            Debug.Log("Kule inï¿½a edemezsin");
             return;
         }
-        PlayerStats.Money -= insaedilcektower.cost;
+      GameManager.Instance.Gold -= insaedilcektower.cost;
 
       GameObject turret =  (GameObject)Instantiate(insaedilcektower.prefab, node.GetBuildPosition(), Quaternion.identity);
         node.turret = turret;
 
-        Debug.Log("Kule inþa edildi kalan para :" + PlayerStats.Money);
+        Debug.Log("Kule inï¿½a edildi kalan para :" + GameManager.Instance.Gold);
     }
 
 }

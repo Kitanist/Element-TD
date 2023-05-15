@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    public TowerBlueprint ArrowTower;
-    public TowerBlueprint FireTower;
-    BuildManager BM;
-    private void Start()
-    {
-        BM = BuildManager.instance;
-    }
+    
+
+    
     public void SelectArrowTower()
     {
-        BM.SelectTowerToBuild(ArrowTower);
+        BuildManager.Instance.SelectTowerToBuild(BuildManager.Instance.ArrowTower.GetComponent<TowerBlueprint>());
     }
     public void SelectFireTower()
     {
-        BM.SelectTowerToBuild(FireTower);
+     BuildManager.Instance.SelectTowerToBuild(BuildManager.Instance.FireTower.GetComponent<TowerBlueprint>());
+    }
+     public void SelectBallTower()
+    {
+       BuildManager.Instance.SelectTowerToBuild(BuildManager.Instance.BallTower.GetComponent<TowerBlueprint>());
     }
 }

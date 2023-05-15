@@ -77,7 +77,7 @@ public void decreseRemainTime () {
     public void UIUpdate()
     {
         WaveCountDownText.text = "Kalan Wave \n " + remainingTime.ToString();
-        MoneyText.text = "Para : " + PlayerStats.Money.ToString();
+        MoneyText.text = "Para : " + GameManager.Instance.Gold.ToString();
     }
 public IEnumerator WaitWave(){
     canStop=true;

@@ -13,14 +13,14 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color StartColor;
 
-    BuildManager BM;
+  
 
     private void Start()
     {
        
         rend = GetComponent<Renderer>();
         StartColor = rend.material.color;
-        BM = BuildManager.instance;
+        
     }
     public Vector3 GetBuildPosition()
     {
@@ -29,12 +29,12 @@ public class Node : MonoBehaviour
     private void OnMouseEnter()
     {
         Debug.Log("Girdim");
-      if (!BM.CanBuild)
+      if (!BuildManager.Instance.CanBuild)
           return;
       if (EventSystem.current.IsPointerOverGameObject())
           return;
 
-        if (BM.HasMoney)
+        if (BuildManager.Instance.HasMoney)
         {
             rend.material.color = HoverColor;
         }
@@ -47,15 +47,15 @@ public class Node : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (!BM.CanBuild)
+        if (!BuildManager.Instance.CanBuild)
             return;
         if (turret != null)
         {
             Debug.Log("Gardas buraya kule yapaman");
             return;
-            // kule menusu buradan açýlacak
+            // kule menusu buradan aï¿½ï¿½lacak
         }
-        BM.BuildTowerOn(this);
+        BuildManager.Instance.BuildTowerOn(this);
     }
 
     private void OnMouseExit()
