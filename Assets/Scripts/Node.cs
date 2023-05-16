@@ -28,7 +28,7 @@ public class Node : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-        Debug.Log("Girdim");
+      
       if (!BuildManager.Instance.CanBuild)
           return;
       if (EventSystem.current.IsPointerOverGameObject())
@@ -62,7 +62,7 @@ public class Node : MonoBehaviour
 
     private void OnMouseExit()
     {
-        Debug.Log("ciktim");
+    
         if(turret)
         turret.GetComponent<Tower>().rangeObject.SetActive(false);
         rend.material.color = StartColor;

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FireTower : Tower
 {
-    
+     [SerializeField] Collider []  targets;
     private void Update() {
-     targets= Physics.OverlapBox(firePos.position,new Vector3(attackRadius,attackRadius,attackRadius),Quaternion.identity,EnemyMask);
+  
     if(reset){
         Fire();
        
@@ -15,11 +15,11 @@ public class FireTower : Tower
     }
     public override void Fire()
     {
-        reset=false;
+        reset=false; //yarı eksen gerekiyormuş everlap box da dikkat edilmeli
+        targets= Physics.OverlapBox(firePos.position,new Vector3(attackRadius/2,attackRadius/2,attackRadius/2),Quaternion.identity,EnemyMask);
         foreach(var obj in targets) {
             //hasar ver
-            obj.GetComponent<HealthComponent>().GetDamage(damage,element_Type);
-            
+            obj.GetComponent<HealthComponent>().GetDamage(damage,element_Type);        
         }
      
     }
