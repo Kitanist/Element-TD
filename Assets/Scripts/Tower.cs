@@ -6,6 +6,7 @@ using DG.Tweening;
 public class Tower : MonoBehaviour
 {
     public Transform firePos;
+    public GameObject rangeObject;
     public Element_Type element_Type;
     public float Cost=100;
     public float damage=10;
@@ -74,7 +75,7 @@ public class Tower : MonoBehaviour
         if(level<maxLevel){
             int openLevelIndex=level-1;
             level++;
-
+            
             for(int i = 0; i < openLevelIndex; i++) {
                 openWithLevel[i].SetActive(true);
                 damage=DamageCounts[i];

@@ -33,7 +33,8 @@ public class Node : MonoBehaviour
           return;
       if (EventSystem.current.IsPointerOverGameObject())
           return;
-
+      if(turret)
+      turret.GetComponent<Tower>().rangeObject.SetActive(true);
         if (BuildManager.Instance.HasMoney)
         {
             rend.material.color = HoverColor;
@@ -51,6 +52,7 @@ public class Node : MonoBehaviour
             return;
         if (turret != null)
         {
+          
             Debug.Log("Gardas buraya kule yapaman");
             return;
             // kule menusu buradan a��lacak
@@ -60,7 +62,9 @@ public class Node : MonoBehaviour
 
     private void OnMouseExit()
     {
-       
+        Debug.Log("ciktim");
+        if(turret)
+        turret.GetComponent<Tower>().rangeObject.SetActive(false);
         rend.material.color = StartColor;
     }
 } 
