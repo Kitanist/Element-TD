@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Damegable
   - Enemy
+  - WaitArea
   layers:
   - Default
   - TransparentFX

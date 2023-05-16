@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 3602821169261134019}
   - component: {fileID: 6404631177536855605}
   - component: {fileID: 2386812058630746963}
+  - component: {fileID: 3564238638057192966}
   m_Layer: 5
   m_Name: ShopTemplate
   m_TagString: Untagged
@@ -316,6 +317,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!225 &3564238638057192966
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890952569236022776}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4430738023991852854
 GameObject:
   m_ObjectHideFlags: 0
