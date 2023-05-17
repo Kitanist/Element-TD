@@ -13,6 +13,7 @@ using PathCreation;
 public class GameManager : MonoSingeleton<GameManager>
 {
    [SerializeField]private float gold=0;
+   public Transform CastleTransform;
    public bool playerIsAttack=false;
    public bool isGameContinue=true;
 

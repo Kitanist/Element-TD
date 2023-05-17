@@ -23,8 +23,8 @@ public class Tower : MonoBehaviour
      public Ease easeType;
     
      [SerializeField] protected Transform target;
-    public bool isBallTower=false;
-    public GameObject rotatObject;
+   
+
 
 [Header("LEVEL")]
 [Space(5)]
@@ -32,26 +32,54 @@ public class Tower : MonoBehaviour
     public int maxLevel=3;
     public GameObject[] openWithLevel;
     public int [] DamageCounts;
+    private float shortDis;
+    public Collider []  targets;
     void Update()
     {
         
         
-       
-        if(reset){
+       UpdateTarget();
+        if(reset && target){
         reset=false;
         Fire();
         StartCoroutine(ResetTower());
-
-        
        }
        
      
     }
-    private void FixedUpdate() {
-          if(isBallTower&& target){
-        rotatObject.transform.LookAt(target,Vector3.up);
-       }
+    private void Start() {
+        //InvokeRepeating("UpdateTarget",0,.5f);
+
     }
+    public virtual void UpdateTarget () {
+        if(target){
+             float dis=Vector3.Distance(target.transform.position,transform.position);
+             if(dis>attackRadius ||!target.gameObject.activeInHierarchy){
+                target=null;
+             }
+             else
+                return;
+
+        }
+        else{
+        targets= Physics.OverlapSphere(this.transform.position,attackRadius,EnemyMask);
+        shortDis=attackRadius;
+        
+        foreach(var obj in targets) {
+           if(Vector3.Distance(obj.transform.position,transform.position)<shortDis){
+            target=obj.transform;
+            shortDis=Vector3.Distance(obj.transform.position,transform.position);
+            Debug.Log(shortDis);
+           }
+        }
+        }
+       
+        
+        
+       
+
+    }
+   
 
     private void OnDrawGizmos() {
         Gizmos.color=Color.cyan;
@@ -59,22 +87,18 @@ public class Tower : MonoBehaviour
     }
 
       public virtual void Fire () {
-        Collider []  targets= Physics.OverlapSphere(this.transform.position,attackRadius,EnemyMask);
-        if(targets.Length>0){
-            target=targets[0].transform;
-        }
-        else
-        {
-            target=null;
-        }
-        if(target){
-                 GameObject bullet=ObjectPool.Instance.GetPooledObject(poolIndex);
+      
+      
+      GameObject bullet=ObjectPool.Instance.GetPooledObject(poolIndex);
       bullet.GetComponent<Bullet>().element_Type=element_Type;
       bullet.GetComponent<Bullet>().damage=damage;//merminin elementini kulenin elementi yapıyoruz
-      bullet.transform.position=firePos.position;
-      bullet.transform.DOJump(target.position,JumpForce,0,(fireRate/bulletSpeed),false).SetEase(easeType);
+      bullet.transform.position=firePos.position;  
+      bullet.GetComponent<Bullet>().Seek(target);
+      //bullet.transform.DOJump(target.position,JumpForce,0,(fireRate/bulletSpeed),false).SetEase(easeType);
       
-        }
+    
+      
+        
  
       
      
@@ -83,7 +107,7 @@ public class Tower : MonoBehaviour
 
       
     }
-    public void LevelUp () {
+    public virtual void LevelUp () {
         if(level<maxLevel){
             int openLevelIndex=level-1;
             level++;

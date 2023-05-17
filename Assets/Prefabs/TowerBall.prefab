@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5320758085249745404}
   - component: {fileID: 3837381484484384965}
   - component: {fileID: 754339393256048061}
-  - component: {fileID: 5373328032555925639}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -32,9 +31,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7219568832736532774}
-  - {fileID: 4960127226028601238}
   m_Father: {fileID: 4601695123754124433}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3837381484484384965
 MeshFilter:
@@ -86,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5373328032555925639
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4415765881283566809}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4601695123754124436
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,8 +96,8 @@ GameObject:
   - component: {fileID: 4601695123754124432}
   - component: {fileID: 4601695123754124439}
   - component: {fileID: 4601695123754124438}
-  - component: {fileID: 4601695123754124437}
   - component: {fileID: 6295103348821082098}
+  - component: {fileID: 4675733292534185445}
   m_Layer: 0
   m_Name: TowerBall
   m_TagString: Untagged
@@ -133,6 +118,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4601695124506555552}
+  - {fileID: 4960127226028601238}
   - {fileID: 5320758085249745404}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -200,42 +186,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4601695123754124437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4601695123754124436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60e021620ae6dfa4eba775be3035cb12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePos: {fileID: 4601695124506555552}
-  rangeObject: {fileID: 5822867450747286397}
-  element_Type: 1
-  Cost: 100
-  damage: 30
-  poolIndex: 4
-  JumpForce: 10
-  attackRadius: 15
-  bulletSpeed: 2
-  fireRate: 4
-  EnemyMask:
-    serializedVersion: 2
-    m_Bits: 64
-  easeType: 0
-  targets: []
-  target: {fileID: 0}
-  isBallTower: 1
-  rotatObject: {fileID: 4415765881283566809}
-  level: 1
-  maxLevel: 3
-  openWithLevel:
-  - {fileID: 0}
-  - {fileID: 0}
-  DamageCounts: 280000003c000000
 --- !u!114 &6295103348821082098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +200,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4601695123754124436}
   cost: 50
+--- !u!114 &4675733292534185445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4601695123754124436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5bdbc4c72cdc24ebef08f8f8ad944a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePos: {fileID: 4601695124506555552}
+  rangeObject: {fileID: 5822867450747286397}
+  element_Type: 0
+  Cost: 100
+  damage: 30
+  poolIndex: 4
+  JumpForce: 10
+  attackRadius: 15
+  bulletSpeed: 2
+  fireRate: 4
+  EnemyMask:
+    serializedVersion: 2
+    m_Bits: 64
+  easeType: 0
+  target: {fileID: 0}
+  level: 1
+  maxLevel: 3
+  openWithLevel: []
+  DamageCounts: 
+  targets: []
+  rotatObject: {fileID: 4415765881283566809}
 --- !u!1 &4601695124506555559
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,11 +290,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5822867450747286397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.15, z: 0}
-  m_LocalScale: {x: 30, y: 0.010347147, z: 30}
+  m_LocalPosition: {x: 0, y: -0.76600003, z: 0}
+  m_LocalScale: {x: 30, y: 0.0051735733, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5320758085249745404}
+  m_Father: {fileID: 4601695123754124433}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &224219215367175989
