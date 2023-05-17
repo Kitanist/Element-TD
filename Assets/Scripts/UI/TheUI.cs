@@ -6,37 +6,57 @@ using UnityEngine.UI;
 
 public class TheUI : MonoBehaviour
 {
-    public List<GameObject> UIElements;
+    public CanvasGroup Shop1, Shop2, Shop3;
     public RectTransform rectTreansform;
-    public bool UIisOpen = true;
-    public GameObject OpenButon;
+    public bool isOpen;
+    public GameObject OpenButon,BackGround;
+    public Button ShopButton1, ShopButton2, ShopButton3;
 
-    // buton 350 saða gidicek  arkaplan saða gidicek butonlar þeffaflaþacak ve aktiflikleri kapanacak .  
+ 
     // kule geliþtirmesi oynanýnca saðdan baþka uý açýlýp büyücek kapamaya basýnca o da yavaþca kapanacak
     public void ControlTheUI()
     {
-        if (!UIisOpen) // açýlýrken set ease out expo 
+        if (!isOpen) // açýlýrken set ease out expo 
         {
-            OpenButon.transform.LeanMoveLocal(new Vector2(0, 0),1).setEaseOutExpo();
-            UIisOpen = false;
-            
-            foreach (GameObject UIElement in UIElements)
-            {
-                
+            ShopUIOpen();
 
-            }
         }
         else // kapanýrken  set ease in expo 
         {
-            OpenButon.transform.LeanMoveLocal(new Vector2(350, 0), 1).setEaseInExpo();
-            UIisOpen = true;
-            foreach (GameObject UIElement in UIElements)
-            {
-               
-
-            }
-            
+            ShopUIClose();
         }
+
+    }
+    public void ShopUIOpen()
+    {
+        OpenButon.transform.LeanMoveLocal(new Vector2(0, 0), 1).setEaseOutExpo();
+        BackGround.transform.LeanMoveLocal(new Vector2(775, 0), 1).setEaseOutExpo();
+        isOpen = true;
+
+
+        Shop1.LeanAlpha(1, 0.5f);
+        Shop2.LeanAlpha(1, 0.5f);
+        Shop3.LeanAlpha(1, 0.5f);
+
+        ShopButton1.interactable = true;
+        ShopButton2.interactable = true;
+        ShopButton3.interactable = true;
+
+    }
+    public void ShopUIClose()
+    {
+        OpenButon.transform.LeanMoveLocal(new Vector2(350, 0), 1).setEaseInExpo();
+        BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 1).setEaseInExpo();
+        isOpen = false;
+
+        Shop1.LeanAlpha(0, 0.5f);
+        Shop2.LeanAlpha(0, 0.5f);
+        Shop3.LeanAlpha(0, 0.5f);
+        Debug.Log("þeffaf");
+
+        ShopButton1.interactable = false;
+        ShopButton2.interactable = false;
+        ShopButton3.interactable = false;
 
     }
 }

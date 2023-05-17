@@ -9,7 +9,7 @@ public class BattleManager : MonoSingeleton<BattleManager>
    [SerializeField]private int spawnIndex=0;
    public List<GameObject> hideUnitObject;
    public PathCreator attackPathCreatorOtherSceene;
-
+  
     public int killedPlayerUnitCount=0;
 
 
@@ -53,7 +53,8 @@ public IEnumerator Fight(){
    //rakip sahaya geçince once bunu cağır 
     public void PassOtherScene () {
       HUD.Instance.setVisionOrAttackHUD.enabled=false;
-       
+      
+
         spawnIndex=0;
         for(int i = 0; i < hideUnitObject.Count; i++) {
          hideUnitObject[i].SetActive(false);   
@@ -68,6 +69,8 @@ public IEnumerator Fight(){
      }
      public void EndAttack () {
            HUD.Instance.setVisionOrAttackHUD.enabled=true;
+        WaveManager.Instance.MotherlandCam.enabled = true;
+        WaveManager.Instance.EnemySideCam.enabled = false;
         WaveManager.Instance.remainingTime= WaveManager.Instance.waveWaitTime;
       StartCoroutine(WaveManager.Instance.WaitWave());
      }

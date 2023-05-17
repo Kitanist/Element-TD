@@ -22,6 +22,7 @@ public class WaveManager : MonoSingeleton<WaveManager>
     private int nextUnitIndex = 0;
     private bool canStop = false;
     public float remainingTime;
+    public Camera MotherlandCam, EnemySideCam;
     [Header("Textler")]
     public TextMeshProUGUI WaveCountDownText;
     public TextMeshProUGUI MoneyText;
@@ -123,13 +124,17 @@ public void AttackOrSetCameraVision () {
         Debug.Log("saldir");
     }else{
        Debug.Log("kamera deei");
-        //kamera açısı değişir rakip alanı görürüz
-    } 
+                //kamera açısı değişir rakip alanı görürüz
+                MotherlandCam.enabled = false;
+                EnemySideCam.enabled = true;
+            } 
     }
     else{
          Debug.Log("kamera degis");
-        //kamera açısı değişir rakip alanı görürüz
-        BattleManager.Instance.PassOtherScene();
+            //kamera açısı değişir rakip alanı görürüz
+            MotherlandCam.enabled = false;
+            EnemySideCam.enabled = true;
+            BattleManager.Instance.PassOtherScene();
     }
    
     
