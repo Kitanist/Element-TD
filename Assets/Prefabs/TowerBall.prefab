@@ -220,7 +220,7 @@ MonoBehaviour:
   poolIndex: 4
   JumpForce: 10
   attackRadius: 15
-  bulletSpeed: 2
+  bulletSpeed: 3
   fireRate: 4
   EnemyMask:
     serializedVersion: 2

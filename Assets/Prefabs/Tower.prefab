@@ -212,8 +212,6 @@ MonoBehaviour:
     m_Bits: 64
   easeType: 0
   target: {fileID: 0}
-  isBallTower: 0
-  rotatObject: {fileID: 0}
   level: 1
   maxLevel: 3
   openWithLevel:
