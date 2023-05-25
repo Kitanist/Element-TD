@@ -26,7 +26,7 @@ private void Update() {
    IEnumerator EnterFight(){
     yield return  new WaitForSeconds(spawnTime);
     if(spawnIndex<unitList.Count){
-     
+    
      Unit _unit=unitList[spawnIndex];   
      GameObject unit =ObjectPool.Instance.GetPooledObject(_unit.myPoolIndex);
      hideUnitObject.Add(unit);

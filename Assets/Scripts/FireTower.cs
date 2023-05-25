@@ -28,6 +28,11 @@ public class FireTower : Tower
         Gizmos.DrawWireCube(firePos.position,new Vector3(attackRadius,attackRadius,attackRadius));
     }
 
+    public override void LevelUp()
+    {
+        base.LevelUp();
+    } 
+
      IEnumerator ResetTower(){
       
         yield return new WaitForSeconds(fireRate);

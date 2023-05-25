@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
 public class Tower : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Tower : MonoBehaviour
     
      [SerializeField] protected Transform target;
    
-
+    public float currentUpgradeCost=100;
 
 [Header("LEVEL")]
 [Space(5)]
@@ -32,8 +33,12 @@ public class Tower : MonoBehaviour
     public int maxLevel=3;
     public GameObject[] openWithLevel;
     public int [] DamageCounts;
+
+    public int upgradeCostforNextLevel;
     private float shortDis;
     public Collider []  targets;
+
+    
     void Update()
     {
         
@@ -112,6 +117,7 @@ public class Tower : MonoBehaviour
             int openLevelIndex=level-1;
             level++;
             
+            
             for(int i = 0; i < openLevelIndex; i++) {
                 openWithLevel[i].SetActive(true);
                 damage=DamageCounts[i];
@@ -123,5 +129,9 @@ public class Tower : MonoBehaviour
         yield return new WaitForSeconds(fireRate);
         
         reset=true;
+    }
+    private void OnMouseDown() {
+        HUD.Instance.UpgradeUI.SetActive(true); 
+        GameManager.Instance.currentUpgradementTower=this;
     }
 }

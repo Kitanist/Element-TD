@@ -181,10 +181,10 @@ BoxCollider:
   m_GameObject: {fileID: 6433023776911228997}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.4969225, y: 7.8362575, z: 3.087791}
+  m_Center: {x: 0.06648946, y: 3.4181287, z: 0.13048226}
 --- !u!114 &6433023776911228996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,12 +212,14 @@ MonoBehaviour:
     m_Bits: 64
   easeType: 0
   target: {fileID: 0}
+  currentUpgradeCost: 100
   level: 1
   maxLevel: 3
   openWithLevel:
   - {fileID: 0}
   - {fileID: 0}
   DamageCounts: 140000001e000000
+  upgradeCostforNextLevel: 200
   targets: []
 --- !u!114 &3586698720180615971
 MonoBehaviour:
