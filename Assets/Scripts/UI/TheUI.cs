@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class TheUI : MonoBehaviour
+public class TheUI : MonoSingeleton<TheUI>
 {
     public CanvasGroup Shop1, Shop2, Shop3;
     public RectTransform rectTreansform;
@@ -12,8 +12,11 @@ public class TheUI : MonoBehaviour
     public GameObject OpenButon,BackGround;
     public Button ShopButton1, ShopButton2, ShopButton3;
 
- 
-    // kule geliþtirmesi oynanýnca saðdan baþka uý açýlýp büyücek kapamaya basýnca o da yavaþca kapanacak
+
+    private void Start()
+    {
+        ControlTheUI();
+    }
     public void ControlTheUI()
     {
         if (!isOpen) // açýlýrken set ease out expo 
