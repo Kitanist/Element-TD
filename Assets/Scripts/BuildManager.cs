@@ -7,7 +7,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
     [SerializeField]private TowerBlueprint insaedilcektower;
 
 
-
+    public Node node;
     
     public GameObject ArrowTower;
     public GameObject FireTower;
@@ -20,7 +20,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
     {
         insaedilcektower = turret;
     }
-    public void BuildTowerOn(Node node)
+    public void BuildTowerOn()
     {
         if (GameManager.Instance.Gold< insaedilcektower.cost)
         {

@@ -514,7 +514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &225002691
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2447,6 +2447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   insaedilcektower: {fileID: 0}
+  node: {fileID: 0}
   ArrowTower: {fileID: 6433023776911228997, guid: 9e085eb9428bfad42819e7f87c2501bf, type: 3}
   FireTower: {fileID: 7895575553819616920, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
   BallTower: {fileID: 4601695123754124436, guid: 755aa92f600480f419065ce21508fa29, type: 3}

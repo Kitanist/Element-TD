@@ -37,7 +37,10 @@ public class WaveManager : MonoSingeleton<WaveManager>
         EndWave();
     }
    private void Start() {
-        remainingTime=waveWaitTime;
+        MotherlandCam.enabled = true;
+        EnemySideCam.enabled = false;
+
+        remainingTime =waveWaitTime;
       StartCoroutine(WaitWave());
    }
    
