@@ -32,7 +32,8 @@ public class BuildManager : MonoSingeleton<BuildManager>
       GameObject turret =  (GameObject)Instantiate(insaedilcektower.prefab, node.GetBuildPosition(), Quaternion.identity);
         node.turret = turret;
 
-        Debug.Log("Kule in�a edildi kalan para :" + GameManager.Instance.Gold);
+        
+        Debugger.Instance.Debuger("Kule insa edildi kalan para :", GameManager.Instance.Gold);
     }
 
 }

@@ -39,13 +39,15 @@ public class WaveManager : MonoSingeleton<WaveManager>
    private void Start() {
         MotherlandCam.enabled = true;
         EnemySideCam.enabled = false;
-
+        UIUpdate();
         remainingTime =waveWaitTime;
       StartCoroutine(WaitWave());
+        StartCoroutine(WaitTimeUI());
    }
    
     public void StartWawe (int waveCount) {
         if(currentWaveCount<waves.Length && GameManager.Instance.isGameContinue){
+            UIUpdate();
           StartCoroutine(UnitSawnWait(waveCount));
         }
         else{
@@ -63,8 +65,8 @@ public void EndWave () {
         InvokeRepeating("decreseRemainTime",0,1);
         StartCoroutine(WaitWave());
         destroyedUnitCount=0;
-        Debug.Log("dalga bitmesi bekleni ve siradaki dalga cagirildi");
-        nextUnitIndex=0;
+        Debugger.Instance.Debuger("dalga bitmesi bekleni ve siradaki dalga cagirildi");
+        nextUnitIndex =0;
         currentWaveCount++;
    
     
@@ -80,10 +82,11 @@ public void decreseRemainTime () {
 }
     public void UIUpdate()
     {
-        WaveCountDownText.text = "Kalan Wave \n " + remainingTime.ToString();
+        WaveCountDownText.text = "Bidahaki dalgaya kalan süre : " + remainingTime.ToString();
         MoneyText.text = "Para : " + GameManager.Instance.Gold.ToString();
     }
 public IEnumerator WaitWave(){
+        UIUpdate();
     canStop=true;
     HUD.Instance.setVisionOrAttackHUD.GetComponent<Image>().color=Color.red;
     yield return new WaitForSeconds(waveWaitTime);
@@ -91,6 +94,12 @@ public IEnumerator WaitWave(){
     canStop=false;
     HUD.Instance.setVisionOrAttackHUD.GetComponent<Image>().color=Color.blue;
 }
+   IEnumerator WaitTimeUI()
+    {
+        yield return new WaitForSeconds(1);
+        remainingTime = remainingTime--;
+        UIUpdate();
+    }
 IEnumerator UnitSawnWait(int waveCount){
     
     yield return new WaitForSeconds(unitSpawnTime);
@@ -103,7 +112,7 @@ IEnumerator UnitSawnWait(int waveCount){
      StartCoroutine(UnitSawnWait(currentWaveCount));
     }
     else{
-        Debug.Log("bu dalgadaki unitlerin spawnlanmasi bitmiştir");
+            Debugger.Instance.Debuger("bu dalgadaki unitlerin spawnlanmasi bitmiştir");
         StopCoroutine(UnitSawnWait(currentWaveCount));
       if(destroyedUnitCount>=waves[currentWaveCount].WaveUnits.Count)
         EndWave(); //30 sn bekle

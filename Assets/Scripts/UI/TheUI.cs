@@ -9,7 +9,7 @@ public class TheUI : MonoSingeleton<TheUI>
     public CanvasGroup Shop1, Shop2, Shop3;
     public RectTransform rectTreansform;
     public bool isOpen;
-    public GameObject OpenButon,BackGround;
+    public GameObject BackGround;
     public Button ShopButton1, ShopButton2, ShopButton3;
 
 
@@ -32,7 +32,7 @@ public class TheUI : MonoSingeleton<TheUI>
     }
     public void ShopUIOpen()
     {
-        OpenButon.transform.LeanMoveLocal(new Vector2(0, 0), 1).setEaseOutExpo();
+       
         BackGround.transform.LeanMoveLocal(new Vector2(775, 0), 1).setEaseOutExpo();
         isOpen = true;
 
@@ -48,14 +48,14 @@ public class TheUI : MonoSingeleton<TheUI>
     }
     public void ShopUIClose()
     {
-        OpenButon.transform.LeanMoveLocal(new Vector2(350, 0), 1).setEaseInExpo();
+      
         BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 1).setEaseInExpo();
         isOpen = false;
 
         Shop1.LeanAlpha(0, 0.5f);
         Shop2.LeanAlpha(0, 0.5f);
         Shop3.LeanAlpha(0, 0.5f);
-        Debug.Log("þeffaf");
+        
 
         ShopButton1.interactable = false;
         ShopButton2.interactable = false;

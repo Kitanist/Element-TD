@@ -19,7 +19,7 @@ public class HUD :MonoSingeleton<HUD>
  public GameObject UpgradeUI;
 
 public void Start () {
-    InitShopHud();
+ 
 }
 public void InitShopHud () {
     normalUnitText.text=normalUnit.cost.ToString();
