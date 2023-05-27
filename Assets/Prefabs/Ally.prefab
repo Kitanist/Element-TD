@@ -291,6 +291,8 @@ MonoBehaviour:
   unitDamage: 5
   myPoolIndex: 5
   speed: 3
+  cost: 50
+  unitName: 
 --- !u!54 &4244516454705143407
 Rigidbody:
   m_ObjectHideFlags: 0

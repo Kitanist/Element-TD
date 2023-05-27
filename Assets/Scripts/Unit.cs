@@ -9,6 +9,7 @@ public class Unit : MonoBehaviour
     public int myPoolIndex=1;
     public float speed=5;
     public float cost=50;
+    public string unitName;
     void Start()
     {
         

@@ -7,7 +7,7 @@ public class Debugger : MonoSingeleton<Debugger>
 
     public TextMeshProUGUI DebugLogText;
     
-  public void Debuger(string first)
+  public void Debuger(string first) 
     {
         DebugLogText.text = first;
         StartCoroutine(DebugTimeReser(1));
@@ -74,7 +74,7 @@ public class Debugger : MonoSingeleton<Debugger>
     }
     public IEnumerator DebugTimeReser(float WaitTime)
     {
-        yield return new WaitForSeconds(WaitTime);
+        yield return new WaitForSeconds(WaitTime+1);
         DebugLogText.text = null;
     }
 }

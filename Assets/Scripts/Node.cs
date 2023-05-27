@@ -43,18 +43,21 @@ public class Node : MonoBehaviour
     //       return;
         BuildManager.Instance.node = this;
         
-
+        // upgrade ve insa bolgeleri ayarlandi
         if (turret != null)
         {
-          
-         //   Debug.Log("Gardas buraya kule yapaman");
-           
-            // kule menusu buradan a��lacak
+            TheUI.Instance.isUpgrade = true;
+            TheUI.Instance.isArmy = false;
+            TheUI.Instance.ControlTheUI();
+
+         
         }
         else
         {
+            TheUI.Instance.isUpgrade = false;
+            TheUI.Instance.isArmy = false;
             TheUI.Instance.ControlTheUI();
-            // shopopen
+            
         }
 
     }

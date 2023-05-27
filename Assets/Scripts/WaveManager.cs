@@ -35,19 +35,21 @@ public class WaveManager : MonoSingeleton<WaveManager>
     if(currentWaveCount<waves.Length)//wave sayısından büyük olmaz şu anki wave
     if(destroyedUnitCount>=waves[currentWaveCount].WaveUnits.Count)
         EndWave();
+        UIUpdate();
     }
+    
    private void Start() {
         MotherlandCam.enabled = true;
         EnemySideCam.enabled = false;
         UIUpdate();
         remainingTime =waveWaitTime;
       StartCoroutine(WaitWave());
-        StartCoroutine(WaitTimeUI());
-   }
-   
+        InvokeRepeating("decreseRemainTime", 0, 1);
+    }
+  
     public void StartWawe (int waveCount) {
         if(currentWaveCount<waves.Length && GameManager.Instance.isGameContinue){
-            UIUpdate();
+          
           StartCoroutine(UnitSawnWait(waveCount));
         }
         else{
@@ -62,7 +64,7 @@ public void EndWave () {
     // dalgayı bitir ve 30 sn bekle
     //eğer dalgadaki bütün düşmanlar ölmüşse diğer dalgaya  hazırlık yap
         Debug.Log(waves[currentWaveCount].WaveUnits.Count);
-        InvokeRepeating("decreseRemainTime",0,1);
+       
         StartCoroutine(WaitWave());
         destroyedUnitCount=0;
         Debugger.Instance.Debuger("dalga bitmesi bekleni ve siradaki dalga cagirildi");
@@ -72,7 +74,8 @@ public void EndWave () {
     
 }
 public void decreseRemainTime () {
-    if(remainingTime>=0){
+        
+    if(remainingTime>0){
          remainingTime--;
             UIUpdate();
     }
@@ -80,6 +83,7 @@ public void decreseRemainTime () {
     else
     CancelInvoke();
 }
+   
     public void UIUpdate()
     {
         WaveCountDownText.text = "Bidahaki dalgaya kalan süre : " + remainingTime.ToString();
@@ -87,19 +91,16 @@ public void decreseRemainTime () {
     }
 public IEnumerator WaitWave(){
         UIUpdate();
-    canStop=true;
+        remainingTime = waveWaitTime;
+        InvokeRepeating("decreseRemainTime", 0, 1);
+        canStop =true;
     HUD.Instance.setVisionOrAttackHUD.GetComponent<Image>().color=Color.red;
     yield return new WaitForSeconds(waveWaitTime);
     StartWawe(currentWaveCount);
     canStop=false;
     HUD.Instance.setVisionOrAttackHUD.GetComponent<Image>().color=Color.blue;
 }
-   IEnumerator WaitTimeUI()
-    {
-        yield return new WaitForSeconds(1);
-        remainingTime = remainingTime--;
-        UIUpdate();
-    }
+  
 IEnumerator UnitSawnWait(int waveCount){
     
     yield return new WaitForSeconds(unitSpawnTime);
@@ -137,10 +138,12 @@ public void AttackOrSetCameraVision () {
     }else{
        Debug.Log("kamera deei");
         if(GameManager.Instance.currentCamIsMineTerritory){
+        GameManager.Instance.currentCamIsMineTerritory = false;
               MotherlandCam.enabled = false;
                 EnemySideCam.enabled = true;
          }
          else{
+                    GameManager.Instance.currentCamIsMineTerritory = true;
              MotherlandCam.enabled = true;
                 EnemySideCam.enabled = false;
          }

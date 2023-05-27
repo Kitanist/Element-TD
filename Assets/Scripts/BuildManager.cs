@@ -6,6 +6,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
 {
     [SerializeField]private TowerBlueprint insaedilcektower;
 
+    public Tower currentUpgradementTower;
 
     public Node node;
     
@@ -24,7 +25,8 @@ public class BuildManager : MonoSingeleton<BuildManager>
     {
         if (GameManager.Instance.Gold< insaedilcektower.cost)
         {
-            Debug.Log("Kule in�a edemezsin");
+            Debugger.Instance.Debuger("Kule inşa edemezsin !");
+           
             return;
         }
       GameManager.Instance.Gold -= insaedilcektower.cost;

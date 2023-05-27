@@ -16,7 +16,7 @@ public class GameManager : MonoSingeleton<GameManager>
    public Transform CastleTransform;
    public bool playerIsAttack=false;
    public bool isGameContinue=true;
-   public Tower currentUpgradementTower;
+   
 
   public PathCreator levelPathCreator;
   public PathCreator attackPathCreator;

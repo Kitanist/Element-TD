@@ -131,7 +131,9 @@ public class Tower : MonoBehaviour
         reset=true;
     }
     private void OnMouseDown() {
-        HUD.Instance.UpgradeUI.SetActive(true); 
-        GameManager.Instance.currentUpgradementTower=this;
+        TheUI.Instance.isUpgrade = true;
+        TheUI.Instance.isArmy = false;
+        TheUI.Instance.ControlTheUI();
+        BuildManager.Instance.currentUpgradementTower=this;
     }
 }
