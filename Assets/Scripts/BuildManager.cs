@@ -26,7 +26,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
         if (GameManager.Instance.Gold< insaedilcektower.cost)
         {
             Debugger.Instance.Debuger("Kule inşa edemezsin !");
-           
+
             return;
         }
       GameManager.Instance.Gold -= insaedilcektower.cost;
@@ -36,6 +36,8 @@ public class BuildManager : MonoSingeleton<BuildManager>
 
         
         Debugger.Instance.Debuger("Kule insa edildi kalan para :", GameManager.Instance.Gold);
+       
+            TheUI.Instance.ShopUIClose();
     }
 
 }

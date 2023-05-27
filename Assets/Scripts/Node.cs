@@ -45,7 +45,8 @@ public class Node : MonoBehaviour
         
         // upgrade ve insa bolgeleri ayarlandi
         if (turret != null)
-        {
+        {   
+            TheUI.Instance.isTurret = false;
             TheUI.Instance.isUpgrade = true;
             TheUI.Instance.isArmy = false;
             TheUI.Instance.ControlTheUI();
@@ -54,6 +55,7 @@ public class Node : MonoBehaviour
         }
         else
         {
+            TheUI.Instance.isTurret = true;
             TheUI.Instance.isUpgrade = false;
             TheUI.Instance.isArmy = false;
             TheUI.Instance.ControlTheUI();
