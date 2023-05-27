@@ -136,13 +136,21 @@ public void AttackOrSetCameraVision () {
         Debug.Log("saldir");
     }else{
        Debug.Log("kamera deei");
-                //kamera açısı değişir rakip alanı görürüz
-                MotherlandCam.enabled = false;
+        if(GameManager.Instance.currentCamIsMineTerritory){
+              MotherlandCam.enabled = false;
                 EnemySideCam.enabled = true;
+         }
+         else{
+             MotherlandCam.enabled = true;
+                EnemySideCam.enabled = false;
+         }
+                //kamera açısı değişir rakip alanı görürüz
+                
             } 
     }
     else{
          Debug.Log("kamera degis");
+        
             //kamera açısı değişir rakip alanı görürüz
             MotherlandCam.enabled = false;
             EnemySideCam.enabled = true;

@@ -20,6 +20,8 @@ public class GameManager : MonoSingeleton<GameManager>
 
   public PathCreator levelPathCreator;
   public PathCreator attackPathCreator;
+
+  public bool currentCamIsMineTerritory=true;
  
   public float Gold
  {
