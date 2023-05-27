@@ -16,24 +16,22 @@ public class HUD :MonoSingeleton<HUD>
  
  public TMP_Text  armoredUnitText;
 
- public GameObject UpgradeUI;
+ 
 
 public void Start () {
-        normalUnit.name = "Normal Asker";
-        speederUnit.name = "Hýzlý Asker";
-        armoredUnit.name = "Zýrhlý Asker";
+   InitShopHud();
 }
 public void InitShopHud () {
-    normalUnitText.text=normalUnit.cost.ToString();
-      speederUnitText.text=speederUnit.cost.ToString();
-        armoredUnitText.text=armoredUnit.cost.ToString();
+    normalUnitText.text=normalUnit.cost.ToString() + "$";
+      speederUnitText.text=speederUnit.cost.ToString()+ "$";
+        armoredUnitText.text=armoredUnit.cost.ToString()+ "$";
 }
 
     public void TakeUnit(Unit unit) {
         if (GameManager.Instance.Gold <= unit.cost) 
         {
 
-            Debugger.Instance.Debuger(unit.name + "Satýn almaya paran yetmedi gereken para :" + (unit.cost-GameManager.Instance.Gold));
+            Debugger.Instance.Debuger(unit.name + "Satin almaya paran yetmedi gereken para :" + (unit.cost-GameManager.Instance.Gold));
         return;
         }
      GameManager.Instance.Gold-=unit.cost;

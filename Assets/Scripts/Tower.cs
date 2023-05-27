@@ -131,10 +131,15 @@ public class Tower : MonoBehaviour
         reset=true;
     }
     private void OnMouseDown() {
-       TheUI.Instance.isTurret = false;
-        TheUI.Instance.isUpgrade = true;
-        TheUI.Instance.isArmy = false;
-        TheUI.Instance.ControlTheUI();
+         TheUI.Instance.ShopUIClose();
+
+        Invoke("OpenUIUpgrade",.6f);
         BuildManager.Instance.currentUpgradementTower=this;
     }
+    public void OpenUIUpgrade () {
+    TheUI.Instance.isTurret = false;
+    TheUI.Instance.isUpgrade = true;
+    TheUI.Instance.isArmy = false;
+    TheUI.Instance.ShopUIOpen();
+}
 }

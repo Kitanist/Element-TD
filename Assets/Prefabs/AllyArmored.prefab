@@ -482,6 +482,7 @@ MonoBehaviour:
   myPoolIndex: 7
   speed: 2
   cost: 100
+  unitName: 
 --- !u!54 &7174328673112370239
 Rigidbody:
   m_ObjectHideFlags: 0

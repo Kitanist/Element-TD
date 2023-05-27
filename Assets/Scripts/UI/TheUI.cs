@@ -22,9 +22,7 @@ public class TheUI : MonoSingeleton<TheUI>
     {
         ShopUIClose();
        
-        UShop1.LeanAlpha(0, 0.5f);
-        UShop2.LeanAlpha(0, 0.5f);
-        UShop3.LeanAlpha(0, 0.5f);
+
     }
   
     public void ControlTheUI()
@@ -57,6 +55,7 @@ public class TheUI : MonoSingeleton<TheUI>
         }
          if (!isArmy && isUpgrade && !isTurret)
         {
+        
             UShopButton1.gameObject.SetActive(true);
             UShopButton2.gameObject.SetActive(true);
             UShopButton3.gameObject.SetActive(true);
@@ -70,16 +69,16 @@ public class TheUI : MonoSingeleton<TheUI>
         }
            if (isArmy && !isUpgrade && !isTurret)
         {
-          //  AShopButton1.gameObject.SetActive(true);
-           // AShopButton2.gameObject.SetActive(true);
-          //  AShopButton3.gameObject.SetActive(true);
-           // AShop1.LeanAlpha(1, 0.5f);
-          //  AShop2.LeanAlpha(1, 0.5f);
-          //  AShop3.LeanAlpha(1, 0.5f);
+            AShopButton1.gameObject.SetActive(true);
+            AShopButton2.gameObject.SetActive(true);
+            AShopButton3.gameObject.SetActive(true);
+            AShop1.LeanAlpha(1, 0.5f);
+          AShop2.LeanAlpha(1, 0.5f);
+            AShop3.LeanAlpha(1, 0.5f);
 
-          //  AShopButton1.interactable = true;
-         //   AShopButton2.interactable = true;
-           // AShopButton3.interactable = true;
+            AShopButton1.interactable = true;
+           AShopButton2.interactable = true;
+            AShopButton3.interactable = true;
         }
 
     }
@@ -93,11 +92,10 @@ public class TheUI : MonoSingeleton<TheUI>
         Shop2.LeanAlpha(0, 0.5f);
         Shop3.LeanAlpha(0, 0.5f);
 
-       // AShop1.LeanAlpha(0, 0.5f);
-      //  AShop2.LeanAlpha(0, 0.5f);
-       // AShop3.LeanAlpha(0, 0.5f);
+        AShop1.LeanAlpha(0, 0.5f);
+        AShop2.LeanAlpha(0, 0.5f);
+        AShop3.LeanAlpha(0, 0.5f);
         
-       
             UShop1.LeanAlpha(0, 0.5f);
             UShop2.LeanAlpha(0, 0.5f);
             UShop3.LeanAlpha(0, 0.5f);
@@ -106,25 +104,26 @@ public class TheUI : MonoSingeleton<TheUI>
         UShopButton1.interactable = false;
         UShopButton2.interactable = false;
         UShopButton3.interactable = false;
+
         ShopButton1.interactable = false;
         ShopButton2.interactable = false;
         ShopButton3.interactable = false;
-      //  AShopButton1.interactable = false;
-       // AShopButton2.interactable = false;
-       // AShopButton3.interactable = false;
+        AShopButton1.interactable = false;
+     AShopButton2.interactable = false;
+        AShopButton3.interactable = false;
 
     }
     IEnumerator ButtonEater()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.5f);
        UShopButton1.gameObject.SetActive(false) ;
        UShopButton2.gameObject.SetActive(false) ;
        UShopButton3.gameObject.SetActive(false) ;
         ShopButton1.gameObject.SetActive(false) ;
         ShopButton2.gameObject.SetActive(false) ;
         ShopButton3.gameObject.SetActive(false) ;
-       // AShopButton1.gameObject.SetActive(false) ;
-       // AShopButton2.gameObject.SetActive(false) ;
-       // AShopButton3.gameObject.SetActive(false) ;
+        AShopButton1.gameObject.SetActive(false) ;
+        AShopButton2.gameObject.SetActive(false) ;
+        AShopButton3.gameObject.SetActive(false) ;
     }
 }

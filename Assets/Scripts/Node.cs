@@ -44,26 +44,32 @@ public class Node : MonoBehaviour
         BuildManager.Instance.node = this;
         
         // upgrade ve insa bolgeleri ayarlandi
-        if (turret != null)
+        if (turret)
         {   
-            TheUI.Instance.isTurret = false;
-            TheUI.Instance.isUpgrade = true;
-            TheUI.Instance.isArmy = false;
-            TheUI.Instance.ControlTheUI();
-
+            TheUI.Instance.ShopUIClose();
+                Invoke("OpenUIUpgrade",.6f);
          
         }
         else
         {
-            TheUI.Instance.isTurret = true;
-            TheUI.Instance.isUpgrade = false;
-            TheUI.Instance.isArmy = false;
-            TheUI.Instance.ControlTheUI();
+            TheUI.Instance.ShopUIClose();
+               Invoke("OpenUIUTower",.6f);
             
         }
 
     }
-
+     public void OpenUIUpgrade () {
+    TheUI.Instance.isTurret = false;
+    TheUI.Instance.isUpgrade = true;
+    TheUI.Instance.isArmy = false;
+    TheUI.Instance.ShopUIOpen();
+}
+  public void OpenUIUTower () {
+    TheUI.Instance.isTurret = true;
+    TheUI.Instance.isUpgrade = false;
+    TheUI.Instance.isArmy = false;
+    TheUI.Instance.ShopUIOpen();
+}
     private void OnMouseExit()
     {
     

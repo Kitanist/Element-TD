@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent (typeof(HealthComponent))]
 
@@ -8,7 +9,18 @@ using UnityEngine;
 public class Castle : MonoBehaviour
 {
 
+private void OnMouseDown() {
+    TheUI.Instance.ShopUIClose();
 
+    Invoke("OpenUIUnit",.6f);
+    
+}
+public void OpenUIUnit () {
+    TheUI.Instance.isTurret = false;
+    TheUI.Instance.isUpgrade = false;
+    TheUI.Instance.isArmy = true;
+    TheUI.Instance.ShopUIOpen();
+}
 private void OnTriggerEnter(Collider other) {
  
      if(GetComponent<HealthComponent>().isPlayerBase){
