@@ -10,11 +10,29 @@ public class HUD :MonoSingeleton<HUD>
  public Unit normalUnit;
  public Unit speederUnit;
  public Unit armoredUnit;
- public TMP_Text  normalUnitText;
- 
- public TMP_Text  speederUnitText;
- 
- public TMP_Text  armoredUnitText;
+    public TowerBlueprint ArrowedTower, BallTower, FireTower; 
+    
+    public TMP_Text normalUnitText;
+
+    public TMP_Text speederUnitText;
+
+    public TMP_Text armoredUnitText;
+
+    public TMP_Text ArrowTowerText;
+
+    public TMP_Text BallTowerText;
+
+    public TMP_Text FireTowerText;
+
+    public TMP_Text UpgradeText;
+
+    public TMP_Text DestroyText;
+
+    public TMP_Text InfoText;
+
+
+    
+    
 
  
 
@@ -25,7 +43,11 @@ public void InitShopHud () {
     normalUnitText.text=normalUnit.cost.ToString() + "$";
       speederUnitText.text=speederUnit.cost.ToString()+ "$";
         armoredUnitText.text=armoredUnit.cost.ToString()+ "$";
-}
+        ArrowTowerText.text = ArrowedTower.cost.ToString()+ "$";
+        BallTowerText.text = BallTower.cost.ToString()+ "$";
+        FireTowerText.text = FireTower.cost.ToString()+ "$";
+        UpgradeText.text = BuildManager.Instance.currentUpgradementTower.currentUpgradeCost.ToString() + "$";
+}       
 
     public void TakeUnit(Unit unit) {
         if (GameManager.Instance.Gold <= unit.cost) 
@@ -52,6 +74,7 @@ public void LevelUpTower () {
     GameManager.Instance.Gold-=BuildManager.Instance.currentUpgradementTower.currentUpgradeCost;
             BuildManager.Instance.currentUpgradementTower.LevelUp();
             BuildManager.Instance.currentUpgradementTower.currentUpgradeCost= BuildManager.Instance.currentUpgradementTower.upgradeCostforNextLevel;
-       }
+            InitShopHud();
+        }
 }
 }
