@@ -199,8 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePos: {fileID: 6433023777251045489}
   rangeObject: {fileID: 2010051797618933523}
-  element_Type: 1
-  Cost: 100
+  element_Type: 0
   damage: 10
   poolIndex: 0
   JumpForce: 1
@@ -211,6 +210,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   easeType: 0
+  elementChanceCost: 50
   target: {fileID: 0}
   currentUpgradeCost: 100
   level: 1

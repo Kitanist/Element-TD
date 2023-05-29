@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
     if(dir.magnitude<=distanceFrame){
         target.GetComponent<HealthComponent>().GetDamage(damage,element_Type);
         gameObject.SetActive(false);
-        Debug.Log("Hit");
+      
     }
     transform.Translate(-dir.normalized*distanceFrame,Space.World);
    }

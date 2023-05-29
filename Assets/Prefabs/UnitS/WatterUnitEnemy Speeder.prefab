@@ -276,6 +276,7 @@ MonoBehaviour:
   lessDamageMultipler: 0.8
   isUnit: 1
   isPlayerBase: 0
+  floatingTextPrefab: {fileID: 5388776113340150087, guid: acc6f9d217cb69a468ea0d39b30f24ab, type: 3}
 --- !u!114 &971698642735673629
 MonoBehaviour:
   m_ObjectHideFlags: 0

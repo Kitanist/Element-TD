@@ -15,9 +15,18 @@ public class HealthComponent : MonoBehaviour
     public float lessDamageMultipler=.8f;
    public bool isUnit=true;
    public bool isPlayerBase=false;
+   
 
+    public void GetFloatingText (string damage) {
+        GameObject text=ObjectPool.Instance.GetPooledObject(18);
+        text.transform.SetParent(this.transform);
+        text.transform.position=transform.position;
+        text.GetComponent<TextMesh>().text=damage;
+        text.GetComponent<TextMesh>().color=Color.cyan;
+    }
    public void GetDamage (float damage,Element_Type damagerType) {
     float _damage=SetElementDamage(damage,damagerType);
+    GetFloatingText(_damage.ToString());
   
     if(Health<=_damage){
         Health=0;      

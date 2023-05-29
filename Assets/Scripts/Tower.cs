@@ -23,6 +23,7 @@ public class Tower : MonoBehaviour
      public LayerMask EnemyMask;
      public Ease easeType;
     
+    public float elementChanceCost=50;
      [SerializeField] protected Transform target;
    
     public float currentUpgradeCost=100;
@@ -74,7 +75,7 @@ public class Tower : MonoBehaviour
            if(Vector3.Distance(obj.transform.position,transform.position)<shortDis){
             target=obj.transform;
             shortDis=Vector3.Distance(obj.transform.position,transform.position);
-            Debug.Log(shortDis);
+            
            }
         }
         }
@@ -131,10 +132,10 @@ public class Tower : MonoBehaviour
         reset=true;
     }
     private void OnMouseDown() {
-         TheUI.Instance.ShopUIClose();
-
+         TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
         BuildManager.Instance.currentUpgradementTower=this;
+         HUD.Instance.InitShopHud();
     }
     public void OpenUIUpgrade () {
     TheUI.Instance.isTurret = false;

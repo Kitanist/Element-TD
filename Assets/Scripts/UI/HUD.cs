@@ -6,6 +6,18 @@ using TMPro;
 
 public class HUD :MonoSingeleton<HUD>
 {
+    [Header ("ELEMENT")]
+    [Space(5)]
+   [SerializeField] private bool elementTabOpen=false;
+    public GameObject elementUI;
+     public TMP_Text elementFireCostText;
+
+    public TMP_Text  elementWatterCostText;
+
+    public TMP_Text  elementAirCostText;
+
+    public TMP_Text elementDirtCostText;
+
  public Button setVisionOrAttackHUD;
  public Unit normalUnit;
  public Unit speederUnit;
@@ -30,7 +42,7 @@ public class HUD :MonoSingeleton<HUD>
 
     public TMP_Text InfoText;
 
-
+    
     
     
 
@@ -46,7 +58,15 @@ public void InitShopHud () {
         ArrowTowerText.text = ArrowedTower.cost.ToString()+ "$";
         BallTowerText.text = BallTower.cost.ToString()+ "$";
         FireTowerText.text = FireTower.cost.ToString()+ "$";
+   
+        if(BuildManager.Instance.currentUpgradementTower){
         UpgradeText.text = BuildManager.Instance.currentUpgradementTower.currentUpgradeCost.ToString() + "$";
+        elementFireCostText.text= BuildManager.Instance.currentUpgradementTower.elementChanceCost.ToString()+ "$";
+        elementWatterCostText.text= BuildManager.Instance.currentUpgradementTower.elementChanceCost.ToString()+ "$";
+        elementAirCostText.text= BuildManager.Instance.currentUpgradementTower.elementChanceCost.ToString()+ "$";
+         elementDirtCostText.text= BuildManager.Instance.currentUpgradementTower.elementChanceCost.ToString()+ "$";
+        }
+      
 }       
 
     public void TakeUnit(Unit unit) {
@@ -77,4 +97,47 @@ public void LevelUpTower () {
             InitShopHud();
         }
 }
+public void ElementTabOpen () {
+    
+    
+    if(elementTabOpen){
+        elementTabOpen=false;
+        elementUI.SetActive(false);
+
+    }
+    else{
+         elementTabOpen=true;
+          elementUI.SetActive(true);
+    }
+}
+public void ElementUIExit () {
+        elementTabOpen=false;
+        elementUI.SetActive(false);
+}
+public void SetTowerElement (int elementIndex) {
+    if(BuildManager.Instance.currentUpgradementTower.element_Type==Element_Type.None&&GameManager.Instance.Gold>BuildManager.Instance.currentUpgradementTower.elementChanceCost){
+        GameManager.Instance.Gold-=BuildManager.Instance.currentUpgradementTower.elementChanceCost;
+         switch(elementIndex){
+        case 0:
+        BuildManager.Instance.currentUpgradementTower.element_Type=Element_Type.Fire;
+        break;
+          case 1:
+        BuildManager.Instance.currentUpgradementTower.element_Type=Element_Type.Watter;
+        break;
+          case 2:
+        BuildManager.Instance.currentUpgradementTower.element_Type=Element_Type.Air;
+        break;
+          case 3:
+        BuildManager.Instance.currentUpgradementTower.element_Type=Element_Type.Dirt;
+        break;
+
+    }
+    ElementUIExit();
+    }
+    else{
+        Debugger.Instance.Debuger("Bu Kuleye zaten element atamasi yapildi");
+    }
+   
+}
+
 }
