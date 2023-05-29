@@ -15,11 +15,23 @@ public class BuildManager : MonoSingeleton<BuildManager>
     public GameObject BallTower;
     public bool CanBuild { get { return insaedilcektower != null; } }
     public bool HasMoney { get { return GameManager.Instance.Gold >= insaedilcektower.cost; } }
-    
+
+    public float PayBackRatio = 0.65f;
 
     public void SelectTowerToBuild(TowerBlueprint turret)
     {
         insaedilcektower = turret;
+    }
+    public void DestroyTowerOn()
+    {
+        if (node.turret)
+        {
+
+            GameManager.Instance.Gold += node.turret.GetComponent<TowerBlueprint>().cost * PayBackRatio;
+            Destroy(node.turret);
+            node.turret = null;
+            TheUI.Instance.ShopUIClose();
+        }
     }
     public void BuildTowerOn()
     {
