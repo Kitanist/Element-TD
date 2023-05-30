@@ -236,7 +236,7 @@ public void InitShopHud () {
         return;
 
         }
-        Debug.Log("saaaaaaaaaaaaaaaaaa");
+     
      GameManager.Instance.Gold-=unit.cost;
    if(unit.GetComponent<HealthComponent>().myElement==Element_Type.Fire){
     if(unit==normalFireUnit)

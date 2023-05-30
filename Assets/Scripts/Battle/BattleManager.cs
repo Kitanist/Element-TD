@@ -14,7 +14,7 @@ public class BattleManager : MonoSingeleton<BattleManager>
 
 
 private void Update() {
-    if(killedPlayerUnitCount>=unitList.Count){
+    if(killedPlayerUnitCount>=unitList.Count &&  unitList.Count>0){
         // atak fail olmustur savas turunu bitir sayacı baslat
       killedPlayerUnitCount=0;
         EndAttack();
@@ -68,11 +68,16 @@ public IEnumerator Fight(){
         unitList.Add(unit);
      }
      public void EndAttack () {
-           HUD.Instance.setVisionOrAttackHUD.enabled=true;
+        HUD.Instance.setVisionOrAttackHUD.enabled=true;
         WaveManager.Instance.MotherlandCam.enabled = true;
         WaveManager.Instance.EnemySideCam.enabled = false;
         WaveManager.Instance.remainingTime= WaveManager.Instance.waveWaitTime;
       StartCoroutine(WaveManager.Instance.WaitWave());
+      for(int i = 0; i <HUD.Instance.myUnitCounts.Length; i++) {
+         HUD.Instance.myUnitCounts[i]=0;
+         HUD.Instance.AllMyUnitCountTexts[i].SetActive(false);
+      }
+     
      }
    
 }
