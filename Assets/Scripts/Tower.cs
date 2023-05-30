@@ -10,6 +10,8 @@ public class Tower : MonoBehaviour
     public GameObject rangeObject;
     public Element_Type element_Type;
    
+    public string Name="Tower";
+
     public float damage=10;
     public int poolIndex=0;
      public float JumpForce=5;
@@ -34,7 +36,7 @@ public class Tower : MonoBehaviour
     public int maxLevel=3;
     public GameObject[] openWithLevel;
     public int [] DamageCounts;
-
+     public int [] AttackRadiusCounts;
     public int upgradeCostforNextLevel;
     private float shortDis;
     public Collider []  targets;
@@ -102,27 +104,21 @@ public class Tower : MonoBehaviour
       bullet.GetComponent<Bullet>().Seek(target);
       //bullet.transform.DOJump(target.position,JumpForce,0,(fireRate/bulletSpeed),false).SetEase(easeType);
       
-    
-      
-        
- 
-      
-     
-    
-
-
-      
     }
     public virtual void LevelUp () {
         if(level<maxLevel){
-            int openLevelIndex=level-1;
-            level++;
-            
-            
-            for(int i = 0; i < openLevelIndex; i++) {
-                openWithLevel[i].SetActive(true);
-                damage=DamageCounts[i];
+            int openLevelIndex=level;
+            level++; 
+            damage=DamageCounts[openLevelIndex-1];
+            attackRadius=AttackRadiusCounts[openLevelIndex-1];
+            if(GetComponent<FireTower>()){
+                     rangeObject.transform.localScale=new Vector3(attackRadius,.1f,attackRadius);
             }
+            else{
+                rangeObject.transform.localScale=new Vector3(attackRadius*2,.1f,attackRadius*2);
+            }
+           
+            
         }
     }
      IEnumerator ResetTower(){

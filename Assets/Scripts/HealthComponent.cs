@@ -18,7 +18,7 @@ public class HealthComponent : MonoBehaviour
    
 
     public void GetFloatingText (string damage) {
-        GameObject text=ObjectPool.Instance.GetPooledObject(18);
+        GameObject text=ObjectPool.Instance.GetPooledObject(26);
         text.transform.SetParent(this.transform);
         text.transform.position=transform.position;
         text.GetComponent<TextMesh>().text=damage;

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1379914775137769158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.64, z: 0}
-  m_LocalScale: {x: 20, y: 0.01, z: 20}
+  m_LocalScale: {x: 15, y: 0.01, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7895575553819616903}
@@ -199,10 +199,11 @@ MonoBehaviour:
   firePos: {fileID: 7895575553885276527}
   rangeObject: {fileID: 1379914775137769158}
   element_Type: 0
+  Name: Trap Tower
   damage: 10
   poolIndex: 0
   JumpForce: 5
-  attackRadius: 20
+  attackRadius: 15
   bulletSpeed: 3
   fireRate: 0.5
   EnemyMask:
@@ -218,6 +219,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   DamageCounts: 0f00000019000000
+  AttackRadiusCounts: 0f00000011000000
   upgradeCostforNextLevel: 0
   targets: []
   targets: []

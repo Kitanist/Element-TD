@@ -11,7 +11,7 @@ public class WaveManager : MonoSingeleton<WaveManager>
     public struct Wave
     {
          public List<Unit> WaveUnits;
-       
+         public List <int> diffrentUnitCounts;
     }
      [SerializeField] public Wave[] waves;
     [Header("Variable")]
@@ -70,6 +70,7 @@ public void EndWave () {
         Debugger.Instance.Debuger("dalga bitmesi bekleni ve siradaki dalga cagirildi");
         nextUnitIndex =0;
         currentWaveCount++;
+        HUD.Instance.RefreshUnitCount();
    
     
 }

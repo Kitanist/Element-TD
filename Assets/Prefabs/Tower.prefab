@@ -200,6 +200,7 @@ MonoBehaviour:
   firePos: {fileID: 6433023777251045489}
   rangeObject: {fileID: 2010051797618933523}
   element_Type: 0
+  Name: Arrow Tower
   damage: 10
   poolIndex: 0
   JumpForce: 1
@@ -219,6 +220,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   DamageCounts: 140000001e000000
+  AttackRadiusCounts: 1100000014000000
   upgradeCostforNextLevel: 200
   targets: []
 --- !u!114 &3586698720180615971

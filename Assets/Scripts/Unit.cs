@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public UnitType unitType;
     public float unitDamage=10;
     public int myPoolIndex=1;
     public float speed=5;

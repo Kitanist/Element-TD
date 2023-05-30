@@ -215,6 +215,7 @@ MonoBehaviour:
   firePos: {fileID: 4601695124506555552}
   rangeObject: {fileID: 5822867450747286397}
   element_Type: 0
+  Name: Bomber Tower
   damage: 30
   poolIndex: 4
   JumpForce: 10
@@ -231,7 +232,8 @@ MonoBehaviour:
   level: 1
   maxLevel: 3
   openWithLevel: []
-  DamageCounts: 
+  DamageCounts: 2800000032000000
+  AttackRadiusCounts: 1000000011000000
   upgradeCostforNextLevel: 0
   targets: []
   rotatObject: {fileID: 4415765881283566809}

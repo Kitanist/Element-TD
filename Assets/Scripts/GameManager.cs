@@ -10,6 +10,11 @@ using PathCreation;
     Dirt,
     Air
    }
+   public enum UnitType{
+    Normal,
+    Speeder,
+    Armored
+   }
 public class GameManager : MonoSingeleton<GameManager>
 {
    [SerializeField]private float gold=0;
