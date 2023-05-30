@@ -10,4 +10,8 @@ public class MainMenuCamController : MonoBehaviour
     {
         gameObject.transform.DORotate(Rotater,1);
     }
+    public void SetCamPos(Vector3 Mover)
+    {
+        gameObject.transform.DOMove(Mover, 1);
+    }
 }
