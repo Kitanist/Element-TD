@@ -220,8 +220,7 @@ MonoBehaviour:
   - {fileID: 0}
   DamageCounts: 0f00000019000000
   AttackRadiusCounts: 0f00000011000000
-  upgradeCostforNextLevel: 0
-  targets: []
+  upgradeCostforNextLevel: 500
   targets: []
 --- !u!114 &2660605284479523788
 MonoBehaviour:

@@ -87,8 +87,9 @@ public class HUD :MonoSingeleton<HUD>
    public GameObject[] AllMyUnitCountTexts;
    public int [] myUnitCounts;
  public void RefreshUnitCount () {
-    
-    for(int i = 0; i < AllUnitCountTexts.Length; i++) {
+    if(WaveManager.Instance.currentWaveCount<WaveManager.Instance.waves.Length){
+          for(int i = 0; i < AllUnitCountTexts.Length; i++) {
+        
         if(WaveManager.Instance.waves[WaveManager.Instance.currentWaveCount].diffrentUnitCounts[i]>0){
              AllUnitCountTexts[i].SetActive(true);
              AllUnitCountTexts[i].transform.GetChild(0).GetComponent<TMP_Text>().text= " x"+WaveManager.Instance.waves[WaveManager.Instance.currentWaveCount].diffrentUnitCounts[i].ToString();
@@ -98,6 +99,8 @@ public class HUD :MonoSingeleton<HUD>
         }
        
     }
+    }
+  
  }
  public void RefreshMyUnitCount (Unit unit) {
     if(unit.GetComponent<HealthComponent>().myElement==Element_Type.Fire){

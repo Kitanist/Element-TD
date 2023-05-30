@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireTower : Tower
 {
-     [SerializeField] Collider []  targets;
+   
     private void Update() {
   
     if(reset){

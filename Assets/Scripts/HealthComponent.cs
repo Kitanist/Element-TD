@@ -26,7 +26,7 @@ public class HealthComponent : MonoBehaviour
     }
    public void GetDamage (float damage,Element_Type damagerType) {
     float _damage=SetElementDamage(damage,damagerType);
-    GetFloatingText(_damage.ToString());
+    GetFloatingText("-"+_damage.ToString());
   
     if(Health<=_damage){
         Health=0;      

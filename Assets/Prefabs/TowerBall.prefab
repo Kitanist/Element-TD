@@ -217,7 +217,7 @@ MonoBehaviour:
   element_Type: 0
   Name: Bomber Tower
   damage: 30
-  poolIndex: 4
+  poolIndex: 1
   JumpForce: 10
   attackRadius: 15
   bulletSpeed: 3
@@ -234,7 +234,7 @@ MonoBehaviour:
   openWithLevel: []
   DamageCounts: 2800000032000000
   AttackRadiusCounts: 1000000011000000
-  upgradeCostforNextLevel: 0
+  upgradeCostforNextLevel: 200
   targets: []
   rotatObject: {fileID: 4415765881283566809}
 --- !u!1 &4601695124506555559

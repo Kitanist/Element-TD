@@ -6765,12 +6765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7719e97825e9851438b10a758ce82b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitList:
-  - {fileID: 4244516454705143406, guid: d47f5933c7824df4898163b29b58c3f2, type: 3}
-  - {fileID: 4244516454705143406, guid: d47f5933c7824df4898163b29b58c3f2, type: 3}
-  - {fileID: 4244516454705143406, guid: d47f5933c7824df4898163b29b58c3f2, type: 3}
-  - {fileID: 4244516454705143406, guid: d47f5933c7824df4898163b29b58c3f2, type: 3}
-  - {fileID: 4244516454705143406, guid: d47f5933c7824df4898163b29b58c3f2, type: 3}
+  unitList: []
   spawnTime: 2
   spawnIndex: 0
   hideUnitObject: []
@@ -6844,7 +6839,7 @@ MonoBehaviour:
   currentWaveCount: 0
   waveWaitTime: 5
   unitSpawnTime: 2
-  remainingTime: 0
+  remainingTime: 5
   MotherlandCam: {fileID: 720764361}
   EnemySideCam: {fileID: 225002692}
   WaveCountDownText: {fileID: 933550589}

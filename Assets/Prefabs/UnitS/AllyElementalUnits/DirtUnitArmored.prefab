@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealtBar: {fileID: 1898157170090321132}
-  myElement: 4
+  myElement: 3
   Health: 120
   maxHealth: 120
   critiDamageMultipler: 1.2
