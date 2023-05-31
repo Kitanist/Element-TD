@@ -96,7 +96,10 @@ public void decreseRemainTime () {
    
     public void UIUpdate()
     {
+        if(canStop)
         WaveCountDownText.text = "NextWave: " + remainingTime.ToString();
+        else
+          WaveCountDownText.text = "Wave Coming ";
         MoneyText.text = "Gold: " + GameManager.Instance.Gold.ToString();
         WaveLeft.text = currentWaveCount + " / " + waves.Length + "  Wave Left";
     }
@@ -104,7 +107,7 @@ public IEnumerator WaitWave(){
         BattleManager.Instance.isAttackedThisTurn = false;
         remainingTime = waveWaitTime;
         InvokeRepeating("decreseRemainTime", 0, 1);
-         UIUpdate();
+        UIUpdate();
         canStop =true;
    
    
@@ -112,6 +115,7 @@ public IEnumerator WaitWave(){
     
     StartWawe(currentWaveCount);
     canStop=false;
+    UIUpdate();
 
 }
   
