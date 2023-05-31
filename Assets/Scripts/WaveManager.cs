@@ -27,6 +27,7 @@ public class WaveManager : MonoSingeleton<WaveManager>
     [Header("Textler")]
     public TextMeshProUGUI WaveCountDownText;
     public TextMeshProUGUI MoneyText;
+    public TextMeshProUGUI WaveLeft;
     public Button attackButton;
     
 
@@ -97,6 +98,7 @@ public void decreseRemainTime () {
     {
         WaveCountDownText.text = "NextWave: " + remainingTime.ToString();
         MoneyText.text = "Gold: " + GameManager.Instance.Gold.ToString();
+        WaveLeft.text = currentWaveCount + " / " + waves.Length + "  Wave Left";
     }
 public IEnumerator WaitWave(){
         BattleManager.Instance.isAttackedThisTurn = false;
