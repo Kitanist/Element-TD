@@ -290,9 +290,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitType: 1
   unitDamage: 5
-  myPoolIndex: 22
+  myPoolIndex: 21
   speed: 5
   cost: 50
+  price: 10
   unitName: 
 --- !u!54 &1055818249809139437
 Rigidbody:

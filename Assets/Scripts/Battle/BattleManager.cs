@@ -33,7 +33,7 @@ private void Update() {
      unit.GetComponent<Movement>().pathCreator=GameManager.Instance.attackPathCreator;
      spawnIndex++;
      StartCoroutine(EnterFight());
-     Debug.Log("EnterFight");
+    
     }
    }
 public IEnumerator Fight(){
@@ -45,16 +45,16 @@ public IEnumerator Fight(){
      unit.GetComponent<Movement>().pathCreator=attackPathCreatorOtherSceene;
      spawnIndex++;
      StartCoroutine(Fight());
-     Debug.Log("Fight");
+
     }
     
    }
 
    //rakip sahaya geçince once bunu cağır 
     public void PassOtherScene () {
-      HUD.Instance.setVisionOrAttackHUD.enabled=false;
+      //HUD.Instance.setVisionOrAttackHUD.enabled=false;
       
-
+         WaveManager.Instance.attackButton.enabled=false;
         spawnIndex=0;
         for(int i = 0; i < hideUnitObject.Count; i++) {
          hideUnitObject[i].SetActive(false);   
@@ -68,11 +68,16 @@ public IEnumerator Fight(){
         unitList.Add(unit);
      }
      public void EndAttack () {
-        HUD.Instance.setVisionOrAttackHUD.enabled=true;
+        //HUD.Instance.setVisionOrAttackHUD.enabled=true;
+        spawnIndex=0;
         WaveManager.Instance.MotherlandCam.enabled = true;
         WaveManager.Instance.EnemySideCam.enabled = false;
         WaveManager.Instance.remainingTime= WaveManager.Instance.waveWaitTime;
+        unitList.RemoveRange(0,unitList.Count);
+        hideUnitObject.RemoveRange(0,hideUnitObject.Count);
       StartCoroutine(WaveManager.Instance.WaitWave());
+        WaveManager.Instance.attackButton.enabled=true;
+        GameManager.Instance.playerIsAttack=false;
       for(int i = 0; i <HUD.Instance.myUnitCounts.Length; i++) {
          HUD.Instance.myUnitCounts[i]=0;
          HUD.Instance.AllMyUnitCountTexts[i].SetActive(false);
