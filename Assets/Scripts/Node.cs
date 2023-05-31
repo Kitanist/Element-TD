@@ -55,23 +55,21 @@ public class Node : MonoBehaviour
             
          if (turret)
         {   
-            TheUI.Instance.ShopUIClose();
+           
+                TheUI.Instance.ShopUIClose();
                 Invoke("OpenUIUpgrade",.6f);
+             
+             
+            
          
         }
         else
         {
             
-               if(!isGoldMineNode){
+               
             TheUI.Instance.ShopUIClose();
             Invoke("OpenUIUTower",.6f);
-               }
-               else{
-            TheUI.Instance.ShopUIClose();
-            Invoke("OpenUIUTower",.6f);
-           
-               }
-          
+                     
             
         }
         
@@ -84,13 +82,22 @@ public class Node : MonoBehaviour
     TheUI.Instance.isUpgrade = true;
     TheUI.Instance.isArmy = false;
     TheUI.Instance.ShopUIOpen();
+     if(isGoldMineNode){
+ 
+     TheUI.Instance.UShopButton3.interactable = false;
+     }
+     else{
+      
+     TheUI.Instance.UShopButton3.interactable = true;
+     }
+    
 }
   public void OpenUIUTower () {
     TheUI.Instance.isTurret = true;
     TheUI.Instance.isUpgrade = false;
     TheUI.Instance.isArmy = false;
     TheUI.Instance.ShopUIOpen();
-    
+
     if(isGoldMineNode){
          TheUI.Instance.ShopButton1.interactable=false;
             TheUI.Instance.ShopButton2.interactable=false;

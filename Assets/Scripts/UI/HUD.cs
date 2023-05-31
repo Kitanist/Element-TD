@@ -261,6 +261,8 @@ public void InitShopHud () {
         UnitSpeedDeElementSelect();
         UnitArmoredDeElementSelect();
         TheUI.Instance.AShopButton1.image.enabled = false ;
+        TheUI.Instance.AShop1.transform.GetChild(0).GetComponent<TMP_Text>().text="";
+
     }
     public void UnitNormalDeElementSelect()
     {
@@ -270,6 +272,7 @@ public void InitShopHud () {
         normalFireUI.SetActive(false);
         normalNormalUI.SetActive(false);
         TheUI.Instance.AShopButton1.image.enabled = true;
+        TheUI.Instance.AShop1.transform.GetChild(0).GetComponent<TMP_Text>().text="Normal Unit";
     }
     public void UnitSpeedElementSelect()
     {
@@ -281,6 +284,7 @@ public void InitShopHud () {
         UnitNormalDeElementSelect();
         UnitArmoredDeElementSelect();
         TheUI.Instance.AShopButton2.image.enabled = false;
+         TheUI.Instance.AShop2.transform.GetChild(0).GetComponent<TMP_Text>().text="";
     }
     public void UnitSpeedDeElementSelect()
     {
@@ -290,6 +294,7 @@ public void InitShopHud () {
         speedFireUI.SetActive(false);
         speedNormalUI.SetActive(false);
         TheUI.Instance.AShopButton2.image.enabled = true;
+         TheUI.Instance.AShop2.transform.GetChild(0).GetComponent<TMP_Text>().text="Fast Unit";
     }
     public void UnitArmoredElementSelect()
     {
@@ -301,6 +306,7 @@ public void InitShopHud () {
         UnitNormalDeElementSelect();
         UnitSpeedDeElementSelect();
         TheUI.Instance.AShopButton3.image.enabled = false;
+              TheUI.Instance.AShop3.transform.GetChild(0).GetComponent<TMP_Text>().text="";
     }
     public void UnitArmoredDeElementSelect()
     {
@@ -310,6 +316,7 @@ public void InitShopHud () {
         armoredFireUI.SetActive(false);
         armoredNormalUI.SetActive(false);
         TheUI.Instance.AShopButton3.image.enabled = true;
+        TheUI.Instance.AShop3.transform.GetChild(0).GetComponent<TMP_Text>().text="Armored Unit";
 
     }
     public void AllUnitDeSelect()
@@ -319,10 +326,10 @@ public void InitShopHud () {
         UnitArmoredDeElementSelect();
     }
     public void TakeUnit(Unit unit) {
-        if (GameManager.Instance.Gold <= unit.cost) 
+        if (GameManager.Instance.Gold < unit.cost) 
         {
 
-            Debugger.Instance.Debuger(unit.name + "Satin almaya paran yetmedi gereken para :" + (unit.cost-GameManager.Instance.Gold));
+            Debugger.Instance.Debuger(unit.unitName + "for need Gold:" + (unit.cost-GameManager.Instance.Gold));
         return;
 
         }
@@ -421,7 +428,7 @@ public void SetTowerElement (int elementIndex) {
     ElementUIExit();
     }
     else{
-        Debugger.Instance.Debuger("Bu Kuleye zaten element atamasi yapildi");
+        Debugger.Instance.Debuger("Already has Elment");
     }
    
 }

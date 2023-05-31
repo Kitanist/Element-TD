@@ -68,7 +68,7 @@ public void EndWave () {
         StartCoroutine(WaitWave());
     
         destroyedUnitCount=0;
-        Debugger.Instance.Debuger("dalga bitmesi bekleni ve siradaki dalga cagirildi");
+        Debugger.Instance.Debuger("Wait For Next Wave ");
         nextUnitIndex =0;
         currentWaveCount++;
         HUD.Instance.RefreshUnitCount();
@@ -89,14 +89,14 @@ public void decreseRemainTime () {
     public void UIUpdate()
     {
         WaveCountDownText.text = "NextWave: " + remainingTime.ToString();
-        MoneyText.text = "Para : " + GameManager.Instance.Gold.ToString();
+        MoneyText.text = "Gold: " + GameManager.Instance.Gold.ToString();
     }
 public IEnumerator WaitWave(){
         UIUpdate();
         remainingTime = waveWaitTime;
         InvokeRepeating("decreseRemainTime", 0, 1);
         canStop =true;
-     Debug.Log("saaaaaaaaaaaaaaaaaaa");
+   
     HUD.Instance.setVisionOrAttackHUD.GetComponent<Image>().color=Color.red;
     yield return new WaitForSeconds(waveWaitTime);
     
@@ -117,7 +117,7 @@ IEnumerator UnitSawnWait(int waveCount){
      StartCoroutine(UnitSawnWait(currentWaveCount));
     }
     else{
-            Debugger.Instance.Debuger("bu dalgadaki unitlerin spawnlanmasi bitmiştir");
+            Debugger.Instance.Debuger("This Wave Spawn Ended");
         StopCoroutine(UnitSawnWait(currentWaveCount));
       if(destroyedUnitCount>=waves[currentWaveCount].WaveUnits.Count)
         EndWave(); //30 sn bekle

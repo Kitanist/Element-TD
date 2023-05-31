@@ -15,18 +15,28 @@ public class HealthComponent : MonoBehaviour
     public float lessDamageMultipler=.8f;
    public bool isUnit=true;
    public bool isPlayerBase=false;
-   
+    GameObject text;
 
     public void GetFloatingText (string damage) {
-        GameObject text=ObjectPool.Instance.GetPooledObject(26);
+         text=ObjectPool.Instance.GetPooledObject(26);
         text.transform.SetParent(this.transform);
         text.transform.position=transform.position;
         text.GetComponent<TextMesh>().text=damage;
-        text.GetComponent<TextMesh>().color=Color.cyan;
+    
+    }
+     public void GetFloatingText2 (string gold) {
+         text=ObjectPool.Instance.GetPooledObject(26);        
+        text.transform.position=transform.position;
+         text.transform.position+=new Vector3(0,2,0);
+         text.transform.localScale=new Vector3(1.5f,1.5f,1.5f);
+         //text.transform.LeanScale(new Vector3(1,1,1),text.GetComponent<FloatingText>().speed);
+        text.GetComponent<TextMesh>().text=gold;
+    
     }
    public void GetDamage (float damage,Element_Type damagerType) {
     float _damage=SetElementDamage(damage,damagerType);
     GetFloatingText("-"+_damage.ToString());
+    text.GetComponent<TextMesh>().color=Color.cyan;
   
     if(Health<=_damage){
         Health=0;      
@@ -42,7 +52,7 @@ public class HealthComponent : MonoBehaviour
 
 
    }
-
+    
     public float SetElementDamage (float damage,Element_Type damagerType) {
         if(damagerType==Element_Type.Fire){
             if(myElement==Element_Type.Watter){
@@ -100,17 +110,25 @@ public class HealthComponent : MonoBehaviour
         
         return damage;
     }
+  
    public void Die () {
     if(isUnit){
-        gameObject.SetActive(false);
+
+        
       
         if(gameObject.layer==LayerMask.NameToLayer("Enemy")){
             WaveManager.Instance.destroyedUnitCount++;
-            GameManager.Instance.Gold+=10;
+            GameManager.Instance.Gold+=gameObject.GetComponent<Unit>().price;
+            GetFloatingText2("+"+gameObject.GetComponent<Unit>().price.ToString());
+            text.GetComponent<TextMesh>().color=Color.yellow;
+             
         }
         else if(gameObject.layer==LayerMask.NameToLayer("Ally")){
            BattleManager.Instance.killedPlayerUnitCount++;
         }
+
+        gameObject.SetActive(false);
+        Health=maxHealth;
     }
     else{
          if(isPlayerBase){

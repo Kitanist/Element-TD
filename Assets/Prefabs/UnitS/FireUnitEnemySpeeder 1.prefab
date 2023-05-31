@@ -293,6 +293,7 @@ MonoBehaviour:
   myPoolIndex: 3
   speed: 5
   cost: 50
+  price: 5
   unitName: 
 --- !u!54 &6879885228997376456
 Rigidbody:

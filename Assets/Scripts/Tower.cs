@@ -138,5 +138,13 @@ public class Tower : MonoBehaviour
     TheUI.Instance.isUpgrade = true;
     TheUI.Instance.isArmy = false;
     TheUI.Instance.ShopUIOpen();
+      if(GetComponent<GoldMine>()){
+ 
+     TheUI.Instance.UShopButton3.interactable = false;
+     }
+     else{
+      
+     TheUI.Instance.UShopButton3.interactable = true;
+     }
 }
 }

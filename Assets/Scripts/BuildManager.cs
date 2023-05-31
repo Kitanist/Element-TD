@@ -38,7 +38,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
     {
         if (GameManager.Instance.Gold< insaedilcektower.cost)
         {
-            Debugger.Instance.Debuger("Not Enough Money!");
+            Debugger.Instance.Debuger("Not Enough Gold!");
 
             return;
         }
@@ -48,7 +48,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
         node.turret = turret;
 
         
-        Debugger.Instance.Debuger("Tower is Builded:", insaedilcektower.cost);
+        Debugger.Instance.Debuger("Tower is Builded: -", insaedilcektower.cost);
        
             TheUI.Instance.ShopUIClose();
     }
