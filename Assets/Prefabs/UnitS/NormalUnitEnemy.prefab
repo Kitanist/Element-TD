@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 3779743739193983279}
   - component: {fileID: 6832721986762570916}
   m_Layer: 6
-  m_Name: AirUnitEnemy  1
+  m_Name: NormalUnitEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,7 +220,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f937d4afcd1b9ae498bb2f451b2b6aaf, type: 2}
+  - {fileID: 2100000, guid: 8513223b850b91747a59512cae33ee79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealtBar: {fileID: 3779743739649626668}
-  myElement: 4
+  myElement: 0
   Health: 50
   maxHealth: 50
   critiDamageMultipler: 1.2
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitType: 0
   unitDamage: 5
-  myPoolIndex: 8
+  myPoolIndex: 30
   speed: 3
   cost: 50
   unitName: 

@@ -10,7 +10,12 @@ public class HUD :MonoSingeleton<HUD>
     [Space(5)]
    [SerializeField] private bool elementTabOpen=false;
     public GameObject elementUI;
-     public TMP_Text elementFireCostText;
+
+    public GameObject normalFireUI, normalWaterUI, normalAirUI, normalEarthUI,normalNormalUI;
+    public GameObject speedFireUI, speedWaterUI, speedAirUI, speedEarthUI, speedNormalUI;
+    public GameObject armoredFireUI, armoredWaterUI, armoredAirUI, armoredEarthUI, armoredNormalUI;
+
+    public TMP_Text elementFireCostText;
 
     public TMP_Text  elementWatterCostText;
 
@@ -23,33 +28,19 @@ public class HUD :MonoSingeleton<HUD>
  [Header("UNİT")]
   [Space(5)]
  public Unit normalFireUnit,normalWatterUnit,normalAirUnit,normalDirtUnit;
- public Unit speederFireUnit,speederWatterUnit,speederAirUnit,speederDirtUnit;
+ public Unit normalUnit, normalSpeedUnit, normalArmoredUnit;
+    public Unit speederFireUnit,speederWatterUnit,speederAirUnit,speederDirtUnit;
  public Unit armoredFireUnit,armoredWatterUnit,armoredAirUnit,armoredDirtUnit;
     public TowerBlueprint ArrowedTower, BallTower, FireTower,GoldMine; 
      [Header("UNİT TEXT")]
   [Space(5)]
-    public TMP_Text normalFireUnitText;
+    public TMP_Text normalUnitText;
 
-    public TMP_Text speederFireUnitText;
+    public TMP_Text speederUnitText;
 
-    public TMP_Text armoredFireUnitText;
+    public TMP_Text armoredUnitText;
 
-        public TMP_Text normalWatterUnitText;
-
-    public TMP_Text speederWatterUnitText;
-
-    public TMP_Text armoredWatterUnitText;
-
-        public TMP_Text normalAirUnitText;
-
-    public TMP_Text speederAirUnitText;
-
-    public TMP_Text armoredAirUnitText;
-        public TMP_Text normalDirtUnitText;
-
-    public TMP_Text speederDirtUnitText;
-
-    public TMP_Text armoredDirtUnitText;
+  
 
  [Header("OTHER")]
   [Space(5)]
@@ -166,6 +157,7 @@ public class HUD :MonoSingeleton<HUD>
              AllMyUnitCountTexts[8].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[8].ToString();
                     AllMyUnitCountTexts[8].GetComponent<Image>().color=Color.cyan;
        }
+    
     }
      else if(unit.GetComponent<HealthComponent>().myElement==Element_Type.Dirt){
           if( unit.unitType==UnitType.Normal){
@@ -187,26 +179,41 @@ public class HUD :MonoSingeleton<HUD>
               AllMyUnitCountTexts[11].GetComponent<Image>().color=Color.yellow;
        }
     }
- }
+     else if (unit.GetComponent<HealthComponent>().myElement == Element_Type.None)
+        {
+            if (unit.unitType == UnitType.Normal)
+            {
+                AllMyUnitCountTexts[12].SetActive(true);
+                myUnitCounts[12]++;
+                AllMyUnitCountTexts[12].transform.GetChild(0).GetComponent<TMP_Text>().text = " x" + myUnitCounts[12].ToString();
+                AllMyUnitCountTexts[12].GetComponent<Image>().color = Color.white;
+            }
+            else if (unit.unitType == UnitType.Speeder)
+            {
+                AllMyUnitCountTexts[13].SetActive(true);
+                myUnitCounts[13]++;
+                AllMyUnitCountTexts[13].transform.GetChild(0).GetComponent<TMP_Text>().text = " x" + myUnitCounts[13].ToString();
+                AllMyUnitCountTexts[13].GetComponent<Image>().color = Color.white;
+            }
+            else if (unit.unitType == UnitType.Armored)
+            {
+                AllMyUnitCountTexts[14].SetActive(true);
+                myUnitCounts[14]++;
+                AllMyUnitCountTexts[14].transform.GetChild(0).GetComponent<TMP_Text>().text = " x" + myUnitCounts[14].ToString();
+                AllMyUnitCountTexts[14].GetComponent<Image>().color = Color.white;
+            }
+        }
+    }
 
 public void Start () {
     RefreshUnitCount();
    InitShopHud();
 }
 public void InitShopHud () {
-    normalFireUnitText.text=normalFireUnit.cost.ToString() + "$";
-      speederFireUnitText.text=speederFireUnit.cost.ToString()+ "$";
-        armoredFireUnitText.text=armoredFireUnit.cost.ToString()+ "$";
-    /* normalWatterUnitText.text=normalWatterUnit.cost.ToString() + "$";
-      speederWatterUnitText.text=speederWatterUnit.cost.ToString()+ "$";
-        armoredWatterUnitText.text=armoredWatterUnit.cost.ToString()+ "$";   
-    normalAirUnitText.text=normalAirUnit.cost.ToString() + "$";
-      speederAirUnitText.text=speederAirUnit.cost.ToString()+ "$";
-        armoredAirUnitText.text=armoredAirUnit.cost.ToString()+ "$";    
-    normalDirtUnitText.text=normalDirtUnit.cost.ToString() + "$";
-      speederDirtUnitText.text=speederDirtUnit.cost.ToString()+ "$";
-        armoredDirtUnitText.text=armoredDirtUnit.cost.ToString()+ "$";   */
-
+    normalUnitText.text=normalFireUnit.cost.ToString() + "$";
+      speederUnitText.text=speederFireUnit.cost.ToString()+ "$";
+        armoredUnitText.text=armoredFireUnit.cost.ToString()+ "$";
+  
 
 
 
@@ -244,7 +251,73 @@ public void InitShopHud () {
         }
       
 }       
+    public void UnitNormalElementSelect()
+    {
+        normalAirUI.SetActive(true);
+        normalEarthUI.SetActive(true);
+        normalWaterUI.SetActive(true);
+        normalFireUI.SetActive(true);
+        normalNormalUI.SetActive(true);
+        UnitSpeedDeElementSelect();
+        UnitArmoredDeElementSelect();
+        TheUI.Instance.AShopButton1.image.enabled = false ;
+    }
+    public void UnitNormalDeElementSelect()
+    {
+        normalAirUI.SetActive(false);
+        normalEarthUI.SetActive(false);
+        normalWaterUI.SetActive(false);
+        normalFireUI.SetActive(false);
+        normalNormalUI.SetActive(false);
+        TheUI.Instance.AShopButton1.image.enabled = true;
+    }
+    public void UnitSpeedElementSelect()
+    {
+        speedAirUI.SetActive(true);
+        speedEarthUI.SetActive(true);
+        speedWaterUI.SetActive(true);
+        speedFireUI.SetActive(true);
+        speedNormalUI.SetActive(true);
+        UnitNormalDeElementSelect();
+        UnitArmoredDeElementSelect();
+        TheUI.Instance.AShopButton2.image.enabled = false;
+    }
+    public void UnitSpeedDeElementSelect()
+    {
+        speedAirUI.SetActive(false);
+        speedEarthUI.SetActive(false);
+        speedWaterUI.SetActive(false);
+        speedFireUI.SetActive(false);
+        speedNormalUI.SetActive(false);
+        TheUI.Instance.AShopButton2.image.enabled = true;
+    }
+    public void UnitArmoredElementSelect()
+    {
+        armoredAirUI.SetActive(true);
+        armoredEarthUI.SetActive(true);
+        armoredWaterUI.SetActive(true);
+        armoredFireUI.SetActive(true);
+        armoredNormalUI.SetActive(true);
+        UnitNormalDeElementSelect();
+        UnitSpeedDeElementSelect();
+        TheUI.Instance.AShopButton3.image.enabled = false;
+    }
+    public void UnitArmoredDeElementSelect()
+    {
+        armoredAirUI.SetActive(false);
+        armoredEarthUI.SetActive(false);
+        armoredWaterUI.SetActive(false);
+        armoredFireUI.SetActive(false);
+        armoredNormalUI.SetActive(false);
+        TheUI.Instance.AShopButton3.image.enabled = true;
 
+    }
+    public void AllUnitDeSelect()
+    {
+        UnitNormalDeElementSelect();
+        UnitSpeedDeElementSelect();
+        UnitArmoredDeElementSelect();
+    }
     public void TakeUnit(Unit unit) {
         if (GameManager.Instance.Gold <= unit.cost) 
         {
@@ -287,9 +360,17 @@ public void InitShopHud () {
     else if(unit==armoredDirtUnit)
     BattleManager.Instance.AddUnit(armoredDirtUnit);
     }
-    
-   
-  RefreshMyUnitCount(unit);
+    else if (unit.GetComponent<HealthComponent>().myElement == Element_Type.None)
+    {
+        if (unit == normalUnit)
+            BattleManager.Instance.AddUnit(normalUnit);
+        else if (unit == normalSpeedUnit)
+            BattleManager.Instance.AddUnit(normalSpeedUnit);
+        else if (unit == normalArmoredUnit)
+            BattleManager.Instance.AddUnit(normalArmoredUnit);
+    }
+
+        RefreshMyUnitCount(unit);
 
 
  }

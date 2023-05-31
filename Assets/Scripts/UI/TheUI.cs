@@ -88,7 +88,7 @@ public class TheUI : MonoSingeleton<TheUI>
     }
     public void ShopUIClose()
     {
-      
+        HUD.Instance.AllUnitDeSelect();
         BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 1).setEaseInExpo();
        
        
