@@ -9507,6 +9507,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8fc2d3dc83d648441890fd7098acc35a, type: 3}
   m_PrefabInstance: {fileID: 814257168}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1389789032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3381166148357385535, guid: d33cd191604abad4c97aad02dd238355, type: 3}
+  m_PrefabInstance: {fileID: 1005631068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1401640520
 GameObject:
   m_ObjectHideFlags: 0
@@ -9842,6 +9853,7 @@ MonoBehaviour:
   ArrowedTower: {fileID: 3586698720180615971, guid: 9e085eb9428bfad42819e7f87c2501bf, type: 3}
   BallTower: {fileID: 6295103348821082098, guid: 755aa92f600480f419065ce21508fa29, type: 3}
   FireTower: {fileID: 2660605284479523788, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
+  GoldMine: {fileID: 6804162784885679842, guid: bd9ef61566ddf7a4a8db91fd60784262, type: 3}
   normalFireUnitText: {fileID: 471991753}
   speederFireUnitText: {fileID: 1968603445}
   armoredFireUnitText: {fileID: 1014532842}
@@ -9857,11 +9869,13 @@ MonoBehaviour:
   ArrowTowerText: {fileID: 1198231752}
   BallTowerText: {fileID: 958330037}
   FireTowerText: {fileID: 307618596}
+  GoldTowerText: {fileID: 1389789032}
   UpgradeText: {fileID: 739734290}
   DestroyText: {fileID: 130123336}
   InfoText: {fileID: 1646567272}
   infoTabOpen: 0
   infoUI: {fileID: 1459735521}
+  towerDamageNameText: {fileID: 148025775}
   towerNameText: {fileID: 171138179}
   towerDamageText: {fileID: 1647187510}
   towerLevelText: {fileID: 171529126}
