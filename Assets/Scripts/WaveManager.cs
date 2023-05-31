@@ -83,14 +83,15 @@ public void EndWave () {
 }
 public void decreseRemainTime () {
         
-    if(remainingTime>0){
+    if(remainingTime>0 && !GameManager.Instance.playerIsAttack){
          remainingTime--;
             UIUpdate();
     }
-   
-    else
+
+        else { 
     CancelInvoke();
-}
+        remainingTime = waveWaitTime;
+}}
    
     public void UIUpdate()
     {
@@ -98,7 +99,7 @@ public void decreseRemainTime () {
         MoneyText.text = "Gold: " + GameManager.Instance.Gold.ToString();
     }
 public IEnumerator WaitWave(){
-     
+        BattleManager.Instance.isAttackedThisTurn = false;
         remainingTime = waveWaitTime;
         InvokeRepeating("decreseRemainTime", 0, 1);
          UIUpdate();
@@ -152,27 +153,26 @@ public void SetCamerVision () {
 }
 public void Attack() {
     if(!GameManager.Instance.playerIsAttack){
-        if(BattleManager.Instance.unitList.Count>0 &&WaveManager.Instance.canStop){
+        if(BattleManager.Instance.unitList.Count>0 && canStop){
          //eger stop wave arasındaysa  butona tıkladığında atağa geçer 
-         //butonun sekli degisir 
+        
         GameManager.Instance.playerIsAttack=true;
         BattleManager.Instance.StartMyBattle();
         Debug.Log("hi");
-        StopAllCoroutines(); 
+        StopAllCoroutines();
+                BattleManager.Instance.isAttackedThisTurn = true;
        }
        else{
         Debugger.Instance.Debuger("U can Not Attack For Now");
        }
     }
-    else{
+    else{ // 
          
-            if(GameManager.Instance.playerIsAttack){
-                //kamera açısı değişir rakip alanı görürüz
-           attackButton.enabled=false;
-            MotherlandCam.enabled = false;
-            EnemySideCam.enabled = true;
-            BattleManager.Instance.PassOtherScene();
-            }
+      
+          //kamera açısı değişir rakip alanı görürüz
+          SetCamerVision();
+      BattleManager.Instance.PassOtherScene();
+            
             
     }
    

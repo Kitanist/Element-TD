@@ -9,7 +9,7 @@ public class BattleManager : MonoSingeleton<BattleManager>
    [SerializeField]private int spawnIndex=0;
    public List<GameObject> hideUnitObject;
    public PathCreator attackPathCreatorOtherSceene;
-  
+    public bool isAttackedThisTurn = false;
     public int killedPlayerUnitCount=0;
 
 
@@ -52,7 +52,7 @@ public IEnumerator Fight(){
 
    //rakip sahaya geçince once bunu cağır 
     public void PassOtherScene () {
-      //HUD.Instance.setVisionOrAttackHUD.enabled=false;
+  
       
          WaveManager.Instance.attackButton.enabled=false;
         spawnIndex=0;
@@ -70,13 +70,18 @@ public IEnumerator Fight(){
      public void EndAttack () {
         //HUD.Instance.setVisionOrAttackHUD.enabled=true;
         spawnIndex=0;
-        WaveManager.Instance.MotherlandCam.enabled = true;
-        WaveManager.Instance.EnemySideCam.enabled = false;
+        WaveManager.Instance.SetCamerVision();
         WaveManager.Instance.remainingTime= WaveManager.Instance.waveWaitTime;
         unitList.RemoveRange(0,unitList.Count);
         hideUnitObject.RemoveRange(0,hideUnitObject.Count);
       StartCoroutine(WaveManager.Instance.WaitWave());
-        WaveManager.Instance.attackButton.enabled=true;
+        // buraya bu tur saldırıldı mı onu ölçen bişi lazım
+        if (isAttackedThisTurn)
+        {
+            WaveManager.Instance.attackButton.enabled = false;
+        }
+       
+
         GameManager.Instance.playerIsAttack=false;
       for(int i = 0; i <HUD.Instance.myUnitCounts.Length; i++) {
          HUD.Instance.myUnitCounts[i]=0;
