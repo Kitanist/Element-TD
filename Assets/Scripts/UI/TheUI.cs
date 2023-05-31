@@ -118,7 +118,7 @@ public class TheUI : MonoSingeleton<TheUI>
         AShopButton1.interactable = false;
      AShopButton2.interactable = false;
         AShopButton3.interactable = false;
-
+       
     }
     IEnumerator ButtonEater()
     {

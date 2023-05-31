@@ -41,6 +41,7 @@ public class Tower : MonoBehaviour
     private float shortDis;
     public Collider []  targets;
 
+    public bool towerIsPlayer=true;
     
     void Update()
     {
@@ -127,11 +128,20 @@ public class Tower : MonoBehaviour
         
         reset=true;
     }
+    private void OnMouseEnter() {
+        rangeObject.SetActive(true);
+    }
+    private void OnMouseExit() {
+         rangeObject.SetActive(false);
+    }
     private void OnMouseDown() {
-         TheUI.Instance.ShopUIClose();      
+        if(towerIsPlayer){
+        TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
         BuildManager.Instance.currentUpgradementTower=this;
          HUD.Instance.InitShopHud();
+        }
+        
     }
     public void OpenUIUpgrade () {
     TheUI.Instance.isTurret = false;

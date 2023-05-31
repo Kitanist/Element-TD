@@ -10,9 +10,11 @@ public class Castle : MonoBehaviour
 {
 
 private void OnMouseDown() {
-    TheUI.Instance.ShopUIClose();
-
+    if(GetComponent<HealthComponent>().isPlayerBase){
+          TheUI.Instance.ShopUIClose();
     Invoke("OpenUIUnit",.6f);
+    }
+  
     
 }
 public void OpenUIUnit () {

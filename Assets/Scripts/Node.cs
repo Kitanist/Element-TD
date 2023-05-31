@@ -55,9 +55,11 @@ public class Node : MonoBehaviour
             
          if (turret)
         {   
-           
-                TheUI.Instance.ShopUIClose();
+           if(turret.GetComponent<Tower>().towerIsPlayer){
+                  TheUI.Instance.ShopUIClose();
                 Invoke("OpenUIUpgrade",.6f);
+           }
+              
              
              
             
@@ -78,6 +80,7 @@ public class Node : MonoBehaviour
 
     }
      public void OpenUIUpgrade () {
+
     TheUI.Instance.isTurret = false;
     TheUI.Instance.isUpgrade = true;
     TheUI.Instance.isArmy = false;
