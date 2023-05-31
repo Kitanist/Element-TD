@@ -118,7 +118,7 @@ public class TheUI : MonoSingeleton<TheUI>
         AShopButton1.interactable = false;
      AShopButton2.interactable = false;
         AShopButton3.interactable = false;
-       
+         
     }
     IEnumerator ButtonEater()
     {
@@ -134,5 +134,6 @@ public class TheUI : MonoSingeleton<TheUI>
         AShopButton1.gameObject.SetActive(false) ;
         AShopButton2.gameObject.SetActive(false) ;
         AShopButton3.gameObject.SetActive(false) ;
+        HUD.Instance.elementUI.SetActive(false);
     }
 }

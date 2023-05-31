@@ -129,6 +129,7 @@ public class Tower : MonoBehaviour
         reset=true;
     }
     private void OnMouseEnter() {
+        
         rangeObject.SetActive(true);
     }
     private void OnMouseExit() {
