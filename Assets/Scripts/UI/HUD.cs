@@ -25,7 +25,7 @@ public class HUD :MonoSingeleton<HUD>
  public Unit normalFireUnit,normalWatterUnit,normalAirUnit,normalDirtUnit;
  public Unit speederFireUnit,speederWatterUnit,speederAirUnit,speederDirtUnit;
  public Unit armoredFireUnit,armoredWatterUnit,armoredAirUnit,armoredDirtUnit;
-    public TowerBlueprint ArrowedTower, BallTower, FireTower; 
+    public TowerBlueprint ArrowedTower, BallTower, FireTower,GoldMine; 
      [Header("UNİT TEXT")]
   [Space(5)]
     public TMP_Text normalFireUnitText;
@@ -60,6 +60,8 @@ public class HUD :MonoSingeleton<HUD>
 
     public TMP_Text FireTowerText;
 
+    public TMP_Text GoldTowerText;
+
     public TMP_Text UpgradeText;
 
     public TMP_Text DestroyText;
@@ -71,6 +73,8 @@ public class HUD :MonoSingeleton<HUD>
     
     [SerializeField] private bool infoTabOpen=false;
     public GameObject infoUI;
+
+    public TMP_Text towerDamageNameText;
     public TMP_Text towerNameText;
     public TMP_Text towerDamageText;
 
@@ -209,6 +213,7 @@ public void InitShopHud () {
         ArrowTowerText.text = ArrowedTower.cost.ToString()+ "$";
         BallTowerText.text = BallTower.cost.ToString()+ "$";
         FireTowerText.text = FireTower.cost.ToString()+ "$";
+        GoldTowerText.text =GoldMine.cost.ToString()+ "$";
    
         if(BuildManager.Instance.currentUpgradementTower){
         UpgradeText.text = BuildManager.Instance.currentUpgradementTower.currentUpgradeCost.ToString() + "$";
@@ -217,9 +222,21 @@ public void InitShopHud () {
         elementAirCostText.text= BuildManager.Instance.currentUpgradementTower.elementChanceCost.ToString()+ "$";
         elementDirtCostText.text= BuildManager.Instance.currentUpgradementTower.elementChanceCost.ToString()+ "$";
         //alt kısımda info ekranı set edilcek
-        towerDamageText.text=BuildManager.Instance.currentUpgradementTower.damage.ToString();
+       if( BuildManager.Instance.currentUpgradementTower.GetComponent<GoldMine>()){
+         towerDamageText.text=BuildManager.Instance.currentUpgradementTower.GetComponent<GoldMine>().collectAmount.ToString();
+         towerDamageNameText.text="Collect Amount:";
+       }
+       else{
+         towerDamageText.text=BuildManager.Instance.currentUpgradementTower.damage.ToString();
+         towerDamageNameText.text="Damage     :";
+       }
+       
         towerElementText.text=BuildManager.Instance.currentUpgradementTower.element_Type.ToString();
         towerLevelText.text=BuildManager.Instance.currentUpgradementTower.level.ToString();
+          if( BuildManager.Instance.currentUpgradementTower.GetComponent<GoldMine>()){
+         towerSpeedText.text=(BuildManager.Instance.currentUpgradementTower.GetComponent<GoldMine>().collectRate/BuildManager.Instance.currentUpgradementTower.GetComponent<GoldMine>().speed).ToString();
+       }
+       else
         towerSpeedText.text=BuildManager.Instance.currentUpgradementTower.fireRate.ToString();
         towerRangeText.text=BuildManager.Instance.currentUpgradementTower.attackRadius.ToString();
         towerNameText.text=BuildManager.Instance.currentUpgradementTower.Name;

@@ -26,10 +26,8 @@ public class GoldMine : Tower
             int openLevelIndex=level-1;
             level++;
             collectAmount+=2;
-            for(int i = 0; i < openLevelIndex; i++) {
-                openWithLevel[i].SetActive(true);
-                
-            }
+            speed++;
+            
         }
    }
   private void OnTriggerEnter(Collider other) {
