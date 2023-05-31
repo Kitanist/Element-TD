@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TheUI : MonoSingeleton<TheUI>
 {
-    public CanvasGroup Shop1, Shop2, Shop3;
+    public CanvasGroup Shop1, Shop2, Shop3,Shop4;
     public CanvasGroup UShop1, UShop2, UShop3,UShop4;
      public CanvasGroup AShop1, AShop2, AShop3;
 
@@ -15,7 +15,7 @@ public class TheUI : MonoSingeleton<TheUI>
     public bool isOpen,isUpgrade,isArmy,isTurret;
 
     public GameObject BackGround;
-    public Button ShopButton1, ShopButton2, ShopButton3, UShopButton1, UShopButton2, UShopButton3,UShopButton4, AShopButton1, AShopButton2, AShopButton3;
+    public Button ShopButton1, ShopButton2, ShopButton3,ShopButton4, UShopButton1, UShopButton2, UShopButton3,UShopButton4, AShopButton1, AShopButton2, AShopButton3;
 
 
     private void Start()
@@ -44,9 +44,11 @@ public class TheUI : MonoSingeleton<TheUI>
             ShopButton1.gameObject.SetActive(true);
             ShopButton2.gameObject.SetActive(true);
             ShopButton3.gameObject.SetActive(true);
+            ShopButton4.gameObject.SetActive(true);
             Shop1.LeanAlpha(1, 0.5f);
             Shop2.LeanAlpha(1, 0.5f);
             Shop3.LeanAlpha(1, 0.5f);
+            Shop4.LeanAlpha(1, 0.5f);
             
             ShopButton1.interactable = true;
             ShopButton2.interactable = true;
@@ -93,6 +95,7 @@ public class TheUI : MonoSingeleton<TheUI>
         Shop1.LeanAlpha(0, 0.5f);
         Shop2.LeanAlpha(0, 0.5f);
         Shop3.LeanAlpha(0, 0.5f);
+          Shop4.LeanAlpha(0, 0.5f);
 
         AShop1.LeanAlpha(0, 0.5f);
         AShop2.LeanAlpha(0, 0.5f);
@@ -127,6 +130,7 @@ public class TheUI : MonoSingeleton<TheUI>
         ShopButton1.gameObject.SetActive(false) ;
         ShopButton2.gameObject.SetActive(false) ;
         ShopButton3.gameObject.SetActive(false) ;
+        ShopButton4.gameObject.SetActive(false) ;
         AShopButton1.gameObject.SetActive(false) ;
         AShopButton2.gameObject.SetActive(false) ;
         AShopButton3.gameObject.SetActive(false) ;

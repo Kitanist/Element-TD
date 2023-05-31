@@ -51,4 +51,11 @@ public class TowerBall : Tower
         rotatObject.transform.LookAt(target,Vector3.up);
        }
     }
+
+     private void OnMouseDown() {
+         TheUI.Instance.ShopUIClose();      
+        Invoke("OpenUIUpgrade",.6f);
+        BuildManager.Instance.currentUpgradementTower=this;
+         HUD.Instance.InitShopHud();
+    }
 }

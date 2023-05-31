@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7052596587578248550}
   - component: {fileID: 3762540033981396384}
   - component: {fileID: 9060297719756134121}
+  - component: {fileID: 6804162784885679842}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Untagged
@@ -110,11 +111,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3ffb680a8041b4aaa52ddaa9332a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  collectRate: 20
-  collectAmount: 1
+  firePos: {fileID: 0}
+  rangeObject: {fileID: 0}
+  element_Type: 0
+  Name: Gold Mine
+  damage: 1
+  poolIndex: 0
+  JumpForce: 0
+  attackRadius: 0
+  bulletSpeed: 0
+  fireRate: 5
+  EnemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  easeType: 0
+  elementChanceCost: 25
+  target: {fileID: 0}
+  currentUpgradeCost: 50
   level: 1
   maxLevel: 3
   openWithLevel:
   - {fileID: 0}
   - {fileID: 0}
+  DamageCounts: 
+  AttackRadiusCounts: 
+  upgradeCostforNextLevel: 100
+  targets: []
+  speed: 5
+  collectRate: 20
+  collectAmount: 1
+--- !u!114 &6804162784885679842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061766671884586919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e98070a9dd3504fa0c871995715704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 9061766671884586919}
+  cost: 25

@@ -13,13 +13,20 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color StartColor;
 
+    public bool isGoldMineNode=false;
   
 
     private void Start()
     {
-       
         rend = GetComponent<Renderer>();
+       if(!isGoldMineNode){
+        
         StartColor = rend.material.color;
+       }
+       else{
+        StartColor=rend.material.color;
+       }
+       
         
     }
     public Vector3 GetBuildPosition() // kule pozisyonu ayarlaması
@@ -28,11 +35,11 @@ public class Node : MonoBehaviour
     }
     private void OnMouseEnter() // mouse node a girince
     {
-      
-      
-    
-      if(turret)
+      if(!isGoldMineNode){
+            if(turret)
       turret.GetComponent<Tower>().rangeObject.SetActive(true); 
+      }
+      
        
        
 
@@ -44,7 +51,9 @@ public class Node : MonoBehaviour
         BuildManager.Instance.node = this;
         
         // upgrade ve insa bolgeleri ayarlandi
-        if (turret)
+     
+            
+         if (turret)
         {   
             TheUI.Instance.ShopUIClose();
                 Invoke("OpenUIUpgrade",.6f);
@@ -52,10 +61,22 @@ public class Node : MonoBehaviour
         }
         else
         {
+            
+               if(!isGoldMineNode){
             TheUI.Instance.ShopUIClose();
-               Invoke("OpenUIUTower",.6f);
+            Invoke("OpenUIUTower",.6f);
+               }
+               else{
+            TheUI.Instance.ShopUIClose();
+            Invoke("OpenUIUTower",.6f);
+           
+               }
+          
             
         }
+        
+        
+       
 
     }
      public void OpenUIUpgrade () {
@@ -69,12 +90,28 @@ public class Node : MonoBehaviour
     TheUI.Instance.isUpgrade = false;
     TheUI.Instance.isArmy = false;
     TheUI.Instance.ShopUIOpen();
+    
+    if(isGoldMineNode){
+         TheUI.Instance.ShopButton1.interactable=false;
+            TheUI.Instance.ShopButton2.interactable=false;
+            TheUI.Instance.ShopButton3.interactable=false;
+            TheUI.Instance.ShopButton4.interactable=true;
+    }
+    else{
+              TheUI.Instance.ShopButton1.interactable=true;
+            TheUI.Instance.ShopButton2.interactable=true;
+            TheUI.Instance.ShopButton3.interactable=true;
+            TheUI.Instance.ShopButton4.interactable=false;
+    }
 }
     private void OnMouseExit()
     {
     
-        if(turret)
-        turret.GetComponent<Tower>().rangeObject.SetActive(false);
+        if(turret){
+            if(!isGoldMineNode)
+             turret.GetComponent<Tower>().rangeObject.SetActive(false);
+        }
+       
         rend.material.color = StartColor;
     }
 } 

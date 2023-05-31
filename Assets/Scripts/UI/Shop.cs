@@ -25,4 +25,11 @@ public class Shop : MonoBehaviour
         BuildManager.Instance.BuildTowerOn();
             TheUI.Instance.ShopUIClose();
     }
+
+     public void SelectGoldMineTower()
+    {
+       BuildManager.Instance.SelectTowerToBuild(BuildManager.Instance.Mine.GetComponent<TowerBlueprint>());
+        BuildManager.Instance.BuildTowerOn();
+            TheUI.Instance.ShopUIClose();
+    }
 }

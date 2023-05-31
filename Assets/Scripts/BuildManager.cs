@@ -13,6 +13,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
     public GameObject ArrowTower;
     public GameObject FireTower;
     public GameObject BallTower;
+    public GameObject Mine;
     public bool CanBuild { get { return insaedilcektower != null; } }
     public bool HasMoney { get { return GameManager.Instance.Gold >= insaedilcektower.cost; } }
 
@@ -37,7 +38,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
     {
         if (GameManager.Instance.Gold< insaedilcektower.cost)
         {
-            Debugger.Instance.Debuger("Kule inşa edemezsin !");
+            Debugger.Instance.Debuger("Not Enough Money!");
 
             return;
         }
@@ -47,7 +48,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
         node.turret = turret;
 
         
-        Debugger.Instance.Debuger("Kule insa edildi kalan para :", GameManager.Instance.Gold);
+        Debugger.Instance.Debuger("Tower is Builded:", insaedilcektower.cost);
        
             TheUI.Instance.ShopUIClose();
     }
