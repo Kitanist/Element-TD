@@ -36,7 +36,7 @@ public class TheUI : MonoSingeleton<TheUI>
     public void ShopUIOpen()
     {
        
-        BackGround.transform.LeanMoveLocal(new Vector2(775, 0), 1).setEaseOutExpo();
+        BackGround.transform.LeanMoveLocal(new Vector2(775, 0), 0.25f).setEaseOutExpo();
        
 
         if (!isArmy && !isUpgrade && isTurret)
@@ -45,10 +45,10 @@ public class TheUI : MonoSingeleton<TheUI>
             ShopButton2.gameObject.SetActive(true);
             ShopButton3.gameObject.SetActive(true);
             ShopButton4.gameObject.SetActive(true);
-            Shop1.LeanAlpha(1, 0.5f);
-            Shop2.LeanAlpha(1, 0.5f);
-            Shop3.LeanAlpha(1, 0.5f);
-            Shop4.LeanAlpha(1, 0.5f);
+            Shop1.LeanAlpha(1, 0.25f);
+            Shop2.LeanAlpha(1, 0.25f);
+            Shop3.LeanAlpha(1, 0.25f);
+            Shop4.LeanAlpha(1, 0.25f);
             
             ShopButton1.interactable = true;
             ShopButton2.interactable = true;
@@ -62,10 +62,10 @@ public class TheUI : MonoSingeleton<TheUI>
             UShopButton2.gameObject.SetActive(true);
             UShopButton3.gameObject.SetActive(true);
              UShopButton4.gameObject.SetActive(true);
-            UShop1.LeanAlpha(1, 0.5f);
-            UShop2.LeanAlpha(1, 0.5f);
-            UShop3.LeanAlpha(1, 0.5f);
-             UShop4.LeanAlpha(1, 0.5f);
+            UShop1.LeanAlpha(1, 0.25f);
+            UShop2.LeanAlpha(1, 0.25f);
+            UShop3.LeanAlpha(1, 0.25f);
+            UShop4.LeanAlpha(1, 0.25f);
             UShopButton1.interactable = true;
             UShopButton2.interactable = true;
             UShopButton3.interactable = true;
@@ -76,9 +76,9 @@ public class TheUI : MonoSingeleton<TheUI>
             AShopButton1.gameObject.SetActive(true);
             AShopButton2.gameObject.SetActive(true);
             AShopButton3.gameObject.SetActive(true);
-            AShop1.LeanAlpha(1, 0.5f);
-          AShop2.LeanAlpha(1, 0.5f);
-            AShop3.LeanAlpha(1, 0.5f);
+            AShop1.LeanAlpha(1, 0.25f);
+            AShop2.LeanAlpha(1, 0.25f);
+            AShop3.LeanAlpha(1, 0.25f);
 
             AShopButton1.interactable = true;
            AShopButton2.interactable = true;
@@ -89,22 +89,20 @@ public class TheUI : MonoSingeleton<TheUI>
     public void ShopUIClose()
     {
         HUD.Instance.AllUnitDeSelect();
-        BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 1).setEaseInExpo();
+        BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 0.25f).setEaseInExpo();
        
        
-        Shop1.LeanAlpha(0, 0.5f);
-        Shop2.LeanAlpha(0, 0.5f);
-        Shop3.LeanAlpha(0, 0.5f);
-          Shop4.LeanAlpha(0, 0.5f);
-
-        AShop1.LeanAlpha(0, 0.5f);
-        AShop2.LeanAlpha(0, 0.5f);
-        AShop3.LeanAlpha(0, 0.5f);
-        
-            UShop1.LeanAlpha(0, 0.5f);
-            UShop2.LeanAlpha(0, 0.5f);
-            UShop3.LeanAlpha(0, 0.5f);
-             UShop4.LeanAlpha(0, 0.5f);
+        Shop1.LeanAlpha(0, 0.25f);
+        Shop2.LeanAlpha(0, 0.25f);
+        Shop3.LeanAlpha(0, 0.25f);
+        Shop4.LeanAlpha(0, 0.25f);
+        AShop1.LeanAlpha(0,0.25f);
+        AShop2.LeanAlpha(0,0.25f);
+        AShop3.LeanAlpha(0,0.25f);
+        UShop1.LeanAlpha(0,0.25f);
+        UShop2.LeanAlpha(0,0.25f);
+        UShop3.LeanAlpha(0,0.25f);
+        UShop4.LeanAlpha(0,0.25f);
         
         StartCoroutine(ButtonEater());
         UShopButton1.interactable = false;
@@ -122,7 +120,7 @@ public class TheUI : MonoSingeleton<TheUI>
     }
     IEnumerator ButtonEater()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.26f);
        UShopButton1.gameObject.SetActive(false) ;
        UShopButton2.gameObject.SetActive(false) ;
        UShopButton3.gameObject.SetActive(false) ;
@@ -131,9 +129,9 @@ public class TheUI : MonoSingeleton<TheUI>
         ShopButton2.gameObject.SetActive(false) ;
         ShopButton3.gameObject.SetActive(false) ;
         ShopButton4.gameObject.SetActive(false) ;
-        AShopButton1.gameObject.SetActive(false) ;
-        AShopButton2.gameObject.SetActive(false) ;
-        AShopButton3.gameObject.SetActive(false) ;
+       AShopButton1.gameObject.SetActive(false) ;
+       AShopButton2.gameObject.SetActive(false) ;
+       AShopButton3.gameObject.SetActive(false) ;
         HUD.Instance.elementUI.SetActive(false);
     }
 }

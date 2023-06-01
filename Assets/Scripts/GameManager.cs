@@ -13,7 +13,8 @@ using PathCreation;
    public enum UnitType{
     Normal,
     Speeder,
-    Armored
+    Armored,
+    Boss
    }
 public class GameManager : MonoSingeleton<GameManager>
 {

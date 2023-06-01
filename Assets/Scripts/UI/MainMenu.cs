@@ -15,16 +15,17 @@ public class MainMenu : MonoBehaviour
 
     public AudioSource Theme;
 
-    public GameObject PauseSettingsMenu;
+    public GameObject PauseSettingsMenu,CreditsMenu;
 
     public MainMenuCamController cam;
 
     public Slider music;
 
-    public CanvasGroup DArkness;
+    public Animator creditanim;
+    public CanvasGroup DArkness,CreditDarkness;
 
     [Header("Kamera Hareketi")]
-    public Vector3 settingsOpenPos;
+    public Vector3 settingsOpenPos,CreditsOpenPos;
     public Vector3 normalPos;
     public Vector3 startingPos;
     void Update()
@@ -81,6 +82,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator ShowSettingsEnum()
     {
         yield return new WaitForSeconds(1.2f);
+        cam.onUI = true;
         SettingsMenu.SetActive(true);
     }
     public void SetQuality(int qual)
@@ -88,10 +90,14 @@ public class MainMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(qual);
     }
 
-    public void SetFullscreen(bool isFull)
+    public void SetFullscreen()
     {
-        
-        Screen.fullScreen = isFull;
+        if (Screen.fullScreen)
+        {
+            Screen.fullScreen = false;
+        }
+        else
+        Screen.fullScreen = true;
     }
 
     public void SetMusic()
@@ -109,10 +115,28 @@ public class MainMenu : MonoBehaviour
     }
     public void BeNormal()
     {
+        CreditsMenu.SetActive(false);
         SettingsMenu.SetActive(false);
         cam.SetCamPos(normalPos);
+        cam.onUI = false;
+        creditanim.SetBool("Credits", false);
 
     }
+    public void SetOpenCredits()
+    {
+        cam.SetCamPos(CreditsOpenPos);
+        StartCoroutine(ShowCreditsEnum());
+
+    }
+    IEnumerator ShowCreditsEnum()
+    {
+        yield return new WaitForSeconds(1.2f);
+        cam.onUI = true;
+        
+        CreditsMenu.SetActive(true);
+        creditanim.SetBool("Credits", true);
+    }
+
     public void EndGame()
     {
         Application.Quit();

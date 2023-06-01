@@ -202,6 +202,14 @@ public class HUD :MonoSingeleton<HUD>
                 AllMyUnitCountTexts[14].transform.GetChild(0).GetComponent<TMP_Text>().text = " x" + myUnitCounts[14].ToString();
                 AllMyUnitCountTexts[14].GetComponent<Image>().color = Color.white;
             }
+            else if (unit.unitType == UnitType.Boss)
+            {
+                AllMyUnitCountTexts[15].SetActive(true);
+                myUnitCounts[15]++;
+                AllMyUnitCountTexts[15].transform.GetChild(0).GetComponent<TMP_Text>().text = " x" + myUnitCounts[14].ToString();
+                AllMyUnitCountTexts[15].GetComponent<Image>().color = Color.white;
+            }
+
         }
     }
 
