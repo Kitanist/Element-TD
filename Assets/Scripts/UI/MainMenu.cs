@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
     public Slider music;
 
     public Animator creditanim;
-    public CanvasGroup DArkness,CreditDarkness;
+    public CanvasGroup DArkness,CreditDarkness,Maps;
 
     [Header("Kamera Hareketi")]
     public Vector3 settingsOpenPos,CreditsOpenPos;
@@ -61,11 +61,19 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame() 
     {
+        Maps.gameObject.SetActive(true);
         gameIsStarted = true;
         cam.SetCamPos(startingPos);
-        DArkness.LeanAlpha(1, 1);
-        StartCoroutine(LoadGameWaiter());
+       // DArkness.LeanAlpha(1, 1);
+        Maps.LeanAlpha(1, 1);
 
+       // StartCoroutine(LoadGameWaiter());
+
+    }
+    public void  ReturnMenu () {
+        Maps.LeanAlpha(0, 1).setOnComplete( ()=> { Maps.gameObject.SetActive(false); } );
+          
+        BeNormal();
     }
     IEnumerator LoadGameWaiter()
     {

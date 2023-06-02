@@ -28,7 +28,17 @@ public class GameManager : MonoSingeleton<GameManager>
   public PathCreator attackPathCreator;
 
   public bool currentCamIsMineTerritory=true;
- 
+[Header("SKILL POINT")]
+ [Space(5)]
+public int skillPoint=0;
+
+ [Header("MAP")]
+ [Space(5)]
+ public bool []levelsOpen;
+ public float []levelStartGolds;
+
+ public Map chosenLevel;
+
   public float Gold
  {
      get { return gold; }
