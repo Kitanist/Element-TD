@@ -10929,6 +10929,9 @@ MonoBehaviour:
   - pooledObject: []
     pooledPrefab: {fileID: 3779743739193983272, guid: 50128a729105fdf4d835c0e40bd67f1d, type: 3}
     poolSize: 100
+  - pooledObject: []
+    pooledPrefab: {fileID: 6007285666888801201, guid: d8a17a997b9ea2540896d2c2de63a1de, type: 3}
+    poolSize: 20
 --- !u!4 &1109597963
 Transform:
   m_ObjectHideFlags: 0

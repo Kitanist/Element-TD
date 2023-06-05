@@ -126,7 +126,8 @@ public class Tower : MonoBehaviour
             }
             openWithLevel[openLevelIndex-1].SetActive(true);
            
-            
+               GameObject particle = ObjectPool.Instance.GetPooledObject(34);
+                particle.transform.position=node.GetBuildPosition();
         }
     }
      IEnumerator ResetTower(){

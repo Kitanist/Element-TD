@@ -53,6 +53,9 @@ public class BuildManager : MonoSingeleton<BuildManager>
       GameManager.Instance.Gold -= insaedilcektower.cost;
 
       GameObject turret =  (GameObject)Instantiate(insaedilcektower.prefab, node.GetBuildPosition(), Quaternion.identity);
+      GameObject particle = ObjectPool.Instance.GetPooledObject(34);
+      particle.transform.position=node.GetBuildPosition();
+
         node.turret = turret;
         turret.GetComponent<Tower>().node=node;
 
