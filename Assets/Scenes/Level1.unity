@@ -8421,6 +8421,10 @@ MonoBehaviour:
   levelPathCreator: {fileID: 2145293751}
   attackPathCreator: {fileID: 331428144}
   currentCamIsMineTerritory: 1
+  skillPoint: 0
+  levelsOpen: 
+  levelStartGolds: []
+  chosenLevel: {fileID: 0}
 --- !u!4 &951813379
 Transform:
   m_ObjectHideFlags: 0
