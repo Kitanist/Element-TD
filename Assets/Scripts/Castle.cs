@@ -9,13 +9,11 @@ using UnityEngine.EventSystems;
 public class Castle : MonoBehaviour
 {
 
-private void OnMouseDown() {
-    if(GetComponent<HealthComponent>().isPlayerBase){
-          TheUI.Instance.ShopUIClose();
+
+public void  OpenUnitPanelButton () {
+    TheUI.Instance.isButton=true;
+    TheUI.Instance.ShopUIClose();
     Invoke("OpenUIUnit",.6f);
-    }
-  
-    
 }
 public void OpenUIUnit () {
     TheUI.Instance.isTurret = false;

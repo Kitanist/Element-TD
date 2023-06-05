@@ -293,6 +293,7 @@ MonoBehaviour:
   myPoolIndex: 28
   speed: 5
   cost: 50
+  price: 10
   unitName: 
 --- !u!54 &1055818249809139437
 Rigidbody:
@@ -400,7 +401,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1055818249065684268}
   m_HandleRect: {fileID: 0}

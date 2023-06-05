@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireTower : Tower
 {
    
+   public GameObject []particles;
     private void Update() {
   
     if(reset){
@@ -21,6 +22,16 @@ public class FireTower : Tower
             //hasar ver
             obj.GetComponent<HealthComponent>().GetDamage(damage,element_Type);        
         }
+        if(targets.Length>0){
+             for(int i = 0; i < particles.Length; i++) {
+            particles[i].SetActive(true);
+        }
+        }
+        else{
+             for(int i = 0; i < particles.Length; i++) {
+            particles[i].SetActive(false);
+        }
+        }
      
     }
     private void OnDrawGizmos() {
@@ -33,6 +44,7 @@ public class FireTower : Tower
         base.LevelUp();
     } 
      private void OnMouseDown() {
+        TheUI.Instance.isButton=false;
          TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
         BuildManager.Instance.currentUpgradementTower=this;
@@ -40,9 +52,10 @@ public class FireTower : Tower
     }
 
      IEnumerator ResetTower(){
-      
+       
         yield return new WaitForSeconds(fireRate);
         
+     
         reset=true;
     }
 }

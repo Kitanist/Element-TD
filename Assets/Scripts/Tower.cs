@@ -10,6 +10,7 @@ public class Tower : MonoBehaviour
     public GameObject rangeObject;
     public Element_Type element_Type;
    
+   public Node node;
     public string Name="Tower";
 
     public float damage=10;
@@ -35,6 +36,7 @@ public class Tower : MonoBehaviour
     public int level=1;
     public int maxLevel=3;
     public GameObject[] openWithLevel;
+    public GameObject[] closeWithLevel;
     public int [] DamageCounts;
      public int [] AttackRadiusCounts;
     public int upgradeCostforNextLevel;
@@ -113,11 +115,16 @@ public class Tower : MonoBehaviour
             damage=DamageCounts[openLevelIndex-1];
             attackRadius=AttackRadiusCounts[openLevelIndex-1];
             if(GetComponent<FireTower>()){
-                     rangeObject.transform.localScale=new Vector3(attackRadius,.1f,attackRadius);
+                rangeObject.transform.localScale=new Vector3(attackRadius,.1f,attackRadius);
             }
             else{
                 rangeObject.transform.localScale=new Vector3(attackRadius*2,.1f,attackRadius*2);
             }
+            for(int i = 0; i < closeWithLevel.Length; i++) {
+                // hepsini kapa
+                closeWithLevel[i].SetActive(false);
+            }
+            openWithLevel[openLevelIndex-1].SetActive(true);
            
             
         }
@@ -137,8 +144,10 @@ public class Tower : MonoBehaviour
     }
     private void OnMouseDown() {
         if(towerIsPlayer){
+            TheUI.Instance.isButton=false;
         TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
+        node.NodeToTower();
         BuildManager.Instance.currentUpgradementTower=this;
          HUD.Instance.InitShopHud();
         }

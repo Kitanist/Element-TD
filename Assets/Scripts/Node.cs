@@ -44,11 +44,14 @@ public class Node : MonoBehaviour
        
 
     }
+    public void NodeToTower () {
+        BuildManager.Instance.node = this;
+    }
     private void OnMouseDown()
     {
     //   if (!BuildManager.Instance.CanBuild)
     //       return;
-        BuildManager.Instance.node = this;
+        NodeToTower();
         
         // upgrade ve insa bolgeleri ayarlandi
      
@@ -56,6 +59,7 @@ public class Node : MonoBehaviour
          if (turret)
         {   
            if(turret.GetComponent<Tower>().towerIsPlayer){
+            TheUI.Instance.isButton=false;
                   TheUI.Instance.ShopUIClose();
                 Invoke("OpenUIUpgrade",.6f);
            }
@@ -68,7 +72,7 @@ public class Node : MonoBehaviour
         else
         {
             
-               
+            TheUI.Instance.isButton=false;
             TheUI.Instance.ShopUIClose();
             Invoke("OpenUIUTower",.6f);
                      

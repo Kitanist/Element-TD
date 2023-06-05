@@ -42,6 +42,7 @@ public class GoldMine : Tower
   }
 
    private void OnMouseDown() {
+    TheUI.Instance.isButton=false;
          TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
         BuildManager.Instance.currentUpgradementTower=this;

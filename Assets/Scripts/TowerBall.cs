@@ -17,8 +17,20 @@ public class TowerBall : Tower
         Fire();
         StartCoroutine(ResetTower());
        }
+     
     }
+    private void FixedUpdate() {
+         if(target){
+            
+        Vector3 Direction = (target.transform.position-transform.position);
 
+        Quaternion rot=Quaternion.LookRotation(-Direction);
+        rotatObject.transform.rotation=rot;
+  
+         
+        
+    }
+    }
      IEnumerator ResetTower(){
       
         yield return new WaitForSeconds(fireRate);
@@ -46,13 +58,11 @@ public class TowerBall : Tower
         Gizmos.color=Color.cyan;
         Gizmos.DrawWireSphere(transform.position,attackRadius);
     }
-     private void FixedUpdate() {
-          if(target){
-        rotatObject.transform.LookAt(target,Vector3.up);
-       }
-    }
+   
+ 
 
      private void OnMouseDown() {
+        TheUI.Instance.isButton=false;
          TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
         BuildManager.Instance.currentUpgradementTower=this;

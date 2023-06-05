@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class TheUI : MonoSingeleton<TheUI>
 {
@@ -16,7 +17,7 @@ public class TheUI : MonoSingeleton<TheUI>
 
     public GameObject BackGround;
     public Button ShopButton1, ShopButton2, ShopButton3,ShopButton4, UShopButton1, UShopButton2, UShopButton3,UShopButton4, AShopButton1, AShopButton2, AShopButton3;
-
+    public bool isButton;
 
     private void Start()
     {
@@ -86,8 +87,10 @@ public class TheUI : MonoSingeleton<TheUI>
         }
 
     }
+    
     public void ShopUIClose()
     {
+        if (EventSystem.current.IsPointerOverGameObject()&&!isButton) return;
         HUD.Instance.AllUnitDeSelect();
         BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 0.25f).setEaseInExpo();
        

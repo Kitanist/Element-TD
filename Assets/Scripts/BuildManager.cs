@@ -25,14 +25,22 @@ public class BuildManager : MonoSingeleton<BuildManager>
     }
     public void DestroyTowerOn()
     {
+       
         if (node.turret)
         {
+  GameManager.Instance.Gold += node.turret.GetComponent<TowerBlueprint>().cost * PayBackRatio;
 
-            GameManager.Instance.Gold += node.turret.GetComponent<TowerBlueprint>().cost * PayBackRatio;
+              
+           
             Destroy(node.turret);
+            currentUpgradementTower=null;
             node.turret = null;
+
+            TheUI.Instance.isButton=true;
             TheUI.Instance.ShopUIClose();
+             
         }
+    
     }
     public void BuildTowerOn()
     {
@@ -46,11 +54,11 @@ public class BuildManager : MonoSingeleton<BuildManager>
 
       GameObject turret =  (GameObject)Instantiate(insaedilcektower.prefab, node.GetBuildPosition(), Quaternion.identity);
         node.turret = turret;
+        turret.GetComponent<Tower>().node=node;
 
         
         Debugger.Instance.Debuger("Tower is Builded: -", insaedilcektower.cost);
-       
-            TheUI.Instance.ShopUIClose();
+         TheUI.Instance.ShopUIClose();
     }
 
 }

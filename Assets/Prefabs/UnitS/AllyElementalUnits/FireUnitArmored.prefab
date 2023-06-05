@@ -140,6 +140,7 @@ MonoBehaviour:
   myPoolIndex: 16
   speed: 2
   cost: 50
+  price: 10
   unitName: 
 --- !u!54 &138770360201571282
 Rigidbody:
@@ -482,7 +483,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138770361048522696}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &138770361048522698
 MonoBehaviour:
   m_ObjectHideFlags: 0
