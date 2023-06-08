@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4601695123754124436}
-  cost: 50
+  cost: 200
 --- !u!114 &4675733292534185445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,20 +133,21 @@ MonoBehaviour:
   element_Type: 0
   node: {fileID: 0}
   Name: Bomber Tower
-  damage: 30
+  damage: 20
   poolIndex: 1
-  JumpForce: 10
+  JumpForce: 7
   attackRadius: 15
-  bulletSpeed: 3
-  fireRate: 4
+  bulletSpeed: 8
+  fireRate: 3
   EnemyMask:
     serializedVersion: 2
     m_Bits: 64
   easeType: 0
   elementChanceCost: 200
-  currentUpgradeCost: 100
+  currentUpgradeCost: 400
   target: {fileID: 0}
   buildSoundClip: {fileID: 8300000, guid: 606a49c610750994f9357a512f0bd036, type: 3}
+  bulletSoundClip: {fileID: 8300000, guid: 3648c6874c651a54297555d3f2798316, type: 3}
   level: 1
   maxLevel: 3
   openWithLevel:
@@ -156,9 +157,9 @@ MonoBehaviour:
   - {fileID: 1411592365447806128}
   - {fileID: 1411592365447806128}
   - {fileID: 1411592365447806128}
-  DamageCounts: 2800000032000000
+  DamageCounts: 1900000023000000
   AttackRadiusCounts: 1000000011000000
-  upgradeCostforNextLevel: 200
+  upgradeCostforNextLevel: 600
   targets: []
   towerIsPlayer: 1
   rotatObject: {fileID: 1411592365447806128}

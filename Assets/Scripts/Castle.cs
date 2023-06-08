@@ -14,6 +14,10 @@ public void  OpenUnitPanelButton () {
     TheUI.Instance.isButton=true;
     TheUI.Instance.ShopUIClose();
     Invoke("OpenUIUnit",.6f);
+    if(Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
 }
 public void OpenUIUnit () {
     TheUI.Instance.isTurret = false;

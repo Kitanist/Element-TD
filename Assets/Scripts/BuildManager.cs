@@ -25,14 +25,18 @@ public class BuildManager : MonoSingeleton<BuildManager>
     }
     public void DestroyTowerOn()
     {
-       
+  
+      
         if (node.turret)
         {
   GameManager.Instance.Gold += node.turret.GetComponent<TowerBlueprint>().cost * PayBackRatio;
 
-              
+    if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
            
-            Destroy(node.turret);
+            Destroy(node.turret.gameObject);
             currentUpgradementTower=null;
             node.turret = null;
 

@@ -24,7 +24,8 @@ public class GameManager : MonoSingeleton<GameManager>
    public bool isGameContinue=true;
    
 public AudioSource asource;
-
+public AudioClip buttonClik1;
+public AudioClip buttonClik2;
   public PathCreator levelPathCreator;
   public PathCreator attackPathCreator;
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using TMPro;
+
  
 public class WaveManager : MonoSingeleton<WaveManager>
 {
@@ -90,7 +91,8 @@ public void decreseRemainTime () {
         
     if(remainingTime>0 && !GameManager.Instance.playerIsAttack){
          remainingTime--;
-         if(remainingTime>=4){
+         if(remainingTime>=4 ){
+            if(remainingTime%2==0)
                GameManager.Instance.asource.PlayOneShot(timeClip);
          }
       
@@ -162,6 +164,12 @@ IEnumerator UnitSawnWait(int waveCount){
 }
 
 public void SetCamerVision () {
+
+    if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+
          if(GameManager.Instance.currentCamIsMineTerritory){
         GameManager.Instance.currentCamIsMineTerritory = false;
               MotherlandCam.enabled = false;
@@ -175,6 +183,11 @@ public void SetCamerVision () {
                 //kamera açısı değişir rakip alanı görürüz
 }
 public void Attack() {
+    if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+      
     if(!GameManager.Instance.playerIsAttack){
         if(BattleManager.Instance.unitList.Count>0 && canStop){
          //eger stop wave arasındaysa  butona tıkladığında atağa geçer 

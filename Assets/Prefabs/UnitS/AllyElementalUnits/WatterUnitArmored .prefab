@@ -123,6 +123,9 @@ MonoBehaviour:
   lessDamageMultipler: 0.8
   isUnit: 1
   isPlayerBase: 0
+  mesh: {fileID: 0}
+  damageMatarial: {fileID: 2100000, guid: 6cd34cf2f0eedb2438c203b3c893fdc3, type: 2}
+  hitSound: {fileID: 8300000, guid: 0c7d87dba5d5a5047ae6b871c522132f, type: 3}
 --- !u!114 &2437270008180210438
 MonoBehaviour:
   m_ObjectHideFlags: 0

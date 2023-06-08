@@ -53,6 +53,7 @@ public class TowerBall : Tower
       bullet.transform.position=firePos.position;  
  
       bullet.transform.DOJump(target.position,JumpForce,0,(fireRate/bulletSpeed),false).SetEase(easeType);
+       GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
     }
      private void OnDrawGizmos() {
         Gizmos.color=Color.cyan;

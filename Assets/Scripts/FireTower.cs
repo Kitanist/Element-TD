@@ -21,6 +21,7 @@ public class FireTower : Tower
         foreach(var obj in targets) {
             //hasar ver
             obj.GetComponent<HealthComponent>().GetDamage(damage,element_Type);        
+             GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
         }
         if(targets.Length>0){
              for(int i = 0; i < particles.Length; i++) {

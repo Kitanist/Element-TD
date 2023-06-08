@@ -2166,7 +2166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 680382018144370373, guid: e1be663267d12e840a4ef13779c3df87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.386139
+      value: -29.346138
       objectReference: {fileID: 0}
     - target: {fileID: 680382018144370373, guid: e1be663267d12e840a4ef13779c3df87, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2174,7 +2174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 680382018144370373, guid: e1be663267d12e840a4ef13779c3df87, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.990944
+      value: -17.360945
       objectReference: {fileID: 0}
     - target: {fileID: 680382018144370373, guid: e1be663267d12e840a4ef13779c3df87, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8605,6 +8605,10 @@ MonoBehaviour:
   WaveLeft: {fileID: 1231981615}
   attackButton: {fileID: 2087171336}
   unitSpawnTransform: {fileID: 1844293866}
+  timeClip: {fileID: 8300000, guid: 7ff372fb786ab5d4f8a31d1ec41df26b, type: 3}
+  timeClip2: {fileID: 8300000, guid: d959fbb7861332e48b734b92b737b9c2, type: 3}
+  timeClip3: {fileID: 8300000, guid: 339ded0f8378ea5468fad13ff194fd35, type: 3}
+  dangerClip: {fileID: 8300000, guid: 57347ed5d3b204e4ebec90371dee1876, type: 3}
 --- !u!114 &951813378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8621,6 +8625,9 @@ MonoBehaviour:
   CastleTransform: {fileID: 0}
   playerIsAttack: 0
   isGameContinue: 1
+  asource: {fileID: 951813382}
+  buttonClik1: {fileID: 8300000, guid: 050178f5946631d45866c402ce1c70d8, type: 3}
+  buttonClik2: {fileID: 8300000, guid: 1528e82671cfb3a4892220700268e721, type: 3}
   levelPathCreator: {fileID: 2145293751}
   attackPathCreator: {fileID: 331428144}
   currentCamIsMineTerritory: 1
@@ -8683,11 +8690,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 606a49c610750994f9357a512f0bd036, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7ac2a5b20bc654c4abc4171d37b076b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

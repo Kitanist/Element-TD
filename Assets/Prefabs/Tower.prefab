@@ -203,20 +203,21 @@ MonoBehaviour:
   element_Type: 0
   node: {fileID: 0}
   Name: Arrow Tower
-  damage: 10
+  damage: 5
   poolIndex: 0
   JumpForce: 1
   attackRadius: 15
   bulletSpeed: 10
-  fireRate: 1
+  fireRate: 0.5
   EnemyMask:
     serializedVersion: 2
     m_Bits: 64
   easeType: 0
-  elementChanceCost: 50
+  elementChanceCost: 100
   currentUpgradeCost: 100
   target: {fileID: 0}
   buildSoundClip: {fileID: 8300000, guid: 606a49c610750994f9357a512f0bd036, type: 3}
+  bulletSoundClip: {fileID: 8300000, guid: 68e90ae7662cd5e46867c490b32fdda1, type: 3}
   level: 1
   maxLevel: 3
   openWithLevel:
@@ -226,9 +227,9 @@ MonoBehaviour:
   - {fileID: 3554231500510329706}
   - {fileID: 3554231500510329706}
   - {fileID: 8935422090309530270}
-  DamageCounts: 140000001e000000
+  DamageCounts: 0a00000014000000
   AttackRadiusCounts: 1100000014000000
-  upgradeCostforNextLevel: 200
+  upgradeCostforNextLevel: 400
   targets: []
   towerIsPlayer: 1
 --- !u!114 &3586698720180615971

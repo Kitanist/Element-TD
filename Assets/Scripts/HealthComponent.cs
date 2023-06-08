@@ -16,7 +16,14 @@ public class HealthComponent : MonoBehaviour
    public bool isUnit=true;
    public bool isPlayerBase=false;
     GameObject text;
-
+    public MeshRenderer mesh;
+    public Material damageMatarial;
+    Material firstMatarial;
+    public AudioClip hitSound;
+private void Start() {
+    mesh=GetComponent<MeshRenderer>();
+    firstMatarial=mesh.material;
+}
     public void GetFloatingText (string damage) {
          text=ObjectPool.Instance.GetPooledObject(26);
         text.transform.SetParent(this.transform);
@@ -33,11 +40,16 @@ public class HealthComponent : MonoBehaviour
         text.GetComponent<TextMesh>().text=gold;
     
     }
+
+    IEnumerator fixMatarial(){
+        yield return new WaitForSeconds(.1f);
+        mesh.material=firstMatarial;
+    }
    public void GetDamage (float damage,Element_Type damagerType) {
     float _damage=SetElementDamage(damage,damagerType);
     GetFloatingText("-"+_damage.ToString());
     text.GetComponent<TextMesh>().color=Color.cyan;
-  
+    GameManager.Instance.asource.PlayOneShot(hitSound);
     if(Health<=_damage){
         Health=0;      
         HealtBar.DOValue(0,.5f,false);
@@ -45,6 +57,10 @@ public class HealthComponent : MonoBehaviour
         Die();
     }
     else{
+        if(isUnit){
+            mesh.material=damageMatarial;
+            StartCoroutine(fixMatarial());
+        }
         Health-=_damage;
         HealtBar.DOValue(Health/maxHealth,.5f,false);
         

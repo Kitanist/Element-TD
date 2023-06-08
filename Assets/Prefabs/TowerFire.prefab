@@ -1453,10 +1453,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   easeType: 0
-  elementChanceCost: 100
-  currentUpgradeCost: 100
+  elementChanceCost: 500
+  currentUpgradeCost: 600
   target: {fileID: 0}
   buildSoundClip: {fileID: 8300000, guid: 606a49c610750994f9357a512f0bd036, type: 3}
+  bulletSoundClip: {fileID: 8300000, guid: acdf8b5ed17168b46b7142bb41492f3b, type: 3}
   level: 1
   maxLevel: 3
   openWithLevel:
@@ -1468,7 +1469,7 @@ MonoBehaviour:
   - {fileID: 1135447162431491856}
   DamageCounts: 0f00000019000000
   AttackRadiusCounts: 0f00000011000000
-  upgradeCostforNextLevel: 500
+  upgradeCostforNextLevel: 1000
   targets: []
   towerIsPlayer: 1
   particles:

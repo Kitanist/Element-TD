@@ -33,7 +33,7 @@ public class Tower : MonoBehaviour
     
 
     public AudioClip buildSoundClip;
-
+       public AudioClip bulletSoundClip;
 [Header("LEVEL")]
 [Space(5)]
     public int level=1;
@@ -108,6 +108,7 @@ public class Tower : MonoBehaviour
       bullet.GetComponent<Bullet>().damage=damage;//merminin elementini kulenin elementi yapıyoruz
       bullet.transform.position=firePos.position;  
       bullet.GetComponent<Bullet>().Seek(target);
+       GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
       //bullet.transform.DOJump(target.position,JumpForce,0,(fireRate/bulletSpeed),false).SetEase(easeType);
       
     }
@@ -152,7 +153,8 @@ public class Tower : MonoBehaviour
             TheUI.Instance.isButton=false;
         TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
-        node.NodeToTower();
+
+          BuildManager.Instance.node=node;
         BuildManager.Instance.currentUpgradementTower=this;
          HUD.Instance.InitShopHud();
         }

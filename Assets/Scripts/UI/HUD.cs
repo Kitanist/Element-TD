@@ -261,6 +261,12 @@ public void InitShopHud () {
 }       
     public void UnitNormalElementSelect()
     {
+
+ if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+
         normalAirUI.SetActive(true);
         normalEarthUI.SetActive(true);
         normalWaterUI.SetActive(true);
@@ -284,6 +290,11 @@ public void InitShopHud () {
     }
     public void UnitSpeedElementSelect()
     {
+         if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+
         speedAirUI.SetActive(true);
         speedEarthUI.SetActive(true);
         speedWaterUI.SetActive(true);
@@ -306,6 +317,11 @@ public void InitShopHud () {
     }
     public void UnitArmoredElementSelect()
     {
+         if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+
         armoredAirUI.SetActive(true);
         armoredEarthUI.SetActive(true);
         armoredWaterUI.SetActive(true);
@@ -342,6 +358,11 @@ public void InitShopHud () {
 
         }
      
+      if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+      
      GameManager.Instance.Gold-=unit.cost;
    if(unit.GetComponent<HealthComponent>().myElement==Element_Type.Fire){
     if(unit==normalFireUnit)
@@ -390,6 +411,11 @@ public void InitShopHud () {
 
  }
 public void LevelUpTower () {   
+    if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+
        if(GameManager.Instance.Gold>= BuildManager.Instance.currentUpgradementTower.currentUpgradeCost){
         
     GameManager.Instance.Gold-=BuildManager.Instance.currentUpgradementTower.currentUpgradeCost;
@@ -399,7 +425,10 @@ public void LevelUpTower () {
         }
 }
 public void ElementTabOpen () {
-    
+     if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
     
     if(elementTabOpen){
         elementTabOpen=false;
@@ -412,11 +441,21 @@ public void ElementTabOpen () {
     }
 }
 public void ElementUIExit () {
+     if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+
         elementTabOpen=false;
         elementUI.SetActive(false);
 }
 public void SetTowerElement (int elementIndex) {
     if(BuildManager.Instance.currentUpgradementTower.element_Type==Element_Type.None&&GameManager.Instance.Gold>BuildManager.Instance.currentUpgradementTower.elementChanceCost){
+       if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+      
         GameManager.Instance.Gold-=BuildManager.Instance.currentUpgradementTower.elementChanceCost;
          switch(elementIndex){
         case 0:
@@ -442,6 +481,10 @@ public void SetTowerElement (int elementIndex) {
 }
 
 public void OpenInfoUI () {
+     if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
     InitShopHud();
     if(infoTabOpen){
         infoTabOpen=false;
@@ -454,6 +497,10 @@ public void OpenInfoUI () {
     }
 }
 public void ExitInfoUI () {
+     if(UnityEngine.Random.Range(0,2)==1)
+    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+    else
+      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
          infoTabOpen=false;
         infoUI.SetActive(false);
 }
