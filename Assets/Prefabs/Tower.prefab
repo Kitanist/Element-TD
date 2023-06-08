@@ -214,8 +214,9 @@ MonoBehaviour:
     m_Bits: 64
   easeType: 0
   elementChanceCost: 50
-  target: {fileID: 0}
   currentUpgradeCost: 100
+  target: {fileID: 0}
+  buildSoundClip: {fileID: 8300000, guid: 606a49c610750994f9357a512f0bd036, type: 3}
   level: 1
   maxLevel: 3
   openWithLevel:

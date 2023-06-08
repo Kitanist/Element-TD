@@ -55,6 +55,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
       GameObject turret =  (GameObject)Instantiate(insaedilcektower.prefab, node.GetBuildPosition(), Quaternion.identity);
       GameObject particle = ObjectPool.Instance.GetPooledObject(34);
       particle.transform.position=node.GetBuildPosition();
+     GameManager.Instance.asource.PlayOneShot(turret.GetComponent<Tower>().buildSoundClip);
 
         node.turret = turret;
         turret.GetComponent<Tower>().node=node;

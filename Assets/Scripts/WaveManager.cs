@@ -33,6 +33,10 @@ public class WaveManager : MonoSingeleton<WaveManager>
 
    public Transform unitSpawnTransform;
 
+public AudioClip timeClip;
+public AudioClip timeClip2;
+public AudioClip timeClip3;
+public AudioClip dangerClip;
     private void Update() {
      
       
@@ -86,10 +90,23 @@ public void decreseRemainTime () {
         
     if(remainingTime>0 && !GameManager.Instance.playerIsAttack){
          remainingTime--;
+         if(remainingTime>=4){
+               GameManager.Instance.asource.PlayOneShot(timeClip);
+         }
+      
+         else{
+            if(remainingTime%2==0){
+                GameManager.Instance.asource.PlayOneShot(timeClip2);
+            }
+            else
+             GameManager.Instance.asource.PlayOneShot(timeClip3);
+         }
+          
             UIUpdate();
     }
 
         else { 
+                GameManager.Instance.asource.PlayOneShot(dangerClip);
     CancelInvoke();
         remainingTime = waveWaitTime;
 }}

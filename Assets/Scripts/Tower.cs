@@ -27,9 +27,12 @@ public class Tower : MonoBehaviour
      public Ease easeType;
     
     public float elementChanceCost=50;
+    public float currentUpgradeCost=100;
      [SerializeField] protected Transform target;
    
-    public float currentUpgradeCost=100;
+    
+
+    public AudioClip buildSoundClip;
 
 [Header("LEVEL")]
 [Space(5)]
@@ -128,6 +131,7 @@ public class Tower : MonoBehaviour
            
                GameObject particle = ObjectPool.Instance.GetPooledObject(34);
                 particle.transform.position=node.GetBuildPosition();
+                GameManager.Instance.asource.PlayOneShot(buildSoundClip);
         }
     }
      IEnumerator ResetTower(){

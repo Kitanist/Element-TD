@@ -2615,8 +2615,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62, y: -91}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: -32, y: -59}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &654818071
 Animator:
@@ -2652,7 +2652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   img: {fileID: 0}
   parentFront: {fileID: 762364067}
-  levelId: 1
+  levelId: 0
 --- !u!114 &654818073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2729,7 +2729,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 062c88dd011fdc647b976c74f98f5361, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b06e777cc4ed7924b901eea8122b6111, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3758,8 +3758,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 98}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: -116, y: 107.5}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &950047923
 Animator:
@@ -3795,7 +3795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   img: {fileID: 0}
   parentFront: {fileID: 762364067}
-  levelId: 2
+  levelId: 1
 --- !u!114 &950047925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3872,7 +3872,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a7193995a2c3f6f469ca700c074d344f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1f6e1e3e1fdaac4ebf74a0169fa3ce0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4262,8 +4262,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -99, y: -15}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 117, y: 147}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1051847724
 Animator:
@@ -4299,7 +4299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   img: {fileID: 0}
   parentFront: {fileID: 762364067}
-  levelId: 0
+  levelId: 3
 --- !u!114 &1051847726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4376,7 +4376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9b6c9e5f1649984bab8960ffac9b8cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8a39057ec1089e418fbec0990292f2b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

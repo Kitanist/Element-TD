@@ -23,6 +23,7 @@ public class GameManager : MonoSingeleton<GameManager>
    public bool playerIsAttack=false;
    public bool isGameContinue=true;
    
+public AudioSource asource;
 
   public PathCreator levelPathCreator;
   public PathCreator attackPathCreator;
