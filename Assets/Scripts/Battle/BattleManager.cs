@@ -10,30 +10,43 @@ public class BattleManager : MonoSingeleton<BattleManager>
    public List<GameObject> hideUnitObject;
    public PathCreator attackPathCreatorOtherSceene;
     public bool isAttackedThisTurn = false;
-    public int killedPlayerUnitCount=0;
+    private int _killedPlayerUnitCount;
 
-
-private void Update() {
-    if(killedPlayerUnitCount>=unitList.Count &&  unitList.Count>0){
-        // atak fail olmustur savas turunu bitir sayacı baslat
-      killedPlayerUnitCount=0;
-        EndAttack();
+    public int KilledPlayerUnitCount
+    {
+        get
+        {
+           return _killedPlayerUnitCount;
+        } 
+        set
+        {
+            _killedPlayerUnitCount = value;
+            if(KilledPlayerUnitCount>=unitList.Count &&  unitList.Count>0){
+                // atak fail olmustur savas turunu bitir sayacı baslat
+                KilledPlayerUnitCount=0;
+                EndAttack();
+            }
+        } 
     }
-}
+
+
+ 
    public void StartMyBattle () {
      StartCoroutine(EnterFight());
    }
    IEnumerator EnterFight(){
-    yield return  new WaitForSeconds(spawnTime);
-    if(spawnIndex<unitList.Count){
     
-     Unit _unit=unitList[spawnIndex];   
-     GameObject unit =ObjectPool.Instance.GetPooledObject(_unit.myPoolIndex);
-     hideUnitObject.Add(unit);
-     unit.GetComponent<Movement>().pathCreator=GameManager.Instance.attackPathCreator;
-     spawnIndex++;
-     StartCoroutine(EnterFight());
-    
+    while (true)
+    {
+        yield return  new WaitForSeconds(spawnTime);
+        
+        if(spawnIndex>=unitList.Count)
+            break;
+        Unit _unit=unitList[spawnIndex];   
+        GameObject unit =ObjectPool.Instance.GetPooledObject(_unit.myPoolIndex);
+        hideUnitObject.Add(unit);
+        unit.GetComponent<Movement>().pathCreator=GameManager.Instance.attackPathCreator;
+        spawnIndex++;
     }
    }
 public IEnumerator Fight(){

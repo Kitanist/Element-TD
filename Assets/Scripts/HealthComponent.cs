@@ -140,7 +140,7 @@ private void Start() {
              
         }
         else if(gameObject.layer==LayerMask.NameToLayer("Ally")){
-           BattleManager.Instance.killedPlayerUnitCount++;
+           BattleManager.Instance.KilledPlayerUnitCount++;
         }
 
         gameObject.SetActive(false);
