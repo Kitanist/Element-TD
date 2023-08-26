@@ -86,7 +86,7 @@ private void Start() {
         else
         {
         
-            StartCoroutine(BurnedDamage(3,_damage/3));
+            StartCoroutine(BurnedDamage(0,_damage/3));
 
         }
     }
@@ -182,19 +182,27 @@ private void Start() {
     {
 
 
-        while (cnt!= 0 || cnt!=1|| cnt!=2)
+        while (cnt!=3)
         {
-            cnt--;
+            cnt++;
             if (isUnit)
             {
                 mesh.material = damageMatarial;
                 StartCoroutine(fixMatarial());
             }
-            GetFloatingText("-" + _damage.ToString());
+            if (Health <= _damage)
+            {
+                Health = 0;
+                HealtBar.DOValue(0, .5f, false);
+
+                Die();
+            }
+            GetFloatingText("-" + ((int)_damage).ToString());
             text.GetComponent<TextMesh>().color = Color.cyan;
             Debug.Log("Yandim Anam");
             Health -= _damage;
             HealtBar.DOValue(Health / maxHealth, .5f, false);
+
             yield return new WaitForSeconds(1);
 
         }
