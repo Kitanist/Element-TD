@@ -120,7 +120,8 @@ public class Tower : AqumentBase
         bullet.GetComponent<Bullet>().damage = damage;//merminin elementini kulenin elementi yapıyoruz
         if (isAlevliOklarEnabled)
         {
-            bullet.GetComponent<Bullet>().damage += 3; // yanma olcak
+            Debug.Log(isAlevliOklarEnabled);
+            bullet.GetComponent<Bullet>().isBurned = true; // yanma olcak
         }
         bullet.transform.position = firePos.position;
         bullet.GetComponent<Bullet>().Seek(target);

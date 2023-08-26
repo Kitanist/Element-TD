@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using static LTGUI;
+using static UnityEngine.GraphicsBuffer;
 
 public class HealthComponent : MonoBehaviour
 {
@@ -61,6 +63,7 @@ private void Start() {
             mesh.material=damageMatarial;
             StartCoroutine(fixMatarial());
         }
+        
         Health-=_damage;
         HealtBar.DOValue(Health/maxHealth,.5f,false);
         
@@ -68,8 +71,26 @@ private void Start() {
 
 
    }
-    
-    public float SetElementDamage (float damage,Element_Type damagerType) {
+    public void GetBurnedDamage(float damage, Element_Type damagerType)
+    {
+        float _damage = SetElementDamage(damage, damagerType);
+      
+        
+        if (Health <= _damage)
+        {
+            Health = 0;
+            HealtBar.DOValue(0, .5f, false);
+
+            Die();
+        }
+        else
+        {
+        
+            StartCoroutine(BurnedDamage(3,_damage/3));
+
+        }
+    }
+        public float SetElementDamage (float damage,Element_Type damagerType) {
         if(damagerType==Element_Type.Fire){
             if(myElement==Element_Type.Watter){
                 damage=damage*lessDamageMultipler;
@@ -157,4 +178,25 @@ private void Start() {
     }
    
    }
+    public IEnumerator BurnedDamage(int cnt,float _damage)
+    {
+
+
+        while (cnt!= 0 || cnt!=1|| cnt!=2)
+        {
+            cnt--;
+            if (isUnit)
+            {
+                mesh.material = damageMatarial;
+                StartCoroutine(fixMatarial());
+            }
+            GetFloatingText("-" + _damage.ToString());
+            text.GetComponent<TextMesh>().color = Color.cyan;
+            Debug.Log("Yandim Anam");
+            Health -= _damage;
+            HealtBar.DOValue(Health / maxHealth, .5f, false);
+            yield return new WaitForSeconds(1);
+
+        }
+    }
 }
