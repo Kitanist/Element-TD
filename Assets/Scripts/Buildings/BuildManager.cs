@@ -94,5 +94,11 @@ public class BuildManager : MonoSingeleton<BuildManager>
         {
             tower.isFistImpact= true;
         }
+        if (towerToBuild.agumentName == "Tonla Hasar")
+        {
+          tower.isTonlaHasarEnabled= true;
+            GameManager.Instance.myCastle.GetComponent<HealthComponent>().GetDamage(GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health/4, Element_Type.None);
+            tower.damage += 4;
+        }
     }
 }

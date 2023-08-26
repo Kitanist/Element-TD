@@ -11,6 +11,7 @@ public class Tower : AqumentBase
     public bool isIamBurning;
     public bool isIamBurningII;
     public bool isFistImpact;
+    public bool isTonlaHasarEnabled;
 
     public Transform firePos;
     public GameObject rangeObject;
