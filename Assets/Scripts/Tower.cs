@@ -150,8 +150,8 @@ public class Tower : MonoBehaviour
     }
     private void OnMouseDown() {
         if(towerIsPlayer){
-            TheUI.Instance.isButton=false;
-        TheUI.Instance.ShopUIClose();      
+          //  TheUI.Instance.isButton=false;
+       // TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
 
           BuildManager.Instance.node=node;
@@ -161,17 +161,17 @@ public class Tower : MonoBehaviour
         
     }
     public void OpenUIUpgrade () {
-    TheUI.Instance.isTurret = false;
-    TheUI.Instance.isUpgrade = true;
-    TheUI.Instance.isArmy = false;
-    TheUI.Instance.ShopUIOpen();
+    //TheUI.Instance.isTurret = false;
+  //  TheUI.Instance.isUpgrade = true;
+   // TheUI.Instance.isArmy = false;
+    //TheUI.Instance.ShopUIOpen();
       if(GetComponent<GoldMine>()){
  
-     TheUI.Instance.UShopButton3.interactable = false;
+    // TheUI.Instance.UShopButton3.interactable = false;
      }
      else{
       
-     TheUI.Instance.UShopButton3.interactable = true;
+    // TheUI.Instance.UShopButton3.interactable = true;
      }
 }
 }

@@ -59,8 +59,8 @@ public class Node : MonoBehaviour
          if (turret)
         {   
            if(turret.GetComponent<Tower>().towerIsPlayer){
-            TheUI.Instance.isButton=false;
-                  TheUI.Instance.ShopUIClose();
+           // TheUI.Instance.isButton=false;
+               //   TheUI.Instance.ShopUIClose();
                 Invoke("OpenUIUpgrade",.6f);
            }
               
@@ -72,8 +72,8 @@ public class Node : MonoBehaviour
         else
         {
             
-            TheUI.Instance.isButton=false;
-            TheUI.Instance.ShopUIClose();
+          //TheUI.Instance.isButton=false;
+         //  TheUI.Instance.ShopUIClose();
             Invoke("OpenUIUTower",.6f);
                      
             
@@ -83,27 +83,27 @@ public class Node : MonoBehaviour
        
 
     }
-     public void OpenUIUpgrade () {
+    /* public void OpenUIUpgrade () {
 
-    TheUI.Instance.isTurret = false;
-    TheUI.Instance.isUpgrade = true;
-    TheUI.Instance.isArmy = false;
-    TheUI.Instance.ShopUIOpen();
+   // TheUI.Instance.isTurret = false;
+   // TheUI.Instance.isUpgrade = true;
+   // TheUI.Instance.isArmy = false;
+  //  TheUI.Instance.ShopUIOpen();
      if(isGoldMineNode){
  
-     TheUI.Instance.UShopButton3.interactable = false;
+    // TheUI.Instance.UShopButton3.interactable = false;
      }
      else{
       
-     TheUI.Instance.UShopButton3.interactable = true;
+    // TheUI.Instance.UShopButton3.interactable = true;
      }
     
 }
   public void OpenUIUTower () {
-    TheUI.Instance.isTurret = true;
-    TheUI.Instance.isUpgrade = false;
-    TheUI.Instance.isArmy = false;
-    TheUI.Instance.ShopUIOpen();
+   // TheUI.Instance.isTurret = true;
+   // TheUI.Instance.isUpgrade = false;
+   // TheUI.Instance.isArmy = false;
+   // TheUI.Instance.ShopUIOpen();
 
     if(isGoldMineNode){
          TheUI.Instance.ShopButton1.interactable=false;
@@ -117,7 +117,7 @@ public class Node : MonoBehaviour
             TheUI.Instance.ShopButton3.interactable=true;
             TheUI.Instance.ShopButton4.interactable=false;
     }
-}
+}*/
     private void OnMouseExit()
     {
     

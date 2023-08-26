@@ -60,8 +60,8 @@ public class FireTower : Tower
         base.LevelUp();
     } 
      private void OnMouseDown() {
-        TheUI.Instance.isButton=false;
-         TheUI.Instance.ShopUIClose();      
+        //TheUI.Instance.isButton=false;
+         //TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade",.6f);
         BuildManager.Instance.currentUpgradementTower=this;
          HUD.Instance.InitShopHud();

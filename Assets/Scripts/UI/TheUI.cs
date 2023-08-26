@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class TheUI : MonoSingeleton<TheUI>
 {
-    public CanvasGroup Shop1, Shop2, Shop3,Shop4;
+   /* public CanvasGroup Shop1, Shop2, Shop3,Shop4;
     public CanvasGroup UShop1, UShop2, UShop3,UShop4;
      public CanvasGroup AShop1, AShop2, AShop3;
 
@@ -18,10 +18,11 @@ public class TheUI : MonoSingeleton<TheUI>
     public GameObject BackGround;
     public Button ShopButton1, ShopButton2, ShopButton3,ShopButton4, UShopButton1, UShopButton2, UShopButton3,UShopButton4, AShopButton1, AShopButton2, AShopButton3;
     public bool isButton;
+   */
 
     private void Start()
     {
-        ShopUIClose();
+        //ShopUIClose();
        
 
     }
@@ -29,11 +30,11 @@ public class TheUI : MonoSingeleton<TheUI>
     public void ControlTheUI()
     {
      
-            ShopUIOpen();
+         //   ShopUIOpen();
 
     }
-  
 
+    /*
     public void ShopUIOpen()
     {
        
@@ -85,56 +86,59 @@ public class TheUI : MonoSingeleton<TheUI>
            AShopButton2.interactable = true;
             AShopButton3.interactable = true;
         }
+      
 
-    }
-    
-    public void ShopUIClose()
-    {
-        if (EventSystem.current.IsPointerOverGameObject()&&!isButton) return;
-        HUD.Instance.AllUnitDeSelect();
-        BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 0.25f).setEaseInExpo();
-       
-       
-        Shop1.LeanAlpha(0, 0.25f);
-        Shop2.LeanAlpha(0, 0.25f);
-        Shop3.LeanAlpha(0, 0.25f);
-        Shop4.LeanAlpha(0, 0.25f);
-        AShop1.LeanAlpha(0,0.25f);
-        AShop2.LeanAlpha(0,0.25f);
-        AShop3.LeanAlpha(0,0.25f);
-        UShop1.LeanAlpha(0,0.25f);
-        UShop2.LeanAlpha(0,0.25f);
-        UShop3.LeanAlpha(0,0.25f);
-        UShop4.LeanAlpha(0,0.25f);
-        
-        StartCoroutine(ButtonEater());
-        UShopButton1.interactable = false;
-        UShopButton2.interactable = false;
-        UShopButton3.interactable = false;
-        UShopButton4.interactable = false;
+}
+     */
 
-        ShopButton1.interactable = false;
-        ShopButton2.interactable = false;
-        ShopButton3.interactable = false;
-        AShopButton1.interactable = false;
-     AShopButton2.interactable = false;
-        AShopButton3.interactable = false;
-         
-    }
-    IEnumerator ButtonEater()
-    {
-        yield return new WaitForSeconds(.26f);
-       UShopButton1.gameObject.SetActive(false) ;
-       UShopButton2.gameObject.SetActive(false) ;
-       UShopButton3.gameObject.SetActive(false) ;
-       UShopButton4.gameObject.SetActive(false) ;
-        ShopButton1.gameObject.SetActive(false) ;
-        ShopButton2.gameObject.SetActive(false) ;
-        ShopButton3.gameObject.SetActive(false) ;
-        ShopButton4.gameObject.SetActive(false) ;
-       AShopButton1.gameObject.SetActive(false) ;
-       AShopButton2.gameObject.SetActive(false) ;
-       AShopButton3.gameObject.SetActive(false) ;
-        HUD.Instance.elementUI.SetActive(false);
-    }
+    /*  public void ShopUIClose()
+      {
+          if (EventSystem.current.IsPointerOverGameObject()&&!isButton) return;
+          HUD.Instance.AllUnitDeSelect();
+          BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 0.25f).setEaseInExpo();
+
+
+          Shop1.LeanAlpha(0, 0.25f);
+          Shop2.LeanAlpha(0, 0.25f);
+          Shop3.LeanAlpha(0, 0.25f);
+          Shop4.LeanAlpha(0, 0.25f);
+          AShop1.LeanAlpha(0,0.25f);
+          AShop2.LeanAlpha(0,0.25f);
+          AShop3.LeanAlpha(0,0.25f);
+          UShop1.LeanAlpha(0,0.25f);
+          UShop2.LeanAlpha(0,0.25f);
+          UShop3.LeanAlpha(0,0.25f);
+          UShop4.LeanAlpha(0,0.25f);
+
+          StartCoroutine(ButtonEater());
+          UShopButton1.interactable = false;
+          UShopButton2.interactable = false;
+          UShopButton3.interactable = false;
+          UShopButton4.interactable = false;
+
+          ShopButton1.interactable = false;
+          ShopButton2.interactable = false;
+          ShopButton3.interactable = false;
+          AShopButton1.interactable = false;
+       AShopButton2.interactable = false;
+          AShopButton3.interactable = false;
+
+      }
+      IEnumerator ButtonEater()
+      {
+          yield return new WaitForSeconds(.26f);
+         UShopButton1.gameObject.SetActive(false) ;
+         UShopButton2.gameObject.SetActive(false) ;
+         UShopButton3.gameObject.SetActive(false) ;
+         UShopButton4.gameObject.SetActive(false) ;
+          ShopButton1.gameObject.SetActive(false) ;
+          ShopButton2.gameObject.SetActive(false) ;
+          ShopButton3.gameObject.SetActive(false) ;
+          ShopButton4.gameObject.SetActive(false) ;
+         AShopButton1.gameObject.SetActive(false) ;
+         AShopButton2.gameObject.SetActive(false) ;
+         AShopButton3.gameObject.SetActive(false) ;
+          HUD.Instance.elementUI.SetActive(false);
+      }*/
+
 }

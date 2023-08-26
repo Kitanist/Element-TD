@@ -9,22 +9,23 @@ using UnityEngine.EventSystems;
 public class Castle : MonoBehaviour
 {
 
-
+    /*
 public void  OpenUnitPanelButton () {
-    TheUI.Instance.isButton=true;
-    TheUI.Instance.ShopUIClose();
+   // TheUI.Instance.isButton=true;
+  //  TheUI.Instance.ShopUIClose();
     Invoke("OpenUIUnit",.6f);
     if(Random.Range(0,2)==1)
     GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
     else
       GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
 }
+    
 public void OpenUIUnit () {
-    TheUI.Instance.isTurret = false;
-    TheUI.Instance.isUpgrade = false;
-    TheUI.Instance.isArmy = true;
-    TheUI.Instance.ShopUIOpen();
-}
+    //TheUI.Instance.isTurret = false;
+    //TheUI.Instance.isUpgrade = false;
+    //TheUI.Instance.isArmy = true;
+   // TheUI.Instance.ShopUIOpen();
+}*/
 private void OnTriggerEnter(Collider other) {
  
      if(GetComponent<HealthComponent>().isPlayerBase){

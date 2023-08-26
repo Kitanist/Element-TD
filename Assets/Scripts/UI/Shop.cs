@@ -16,8 +16,8 @@ public class Shop : MonoBehaviour
 
         BuildManager.Instance.SelectTowerToBuild(BuildManager.Instance.ArrowTower.GetComponent<TowerBlueprint>());
         BuildManager.Instance.BuildTowerOn();
-        TheUI.Instance.isButton=true;
-        TheUI.Instance.ShopUIClose();
+       // TheUI.Instance.isButton=true;
+       // TheUI.Instance.ShopUIClose();
     }
     public void SelectFireTower()
     {
@@ -28,8 +28,8 @@ public class Shop : MonoBehaviour
 
      BuildManager.Instance.SelectTowerToBuild(BuildManager.Instance.FireTower.GetComponent<TowerBlueprint>());
         BuildManager.Instance.BuildTowerOn();
-        TheUI.Instance.isButton=true;
-             TheUI.Instance.ShopUIClose();
+        //TheUI.Instance.isButton=true;
+           //  TheUI.Instance.ShopUIClose();
     }
      public void SelectBallTower()
     {
@@ -40,8 +40,8 @@ public class Shop : MonoBehaviour
 
        BuildManager.Instance.SelectTowerToBuild(BuildManager.Instance.BallTower.GetComponent<TowerBlueprint>());
         BuildManager.Instance.BuildTowerOn();
-        TheUI.Instance.isButton=true;
-            TheUI.Instance.ShopUIClose();
+        //TheUI.Instance.isButton=true;
+         //   TheUI.Instance.ShopUIClose();
     }
 
      public void SelectGoldMineTower()
@@ -53,7 +53,7 @@ public class Shop : MonoBehaviour
       
        BuildManager.Instance.SelectTowerToBuild(BuildManager.Instance.Mine.GetComponent<TowerBlueprint>());
         BuildManager.Instance.BuildTowerOn();
-                  TheUI.Instance.isButton=true;
-            TheUI.Instance.ShopUIClose();
+                //  TheUI.Instance.isButton=true;
+           // TheUI.Instance.ShopUIClose();
     }
 }

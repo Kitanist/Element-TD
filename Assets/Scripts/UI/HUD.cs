@@ -6,7 +6,7 @@ using TMPro;
 
 public class HUD :MonoSingeleton<HUD>
 {
-    [Header ("ELEMENT")]
+    /*[Header ("ELEMENT")]
     [Space(5)]
    [SerializeField] private bool elementTabOpen=false;
     public GameObject elementUI;
@@ -22,7 +22,7 @@ public class HUD :MonoSingeleton<HUD>
     public TMP_Text  elementAirCostText;
 
     public TMP_Text elementDirtCostText;
-
+    */
  public Button setVisionOrAttackHUD;
 
  [Header("UNİT")]
@@ -45,7 +45,7 @@ public class HUD :MonoSingeleton<HUD>
  [Header("OTHER")]
   [Space(5)]
 
-    public TMP_Text ArrowTowerText;
+    /*public TMP_Text ArrowTowerText;
 
     public TMP_Text BallTowerText;
 
@@ -57,12 +57,12 @@ public class HUD :MonoSingeleton<HUD>
 
     public TMP_Text DestroyText;
 
-    public TMP_Text InfoText;
+    public TMP_Text InfoText;*/
 
     [Header("INFO")]
     [Space(5)]
     
-    [SerializeField] private bool infoTabOpen=false;
+   /* [SerializeField] private bool infoTabOpen=false;
     public GameObject infoUI;
 
     public TMP_Text towerDamageNameText;
@@ -74,7 +74,7 @@ public class HUD :MonoSingeleton<HUD>
     public TMP_Text towerSpeedText;
 
      public TMP_Text towerElementText;
-     public TMP_Text towerRangeText;
+     public TMP_Text towerRangeText;*/
 
  [Header("UNİT COUNT")]
   [Space(5)]
@@ -218,6 +218,7 @@ public void Start () {
    InitShopHud();
 }
 public void InitShopHud () {
+        /*
     normalUnitText.text=normalFireUnit.cost.ToString() + "$";
       speederUnitText.text=speederFireUnit.cost.ToString()+ "$";
         armoredUnitText.text=armoredFireUnit.cost.ToString()+ "$";
@@ -257,8 +258,9 @@ public void InitShopHud () {
         towerNameText.text=BuildManager.Instance.currentUpgradementTower.Name;
 
         }
-      
+        */
 }       
+    /*/
     public void UnitNormalElementSelect()
     {
 
@@ -276,6 +278,7 @@ public void InitShopHud () {
         UnitArmoredDeElementSelect();
         TheUI.Instance.AShopButton1.image.enabled = false ;
         TheUI.Instance.AShop1.transform.GetChild(0).GetComponent<TMP_Text>().text="";
+
 
     }
     public void UnitNormalDeElementSelect()
@@ -349,6 +352,7 @@ public void InitShopHud () {
         UnitSpeedDeElementSelect();
         UnitArmoredDeElementSelect();
     }
+    */
     public void TakeUnit(Unit unit) {
         if (GameManager.Instance.Gold < unit.cost) 
         {
@@ -424,6 +428,7 @@ public void LevelUpTower () {
             InitShopHud();
         }
 }
+    /*
 public void ElementTabOpen () {
      if(UnityEngine.Random.Range(0,2)==1)
     GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
@@ -440,6 +445,7 @@ public void ElementTabOpen () {
           elementUI.SetActive(true);
     }
 }
+ 
 public void ElementUIExit () {
      if(UnityEngine.Random.Range(0,2)==1)
     GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
@@ -449,7 +455,8 @@ public void ElementUIExit () {
         elementTabOpen=false;
         elementUI.SetActive(false);
 }
-public void SetTowerElement (int elementIndex) {
+      
+    public void SetTowerElement (int elementIndex) {
     if(BuildManager.Instance.currentUpgradementTower.element_Type==Element_Type.None&&GameManager.Instance.Gold>BuildManager.Instance.currentUpgradementTower.elementChanceCost){
        if(UnityEngine.Random.Range(0,2)==1)
     GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
@@ -479,29 +486,33 @@ public void SetTowerElement (int elementIndex) {
     }
    
 }
+     */
 
-public void OpenInfoUI () {
-     if(UnityEngine.Random.Range(0,2)==1)
-    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
-    else
-      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
-    InitShopHud();
-    if(infoTabOpen){
-        infoTabOpen=false;
-        infoUI.SetActive(false);
+    public void OpenInfoUI () {
+        /*
+             if(UnityEngine.Random.Range(0,2)==1)
+            GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+            else
+              GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+            InitShopHud();
+            if(infoTabOpen){
+                infoTabOpen=false;
+                infoUI.SetActive(false);
 
+            }
+            else{
+                 infoTabOpen=true;
+                  infoUI.SetActive(true);
+            }
+        }
+        public void ExitInfoUI () {
+             if(UnityEngine.Random.Range(0,2)==1)
+            GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
+            else
+              GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
+                 infoTabOpen=false;
+                infoUI.SetActive(false);
+        */
     }
-    else{
-         infoTabOpen=true;
-          infoUI.SetActive(true);
-    }
-}
-public void ExitInfoUI () {
-     if(UnityEngine.Random.Range(0,2)==1)
-    GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
-    else
-      GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
-         infoTabOpen=false;
-        infoUI.SetActive(false);
-}
+
 }

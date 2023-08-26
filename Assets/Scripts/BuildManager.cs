@@ -40,8 +40,8 @@ public class BuildManager : MonoSingeleton<BuildManager>
             currentUpgradementTower=null;
             node.turret = null;
 
-            TheUI.Instance.isButton=true;
-            TheUI.Instance.ShopUIClose();
+          //  TheUI.Instance.isButton=true;
+           // TheUI.Instance.ShopUIClose();
              
         }
     
@@ -66,7 +66,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
 
         
         Debugger.Instance.Debuger("Tower is Builded: -", insaedilcektower.cost);
-         TheUI.Instance.ShopUIClose();
+         //TheUI.Instance.ShopUIClose();
     }
 
 }
