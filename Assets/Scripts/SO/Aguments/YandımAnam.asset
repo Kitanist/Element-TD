@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d30b320a5ffaf7468a31186caf79115, type: 3}
-  m_Name: AlevliOklar
+  m_Name: "Yand\u0131mAnam"
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: 9e085eb9428bfad42819e7f87c2501bf, type: 3}
-  sprite: {fileID: 21300000, guid: d1f6e1e3e1fdaac4ebf74a0169fa3ce0, type: 3}
-  agumentName: Alevli Oklar
-  agumentDescription: "Bu kulenin at\u0131\u015Flar\u0131 isabet etti\u011Fi rakibe
-    yakmahasar\u0131 uygularve rakip 3 saniye boyunca hasar almaya devam eder."
+  sprite: {fileID: 21300000, guid: 9c0d6ec706e01ce448aea81584af092b, type: 3}
+  agumentName: "Yand\u0131m Anam"
+  agumentDescription: "D\xFC\u015Fmana att\u0131\u011F\u0131n yak\u0131c\u0131 oklar
+    ile Rakibe tonla hasar ver ancakYanan rakipler h\u0131zlan\u0131r."
   aqumentType: 0

@@ -22,7 +22,15 @@ public class HealthComponent : MonoBehaviour
     public Material damageMatarial;
     Material firstMatarial;
     public AudioClip hitSound;
-private void Start() {
+
+
+    public bool isIlkDarbe;
+    public bool isIlkDarbeUse;
+
+    public bool isImBurning;
+    public bool isImBurningII;
+
+    private void Start() {
     mesh=GetComponent<MeshRenderer>();
     firstMatarial=mesh.material;
 }
@@ -48,8 +56,27 @@ private void Start() {
         mesh.material=firstMatarial;
     }
    public void GetDamage (float damage,Element_Type damagerType) {
+    
     float _damage=SetElementDamage(damage,damagerType);
-    GetFloatingText("-"+_damage.ToString());
+        if (!isIlkDarbeUse && isIlkDarbe)
+        {
+            isIlkDarbeUse = true;
+            _damage += _damage;
+               
+        }
+        if (isImBurning)
+        {
+            GetComponent<Unit>().speed += 2 ;
+            _damage += _damage + _damage +_damage;
+            StartCoroutine(ReturnNormalSpeed(3));
+        }
+        if (isImBurningII)
+        {
+            GetComponent<Unit>().speed += 1;
+            _damage += 3;
+            StartCoroutine(ReturnNormalSpeed(.5f));
+        }
+        GetFloatingText("-"+_damage.ToString());
     text.GetComponent<TextMesh>().color=Color.cyan;
     GameManager.Instance.asource.PlayOneShot(hitSound);
     if(Health<=_damage){
@@ -199,12 +226,18 @@ private void Start() {
             }
             GetFloatingText("-" + ((int)_damage).ToString());
             text.GetComponent<TextMesh>().color = Color.cyan;
-            Debug.Log("Yandim Anam");
+         
             Health -= _damage;
             HealtBar.DOValue(Health / maxHealth, .5f, false);
 
             yield return new WaitForSeconds(1);
 
         }
+    }
+    public IEnumerator ReturnNormalSpeed(float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        isImBurning = false;
+        GetComponent<Unit>().speed = GetComponent<Unit>().maxSpeed;
     }
 }

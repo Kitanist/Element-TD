@@ -61,7 +61,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         {
             case 0:
               BuildManager.Instance.towerToBuild =  aquments[final1];
-                aquments[final1].Effect.Raise();
+                
                 BuildManager.Instance.BuildTowerOn();
 
 
@@ -69,14 +69,14 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
             case 1:
                
                 BuildManager.Instance.towerToBuild = aquments[final2];
-                aquments[final2].Effect.Raise();
+              
                 BuildManager.Instance.BuildTowerOn();
 
                 break;
             case 2:
 
                 BuildManager.Instance.towerToBuild = aquments[final3];
-                aquments[final3].Effect.Raise();
+                
                 BuildManager.Instance.BuildTowerOn();
                 break;
             default:

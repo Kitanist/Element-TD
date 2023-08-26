@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+
     public Element_Type element_Type;
     public float damage = 10;
     private Transform target;
     public float speed = 70;
     public bool isBurned;
-
+    public bool isIlkDarbe;
+    public bool isIamBrning;
 
     public void Seek(Transform _target)
     {
@@ -33,6 +35,16 @@ public class Bullet : MonoBehaviour
                 target.GetComponent<HealthComponent>().GetBurnedDamage(damage, element_Type);
                 Debug.Log("Yanma Hasarý Start");
             }
+            if (isIlkDarbe )
+            {
+                target.GetComponent<HealthComponent>().isIlkDarbe = true;
+                    
+            }
+            if (isIamBrning)
+            {
+                target.GetComponent<HealthComponent>().isImBurning = true;
+            }
+
             gameObject.SetActive(false);
 
         }

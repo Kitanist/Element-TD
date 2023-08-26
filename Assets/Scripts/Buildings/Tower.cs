@@ -7,6 +7,10 @@ using UnityEngine.EventSystems;
 public class Tower : AqumentBase
 {
     public bool isAlevliOklarEnabled;
+    public bool isIlkDarbeEnabled;
+    public bool isIamBurning;
+    public bool isIamBurningII;
+    public bool isFistImpact;
 
     public Transform firePos;
     public GameObject rangeObject;
@@ -47,7 +51,7 @@ public class Tower : AqumentBase
     public int upgradeCostforNextLevel;
     private float shortDis;
     public Collider[] targets;
-
+    
     public bool towerIsPlayer = true;
 
     void Update()
@@ -120,9 +124,25 @@ public class Tower : AqumentBase
         bullet.GetComponent<Bullet>().damage = damage;//merminin elementini kulenin elementi yapıyoruz
         if (isAlevliOklarEnabled)
         {
-            Debug.Log(isAlevliOklarEnabled);
+          
             bullet.GetComponent<Bullet>().isBurned = true; // yanma olcak
         }
+        if (isIlkDarbeEnabled)
+        {
+           
+            bullet.GetComponent<Bullet>().isIlkDarbe = true; // yanma olcak
+        }
+        if (isIamBurning)
+        {
+
+            bullet.GetComponent<Bullet>().isIamBrning = true;
+        }
+          if (isIamBurning)
+        {
+
+            bullet.GetComponent<Bullet>().isIamBrning = true;
+        }
+
         bullet.transform.position = firePos.position;
         bullet.GetComponent<Bullet>().Seek(target);
 

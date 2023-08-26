@@ -199,12 +199,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAlevliOklarEnabled: 0
+  isIlkDarbeEnabled: 0
+  isIamBurning: 0
+  isIamBurningII: 0
+  isFistImpact: 0
   firePos: {fileID: 6433023777251045489}
   rangeObject: {fileID: 2010051797618933523}
   element_Type: 0
   node: {fileID: 0}
   Name: Arrow Tower
-  damage: 5
+  damage: 3
   poolIndex: 0
   JumpForce: 1
   attackRadius: 15

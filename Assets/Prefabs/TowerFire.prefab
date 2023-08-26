@@ -1187,12 +1187,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c21a855857f17419a41dcf1ba12543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAlevliOklarEnabled: 0
+  isIlkDarbeEnabled: 0
+  isIamBurning: 0
+  isIamBurningII: 0
+  isFistImpact: 0
   firePos: {fileID: 7895575553885276527}
   rangeObject: {fileID: 1379914775137769158}
   element_Type: 0
   node: {fileID: 0}
   Name: Trap Tower
-  damage: 10
+  damage: 2
   poolIndex: 0
   JumpForce: 5
   attackRadius: 15
@@ -1221,6 +1226,7 @@ MonoBehaviour:
   upgradeCostforNextLevel: 1000
   targets: []
   towerIsPlayer: 1
+  UnTargets: []
   particles:
   - {fileID: 7627460614140884146}
   rotatObject: {fileID: 5895256763184718122}

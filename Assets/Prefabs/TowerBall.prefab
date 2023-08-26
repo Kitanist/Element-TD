@@ -129,12 +129,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5bdbc4c72cdc24ebef08f8f8ad944a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAlevliOklarEnabled: 0
+  isIlkDarbeEnabled: 0
+  isIamBurning: 0
+  isIamBurningII: 0
+  isFistImpact: 0
   firePos: {fileID: 4601695124506555552}
   rangeObject: {fileID: 5822867450747286397}
   element_Type: 0
   node: {fileID: 0}
   Name: Bomber Tower
-  damage: 20
+  damage: 10
   poolIndex: 1
   JumpForce: 7
   attackRadius: 15
@@ -163,6 +168,7 @@ MonoBehaviour:
   upgradeCostforNextLevel: 600
   targets: []
   towerIsPlayer: 1
+  isUseFirstImpact: 0
   rotatObject: {fileID: 2154469513596929870}
 --- !u!1 &4601695124506555559
 GameObject:

@@ -11625,10 +11625,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   augmentTab: {fileID: 1333480872}
   aquments:
+  - {fileID: 11400000, guid: 589d611b42dcc914193766d03a7c23bc, type: 2}
+  - {fileID: 11400000, guid: 07c7a99bae5c72e41b5920fb56f25a60, type: 2}
   - {fileID: 11400000, guid: 0e062c6befe9d1444bfb0e8cb8013776, type: 2}
-  - {fileID: 11400000, guid: 0e062c6befe9d1444bfb0e8cb8013776, type: 2}
-  - {fileID: 11400000, guid: 0e062c6befe9d1444bfb0e8cb8013776, type: 2}
-  - {fileID: 11400000, guid: 0e062c6befe9d1444bfb0e8cb8013776, type: 2}
+  - {fileID: 11400000, guid: 29805a26d0713764f907c5fe992de57f, type: 2}
+  - {fileID: 11400000, guid: eca32de069fb6714d9d55f24ed020f49, type: 2}
   Returner: {fileID: 0}
   icon1: {fileID: 1698244328}
   icon2: {fileID: 1266508470}

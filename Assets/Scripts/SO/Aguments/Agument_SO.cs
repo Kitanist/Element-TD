@@ -10,6 +10,6 @@ public class Agument_SO : ScriptableObject
     public string agumentName;
     public string agumentDescription;
     public AqumentType aqumentType;
-    public GameEvent Effect;
+ 
 
 }

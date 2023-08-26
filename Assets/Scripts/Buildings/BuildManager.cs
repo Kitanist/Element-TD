@@ -78,6 +78,21 @@ public class BuildManager : MonoSingeleton<BuildManager>
         {
             tower.isAlevliOklarEnabled = true;
         }
-       
+        if(towerToBuild.agumentName == "Ikinci Darbe")
+        {
+            tower.isIlkDarbeEnabled = true;
+        }
+        if (towerToBuild.agumentName == "Yandým Anam")
+        {
+            tower.isIamBurning = true;
+        }
+        if (towerToBuild.agumentName == "Yandým Anam II")
+        {
+            tower.isIamBurningII = true;
+        }
+        if (towerToBuild.agumentName == "Ilk Darbe")
+        {
+            tower.isFistImpact= true;
+        }
     }
 }
