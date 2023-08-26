@@ -36,6 +36,7 @@ public class Node : MonoBehaviour
 
     private void OnMouseEnter() // mouse node a girince
     {
+        if (AgumentManager.Instance.isOpenTab) return;
         if (!isGoldMineNode)
         {
             if (turret)
@@ -50,6 +51,8 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown() // Agument Eventini Başlat
     {
+        if (AgumentManager.Instance.isOpenTab) return;
+        if (turret) return;
         //   if (!BuildManager.Instance.CanBuild)
         //       return;
         NodeToTower();  
@@ -111,6 +114,7 @@ public class Node : MonoBehaviour
 }*/
     private void OnMouseExit()
     {
+        if (AgumentManager.Instance.isOpenTab) return;
         if (turret)
         {
             if (!isGoldMineNode)

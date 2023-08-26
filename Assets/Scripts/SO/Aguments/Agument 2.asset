@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d30b320a5ffaf7468a31186caf79115, type: 3}
-  m_Name: Agument 1
+  m_Name: Agument 2
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
-  sprite: {fileID: 21300000, guid: ce1820d40adc0f34ba8bed5d502e8f4c, type: 3}
-  agumentName: dikizDisW
+  sprite: {fileID: 21300000, guid: 9c0d6ec706e01ce448aea81584af092b, type: 3}
+  agumentName: dikizDisD
   agumentDescription: "bir sald\u0131r\u0131 yerine iki sald\u0131r\u0131 yapt\u0131n
     say\u0131l\u0131r"
   agumentLevel: 0
-  elementType: 2
+  elementType: 3
   aqumentType: 0

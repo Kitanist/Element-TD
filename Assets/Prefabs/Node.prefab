@@ -113,4 +113,7 @@ MonoBehaviour:
   HoverColor: {r: 0.43137255, g: 0.43137255, b: 0.43137255, a: 1}
   NotHaveMoneyColor: {r: 0.8584906, g: 0.15711991, b: 0.15711991, a: 0}
   pozisyonOffset: {x: 0, y: 1.5, z: 0}
+  cost: 0
   turret: {fileID: 0}
+  OnAgumentEvent: {fileID: 11400000, guid: 69c5f209dad23cc45b4eccde42561137, type: 2}
+  isGoldMineNode: 0

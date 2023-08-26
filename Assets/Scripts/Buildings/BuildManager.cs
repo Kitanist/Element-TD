@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class BuildManager : MonoSingeleton<BuildManager>
 {
-    [SerializeField] private TowerBlueprint towerToBuild; // Tower from Agument
-
+    public Agument_SO towerToBuild; // Tower from Agument
+     
     public Tower currentUpgradementTower; //For Upgrade Towers
 
     public Node node;
@@ -28,10 +28,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
 
     public float PayBackRatio = 0.65f;
 
-    public void SelectTowerToBuild(TowerBlueprint turret)
-    {
-        towerToBuild = turret;
-    }
+
     public void DestroyTowerOn()
     {
         if (node.turret)
@@ -54,13 +51,13 @@ public class BuildManager : MonoSingeleton<BuildManager>
 
     public void BuildTowerOn()
     {
-        if (GameManager.Instance.Gold < towerToBuild.cost)
-        {
-            Debugger.Instance.Debuger("Not Enough Gold!");
-            return;
-        }
+      // if (GameManager.Instance.Gold < node.cost)
+      // {
+      //     Debugger.Instance.Debuger("Not Enough Gold!");
+      //     return;
+      // }
 
-        GameManager.Instance.Gold -= towerToBuild.cost;
+        GameManager.Instance.Gold -= node.cost;
 
         GameObject turret = Instantiate(towerToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
             
@@ -71,8 +68,16 @@ public class BuildManager : MonoSingeleton<BuildManager>
         node.turret = turret;
         turret.GetComponent<Tower>().node = node;
 
-
-        Debugger.Instance.Debuger("Tower is Builded: -", towerToBuild.cost);
+        OnEfect(turret.GetComponent<Tower>());
+        Debugger.Instance.Debuger("Tower is Builded: -", node.cost);
         //TheUI.Instance.ShopUIClose();
     } // Before Call This Func Set towerToBuild
+    public void OnEfect(Tower tower)
+    {
+        if(towerToBuild.agumentName=="Alevli Oklar")
+        {
+            tower.isAlevliOklarEnabled = true;
+        }
+       
+    }
 }

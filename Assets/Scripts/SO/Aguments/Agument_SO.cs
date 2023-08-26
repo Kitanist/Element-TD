@@ -9,9 +9,7 @@ public class Agument_SO : ScriptableObject
     public Sprite sprite;
     public string agumentName;
     public string agumentDescription;
-    public int agumentLevel;
-    public Element_Type elementType;
     public AqumentType aqumentType;
-
+    public GameEvent Effect;
 
 }
