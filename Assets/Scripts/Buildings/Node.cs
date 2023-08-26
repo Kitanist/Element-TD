@@ -6,83 +6,74 @@ public class Node : MonoBehaviour
     public Color HoverColor;
     public Color NotHaveMoneyColor;
     public Vector3 pozisyonOffset;
+    public int cost;
 
-    
     public GameObject turret;
-
+    public GameEvent OnAgumentEvent;
     private Renderer rend;
     private Color StartColor;
 
-    public bool isGoldMineNode=false;
-  
+    public bool isGoldMineNode = false;
+
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
-       if(!isGoldMineNode){
-        
-        StartColor = rend.material.color;
-       }
-       else{
-        StartColor=rend.material.color;
-       }
-       
-        
+        if (!isGoldMineNode)
+        {
+            StartColor = rend.material.color;
+        }
+        else
+        {
+            StartColor = rend.material.color;
+        }
     }
+
     public Vector3 GetBuildPosition() // kule pozisyonu ayarlaması
     {
         return transform.position + pozisyonOffset;
     }
+
     private void OnMouseEnter() // mouse node a girince
     {
-      if(!isGoldMineNode){
-            if(turret)
-      turret.GetComponent<Tower>().rangeObject.SetActive(true); 
-      }
-      
-       
-       
-
+        if (!isGoldMineNode)
+        {
+            if (turret)
+                turret.GetComponent<Tower>().rangeObject.SetActive(true);
+        }
     }
-    public void NodeToTower () {
+
+    public void NodeToTower()
+    {
         BuildManager.Instance.node = this;
     }
-    private void OnMouseDown()
+
+    private void OnMouseDown() // Agument Eventini Başlat
     {
-    //   if (!BuildManager.Instance.CanBuild)
-    //       return;
-        NodeToTower();
-        
+        //   if (!BuildManager.Instance.CanBuild)
+        //       return;
+        NodeToTower();  
+        OnAgumentEvent.Raise();
         // upgrade ve insa bolgeleri ayarlandi
-     
-            
-         if (turret)
-        {   
-           if(turret.GetComponent<Tower>().towerIsPlayer){
-           // TheUI.Instance.isButton=false;
-               //   TheUI.Instance.ShopUIClose();
-                Invoke("OpenUIUpgrade",.6f);
-           }
-              
-             
-             
-            
-         
+
+
+        if (turret)
+        {
+            if (turret.GetComponent<Tower>().towerIsPlayer)
+            {
+                // TheUI.Instance.isButton=false;
+                //   TheUI.Instance.ShopUIClose();
+                // Invoke("OpenUIUpgrade",.6f);
+            }
         }
         else
         {
-            
-          //TheUI.Instance.isButton=false;
-         //  TheUI.Instance.ShopUIClose();
-            Invoke("OpenUIUTower",.6f);
-                     
-            
+            //TheUI.Instance.isButton=false;
+            //  TheUI.Instance.ShopUIClose();
+            //   Invoke("OpenUIUTower",.6f);
         }
-        
-        
-       
-
     }
+
     /* public void OpenUIUpgrade () {
 
    // TheUI.Instance.isTurret = false;
@@ -120,12 +111,12 @@ public class Node : MonoBehaviour
 }*/
     private void OnMouseExit()
     {
-    
-        if(turret){
-            if(!isGoldMineNode)
-             turret.GetComponent<Tower>().rangeObject.SetActive(false);
+        if (turret)
+        {
+            if (!isGoldMineNode)
+                turret.GetComponent<Tower>().rangeObject.SetActive(false);
         }
-       
+
         rend.material.color = StartColor;
     }
-} 
+}
