@@ -57,7 +57,7 @@ public class Node : MonoBehaviour
         if (turret) return;
         //   if (!BuildManager.Instance.CanBuild)
         //       return;
-        mrenderer.enabled = false;
+      
         NodeToTower();  
         OnAgumentEvent.Raise();
         // upgrade ve insa bolgeleri ayarlandi
