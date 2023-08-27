@@ -1192,6 +1192,7 @@ MonoBehaviour:
   isIamBurning: 0
   isIamBurningII: 0
   isFistImpact: 0
+  isTonlaHasarEnabled: 0
   firePos: {fileID: 7895575553885276527}
   rangeObject: {fileID: 1379914775137769158}
   element_Type: 0
@@ -1229,7 +1230,6 @@ MonoBehaviour:
   UnTargets: []
   particles:
   - {fileID: 7627460614140884146}
-  rotatObject: {fileID: 5895256763184718122}
 --- !u!114 &2660605284479523788
 MonoBehaviour:
   m_ObjectHideFlags: 0

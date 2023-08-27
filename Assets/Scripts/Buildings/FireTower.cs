@@ -6,7 +6,7 @@ public class FireTower :Tower
 {
     public Collider[] UnTargets;
     public GameObject[] particles;
-    public GameObject rotatObject;
+   // public GameObject rotatObject;
     private void Update()
     {
 
@@ -55,10 +55,10 @@ public class FireTower :Tower
         if (target)
         {
 
-            Vector3 Direction = (target.transform.position - transform.position);
-
-            Quaternion rot = Quaternion.LookRotation(-Direction);
-            rotatObject.transform.rotation = rot;
+           // Vector3 Direction = (target.transform.position - transform.position);
+           //
+           // Quaternion rot = Quaternion.LookRotation(-Direction);
+          //  rotatObject.transform.rotation = rot;
 
 
         }

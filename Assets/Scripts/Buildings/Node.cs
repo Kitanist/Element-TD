@@ -11,6 +11,7 @@ public class Node : MonoBehaviour
     public GameObject turret;
     public GameEvent OnAgumentEvent;
     private Renderer rend;
+    private MeshRenderer mrenderer;
     private Color StartColor;
 
     public bool isGoldMineNode = false;
@@ -18,6 +19,7 @@ public class Node : MonoBehaviour
 
     private void Start()
     {
+        mrenderer = GetComponent<MeshRenderer>();
         rend = GetComponent<Renderer>();
         if (!isGoldMineNode)
         {
@@ -55,6 +57,7 @@ public class Node : MonoBehaviour
         if (turret) return;
         //   if (!BuildManager.Instance.CanBuild)
         //       return;
+        mrenderer.enabled = false;
         NodeToTower();  
         OnAgumentEvent.Raise();
         // upgrade ve insa bolgeleri ayarlandi
