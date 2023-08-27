@@ -354,20 +354,13 @@ public void InitShopHud () {
     }
     */
     public void TakeUnit(Unit unit) {
-        if (GameManager.Instance.Gold < unit.cost) 
-        {
-
-            Debugger.Instance.Debuger(unit.unitName + "for need Gold:" + (unit.cost-GameManager.Instance.Gold));
-        return;
-
-        }
      
       if(UnityEngine.Random.Range(0,2)==1)
     GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
     else
       GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
       
-     GameManager.Instance.Gold-=unit.cost;
+  
    if(unit.GetComponent<HealthComponent>().myElement==Element_Type.Fire){
     if(unit==normalFireUnit)
     BattleManager.Instance.AddUnit(normalFireUnit);

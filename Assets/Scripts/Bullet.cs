@@ -8,11 +8,12 @@ public class Bullet : MonoBehaviour
 
     public Element_Type element_Type;
     public float damage = 10;
-    private Transform target;
+    public Transform target;
     public float speed = 70;
     public bool isBurned;
     public bool isIlkDarbe;
     public bool isIamBrning;
+   
 
     public void Seek(Transform _target)
     {
@@ -44,6 +45,7 @@ public class Bullet : MonoBehaviour
             {
                 target.GetComponent<HealthComponent>().isImBurning = true;
             }
+       
 
             gameObject.SetActive(false);
 
@@ -51,4 +53,5 @@ public class Bullet : MonoBehaviour
         transform.Translate(-dir.normalized * distanceFrame, Space.World);
     }
    
+    
 }

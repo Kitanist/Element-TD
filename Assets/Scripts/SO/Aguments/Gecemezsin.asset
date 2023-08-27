@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d30b320a5ffaf7468a31186caf79115, type: 3}
   m_Name: Gecemezsin
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4601695123754124436, guid: 755aa92f600480f419065ce21508fa29, type: 3}
+  prefab: {fileID: 4601695123754124436, guid: a379dd534de252e40a9469041e1262c5, type: 3}
   sprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
   agumentName: Gecemezsin
   agumentDescription: "d\xFC\u015Fmanlar yava\u015Flar ama kule ates\u015F etmez"
   aqumentType: 0
+  elemetType: 0
+  AmountSoldier: 0
+  Cost: 0

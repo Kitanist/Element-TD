@@ -282,6 +282,10 @@ MonoBehaviour:
   isIlkDarbe: 0
   isIlkDarbeUse: 0
   isImBurning: 0
+  isImBurningII: 0
+  don: 0
+  coss: 0
+  isBass: 0
 --- !u!114 &3779743739193983278
 MonoBehaviour:
   m_ObjectHideFlags: 0

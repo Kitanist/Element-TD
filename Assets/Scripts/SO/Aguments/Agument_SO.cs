@@ -10,6 +10,9 @@ public class Agument_SO : ScriptableObject
     public string agumentName;
     public string agumentDescription;
     public AqumentType aqumentType;
- 
+
+    public Element_Type elemetType;
+    public int AmountSoldier;
+    public int Cost;
 
 }

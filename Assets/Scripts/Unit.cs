@@ -10,7 +10,7 @@ public class Unit : MonoBehaviour
     public int myPoolIndex=1;
     public float speed=5;
     public float maxSpeed = 5;
-    public float cost=50;
+
     public float price=10;
     public string unitName;
     void Start()
@@ -29,4 +29,5 @@ public class Unit : MonoBehaviour
                 Debug.Log("spriseee");
         }
     }
+    
 }
