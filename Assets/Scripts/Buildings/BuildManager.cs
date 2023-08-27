@@ -100,5 +100,9 @@ public class BuildManager : MonoSingeleton<BuildManager>
             GameManager.Instance.myCastle.GetComponent<HealthComponent>().GetDamage(GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health/4, Element_Type.None);
             tower.damage += 4;
         }
+        if (towerToBuild.agumentName == "Gecemezsin")
+        {
+           
+        }
     }
 }
