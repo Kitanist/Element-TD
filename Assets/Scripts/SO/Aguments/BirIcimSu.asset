@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d30b320a5ffaf7468a31186caf79115, type: 3}
+  m_Name: BirIcimSu
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 7895575553819616920, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
+  sprite: {fileID: 21300000, guid: f82dfc5fc3c5a8f4080a3550427019c8, type: 3}
+  agumentName: Bir icim Su
+  agumentDescription: kalene 20 can ekler
+  aqumentType: 0
+  elemetType: 0
+  AmountSoldier: 0
+  Cost: 0

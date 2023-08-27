@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
     public Tower currentUpgradementTower; //For Upgrade Towers
 
     public Node node;
+    
 
     public GameObject ArrowTower;
     public GameObject FireTower;
@@ -74,11 +76,11 @@ public class BuildManager : MonoSingeleton<BuildManager>
     } // Before Call This Func Set towerToBuild
     public void OnEfect(Tower tower)
     {
-        if(towerToBuild.agumentName=="Alevli Oklar")
+        if (towerToBuild.agumentName == "Alevli Oklar")
         {
             tower.isAlevliOklarEnabled = true;
         }
-        if(towerToBuild.agumentName == "Ikinci Darbe")
+        if (towerToBuild.agumentName == "Ikinci Darbe")
         {
             tower.isIlkDarbeEnabled = true;
         }
@@ -92,17 +94,48 @@ public class BuildManager : MonoSingeleton<BuildManager>
         }
         if (towerToBuild.agumentName == "Ilk Darbe")
         {
-            tower.isFistImpact= true;
+            tower.isFistImpact = true;
         }
         if (towerToBuild.agumentName == "Tonla Hasar")
         {
-          tower.isTonlaHasarEnabled= true;
-            GameManager.Instance.myCastle.GetComponent<HealthComponent>().GetDamage(GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health/4, Element_Type.None);
+            tower.isTonlaHasarEnabled = true;
+            GameManager.Instance.myCastle.GetComponent<HealthComponent>().GetDamage(GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health / 4, Element_Type.None);
             tower.damage += 4;
         }
         if (towerToBuild.agumentName == "Gecemezsin")
         {
-           
+            tower.isCantPass = true;
+        }
+        if (towerToBuild.agumentName == "Hop Dedik")
+        {
+            tower.isDon = true;
+        }
+        if (towerToBuild.agumentName == "Coss")
+        {
+            tower.isCoss = true;
+        }
+        if (towerToBuild.agumentName == "Bir icim Su")
+        {
+            Debug.Log("+20");
+            tower.isBirIcimSu = true;
+
+            GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health += 20;
+            GameManager.Instance.myCastle.GetComponent<HealthComponent>().HealtBar.DOValue(GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health / GameManager.Instance.myCastle.GetComponent<HealthComponent>().maxHealth, .5f, false);
+            if (GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health > GameManager.Instance.myCastle.GetComponent<HealthComponent>().maxHealth)
+            {
+                GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health = GameManager.Instance.myCastle.GetComponent<HealthComponent>().maxHealth;
+                GameManager.Instance.myCastle.GetComponent<HealthComponent>().HealtBar.DOValue(1, .5f, false);
+            }
+
+        }
+        if (towerToBuild.agumentName == "Olumcul Tempo")
+        {
+            tower.isOlumculTempo= true;
+
+        }
+        if(towerToBuild.agumentName == "Geri Bass")
+        {
+            tower.isBassGeri= true;
         }
     }
-}
+    }

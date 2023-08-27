@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class Tower : AqumentBase
 {
@@ -12,6 +13,12 @@ public class Tower : AqumentBase
     public bool isIamBurningII;
     public bool isFistImpact;
     public bool isTonlaHasarEnabled;
+    public bool isCantPass;
+    public bool isDon;
+    public bool isCoss;
+    public bool isBirIcimSu;
+    public bool isOlumculTempo;
+    public bool isBassGeri;
 
     public Transform firePos;
     public GameObject rangeObject;
@@ -143,6 +150,19 @@ public class Tower : AqumentBase
 
             bullet.GetComponent<Bullet>().isIamBrning = true;
         }
+          if (isDon)
+        {
+           //bullet.GetComponent<Bullet>().isDondu = true;
+           target.GetComponent<HealthComponent>().don = true;
+        }
+        if (isCoss)
+        {
+            target.GetComponent<HealthComponent>().coss= true;
+        }
+        if (isBassGeri)
+        {
+            target.GetComponent<HealthComponent>().isBass= true;
+        }
 
         bullet.transform.position = firePos.position;
         bullet.GetComponent<Bullet>().Seek(target);
@@ -181,8 +201,10 @@ public class Tower : AqumentBase
     }
     IEnumerator ResetTower()
     {
-
+        if(!isOlumculTempo)
         yield return new WaitForSeconds(fireRate);
+        else
+        yield return new WaitForSeconds(fireRate/3);
 
         reset = true;
     }

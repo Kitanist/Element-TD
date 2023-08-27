@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4601695123754124436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0068712234, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -135,6 +135,12 @@ MonoBehaviour:
   isIamBurningII: 0
   isFistImpact: 0
   isTonlaHasarEnabled: 0
+  isCantPass: 0
+  isDon: 0
+  isCoss: 0
+  isBirIcimSu: 0
+  isOlumculTempo: 0
+  isBassGeri: 0
   firePos: {fileID: 4601695124506555552}
   rangeObject: {fileID: 5822867450747286397}
   element_Type: 1

@@ -29,6 +29,9 @@ public class HealthComponent : MonoBehaviour
 
     public bool isImBurning;
     public bool isImBurningII;
+    public bool don;
+    public bool coss;
+    public bool isBass;
 
     private void Start() {
     mesh=GetComponent<MeshRenderer>();
@@ -53,7 +56,8 @@ public class HealthComponent : MonoBehaviour
 
     IEnumerator fixMatarial(){
         yield return new WaitForSeconds(.1f);
-        mesh.material=firstMatarial;
+        if (this.gameObject.activeInHierarchy)
+            mesh.material=firstMatarial;
     }
    public void GetDamage (float damage,Element_Type damagerType) {
     
@@ -64,17 +68,34 @@ public class HealthComponent : MonoBehaviour
             _damage += _damage;
                
         }
-        if (isImBurning)
+       if (isImBurning)
         {
             GetComponent<Unit>().speed += 2 ;
             _damage += _damage + _damage +_damage;
             StartCoroutine(ReturnNormalSpeed(3));
         }
-        if (isImBurningII)
+
+       if (isImBurningII)
         {
             GetComponent<Unit>().speed += 1;
             _damage += 3;
             StartCoroutine(ReturnNormalSpeed(.5f));
+        }
+        if (don)
+        {
+            GetComponent<Unit>().speed =0;
+            StartCoroutine(ReturnNormalSpeed(.7f));
+        }
+        if (coss &&myElement==Element_Type.Fire)
+        {
+            Health = 0;
+            HealtBar.DOValue(0, .5f, false);
+            Die();
+        }
+        if (isBass)
+        {
+            GetComponent<Unit>().speed = -GetComponent<Unit>().maxSpeed;
+            StartCoroutine(ReturnNormalSpeed(1));
         }
         GetFloatingText("-"+_damage.ToString());
     text.GetComponent<TextMesh>().color=Color.cyan;
@@ -88,6 +109,7 @@ public class HealthComponent : MonoBehaviour
     else{
         if(isUnit){
             mesh.material=damageMatarial;
+               
             StartCoroutine(fixMatarial());
         }
         
@@ -112,7 +134,7 @@ public class HealthComponent : MonoBehaviour
         }
         else
         {
-        
+            
             StartCoroutine(BurnedDamage(0,_damage/3));
 
         }
@@ -178,7 +200,7 @@ public class HealthComponent : MonoBehaviour
    public void Die () {
     if(isUnit){
 
-        
+            StopAllCoroutines();
       
         if(gameObject.layer==LayerMask.NameToLayer("Enemy")){
             WaveManager.Instance.destroyedUnitCount++;
@@ -238,6 +260,8 @@ public class HealthComponent : MonoBehaviour
     {
         yield return new WaitForSeconds(timer);
         isImBurning = false;
+        don = false;
+        isImBurningII = false;
         GetComponent<Unit>().speed = GetComponent<Unit>().maxSpeed;
     }
 }

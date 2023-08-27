@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireTower :Tower
 {
-    public Collider[] UnTargets;
+  
     public GameObject[] particles;
    // public GameObject rotatObject;
     private void Update()
@@ -21,7 +21,7 @@ public class FireTower :Tower
     {
         reset = false; //yarý eksen gerekiyormuþ everlap box da dikkat edilmeli
         targets = Physics.OverlapBox(firePos.position, new Vector3(attackRadius / 2, attackRadius / 2, attackRadius / 2), Quaternion.identity, EnemyMask);
-        UnTargets = Physics.OverlapBox(firePos.position, new Vector3((attackRadius / 3)*2, (attackRadius / 3) * 2 , (attackRadius / 3) * 2), Quaternion.identity, EnemyMask);
+       
         foreach (var obj in targets)
         {
             //hasar ver
@@ -32,7 +32,7 @@ public class FireTower :Tower
             GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
         }
      
-        if (targets.Length > 0)
+     /*   if (targets.Length > 0)
         {
             for (int i = 0; i < particles.Length; i++)
             {
@@ -47,7 +47,8 @@ public class FireTower :Tower
                 particles[i].SetActive(false);
                 target = null;
             }
-        }
+        }*/
+        Debug.Log("Hasar");
 
     }
     private void FixedUpdate()

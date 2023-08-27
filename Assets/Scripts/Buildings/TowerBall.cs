@@ -25,10 +25,10 @@ public class TowerBall : Tower
         if (target)
         {
 
-            Vector3 Direction = (target.transform.position - transform.position);
-
-            Quaternion rot = Quaternion.LookRotation(Direction);
-            rotatObject.transform.rotation = rot;
+           // Vector3 Direction = (target.transform.position - transform.position);
+           //
+           // Quaternion rot = Quaternion.LookRotation(Direction);
+           // rotatObject.transform.rotation = rot;
 
 
 
@@ -51,20 +51,33 @@ public class TowerBall : Tower
     }
     public override void Fire()
     {
-
-        GameObject bullet = ObjectPool.Instance.GetPooledObject(poolIndex);
-        bullet.GetComponent<BallBullet>().damage = damage;//merminin elementini kulenin elementi yapıyoruz
-        bullet.GetComponent<BallBullet>().element_Type = element_Type;
-        bullet.transform.position = firePos.position;
-
-        bullet.transform.DOJump(target.position, JumpForce, 0, (fireRate / bulletSpeed), false).SetEase(easeType);
-        GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
-
-        if (isFistImpact && !isUseFirstImpact)
+        if (isCantPass)
         {
-            bullet.GetComponent<BallBullet>().damage += damage;
-            isUseFirstImpact = true;
+            targets = Physics.OverlapSphere(transform.position, attackRadius,EnemyMask);
+            foreach (var item in targets)
+            {
+                item.GetComponent<Unit>().speed -= 1;
+                StartCoroutine(ReturnNormalSpeed(item));
+            }
         }
+        else
+        {
+            GameObject bullet = ObjectPool.Instance.GetPooledObject(poolIndex);
+
+            bullet.GetComponent<BallBullet>().damage = damage;//merminin elementini kulenin elementi yapıyoruz
+            bullet.GetComponent<BallBullet>().element_Type = element_Type;
+            bullet.transform.position = firePos.position;
+
+            bullet.transform.DOJump(target.position, JumpForce, 0, (fireRate / bulletSpeed), false).SetEase(easeType);
+            GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
+
+            if (isFistImpact && !isUseFirstImpact)
+            {
+                bullet.GetComponent<BallBullet>().damage += damage;
+                isUseFirstImpact = true;
+            }
+        }
+        
 
 
 
@@ -84,5 +97,13 @@ public class TowerBall : Tower
         Invoke("OpenUIUpgrade", .6f);
         BuildManager.Instance.currentUpgradementTower = this;
         HUD.Instance.InitShopHud();
+    }
+    IEnumerator ReturnNormalSpeed(Collider targett )
+    {
+        yield return new WaitForSeconds(1f);
+       
+        
+          targett.GetComponent<Unit>().speed = targett.GetComponent<Unit>().maxSpeed;
+        
     }
 }
