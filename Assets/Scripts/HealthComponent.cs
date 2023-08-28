@@ -238,19 +238,26 @@ public class HealthComponent : MonoBehaviour
            case Element_Type.None:
                break;
            case Element_Type.Fire:
-               Instantiate(fireParticle, transform.position, Quaternion.identity);
+               GameObject obj1=Instantiate(fireParticle, transform.position, Quaternion.identity);
+               Destroy(obj1.gameObject,1);
                Debug.Log("€");
                break;
            case Element_Type.Watter:
-               Instantiate(waterParticle, transform.position, Quaternion.identity);
+               GameObject obj2=Instantiate(waterParticle, transform.position, Quaternion.identity);
+               
+               Destroy(obj2.gameObject,1);
                Debug.Log("€");
                break;
            case Element_Type.Dirt:
-               Instantiate(earthParticle, transform.position, Quaternion.identity);
+               GameObject obj3= Instantiate(earthParticle, transform.position, Quaternion.identity);
+               
+               Destroy(obj3.gameObject,1);
                Debug.Log("€");
                break;
            case Element_Type.Air:
-               Instantiate(airParticle, transform.position, Quaternion.identity);
+               GameObject obj4=  Instantiate(airParticle, transform.position, Quaternion.identity);
+               
+               Destroy(obj4.gameObject,1);
                Debug.Log("€");
                break;
            default:

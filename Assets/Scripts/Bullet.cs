@@ -28,13 +28,13 @@ public class Bullet : MonoBehaviour
         }
         Vector3 dir = transform.position - target.position;
         float distanceFrame = speed * Time.deltaTime;
-        if (dir.magnitude <= distanceFrame)
+        if (dir.magnitude <= distanceFrame && target.GetComponent<HealthComponent>())
         {
             target.GetComponent<HealthComponent>().GetDamage(damage, element_Type);
             if (isBurned)
             {
                 target.GetComponent<HealthComponent>().GetBurnedDamage(damage, element_Type);
-                Debug.Log("Yanma Hasarý Start");
+                Debug.Log("Yanma Hasarï¿½ Start");
             }
             if (isIlkDarbe )
             {
