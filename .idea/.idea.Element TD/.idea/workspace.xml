@@ -6,36 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4389c10e-d1f6-4b9b-98b6-f061dbc5b238" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Flare.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Flare.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/ArrowTowers/AlevOkcu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/ArrowTowers/AlevOkcu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/ArrowTowers/HavaOkcu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/ArrowTowers/HavaOkcu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/ArrowTowers/SuOkcu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/ArrowTowers/SuOkcu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/ArrowTowers/ToprakOkcu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/ArrowTowers/ToprakOkcu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/AlevKulesiSon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/AlevKulesiSon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/HavaKule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/HavaKule.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/SuKule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/SuKule.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/ToprakKule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/ToprakKule.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AirUnitEnemy  1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AirUnitEnemy  1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AirUnitEnemy Armored 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AirUnitEnemy Armored 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AirUnitEnemy Speeder 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AirUnitEnemy Speeder 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/AirUnitArmored.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/AirUnitArmored.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/AirUnitNormal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/AirUnitNormal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/AirUnitSpeeder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/AirUnitSpeeder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/DirtUnitArmored.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/DirtUnitArmored.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/DirtUnitNormal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/DirtUnitNormal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/DirtUnitSpeeder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/DirtUnitSpeeder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/FireUnitArmored.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/FireUnitArmored.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/FireUnitNormal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/FireUnitNormal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/FireUnitSpeeder .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/FireUnitSpeeder .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/WatterUnitArmored .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/WatterUnitArmored .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/WatterUnitNormal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/WatterUnitNormal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/WatterUnitSpeeder .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/AllyElementalUnits/WatterUnitSpeeder .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/DirtUnitEnemy  1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/DirtUnitEnemy  1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/DirtUnitEnemyArmored 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/DirtUnitEnemyArmored 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/DirtUnitEnemySpeeder 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/DirtUnitEnemySpeeder 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/FireUnitEnemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/FireUnitEnemy 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/FireUnitEnemyArmored 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/FireUnitEnemyArmored 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/FireUnitEnemySpeeder 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/FireUnitEnemySpeeder 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeAir.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeAir.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeArmoredAir.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeArmoredAir.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeArmoredFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeArmoredFire.prefab" afterDir="false" />
@@ -48,12 +18,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeWatter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeWatter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/slimeArmoredDirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/slimeArmoredDirt.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/slimeArmoredWatter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/slimeArmoredWatter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/WatterUnitEnemy  1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/WatterUnitEnemy  1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/WatterUnitEnemy Speeder 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/WatterUnitEnemy Speeder 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/WatterUnitEnemyArmored 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/WatterUnitEnemyArmored 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level-1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Slime.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +109,7 @@
       <workItem from="1692976611651" duration="1593000" />
       <workItem from="1693035936298" duration="3486000" />
       <workItem from="1693212320495" duration="6966000" />
-      <workItem from="1693260790591" duration="1252000" />
+      <workItem from="1693260790591" duration="2526000" />
     </task>
     <servers />
   </component>
