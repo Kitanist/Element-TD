@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlevliOklar
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: d3e144b9b96418d4685eca6e81e8b919, type: 3}
-  sprite: {fileID: 21300000, guid: d1f6e1e3e1fdaac4ebf74a0169fa3ce0, type: 3}
+  sprite: {fileID: 21300000, guid: 0040696d3857e7f48b3f514be849dd1b, type: 3}
   agumentName: Alevli Oklar
   agumentDescription: "Bu kulenin at\u0131\u015Flar\u0131 isabet etti\u011Fi rakibe
     yakma hasar\u0131 uygularve rakip 3 saniye boyunca hasar almaya devam eder."

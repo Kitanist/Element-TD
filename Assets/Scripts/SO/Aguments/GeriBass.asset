@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GeriBass
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: 15f448092bb4726459cb7ef8cce92eb1, type: 3}
-  sprite: {fileID: 21300000, guid: 874d8401331ede14087e8d8d486ddda6, type: 3}
+  sprite: {fileID: 21300000, guid: 656d1f279441b56439548e20d56392e2, type: 3}
   agumentName: Geri Bass
   agumentDescription: "Bu kuleden hasar alan birimler bi s\xFCre rotas\u0131n\u0131
     \u015Fa\u015F\u0131r\u0131r"
