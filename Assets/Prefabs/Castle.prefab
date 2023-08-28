@@ -188,8 +188,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4830759, y: 4.7807183, z: 3.271274}
-  m_Center: {x: 0.011284649, y: 1.8903588, z: 0.17755845}
+  m_Size: {x: 3.7784839, y: 4.7807183, z: 3.5651677}
+  m_Center: {x: 1.3474902, y: 1.8903588, z: 0.32450455}
 --- !u!114 &5505317969047654210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +217,9 @@ MonoBehaviour:
   isIlkDarbeUse: 0
   isImBurning: 0
   isImBurningII: 0
+  don: 0
+  coss: 0
+  isBass: 0
 --- !u!114 &5505317969047654213
 MonoBehaviour:
   m_ObjectHideFlags: 0
