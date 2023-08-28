@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8592837231164966224}
-  - {fileID: 2254651236654880209}
+  - {fileID: 4964035857943253009}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -525,73 +525,65 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1001 &293606148971658311
+--- !u!1001 &7190911707105731794
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 8592837230960499429}
     m_Modifications:
-    - target: {fileID: 1970668322695866770, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
-      propertyPath: m_Name
-      value: AirUnitEnemy Armored 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.401
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12687111
+      value: -0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.53
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
+    - target: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1970668323456033364, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970668323456033364, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 3198502390492704377, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
+      propertyPath: m_Name
+      value: SlimeArmoredAir
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
---- !u!4 &2254651236654880209 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
+--- !u!4 &4964035857943253009 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1970668322695866774, guid: 1626e444c5574bb48bc7d50460834b06, type: 3}
-  m_PrefabInstance: {fileID: 293606148971658311}
+  m_CorrespondingSourceObject: {fileID: 2821659471103554755, guid: f7dcc2857fc2a5a428579376484b0854, type: 3}
+  m_PrefabInstance: {fileID: 7190911707105731794}
   m_PrefabAsset: {fileID: 0}
