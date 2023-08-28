@@ -95,7 +95,7 @@ public class HealthComponent : MonoBehaviour
         if (isBass)
         {
             GetComponent<Unit>().speed = -GetComponent<Unit>().maxSpeed;
-            StartCoroutine(ReturnNormalSpeed(1));
+            StartCoroutine(ReturnNormalSpeed(.5f));
         }
         GetFloatingText("-"+_damage.ToString());
     text.GetComponent<TextMesh>().color=Color.cyan;

@@ -112,9 +112,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7895575553819616920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.44, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7895575553885276527}
   - {fileID: 1392399950689244491}
@@ -184,8 +184,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9345398, y: 2.23383, z: 1.7152386}
-  m_Center: {x: 0.014780998, y: 0.6169143, z: -0.09105778}
+  m_Size: {x: 2.3287737, y: 6.9009204, z: 2.805985}
+  m_Center: {x: -0.02485311, y: 1.3616793, z: -0.08276677}
 --- !u!114 &7895575553819616923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   damage: 2
   poolIndex: 0
   JumpForce: 5
-  attackRadius: 15
+  attackRadius: 30
   bulletSpeed: 3
   fireRate: 0.5
   EnemyMask:
@@ -379,7 +379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 75824b2985456e14e9241b0c789668d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 75824b2985456e14e9241b0c789668d9, type: 3}
       propertyPath: m_LocalPosition.z
