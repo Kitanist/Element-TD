@@ -26,6 +26,6 @@ public class MapPanel : MonoBehaviour
 
     }
     public void EnterLevel () {
-             SceneManager.LoadScene(GameManager.Instance.chosenLevel.levelId+1);// +1 eklememizin sebebi 1 tane menü levelinin olması 
+             SceneManager.LoadScene(GameManager.Instance.chosenLevel.levelId);// +1 eklememizin sebebi 1 tane menü levelinin olması 
     }
 }
