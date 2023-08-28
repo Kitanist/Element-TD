@@ -13,13 +13,13 @@ public class Bullet : MonoBehaviour
     public bool isBurned;
     public bool isIlkDarbe;
     public bool isIamBrning;
-   
+
 
     public void Seek(Transform _target)
     {
         target = _target;
     }
-    private void Update()
+    private void Update() 
     {
         if (!target)
         {
@@ -31,10 +31,12 @@ public class Bullet : MonoBehaviour
         if (dir.magnitude <= distanceFrame)
         {
             target.GetComponent<HealthComponent>().GetDamage(damage, element_Type);
+       
             if (isBurned)
             {
                 target.GetComponent<HealthComponent>().GetBurnedDamage(damage, element_Type);
                 Debug.Log("Yanma Hasarý Start");
+
             }
             if (isIlkDarbe )
             {
@@ -45,8 +47,8 @@ public class Bullet : MonoBehaviour
             {
                 target.GetComponent<HealthComponent>().isImBurning = true;
             }
-       
-
+      
+           
             gameObject.SetActive(false);
 
         }
