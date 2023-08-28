@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using DG.Tweening;
 using static LTGUI;
 using static UnityEngine.GraphicsBuffer;
-using UnityEngine.SceneManagement;
 
 public class HealthComponent : MonoBehaviour
 {
@@ -24,10 +23,6 @@ public class HealthComponent : MonoBehaviour
     Material firstMatarial;
     public AudioClip hitSound;
 
-    public GameObject fireParticle;
-    public GameObject waterParticle;
-    public GameObject earthParticle;
-    public GameObject airParticle;
 
     public bool isIlkDarbe;
     public bool isIlkDarbeUse;
@@ -67,7 +62,6 @@ public class HealthComponent : MonoBehaviour
    public void GetDamage (float damage,Element_Type damagerType) {
     
     float _damage=SetElementDamage(damage,damagerType);
-        CreateParticleHit(damagerType); 
         if (!isIlkDarbeUse && isIlkDarbe)
         {
             isIlkDarbeUse = true;
@@ -225,43 +219,14 @@ public class HealthComponent : MonoBehaviour
     else{
          if(isPlayerBase){
         Debug.Log("kaybettiniz");
-        SceneManager.LoadScene(0);
     }
     else{
          Debug.Log("kazandiniz");
-          SceneManager.LoadScene(0);
-            }
+    }
     
     }
    
    }
-    public void CreateParticleHit(Element_Type element_Type)
-    {
-        switch (element_Type)
-        {
-            case Element_Type.None:
-                break;
-            case Element_Type.Fire:
-                Instantiate(fireParticle, transform.position, Quaternion.identity);
-                Debug.Log("€");
-                break;
-            case Element_Type.Watter:
-                Instantiate(waterParticle, transform.position, Quaternion.identity);
-                Debug.Log("€");
-                break;
-            case Element_Type.Dirt:
-                Instantiate(earthParticle, transform.position, Quaternion.identity);
-                Debug.Log("€");
-                break;
-            case Element_Type.Air:
-                Instantiate(airParticle, transform.position, Quaternion.identity);
-                Debug.Log("€");
-                break;
-            default:
-                Debug.LogError("Biz Salaðýz");
-                break;
-        }
-    }
     public IEnumerator BurnedDamage(int cnt,float _damage)
     {
 
@@ -299,5 +264,4 @@ public class HealthComponent : MonoBehaviour
         isImBurningII = false;
         GetComponent<Unit>().speed = GetComponent<Unit>().maxSpeed;
     }
-   
 }

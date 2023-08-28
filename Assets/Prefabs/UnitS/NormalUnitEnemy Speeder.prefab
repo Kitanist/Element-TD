@@ -279,17 +279,10 @@ MonoBehaviour:
   mesh: {fileID: 0}
   damageMatarial: {fileID: 2100000, guid: 6cd34cf2f0eedb2438c203b3c893fdc3, type: 2}
   hitSound: {fileID: 8300000, guid: 0c7d87dba5d5a5047ae6b871c522132f, type: 3}
-  fireParticle: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
-  waterParticle: {fileID: 4924508274929071776, guid: 0edef91621bb6b34384ccc9dbb98729c, type: 3}
-  earthParticle: {fileID: 6823302871133167919, guid: 3138a83bedbd6ad4481ba0b061da2eb6, type: 3}
-  airParticle: {fileID: 2944396702758532163, guid: e190bf97c041e58448af6b043116cba0, type: 3}
   isIlkDarbe: 0
   isIlkDarbeUse: 0
   isImBurning: 0
   isImBurningII: 0
-  don: 0
-  coss: 0
-  isBass: 0
 --- !u!114 &8206401191070304153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +300,7 @@ MonoBehaviour:
   myPoolIndex: 31
   speed: 5
   maxSpeed: 5
+  cost: 50
   price: 5
   unitName: 
 --- !u!54 &8206401191070304152

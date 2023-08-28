@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Yand\u0131mAnam"
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: d3e144b9b96418d4685eca6e81e8b919, type: 3}
-  sprite: {fileID: 21300000, guid: b0ddcfb6697ba7646a223fb465b3b894, type: 3}
+  sprite: {fileID: 21300000, guid: 9c0d6ec706e01ce448aea81584af092b, type: 3}
   agumentName: "Yand\u0131m Anam"
   agumentDescription: "D\xFC\u015Fmana att\u0131\u011F\u0131n yak\u0131c\u0131 oklar
     ile Rakibe hasar verir  ancak Yanan rakipler h\u0131zlan\u0131r."

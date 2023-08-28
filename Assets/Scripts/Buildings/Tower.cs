@@ -130,8 +130,6 @@ public class Tower : AqumentBase
         GameObject bullet = ObjectPool.Instance.GetPooledObject(poolIndex);
         bullet.GetComponent<Bullet>().element_Type = element_Type;
         bullet.GetComponent<Bullet>().damage = damage;//merminin elementini kulenin elementi yapıyoruz
-        bullet.transform.position = firePos.position;
-        bullet.GetComponent<Bullet>().Seek(target);
         if (isAlevliOklarEnabled)
         {
           
@@ -166,7 +164,8 @@ public class Tower : AqumentBase
             target.GetComponent<HealthComponent>().isBass= true;
         }
 
-
+        bullet.transform.position = firePos.position;
+        bullet.GetComponent<Bullet>().Seek(target);
 
         GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
         //bullet.transform.DOJump(target.position,JumpForce,0,(fireRate/bulletSpeed),false).SetEase(easeType);

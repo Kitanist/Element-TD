@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BirIcimSu
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: 04dc7b5a131d9a2489863a2971a638bc, type: 3}
-  sprite: {fileID: 21300000, guid: d9eb2b319817bde45bb6961db773d7d5, type: 3}
+  sprite: {fileID: 21300000, guid: f82dfc5fc3c5a8f4080a3550427019c8, type: 3}
   agumentName: Bir icim Su
   agumentDescription: "Kalenin azami can\u0131n\u0131 +20 birim artt\u0131r\u0131r"
   aqumentType: 0

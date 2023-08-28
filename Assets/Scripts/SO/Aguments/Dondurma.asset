@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dondurma
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: 05eeb5ec16a6b6947874a123631c4417, type: 3}
-  sprite: {fileID: 21300000, guid: 570f4d2e60064ca4a950da716ab92a62, type: 3}
+  sprite: {fileID: 21300000, guid: f008857e434b98b4eaabda1fd6af3059, type: 3}
   agumentName: Dondurma
   agumentDescription: "Bu kuleden hasar alan birimler bir s\xFCre yerine sabitlenir"
   aqumentType: 0

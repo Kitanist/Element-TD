@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ilk Darbe
   m_EditorClassIdentifier: 
   prefab: {fileID: 4601695123754124436, guid: a379dd534de252e40a9469041e1262c5, type: 3}
-  sprite: {fileID: 21300000, guid: 993d99573223a0948b9d4f4a2e103770, type: 3}
+  sprite: {fileID: 21300000, guid: ddf2e76e8a1f88f46ae1e42277850b48, type: 3}
   agumentName: Ilk Darbe
   agumentDescription: "Kulenin ilk hasar\u0131 extra fazla hasar vererek d\xFC\u015Fman\u0131
     k\u0131rar"

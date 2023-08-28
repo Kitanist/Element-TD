@@ -211,15 +211,15 @@ MonoBehaviour:
   isBassGeri: 0
   firePos: {fileID: 6433023777251045489}
   rangeObject: {fileID: 2010051797618933523}
-  element_Type: 2
+  element_Type: 0
   node: {fileID: 0}
   Name: Arrow Tower
   damage: 3
   poolIndex: 0
   JumpForce: 1
-  attackRadius: 18
+  attackRadius: 21
   bulletSpeed: 10
-  fireRate: 0.5
+  fireRate: 3
   EnemyMask:
     serializedVersion: 2
     m_Bits: 64

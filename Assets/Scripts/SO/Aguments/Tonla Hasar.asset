@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tonla Hasar
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: 181c5694bfb42c34e80738146f3c848c, type: 3}
-  sprite: {fileID: 21300000, guid: 11b21c85e532c3f4f8d45d58b1bc1e03, type: 3}
+  sprite: {fileID: 21300000, guid: 0f061b4bd0275bc4eb60f2af31e7375a, type: 3}
   agumentName: Tonla Hasar
   agumentDescription: "Tonla hasar atars\u0131n ama kalenin can\u0131 25 azal\u0131r"
   aqumentType: 0

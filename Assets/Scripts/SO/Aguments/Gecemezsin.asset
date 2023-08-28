@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gecemezsin
   m_EditorClassIdentifier: 
   prefab: {fileID: 4601695123754124436, guid: 1465d3b449c3ccf4dbfd21167bbf60b3, type: 3}
-  sprite: {fileID: 21300000, guid: 25a8bb52a0e21b247a5c69bb56b821e5, type: 3}
+  sprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
   agumentName: Gecemezsin
   agumentDescription: "Kule alan\u0131ndaki t\xFCm d\xFCsmanlar yava\u015Flar ancak
     kule i\u015Flevini yitirerek hasar veremez hale gelir"

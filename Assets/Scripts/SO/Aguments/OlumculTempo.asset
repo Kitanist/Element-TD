@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OlumculTempo
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: 15f448092bb4726459cb7ef8cce92eb1, type: 3}
-  sprite: {fileID: 21300000, guid: ab5a6aae43bf35940b02d100b0552e74, type: 3}
+  sprite: {fileID: 21300000, guid: 6fac4e39926fd9c4ca2ba4416160a857, type: 3}
   agumentName: Olumcul Tempo
   agumentDescription: "Normal kulelerden  3 kat h\u0131zl\u0131 ate\u015F eder"
   aqumentType: 0

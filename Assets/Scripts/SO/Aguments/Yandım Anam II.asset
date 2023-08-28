@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Yand\u0131m Anam II"
   m_EditorClassIdentifier: 
   prefab: {fileID: 7895575553819616920, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
-  sprite: {fileID: 21300000, guid: b0ddcfb6697ba7646a223fb465b3b894, type: 3}
+  sprite: {fileID: 21300000, guid: ce1820d40adc0f34ba8bed5d502e8f4c, type: 3}
   agumentName: "Yand\u0131m Anam II"
   agumentDescription: "D\xFC\u015Fmanlara ekstra hasar verirsin ancak yanan d\xFC\u015Fmanlar
     h\u0131zlanarak bu kuleden ka\xE7arlar."
