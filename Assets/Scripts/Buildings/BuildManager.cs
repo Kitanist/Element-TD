@@ -107,7 +107,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
         {
             tower.isCantPass = true;
         }
-        if (towerToBuild.agumentName == "Hop Dedik")
+        if (towerToBuild.agumentName == "Dondurma")
         {
             tower.isDon = true;
         }
