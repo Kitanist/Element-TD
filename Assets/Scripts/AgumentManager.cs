@@ -12,11 +12,11 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     public Agument_SO[] UnitAquments;
     public Agument_SO Returner;
     public Image icon1, icon2, icon3;
-    public TextMeshProUGUI Name1, Name2, Name3, Desc1, Desc2, Desc3;
+    public TextMeshProUGUI Name1, Name2, Name3, Desc1, Desc2, Desc3,cost1,cost2,cost3;
     public int final1, final2, final3;
     public bool isOpenTab = false;
     public bool isUnitTabOpen= false;
-
+    public bool isIn= false;
     public void OpenAugmentTAB()
     {
 
@@ -24,9 +24,10 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         {
             return;
         }
-       
+    
          isOpenTab = true;
         StartCoroutine(OpenAgumentTabEnum());
+
 
     }
     public void OpenUnitAugmentTAB()
@@ -36,9 +37,11 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         {
             return;
         }
+       
         isUnitTabOpen = true;
         isOpenTab = true;
         StartCoroutine(OpenAgumentUnitTabEnum());
+     
 
     }
    
@@ -48,70 +51,186 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         augmentTab.SetActive(false);
         isOpenTab = false;
         isUnitTabOpen = false;
+        isIn= false;
     }
     public void AugmentUpdate()
+
     {
-        if (isUnitTabOpen)
+        if(isIn)
         {
-            final1 = Random.Range(0, UnitAquments.Length);
-            icon1.sprite = UnitAquments[final1].sprite;
-            Desc1.text = UnitAquments[final1].agumentDescription;
-            Name1.text = UnitAquments[final1].agumentName;
+          
+            if (GameManager.Instance.Gold > 10)
+            {
+                if (isUnitTabOpen)
+                {
+                    final1 = Random.Range(0, UnitAquments.Length);
+                    icon1.sprite = UnitAquments[final1].sprite;
+                    Desc1.text = UnitAquments[final1].agumentDescription;
+                    Name1.text = UnitAquments[final1].agumentName;
+                    cost1.text = UnitAquments[final1].Cost.ToString();
+                }
+                else
+                {
+
+                    final1 = Random.Range(0, aquments.Length);
+                    icon1.sprite = aquments[final1].sprite;
+                    Desc1.text = aquments[final1].agumentDescription;
+                    Name1.text = aquments[final1].agumentName;
+                    cost1.text = aquments[final1].Cost.ToString();
+                }
+                GameManager.Instance.Gold -= 10;
+            }
+            else
+            {
+
+            }
         }
         else
         {
+            
+            if (isUnitTabOpen)
+            {
+                final1 = Random.Range(0, UnitAquments.Length);
+                icon1.sprite = UnitAquments[final1].sprite;
+                Desc1.text = UnitAquments[final1].agumentDescription;
+                Name1.text = UnitAquments[final1].agumentName;
+                cost1.text = UnitAquments[final1].Cost.ToString();
+            }
+            else
+            {
 
-            final1 = Random.Range(0, aquments.Length);
-            icon1.sprite = aquments[final1].sprite;
-            Desc1.text = aquments[final1].agumentDescription;
-            Name1.text = aquments[final1].agumentName;
+                final1 = Random.Range(0, aquments.Length);
+                icon1.sprite = aquments[final1].sprite;
+                Desc1.text = aquments[final1].agumentDescription;
+                Name1.text = aquments[final1].agumentName;
+                cost1.text = aquments[final1].Cost.ToString();
+            }
         }
+    
 
 
     }
     public void AugmentUpdate2()
     {
-        if (isUnitTabOpen)
+        if (isIn)
         {
-            final2 = Random.Range(0, UnitAquments.Length);
-            icon2.sprite = UnitAquments[final2].sprite;
-            Desc2.text = UnitAquments[final2].agumentDescription;
-            Name2.text = UnitAquments[final2].agumentName;
+   
+            if (GameManager.Instance.Gold > 10)
+            {
+                if (isUnitTabOpen)
+                {
+                    final2 = Random.Range(0, UnitAquments.Length);
+                    icon2.sprite = UnitAquments[final2].sprite;
+                    Desc2.text = UnitAquments[final2].agumentDescription;
+                    Name2.text = UnitAquments[final2].agumentName;
+                    cost2.text = UnitAquments[final2].Cost.ToString();
+
+                }
+                else
+                {
+                    final2 = Random.Range(0, aquments.Length);
+                    icon2.sprite = aquments[final2].sprite;
+                    Desc2.text = aquments[final2].agumentDescription;
+                    Name2.text = aquments[final2].agumentName;
+                    cost2.text = aquments[final2].Cost.ToString();
+                }
+                GameManager.Instance.Gold -= 10;
+            }
+            else
+            {
+
+            }
+
+
         }
         else
         {
-            final2 = Random.Range(0, aquments.Length);
-            icon2.sprite = aquments[final2].sprite;
-            Desc2.text = aquments[final2].agumentDescription;
-            Name2.text = aquments[final2].agumentName;
+            if (isUnitTabOpen)
+            {
+                final2 = Random.Range(0, UnitAquments.Length);
+                icon2.sprite = UnitAquments[final2].sprite;
+                Desc2.text = UnitAquments[final2].agumentDescription;
+                Name2.text = UnitAquments[final2].agumentName;
+                cost2.text = UnitAquments[final2].Cost.ToString();
+
+            }
+            else
+            {
+                final2 = Random.Range(0, aquments.Length);
+                icon2.sprite = aquments[final2].sprite;
+                Desc2.text = aquments[final2].agumentDescription;
+                Name2.text = aquments[final2].agumentName;
+                cost2.text = aquments[final2].Cost.ToString();
+            }
         }
+       
     
     }
     public void AugmentUpdate3()
     {
-        if (isUnitTabOpen)
+        if (isIn)
         {
-            final3 = Random.Range(0, UnitAquments.Length);
-            icon3.sprite = UnitAquments[final3].sprite;
-            Desc3.text = UnitAquments[final3].agumentDescription;
-            Name3.text = UnitAquments[final3].agumentName;
+            Debug.Log("hiii");
+            if (GameManager.Instance.Gold > 10)
+            {
+                if (isUnitTabOpen)
+                {
+                    final3 = Random.Range(0, UnitAquments.Length);
+                    icon3.sprite = UnitAquments[final3].sprite;
+                    Desc3.text = UnitAquments[final3].agumentDescription;
+                    Name3.text = UnitAquments[final3].agumentName;
+                    cost3.text = UnitAquments[final3].Cost.ToString();
+                }
+                else
+                {
+                    final3 = Random.Range(0, aquments.Length);
+                    icon3.sprite = aquments[final3].sprite;
+                    Desc3.text = aquments[final3].agumentDescription;
+                    Name3.text = aquments[final3].agumentName;
+                    cost3.text = aquments[final3].Cost.ToString();
+                }
+                GameManager.Instance.Gold -= 10;
+            }
+            else
+            {
+
+            }
         }
         else
         {
-            final3 = Random.Range(0, aquments.Length);
-            icon3.sprite = aquments[final3].sprite;
-            Desc3.text = aquments[final3].agumentDescription;
-            Name3.text = aquments[final3].agumentName;
+            if (isUnitTabOpen)
+            {
+                final3 = Random.Range(0, UnitAquments.Length);
+                icon3.sprite = UnitAquments[final3].sprite;
+                Desc3.text = UnitAquments[final3].agumentDescription;
+                Name3.text = UnitAquments[final3].agumentName;
+                cost3.text = UnitAquments[final3].Cost.ToString();
+            }
+            else
+            {
+                final3 = Random.Range(0, aquments.Length);
+                icon3.sprite = aquments[final3].sprite;
+                Desc3.text = aquments[final3].agumentDescription;
+                Name3.text = aquments[final3].agumentName;
+                cost3.text = aquments[final3].Cost.ToString();
+            }
         }
+      
     }
 
 
     public void UnitAugmentUpdate()
     {
-        final1 = Random.Range(0, UnitAquments.Length);
-        icon1.sprite = UnitAquments[final1].sprite;
-        Desc1.text = UnitAquments[final1].agumentDescription;
-        Name1.text = UnitAquments[final1].agumentName;
+
+       
+        
+            final1 = Random.Range(0, UnitAquments.Length);
+            icon1.sprite = UnitAquments[final1].sprite;
+            Desc1.text = UnitAquments[final1].agumentDescription;
+            Name1.text = UnitAquments[final1].agumentName;
+            cost1.text = UnitAquments[final1].Cost.ToString();
+        
+
 
     }
     public void UnitAugmentUpdate2()
@@ -120,6 +239,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         icon2.sprite = UnitAquments[final2].sprite;
         Desc2.text = UnitAquments[final2].agumentDescription;
         Name2.text = UnitAquments[final2].agumentName;
+        cost1.text = UnitAquments[final2].Cost.ToString();
     }
     public void UnitAugmentUpdate3()
     {
@@ -127,6 +247,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         icon3.sprite = UnitAquments[final3].sprite;
         Desc3.text = UnitAquments[final3].agumentDescription;
         Name3.text = UnitAquments[final3].agumentName;
+        cost1.text = UnitAquments[final3].Cost.ToString();
     }
     public void OnClickAuqments(int index)
     {
@@ -150,9 +271,16 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                 }
                 else
                 {
-                    BuildManager.Instance.towerToBuild = aquments[final1];
+                    if (GameManager.Instance.Gold >= aquments[final1].Cost)
+                    {
+                        GameManager.Instance.Gold -= aquments[final1].Cost;
 
-                    BuildManager.Instance.BuildTowerOn();
+                        BuildManager.Instance.towerToBuild = aquments[final1];
+
+                        BuildManager.Instance.BuildTowerOn();
+                    }
+
+                  
                 }
               
 
@@ -176,9 +304,15 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                 }
                 else
                 {
-                    BuildManager.Instance.towerToBuild = aquments[final2];
+                    if (GameManager.Instance.Gold >= aquments[final2].Cost)
+                    {
+                        GameManager.Instance.Gold -= aquments[final2].Cost;
 
-                    BuildManager.Instance.BuildTowerOn();
+                        BuildManager.Instance.towerToBuild = aquments[final2];
+
+                        BuildManager.Instance.BuildTowerOn();
+                    }
+                    
                 }
      
 
@@ -202,9 +336,15 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                 }
                 else
                 {
-                    BuildManager.Instance.towerToBuild = aquments[final3];
+                    if (GameManager.Instance.Gold >= aquments[final3].Cost)
+                    {
+                        GameManager.Instance.Gold -= aquments[final3].Cost;
+                        BuildManager.Instance.towerToBuild = aquments[final3];
 
-                    BuildManager.Instance.BuildTowerOn();
+                        BuildManager.Instance.BuildTowerOn();
+
+                    }
+         
                 }
       
                 break;
@@ -222,6 +362,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         AugmentUpdate();
         AugmentUpdate2();
         AugmentUpdate3();
+        isIn = true;
 
     }
 
@@ -235,6 +376,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         UnitAugmentUpdate();
         UnitAugmentUpdate2();
         UnitAugmentUpdate3();
+        isIn = true;
     }
 
 }

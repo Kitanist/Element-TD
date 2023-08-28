@@ -69,9 +69,10 @@ public class BuildManager : MonoSingeleton<BuildManager>
 
         node.turret = turret;
         turret.GetComponent<Tower>().node = node;
-
+       
         OnEfect(turret.GetComponent<Tower>());
         Debugger.Instance.Debuger("Tower is Builded: -", node.cost);
+        node.mrenderer.enabled = false;
         //TheUI.Instance.ShopUIClose();
     } // Before Call This Func Set towerToBuild
     public void OnEfect(Tower tower)

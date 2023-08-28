@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d30b320a5ffaf7468a31186caf79115, type: 3}
   m_Name: Gecemezsin
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4601695123754124436, guid: a379dd534de252e40a9469041e1262c5, type: 3}
+  prefab: {fileID: 4601695123754124436, guid: 1465d3b449c3ccf4dbfd21167bbf60b3, type: 3}
   sprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
   agumentName: Gecemezsin
-  agumentDescription: "d\xFC\u015Fmanlar yava\u015Flar ama kule ates\u015F etmez"
+  agumentDescription: "Kule alan\u0131ndaki t\xFCm d\xFCsmanlar yava\u015Flar ancak
+    kule i\u015Flevini yitirerek hasar veremez hale gelir"
   aqumentType: 0
   elemetType: 0
   AmountSoldier: 0
-  Cost: 0
+  Cost: 100

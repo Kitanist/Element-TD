@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d30b320a5ffaf7468a31186caf79115, type: 3}
   m_Name: HopDedik
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6433023776911228997, guid: d3e144b9b96418d4685eca6e81e8b919, type: 3}
+  prefab: {fileID: 6433023776911228997, guid: 05eeb5ec16a6b6947874a123631c4417, type: 3}
   sprite: {fileID: 21300000, guid: f008857e434b98b4eaabda1fd6af3059, type: 3}
   agumentName: Hop Dedik
-  agumentDescription: "dondurur at\u0131slar ama yavas vurur"
+  agumentDescription: "Bu kuleden hasar alan birimler bir s\xFCre yerine sabitlenir"
   aqumentType: 0
   elemetType: 0
   AmountSoldier: 0
-  Cost: 0
+  Cost: 200

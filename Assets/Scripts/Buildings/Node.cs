@@ -11,7 +11,7 @@ public class Node : MonoBehaviour
     public GameObject turret;
     public GameEvent OnAgumentEvent;
     private Renderer rend;
-    private MeshRenderer mrenderer;
+    public MeshRenderer mrenderer;
     private Color StartColor;
 
     public bool isGoldMineNode = false;
