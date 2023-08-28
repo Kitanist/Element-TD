@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
  
 public class WaveManager : MonoSingeleton<WaveManager>
@@ -66,6 +67,7 @@ public AudioClip dangerClip;
         }
         else{
   Debug.Log("GameOver");
+            SceneManager.LoadScene(0);
   GameManager.Instance.isGameContinue=false;
         }
       
@@ -194,7 +196,7 @@ public void Attack() {
         
         GameManager.Instance.playerIsAttack=true;
         BattleManager.Instance.StartMyBattle();
-        Debug.Log("hi");
+        
         StopAllCoroutines();
                 BattleManager.Instance.isAttackedThisTurn = true;
        }

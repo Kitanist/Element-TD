@@ -163,12 +163,12 @@ MonoBehaviour:
   level: 1
   maxLevel: 3
   openWithLevel:
-  - {fileID: 1135447162431491856, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
-  - {fileID: 1135447162431491856, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
+  - {fileID: 1415920570016287720}
+  - {fileID: 1415920570016287720}
   closeWithLevel:
-  - {fileID: 1135447162431491856, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
-  - {fileID: 1135447162431491856, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
-  - {fileID: 1135447162431491856, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
+  - {fileID: 1415920570016287720}
+  - {fileID: 1415920570016287720}
+  - {fileID: 1415920570016287720}
   DamageCounts: 0f00000019000000
   AttackRadiusCounts: 0f00000011000000
   upgradeCostforNextLevel: 1000
@@ -347,6 +347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9b576c71ba74b4aad56961abaea4ab, type: 3}
+--- !u!1 &1415920570016287720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d9b576c71ba74b4aad56961abaea4ab, type: 3}
+  m_PrefabInstance: {fileID: 2262836231609022137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1796246776853631314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d9b576c71ba74b4aad56961abaea4ab, type: 3}

@@ -263,7 +263,8 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                         {
                            
                             HUD.Instance.TakeUnit(UnitAquments[final1].prefab.GetComponent<Unit>());
-                       
+                            CloseAugmentTAB();
+
                         }
 
                     }
@@ -278,6 +279,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                         BuildManager.Instance.towerToBuild = aquments[final1];
 
                         BuildManager.Instance.BuildTowerOn();
+                        CloseAugmentTAB();
                     }
 
                   
@@ -297,7 +299,8 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                         {
                            
                             HUD.Instance.TakeUnit(UnitAquments[final2].prefab.GetComponent<Unit>());
-                           
+                            CloseAugmentTAB();
+
                         }
 
                     }
@@ -311,6 +314,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                         BuildManager.Instance.towerToBuild = aquments[final2];
 
                         BuildManager.Instance.BuildTowerOn();
+                        CloseAugmentTAB();
                     }
                     
                 }
@@ -328,7 +332,8 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                         {
                          
                             HUD.Instance.TakeUnit(UnitAquments[final3].prefab.GetComponent<Unit>());
-                         
+
+                            CloseAugmentTAB();
                         }
 
                     }
@@ -342,9 +347,10 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                         BuildManager.Instance.towerToBuild = aquments[final3];
 
                         BuildManager.Instance.BuildTowerOn();
+                        CloseAugmentTAB();
 
                     }
-         
+                  
                 }
       
                 break;

@@ -1047,6 +1047,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1382548889}
     m_Modifications:
+    - target: {fileID: 5505317969047654211, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
+      propertyPath: m_Size.y
+      value: 5.1476994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505317969047654211, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
+      propertyPath: m_Center.y
+      value: 1.7068756
+      objectReference: {fileID: 0}
     - target: {fileID: 5505317969047654212, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
       propertyPath: m_Name
       value: Castle
@@ -1061,7 +1069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5505317969047654334, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 566.0002
+      value: 562.83
       objectReference: {fileID: 0}
     - target: {fileID: 5505317969047654334, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9761,6 +9769,10 @@ PrefabInstance:
       propertyPath: MotherlandCam
       value: 
       objectReference: {fileID: 812589862}
+    - target: {fileID: 7345127441330900446, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
+      propertyPath: myCastle
+      value: 
+      objectReference: {fileID: 2046482107}
     - target: {fileID: 7345127441330900447, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 11.5
@@ -17422,6 +17434,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60fe1a51573472c40931f69d10fc2eba, type: 3}
+--- !u!1 &2046482107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5505317969047654212, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
+  m_PrefabInstance: {fileID: 103933521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2049207181
 PrefabInstance:
   m_ObjectHideFlags: 0
