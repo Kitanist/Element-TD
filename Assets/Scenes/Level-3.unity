@@ -1377,11 +1377,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5505317969047654334, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< Updated upstream
       value: 562.83
+=======
+      value: 563.07
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5505317969047654334, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -242.02007
+      value: -241.44
       objectReference: {fileID: 0}
     - target: {fileID: 5505317969047654334, guid: 93c4c9f7f87484b4c9189652222aebf4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4832,7 +4836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 680382018144370373, guid: e1be663267d12e840a4ef13779c3df87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 558.67
+      value: 559.84
       objectReference: {fileID: 0}
     - target: {fileID: 680382018144370373, guid: e1be663267d12e840a4ef13779c3df87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10891,7 +10895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113380, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99999905
+      value: 1.7799997
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113387, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData.vertexPathUpToDate
@@ -11035,27 +11039,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113387, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[11].x
-      value: 32.84663
+      value: 32.84449
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113387, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[11].y
-      value: -4.4732523
+      value: -1.2963772
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113387, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[11].z
-      value: 19.944218
+      value: 19.929405
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113387, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[12].x
-      value: 33.81378
+      value: 33.81164
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113387, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[12].y
-      value: -4.650341
+      value: -1.4734659
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113387, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[12].z
-      value: 19.892033
+      value: 19.87722
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440314113387, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[13].x
@@ -11483,7 +11487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7345127440919443955, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99999905
+      value: 1.7799997
       objectReference: {fileID: 0}
     - target: {fileID: 7345127441142990778, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: editorData.vertexPathUpToDate
@@ -19610,7 +19614,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdbdcd4c319d51f4c80a69bf17e5a390, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< Updated upstream
       value: -238.08
+=======
+      value: -238
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdbdcd4c319d51f4c80a69bf17e5a390, type: 3}
       propertyPath: m_LocalRotation.w
