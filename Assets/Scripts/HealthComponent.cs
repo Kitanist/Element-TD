@@ -32,7 +32,10 @@ public class HealthComponent : MonoBehaviour
     public bool don;
     public bool coss;
     public bool isBass;
-
+    public GameObject fireParticle;
+    public GameObject waterParticle;
+    public GameObject earthParticle;
+    public GameObject airParticle;
     private void Start() {
     mesh=GetComponent<MeshRenderer>();
     firstMatarial=mesh.material;
@@ -62,6 +65,7 @@ public class HealthComponent : MonoBehaviour
    public void GetDamage (float damage,Element_Type damagerType) {
     
     float _damage=SetElementDamage(damage,damagerType);
+    CreateParticleHit(damagerType); 
         if (!isIlkDarbeUse && isIlkDarbe)
         {
             isIlkDarbeUse = true;
@@ -226,6 +230,33 @@ public class HealthComponent : MonoBehaviour
     
     }
    
+   }
+   public void CreateParticleHit(Element_Type element_Type)
+   {
+       switch (element_Type)
+       {
+           case Element_Type.None:
+               break;
+           case Element_Type.Fire:
+               Instantiate(fireParticle, transform.position, Quaternion.identity);
+               Debug.Log("€");
+               break;
+           case Element_Type.Watter:
+               Instantiate(waterParticle, transform.position, Quaternion.identity);
+               Debug.Log("€");
+               break;
+           case Element_Type.Dirt:
+               Instantiate(earthParticle, transform.position, Quaternion.identity);
+               Debug.Log("€");
+               break;
+           case Element_Type.Air:
+               Instantiate(airParticle, transform.position, Quaternion.identity);
+               Debug.Log("€");
+               break;
+           default:
+               Debug.LogError("Biz Salagiz");
+               break;
+       }
    }
     public IEnumerator BurnedDamage(int cnt,float _damage)
     {

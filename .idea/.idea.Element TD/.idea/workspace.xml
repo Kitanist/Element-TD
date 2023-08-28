@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4389c10e-d1f6-4b9b-98b6-f061dbc5b238" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelCore.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelCore.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Enes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Enes.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LookAtThisBird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LookAtThisBird.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TheUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TheUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Circle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Circle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Flash.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Flash.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Gradient.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Gradient.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Point.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Point.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Smoke26.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Smoke26.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Snowflake.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Snowflake.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Stone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Stone.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Trail67.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hovl Studio/Magic effects pack/Materials/Trail67.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Range.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Range.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/AlevKulesiSon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/AlevKulesiSon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/SuKule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Towers/FireTowers/SuKule.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
