@@ -1606,7 +1606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -20}
+  m_AnchoredPosition: {x: 59, y: 6}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7345127440002680044
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "S\u0131radaki waveye kalan s\xFCre : "
+  m_text: "S\u0131radaki waveye kalan s\xFCre "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 474bad1f31621b441be16da19cf81789, type: 2}
   m_sharedMaterial: {fileID: 4444503758273924080, guid: 474bad1f31621b441be16da19cf81789, type: 2}
@@ -10513,7 +10513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -20}
+  m_AnchoredPosition: {x: 407, y: -20}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7345127441497007841
@@ -10544,7 +10544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "S\u0131radaki waveye kalan s\xFCre : "
+  m_text: "S\u0131radaki waveye kalan s\xFCre "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 474bad1f31621b441be16da19cf81789, type: 2}
   m_sharedMaterial: {fileID: 4444503758273924080, guid: 474bad1f31621b441be16da19cf81789, type: 2}
@@ -10578,7 +10578,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -10739,7 +10739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50, y: -20}
+  m_AnchoredPosition: {x: 1201, y: 62}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7345127441518031795
@@ -10770,7 +10770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold : '
+  m_text: 'Gold '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 474bad1f31621b441be16da19cf81789, type: 2}
   m_sharedMaterial: {fileID: 4444503758273924080, guid: 474bad1f31621b441be16da19cf81789, type: 2}
@@ -10804,7 +10804,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
