@@ -189,6 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3779743739398463129}
+  - {fileID: 8921555757596426184}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -207,7 +208,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3779743739193983272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -303,7 +304,6 @@ MonoBehaviour:
   myPoolIndex: 8
   speed: 3
   maxSpeed: 3
-  cost: 50
   price: 10
   unitName: 
 --- !u!54 &3779743739193983279
@@ -525,3 +525,65 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &3281493228974268614
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3779743739193983276}
+    m_Modifications:
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705402075998324148, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+      propertyPath: m_Name
+      value: SlimeAir
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+--- !u!4 &8921555757596426184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6216532115693788942, guid: 76ac4d1c8c5f1364cb7dd3e5be6d1b49, type: 3}
+  m_PrefabInstance: {fileID: 3281493228974268614}
+  m_PrefabAsset: {fileID: 0}

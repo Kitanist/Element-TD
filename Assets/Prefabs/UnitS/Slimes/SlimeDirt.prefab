@@ -84,7 +84,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5625113567135596825, guid: 4d3dc5cb8950b8248b6eda1f33259ced, type: 3}
+  - {fileID: -7030218761694185608, guid: 410a3f5b84f1a9c429e95767e8bcf8b4, type: 3}
   - {fileID: 2100000, guid: c12dba4db4b10a34ea85b03c5b9263e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6216532115693788942}
   m_Layer: 0
-  m_Name: Slime_01
+  m_Name: SlimeDirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 6705402075998324148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7625824445407367461}

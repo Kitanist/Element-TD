@@ -189,6 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6879885229329770110}
+  - {fileID: 5014374436534617033}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -207,7 +208,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6879885228997376463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -279,6 +280,13 @@ MonoBehaviour:
   mesh: {fileID: 0}
   damageMatarial: {fileID: 2100000, guid: 6cd34cf2f0eedb2438c203b3c893fdc3, type: 2}
   hitSound: {fileID: 8300000, guid: 0c7d87dba5d5a5047ae6b871c522132f, type: 3}
+  isIlkDarbe: 0
+  isIlkDarbeUse: 0
+  isImBurning: 0
+  isImBurningII: 0
+  don: 0
+  coss: 0
+  isBass: 0
 --- !u!114 &6879885228997376457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +303,7 @@ MonoBehaviour:
   unitDamage: 5
   myPoolIndex: 3
   speed: 5
-  cost: 50
+  maxSpeed: 5
   price: 5
   unitName: 
 --- !u!54 &6879885228997376456
@@ -517,3 +525,65 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &1260653790975889695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6879885228997376459}
+    m_Modifications:
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.745
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6891580169314388076, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+      propertyPath: m_Name
+      value: SlimeSpeederFire
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+--- !u!4 &5014374436534617033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6118174221721670358, guid: 9d6aaabb988a4db488acd67b710937c0, type: 3}
+  m_PrefabInstance: {fileID: 1260653790975889695}
+  m_PrefabAsset: {fileID: 0}
