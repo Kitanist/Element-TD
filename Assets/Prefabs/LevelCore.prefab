@@ -9455,7 +9455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCastle: {fileID: 0}
-  gold: 400
+  gold: 2000
   CastleTransform: {fileID: 0}
   playerIsAttack: 0
   isGameContinue: 1
