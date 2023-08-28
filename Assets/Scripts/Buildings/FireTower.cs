@@ -20,17 +20,22 @@ public class FireTower :Tower
     public override void Fire()
     {
         reset = false; //yarý eksen gerekiyormuþ everlap box da dikkat edilmeli
-        targets = Physics.OverlapBox(firePos.position, new Vector3(attackRadius / 2, attackRadius / 2, attackRadius / 2), Quaternion.identity, EnemyMask);
-       
-        foreach (var obj in targets)
+        if (firePos)
         {
-            //hasar ver
+            targets = Physics.OverlapBox(firePos.position, new Vector3(attackRadius / 2, attackRadius / 2, attackRadius / 2), Quaternion.identity, EnemyMask);
 
-            obj.GetComponent<HealthComponent>().GetDamage(damage, element_Type);
-            if(isIamBurningII)
-            obj.GetComponent<HealthComponent>().isImBurningII = true;
-            GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
+            foreach (var obj in targets)
+            {
+                //hasar ver
+
+                obj.GetComponent<HealthComponent>().GetDamage(damage, element_Type);
+                if (isIamBurningII)
+                    obj.GetComponent<HealthComponent>().isImBurningII = true;
+                GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
+            }
+
         }
+          
      
      /*   if (targets.Length > 0)
         {
@@ -67,6 +72,7 @@ public class FireTower :Tower
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
+        if(firePos)
         Gizmos.DrawWireCube(firePos.position, new Vector3(attackRadius, attackRadius, attackRadius));
     }
 
