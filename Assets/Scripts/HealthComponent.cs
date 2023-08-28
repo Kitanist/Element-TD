@@ -84,7 +84,7 @@ public class HealthComponent : MonoBehaviour
         if (don)
         {
             GetComponent<Unit>().speed =0;
-            StartCoroutine(ReturnNormalSpeed(.7f));
+            StartCoroutine(ReturnNormalSpeed(.4f));
         }
         if (coss &&myElement==Element_Type.Fire)
         {
@@ -95,7 +95,7 @@ public class HealthComponent : MonoBehaviour
         if (isBass)
         {
             GetComponent<Unit>().speed = -GetComponent<Unit>().maxSpeed;
-            StartCoroutine(ReturnNormalSpeed(.5f));
+            StartCoroutine(ReturnNormalSpeed(.3f));
         }
         GetFloatingText("-"+_damage.ToString());
     text.GetComponent<TextMesh>().color=Color.cyan;
