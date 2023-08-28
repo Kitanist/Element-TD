@@ -15,11 +15,13 @@ public class TheUI : MonoSingeleton<TheUI>
 
     public bool isOpen,isUpgrade,isArmy,isTurret;
 
-    public GameObject BackGround;
+    
     public Button ShopButton1, ShopButton2, ShopButton3,ShopButton4, UShopButton1, UShopButton2, UShopButton3,UShopButton4, AShopButton1, AShopButton2, AShopButton3;
-    public bool isButton;
-   */
 
+   */
+   public GameObject BackGround;
+   public bool isButton;
+   
     private void Start()
     {
         //ShopUIClose();
@@ -29,16 +31,34 @@ public class TheUI : MonoSingeleton<TheUI>
   
     public void ControlTheUI()
     {
-     
-         //   ShopUIOpen();
+
+        if (!isButton)
+        {
+            TheUIOpen();
+            isButton = true;
+        }
+        else
+        {
+            TheUIClose();
+            isButton = false;
+        }
 
     }
 
+    public void TheUIOpen()
+    {
+        BackGround.transform.LeanMoveLocal(new Vector2(0, -880), 0.25f).setEaseOutExpo();
+    }
+
+    public void TheUIClose()
+    {
+        BackGround.transform.LeanMoveLocal(new Vector2(0, -580), 0.25f).setEaseInExpo();
+    }
     /*
     public void ShopUIOpen()
     {
        
-        BackGround.transform.LeanMoveLocal(new Vector2(775, 0), 0.25f).setEaseOutExpo();
+       
        
 
         if (!isArmy && !isUpgrade && isTurret)
@@ -95,7 +115,7 @@ public class TheUI : MonoSingeleton<TheUI>
       {
           if (EventSystem.current.IsPointerOverGameObject()&&!isButton) return;
           HUD.Instance.AllUnitDeSelect();
-          BackGround.transform.LeanMoveLocal(new Vector2(1000, 0), 0.25f).setEaseInExpo();
+          
 
 
           Shop1.LeanAlpha(0, 0.25f);

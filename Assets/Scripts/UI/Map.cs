@@ -13,7 +13,7 @@ public class Map : MonoBehaviour
     void Start()
     {
         img=GetComponent<Image>();
-        img.alphaHitTestMinimumThreshold=0.1f;// resimin sekline göre buton etkileşimi kabul eder hatalı
+       
         if(GameManager.Instance.levelsOpen[levelId]){ // level açıldıysa butonu aktif et
             GetComponent<Button>().enabled=true;
         }
@@ -24,11 +24,11 @@ public class Map : MonoBehaviour
   
    public void  LoadLevelPanel () {
   
-        GameManager.Instance.chosenLevel=this;
-         parentFront.SetActive(true);
+     GameManager.Instance.chosenLevel=this;
+     parentFront.SetActive(true);
      parentFront.gameObject.GetComponent<CanvasGroup>().LeanAlpha(1,1);
      parentFront.transform.GetChild(0).GetComponent<Image>().sprite=GameManager.Instance.chosenLevel.img.sprite;
-     parentFront.transform.GetChild(0).GetComponent<Image>().transform.DOScale(new Vector3(6,6,0),2);
+     parentFront.transform.GetChild(0).GetComponent<Image>().transform.DOScale(new Vector3(2,2,0),2);
 
       
    }

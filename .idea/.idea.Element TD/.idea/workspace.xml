@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4389c10e-d1f6-4b9b-98b6-f061dbc5b238" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelCore.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelCore.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings/BuildManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buildings/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buildings/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TheUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TheUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +97,7 @@
       <workItem from="1692188723309" duration="624000" />
       <workItem from="1692976611651" duration="1593000" />
       <workItem from="1693035936298" duration="3486000" />
+      <workItem from="1693212320495" duration="2122000" />
     </task>
     <servers />
   </component>
