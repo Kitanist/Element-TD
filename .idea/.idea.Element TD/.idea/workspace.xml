@@ -7,7 +7,9 @@
     <list default="true" id="4389c10e-d1f6-4b9b-98b6-f061dbc5b238" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelCore.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelCore.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Enes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Enes.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LookAtThisBird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LookAtThisBird.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TheUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TheUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +23,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SO/GameEvents/Scripts/GameEventTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SO/Tower/TowerSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TheScene.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2U49fn38QSF39oNQCaZS7pk7udf" />
   <component name="ProjectViewState">
@@ -97,7 +100,7 @@
       <workItem from="1692188723309" duration="624000" />
       <workItem from="1692976611651" duration="1593000" />
       <workItem from="1693035936298" duration="3486000" />
-      <workItem from="1693212320495" duration="2122000" />
+      <workItem from="1693212320495" duration="6966000" />
     </task>
     <servers />
   </component>

@@ -7,33 +7,25 @@ public class LookAtThisBird : MonoBehaviour
     public MainMenuCamController Cam;
     public Vector3 birdName;
     
-    private void OnMouseEnter()
+  
+
+    public void ClickedOn()
     {
-        if (!MainMenuCamController.Instance.onUI)
-        {
-            Cam.SetCam(birdName);
-            MainMenuCamController.Instance.OnButton = true;
-            StopCoroutine(OnButtonEnum());
-        }
-       
+        Cam.SetCam(birdName);
     }
-    private void OnMouseExit()
+
+    public void ClickedBackOn()
     {
-        if (!MainMenuCamController.Instance.onUI)
-        {
-            StartCoroutine(OnButtonEnum());
-        }
-        
-        
-       
+        StartCoroutine(OnButtonEnum());
     }
+    
     IEnumerator OnButtonEnum()
     {
         Debug.Log("girdim");
         yield return new WaitForSeconds(0.01f);
         MainMenuCamController.Instance.OnButton = false;
         Cam.SetCam(Cam.tmp);
-        Debug.Log("çýktým");
+        Debug.Log("ï¿½ï¿½ktï¿½m");
 
     }
 }

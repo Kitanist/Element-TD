@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,11 +22,15 @@ public class TheUI : MonoSingeleton<TheUI>
    */
    public GameObject BackGround;
    public bool isButton;
+   public int Pixels;
+   public GameObject Konum1, Konum2;
    
     private void Start()
     {
         //ShopUIClose();
-       
+
+        
+        Pixels = Screen.height;
 
     }
   
@@ -45,14 +50,16 @@ public class TheUI : MonoSingeleton<TheUI>
 
     }
 
+   
+
     public void TheUIOpen()
     {
-        BackGround.transform.LeanMoveLocal(new Vector2(0, -880), 0.25f).setEaseOutExpo();
+        BackGround.transform.LeanMoveLocal(new Vector2(0, -Pixels/3 + -Pixels/16), 0.25f).setEaseOutExpo();
     }
 
     public void TheUIClose()
     {
-        BackGround.transform.LeanMoveLocal(new Vector2(0, -580), 0.25f).setEaseInExpo();
+        BackGround.transform.LeanMoveLocal(new Vector2(0, ((-Pixels/2 + -Pixels/8) + Pixels/32)), 0.25f).setEaseInExpo();
     }
     /*
     public void ShopUIOpen()

@@ -61,13 +61,13 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame() 
     {
-        Maps.gameObject.SetActive(true);
+       // Maps.gameObject.SetActive(true);
         gameIsStarted = true;
         cam.SetCamPos(startingPos);
-       // DArkness.LeanAlpha(1, 1);
-        Maps.LeanAlpha(1, 1);
+        DArkness.LeanAlpha(1, 1);
+      //  Maps.LeanAlpha(1, 1);
 
-       // StartCoroutine(LoadGameWaiter());
+        StartCoroutine(LoadGameWaiter());
 
     }
     public void  ReturnMenu () {
