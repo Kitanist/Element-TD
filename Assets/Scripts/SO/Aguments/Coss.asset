@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coss
   m_EditorClassIdentifier: 
   prefab: {fileID: 6433023776911228997, guid: 05eeb5ec16a6b6947874a123631c4417, type: 3}
-  sprite: {fileID: 21300000, guid: ce1820d40adc0f34ba8bed5d502e8f4c, type: 3}
+  sprite: {fileID: 21300000, guid: 8bb58b1338862c34bbbc7853944784de, type: 3}
   agumentName: Coss
   agumentDescription: "Ate\u015F elementli t\xFCm d\xFC\u015Fmanlara tek at\u0131p
     onlar\u0131n ate\u015Fini s\xF6nd\xFCr\xFCr"
