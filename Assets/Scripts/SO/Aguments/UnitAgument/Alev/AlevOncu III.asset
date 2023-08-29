@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlevOncu III
   m_EditorClassIdentifier: 
   prefab: {fileID: 138770360201571285, guid: 01e579f37305c7d4689924ab5df3ee60, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: 5e3e20ef123c4fc46a327fa3c4099768, type: 3}
   agumentName: Alev Oncu III
   agumentDescription: + 9 Birimmm
   aqumentType: 1

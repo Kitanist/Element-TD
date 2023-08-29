@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SuOncu
   m_EditorClassIdentifier: 
   prefab: {fileID: 2437270008180210432, guid: 956fde75b211b0946a6f36c6b5f124bd, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: 5051f71e618c3344da87ab6b404315b0, type: 3}
   agumentName: Su Oncu
   agumentDescription: SU birimi verir 3 birim
   aqumentType: 1

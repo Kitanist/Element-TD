@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "HavaK\u0131r\u0131c\u0131 III"
   m_EditorClassIdentifier: 
   prefab: {fileID: 1055818249809139434, guid: 1a48900918d932f4b933c67054bfcf60, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: bc6d26a69de87154eaa70403e7e9713f, type: 3}
   agumentName: "Hava K\u0131r\u0131c\u0131 III"
   agumentDescription: + 9 Birimmm
   aqumentType: 1

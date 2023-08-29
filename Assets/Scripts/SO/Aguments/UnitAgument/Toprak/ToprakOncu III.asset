@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ToprakOncu III
   m_EditorClassIdentifier: 
   prefab: {fileID: 1898157170178963432, guid: 302daf77b41d49e42a759b73a22215f0, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: 880a0a82e419de946afbdf05625ffaa9, type: 3}
   agumentName: Toprak Oncu III
   agumentDescription: + 9 Birimmm
   aqumentType: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HavaOncu II
   m_EditorClassIdentifier: 
   prefab: {fileID: 8592837230960499425, guid: 288874522546ec04c94fd3f77f2ab2a1, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: 4e7f41fa5869078409ce5b8e79370341, type: 3}
   agumentName: Hava Oncu II
   agumentDescription: Hava birimi 6 birim
   aqumentType: 1

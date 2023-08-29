@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hava
   m_EditorClassIdentifier: 
   prefab: {fileID: 4535507078065905751, guid: 82f9e1377e71041479a54c8a510e77a7, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: fdbe88617a72ec94b9af9137e1692a95, type: 3}
   agumentName: Hava
   agumentDescription: Hava birimi verir 3 birim
   aqumentType: 1

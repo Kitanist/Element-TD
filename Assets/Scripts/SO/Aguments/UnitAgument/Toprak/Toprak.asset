@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toprak
   m_EditorClassIdentifier: 
   prefab: {fileID: 7553014240729941755, guid: f7c4db38a768db54b961c694ec179156, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: e043e5b6eb555e14cb02c83d73a14c6e, type: 3}
   agumentName: Toprak
   agumentDescription: Toprak birimi verir 3 birim
   aqumentType: 1

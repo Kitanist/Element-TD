@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "AlevK\u0131r\u0131c\u0131"
   m_EditorClassIdentifier: 
   prefab: {fileID: 2447599239046512213, guid: 098d469d44bc227468e7825f5b01d9dc, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: e21fba06af0b26e44bc40eb02139b4fe, type: 3}
   agumentName: "Alev K\u0131r\u0131c\u0131"
   agumentDescription: Ates birimi verir 3 birim
   aqumentType: 1

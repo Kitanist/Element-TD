@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Alev III
   m_EditorClassIdentifier: 
   prefab: {fileID: 6913693991796829329, guid: 2a777c28892529341b62ac432717ac1f, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: f4ea1eaaf06a6204599d01ef6d2fe8b5, type: 3}
   agumentName: Alev III
   agumentDescription: + 9 Birimmm
   aqumentType: 1

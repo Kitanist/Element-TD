@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Su  III
   m_EditorClassIdentifier: 
   prefab: {fileID: 1828340128005876221, guid: d56be565f880cba44a08a66af4082292, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: 6a3a36c98d87e244b8a31bc3893c5e20, type: 3}
   agumentName: Su III
   agumentDescription: + 9 Birimmm
   aqumentType: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "TopraklK\u0131r\u0131c\u0131 III"
   m_EditorClassIdentifier: 
   prefab: {fileID: 3370187479822302285, guid: 339f3c99b53b68a4d9b24c81670b93ac, type: 3}
-  sprite: {fileID: 21300000, guid: 0c6a2a64ca9f9c946a7dbbd1674cf5bd, type: 3}
+  sprite: {fileID: 21300000, guid: a7fbb3b2f6b48fe499a02e9004c1e82a, type: 3}
   agumentName: "Toprak K\u0131r\u0131c\u0131 III"
   agumentDescription: + 9 Birimmm
   aqumentType: 1
