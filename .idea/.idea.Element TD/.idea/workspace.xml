@@ -6,18 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4389c10e-d1f6-4b9b-98b6-f061dbc5b238" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Element TD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeAir.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeAir.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeArmoredAir.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeArmoredAir.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeArmoredFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeArmoredFire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeDirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeDirt.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeFire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeSpeederAir 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeSpeederAir 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeSpeederDirt 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeSpeederDirt 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeSpeederFire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeSpeederFire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeSpeederWatter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeSpeederWatter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeWatter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/SlimeWatter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/slimeArmoredDirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/slimeArmoredDirt.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/slimeArmoredWatter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/Slimes/slimeArmoredWatter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UnitS/FireUnitEnemySpeeder 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UnitS/FireUnitEnemySpeeder 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Enes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Enes.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level-3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level-4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level-4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Slime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Slime.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,6 +102,7 @@
       <workItem from="1693035936298" duration="3486000" />
       <workItem from="1693212320495" duration="6966000" />
       <workItem from="1693260790591" duration="2526000" />
+      <workItem from="1693296165513" duration="1197000" />
     </task>
     <servers />
   </component>
