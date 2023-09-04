@@ -8,14 +8,14 @@ using Unity.VisualScripting;
 public class Slime : MonoBehaviour
 {
     // Start is called before the first frame update
-    private void OnEnable()
-    {
-       // yoyoYoYo();
-    }
+ 
 
+    private void Start() {
+      // yoyoYoYo(); 
+    }
     public void yoyoYoYo()
     {
-        transform.DOMoveY(2, .5f, false).SetLoops(99, LoopType.Restart);
+        transform.DOMoveY(2, 2f, false).SetLoops(99, LoopType.Yoyo);
     }
     
 }

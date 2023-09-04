@@ -1,8 +1,14 @@
 fileFormatVersion: 2
 guid: 60fe1a51573472c40931f69d10fc2eba
 ModelImporter:
-  serializedVersion: 21300
-  internalIDToNameTable: []
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: -7992222990376079527
+    second: gezegen|gezegenAction
+  - first:
+      74: 2915880176750922010
+    second: gezegen|gezegenAction.003
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -99,7 +105,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

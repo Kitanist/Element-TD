@@ -19,7 +19,7 @@ public class FireTower :Tower
     }
     public override void Fire()
     {
-        reset = false; //yarý eksen gerekiyormuþ everlap box da dikkat edilmeli
+        reset = false; //yarï¿½ eksen gerekiyormuï¿½ everlap box da dikkat edilmeli
         if (firePos)
         {
             targets = Physics.OverlapBox(firePos.position, new Vector3(attackRadius / 2, attackRadius / 2, attackRadius / 2), Quaternion.identity, EnemyMask);
@@ -69,12 +69,7 @@ public class FireTower :Tower
 
         }
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.cyan;
-        if(firePos)
-        Gizmos.DrawWireCube(firePos.position, new Vector3(attackRadius, attackRadius, attackRadius));
-    }
+   
 
     public override void LevelUp()
     {

@@ -188,7 +188,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.7784839, y: 4.7807183, z: 3.5651677}
+  m_Size: {x: 8, y: 8, z: 8}
   m_Center: {x: 1.3474902, y: 1.8903588, z: 0.32450455}
 --- !u!114 &5505317969047654210
 MonoBehaviour:
@@ -220,6 +220,10 @@ MonoBehaviour:
   don: 0
   coss: 0
   isBass: 0
+  fireParticle: {fileID: 0}
+  waterParticle: {fileID: 0}
+  earthParticle: {fileID: 0}
+  airParticle: {fileID: 0}
 --- !u!114 &5505317969047654213
 MonoBehaviour:
   m_ObjectHideFlags: 0

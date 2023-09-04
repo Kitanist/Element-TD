@@ -117,11 +117,7 @@ public class Tower : AqumentBase
     }
 
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
-    }
+   
 
     public virtual void Fire()
     {

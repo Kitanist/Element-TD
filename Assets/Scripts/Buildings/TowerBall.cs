@@ -82,12 +82,7 @@ public class TowerBall : Tower
 
 
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
-    }
-
+    
 
 
     private void OnMouseDown()
