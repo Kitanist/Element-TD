@@ -65,6 +65,7 @@ public class HealthComponent : MonoBehaviour
    public void GetDamage (float damage,Element_Type damagerType) {
     
     float _damage=SetElementDamage(damage,damagerType);
+    if(isUnit && myElement!=Element_Type.None)
     CreateParticleHit(damagerType); 
         if (!isIlkDarbeUse && isIlkDarbe)
         {
@@ -138,7 +139,7 @@ public class HealthComponent : MonoBehaviour
         }
         else
         {
-            
+            if(this.gameObject.activeInHierarchy)
             StartCoroutine(BurnedDamage(0,_damage/3));
 
         }

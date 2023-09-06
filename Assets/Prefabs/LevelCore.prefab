@@ -1331,7 +1331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -5816,15 +5815,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
+    m_Left: 40
     m_Right: 0
     m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 80, y: 80}
-  m_Spacing: {x: 70, y: 20}
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 80, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &7345127440696227038
@@ -9717,15 +9716,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
+    m_Left: 40
     m_Right: 0
     m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 80, y: 80}
-  m_Spacing: {x: 70, y: 20}
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 80, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &7345127441357679190
@@ -11351,7 +11350,6 @@ GameObject:
   - component: {fileID: 7345127441611376898}
   - component: {fileID: 7345127441611376956}
   - component: {fileID: 7345127441611376899}
-  - component: {fileID: 5483455824352825775}
   m_Layer: 5
   m_Name: WaveUnitPanel
   m_TagString: Untagged
@@ -11422,18 +11420,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5483455824352825775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7345127441611376897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71b95e746459b4f46b6fa3a78462ee82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7345127441615605315
 GameObject:
   m_ObjectHideFlags: 0

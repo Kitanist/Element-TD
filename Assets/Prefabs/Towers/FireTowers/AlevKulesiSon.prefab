@@ -213,7 +213,7 @@ MonoBehaviour:
   isBassGeri: 0
   firePos: {fileID: 7895575553885276527}
   rangeObject: {fileID: 1379914775137769158}
-  element_Type: 0
+  element_Type: 1
   node: {fileID: 0}
   Name: Trap Tower
   damage: 2

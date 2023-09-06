@@ -143,7 +143,7 @@ MonoBehaviour:
   isBassGeri: 0
   firePos: {fileID: 4601695124506555552}
   rangeObject: {fileID: 5822867450747286397}
-  element_Type: 1
+  element_Type: 3
   node: {fileID: 0}
   Name: Bomber Tower
   damage: 10
