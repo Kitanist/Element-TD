@@ -20,6 +20,7 @@ public class GameManager : MonoSingeleton<GameManager>
 {
 
    public GameObject myCastle;
+   public GameObject mySoytari;
    [SerializeField]private float gold=0;
    public Transform CastleTransform;
    public bool playerIsAttack=false;

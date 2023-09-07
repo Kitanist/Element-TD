@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 [RequireComponent (typeof(BoxCollider))]
 public class Castle : MonoBehaviour
 {
-    public bool isSoytariActive;
+    public bool isSoytariActive=false;
     /*
 public void  OpenUnitPanelButton () {
    // TheUI.Instance.isButton=true;
@@ -28,12 +28,17 @@ public void OpenUIUnit () {
 }*/
 private void OnTriggerEnter(Collider other) {
  
-     if(GetComponent<HealthComponent>().isPlayerBase){
+  if(GetComponent<HealthComponent>().isPlayerBase){
         Debug.Log("other layer: "+ other.gameObject.layer +"    "+ " sorulan layer: "+LayerMask.NameToLayer("Enemy"));
-    if(other.gameObject.layer==LayerMask.NameToLayer("Enemy")){
+         if(other.gameObject.layer==LayerMask.NameToLayer("Enemy")){
         GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage,other.GetComponent<HealthComponent>().myElement);
         other.GetComponent<HealthComponent>().GetDamage(other.GetComponent<HealthComponent>().maxHealth,Element_Type.None);// kendisi de hasar yiyerek ölsün
 
+            }
+     if(!isSoytariActive){
+        isSoytariActive=true;
+        GameManager.Instance.mySoytari.SetActive(true);
+        Debug.Log("nedeeeeene tanrım nedennn");
     }
      }
      else{
@@ -41,7 +46,9 @@ private void OnTriggerEnter(Collider other) {
         GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage,other.GetComponent<HealthComponent>().myElement);
         other.GetComponent<HealthComponent>().GetDamage(other.GetComponent<HealthComponent>().maxHealth,Element_Type.None);// kendisi de hasar yiyerek ölsün
 
-    }
+            }
+
+   
      }
     
       

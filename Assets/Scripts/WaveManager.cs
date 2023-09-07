@@ -80,7 +80,8 @@ public void EndWave () {
         Debug.Log(waves[currentWaveCount].WaveUnits.Count);
        
         StartCoroutine(WaitWave());
-    
+       GameManager.Instance.myCastle.GetComponent<Castle>().isSoytariActive=false;
+        GameManager.Instance.mySoytari.SetActive(false);
         destroyedUnitCount=0;
         Debugger.Instance.Debuger("Wait For Next Wave ");
         nextUnitIndex =0;
