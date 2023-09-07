@@ -112,7 +112,7 @@ public class HealthComponent : MonoBehaviour
         Die();
     }
     else{
-        if(isUnit){
+        if(isUnit && gameObject.activeInHierarchy){
             mesh.material=damageMatarial;
                
             StartCoroutine(fixMatarial());

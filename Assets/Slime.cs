@@ -11,11 +11,11 @@ public class Slime : MonoBehaviour
  
 
     private void Start() {
-      // yoyoYoYo(); 
+       yoyoYoYo(); 
     }
     public void yoyoYoYo()
     {
-        transform.DOMoveY(2, 2f, false).SetLoops(99, LoopType.Yoyo);
+        transform.DOMoveY(2, 1f, false).SetLoops(-1, LoopType.Yoyo);
     }
     
 }

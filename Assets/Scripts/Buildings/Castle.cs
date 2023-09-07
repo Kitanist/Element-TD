@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 [RequireComponent (typeof(BoxCollider))]
 public class Castle : MonoBehaviour
 {
-
+    public bool isSoytariActive;
     /*
 public void  OpenUnitPanelButton () {
    // TheUI.Instance.isButton=true;

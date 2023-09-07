@@ -258,8 +258,7 @@ MonoBehaviour:
   upgradeCostforNextLevel: 1000
   targets: []
   towerIsPlayer: 1
-  particles:
-  - {fileID: 7627460614140884146, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
+  particles: {fileID: 2965212448061128951}
 --- !u!1 &6433023777251045494
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,11 +353,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Magic circle
       objectReference: {fileID: 0}
+    - target: {fileID: 3744133877081091469, guid: a2a060732547fe64581bb0cb3c2bdf1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a060732547fe64581bb0cb3c2bdf1d, type: 3}
 --- !u!4 &2916913060621553986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3650638188812647480, guid: a2a060732547fe64581bb0cb3c2bdf1d, type: 3}
+  m_PrefabInstance: {fileID: 1932986445852355962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2965212448061128951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3744133877081091469, guid: a2a060732547fe64581bb0cb3c2bdf1d, type: 3}
   m_PrefabInstance: {fileID: 1932986445852355962}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3119280128466454955 stripped

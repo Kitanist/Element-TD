@@ -5,11 +5,14 @@ using UnityEngine;
 public class FireTower :Tower
 {
   
-    public GameObject[] particles;
+    public GameObject particles;
    // public GameObject rotatObject;
     private void Update()
     {
-
+    if( targets.Length>0)
+    particles.SetActive(true);
+    else
+    particles.SetActive(false);
         if (reset)
         {
             Fire();
@@ -21,9 +24,8 @@ public class FireTower :Tower
     {
         reset = false; //yar� eksen gerekiyormu� everlap box da dikkat edilmeli
         if (firePos)
-        {
-            targets = Physics.OverlapBox(firePos.position, new Vector3(attackRadius / 2, attackRadius / 2, attackRadius / 2), Quaternion.identity, EnemyMask);
-
+        {      
+            targets= Physics.OverlapSphere(firePos.position,attackRadius);
             foreach (var obj in targets)
             {
                 //hasar ver

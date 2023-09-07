@@ -175,8 +175,7 @@ MonoBehaviour:
   upgradeCostforNextLevel: 1000
   targets: []
   towerIsPlayer: 1
-  particles:
-  - {fileID: 7627460614140884146, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
+  particles: {fileID: 4873586673939011782}
 --- !u!1 &6433023777251045494
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow AOE
       objectReference: {fileID: 0}
+    - target: {fileID: 161766660727748596, guid: 05ce920d629922a4eb4795ef7494ce5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2100541099862133063, guid: 05ce920d629922a4eb4795ef7494ce5c, type: 3}
       propertyPath: lengthInSec
       value: 1
@@ -462,6 +465,11 @@ PrefabInstance:
 --- !u!4 &2430276195675996540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6928458153528979022, guid: 05ce920d629922a4eb4795ef7494ce5c, type: 3}
+  m_PrefabInstance: {fileID: 4727865543315156786}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4873586673939011782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161766660727748596, guid: 05ce920d629922a4eb4795ef7494ce5c, type: 3}
   m_PrefabInstance: {fileID: 4727865543315156786}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8856010326451240702 stripped
