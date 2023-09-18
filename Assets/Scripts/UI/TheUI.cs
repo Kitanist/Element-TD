@@ -20,6 +20,7 @@ public class TheUI : MonoSingeleton<TheUI>
     public Button ShopButton1, ShopButton2, ShopButton3,ShopButton4, UShopButton1, UShopButton2, UShopButton3,UShopButton4, AShopButton1, AShopButton2, AShopButton3;
 
    */
+   
    public GameObject BackGround;
    public bool isButton;
    public int Pixels;

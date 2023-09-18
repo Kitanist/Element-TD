@@ -24,6 +24,7 @@ public class HUD :MonoSingeleton<HUD>
     public TMP_Text elementDirtCostText;
     */
  public Button setVisionOrAttackHUD;
+ 
 
  [Header("UNİT")]
   [Space(5)]
@@ -81,6 +82,10 @@ public class HUD :MonoSingeleton<HUD>
    public GameObject[] AllUnitCountTexts;
    public GameObject[] AllMyUnitCountTexts;
    public int [] myUnitCounts;
+    public Sprite fn_s, fa_s, fs_s, wn_s, wa_s, ws_s, an_s, aa_s, as_s, dn_s, da_s, ds_s;
+            
+
+
  public void RefreshUnitCount () {
     if(WaveManager.Instance.currentWaveCount<WaveManager.Instance.waves.Length){
           for(int i = 0; i < AllUnitCountTexts.Length; i++) {
@@ -103,19 +108,20 @@ public class HUD :MonoSingeleton<HUD>
             AllMyUnitCountTexts[0].SetActive(true);
             myUnitCounts[0]++;
              AllMyUnitCountTexts[0].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[0].ToString();
-             AllMyUnitCountTexts[0].GetComponent<Image>().color=Color.red;
+         
+                AllMyUnitCountTexts[0].GetComponent<Image>().sprite = fn_s;
        }
       else if( unit.unitType==UnitType.Speeder){
             AllMyUnitCountTexts[1].SetActive(true);
             myUnitCounts[1]++;
              AllMyUnitCountTexts[1].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[1].ToString();
-             AllMyUnitCountTexts[1].GetComponent<Image>().color=Color.red; 
+             AllMyUnitCountTexts[1].GetComponent<Image>().sprite=fs_s; 
        }
       else if( unit.unitType==UnitType.Armored){
             AllMyUnitCountTexts[2].SetActive(true);
             myUnitCounts[2]++;
              AllMyUnitCountTexts[2].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[2].ToString();
-              AllMyUnitCountTexts[2].GetComponent<Image>().color=Color.red;
+              AllMyUnitCountTexts[2].GetComponent<Image>().sprite=fa_s;
        }
     }
     else if(unit.GetComponent<HealthComponent>().myElement==Element_Type.Watter){
@@ -123,19 +129,19 @@ public class HUD :MonoSingeleton<HUD>
             AllMyUnitCountTexts[3].SetActive(true);
             myUnitCounts[3]++;
              AllMyUnitCountTexts[3].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[3].ToString();
-              AllMyUnitCountTexts[3].GetComponent<Image>().color=Color.blue;
+              AllMyUnitCountTexts[3].GetComponent<Image>().sprite=wn_s;
        }
       else if( unit.unitType==UnitType.Speeder){
             AllMyUnitCountTexts[4].SetActive(true);
             myUnitCounts[4]++;
              AllMyUnitCountTexts[4].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[4].ToString();
-              AllMyUnitCountTexts[4].GetComponent<Image>().color=Color.blue;
+                AllMyUnitCountTexts[4].GetComponent<Image>().sprite = ws_s;
        }
       else if( unit.unitType==UnitType.Armored){
             AllMyUnitCountTexts[5].SetActive(true);
             myUnitCounts[5]++;
              AllMyUnitCountTexts[5].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[5].ToString();
-                       AllMyUnitCountTexts[5].GetComponent<Image>().color=Color.blue;
+                AllMyUnitCountTexts[5].GetComponent<Image>().sprite = wa_s;
        }
     }
      else if(unit.GetComponent<HealthComponent>().myElement==Element_Type.Air){
@@ -143,19 +149,19 @@ public class HUD :MonoSingeleton<HUD>
             AllMyUnitCountTexts[6].SetActive(true);
             myUnitCounts[6]++;
              AllMyUnitCountTexts[6].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[6].ToString();
-                       AllMyUnitCountTexts[6].GetComponent<Image>().color=Color.cyan;
+                AllMyUnitCountTexts[6].GetComponent<Image>().sprite = an_s;
        }
        else if( unit.unitType==UnitType.Speeder){
             AllMyUnitCountTexts[7].SetActive(true);
             myUnitCounts[7]++;
              AllMyUnitCountTexts[7].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[7].ToString();
-                    AllMyUnitCountTexts[7].GetComponent<Image>().color=Color.cyan;
+                AllMyUnitCountTexts[7].GetComponent<Image>().sprite = as_s;
        }
        else if( unit.unitType==UnitType.Armored){
             AllMyUnitCountTexts[8].SetActive(true);
             myUnitCounts[8]++;
              AllMyUnitCountTexts[8].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[8].ToString();
-                    AllMyUnitCountTexts[8].GetComponent<Image>().color=Color.cyan;
+                AllMyUnitCountTexts[8].GetComponent<Image>().sprite = aa_s;
        }
     
     }
@@ -164,19 +170,19 @@ public class HUD :MonoSingeleton<HUD>
             AllMyUnitCountTexts[9].SetActive(true);
             myUnitCounts[9]++;
              AllMyUnitCountTexts[9].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[9].ToString();
-                    AllMyUnitCountTexts[9].GetComponent<Image>().color=Color.yellow;
+                AllMyUnitCountTexts[9].GetComponent<Image>().sprite = dn_s;
        }
       else if( unit.unitType==UnitType.Speeder){
             AllMyUnitCountTexts[10].SetActive(true);
             myUnitCounts[10]++;
              AllMyUnitCountTexts[10].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[10].ToString();
-              AllMyUnitCountTexts[10].GetComponent<Image>().color=Color.yellow;
+                AllMyUnitCountTexts[10].GetComponent<Image>().sprite = ds_s;
        }
       else if( unit.unitType==UnitType.Armored){
             AllMyUnitCountTexts[11].SetActive(true);
             myUnitCounts[11]++;
              AllMyUnitCountTexts[11].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[11].ToString();
-              AllMyUnitCountTexts[11].GetComponent<Image>().color=Color.yellow;
+                AllMyUnitCountTexts[11].GetComponent<Image>().sprite = da_s;
        }
     }
      else if (unit.GetComponent<HealthComponent>().myElement == Element_Type.None)
