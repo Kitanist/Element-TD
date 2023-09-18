@@ -3889,6 +3889,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5810427084609767039, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842280964166512819, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7345127440108929993, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: aquments.Array.size
       value: 12
@@ -4733,6 +4741,18 @@ PrefabInstance:
       propertyPath: waves.Array.data[4].diffrentUnitCounts.Array.data[8]
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7345127441330900445, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
+      propertyPath: waves.Array.data[0].diffrentUnitCounts.Array.data[12]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7345127441330900445, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
+      propertyPath: waves.Array.data[1].diffrentUnitCounts.Array.data[12]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7345127441330900445, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
+      propertyPath: waves.Array.data[1].diffrentUnitCounts.Array.data[13]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7345127441330900446, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: myCastle
       value: 
@@ -4741,6 +4761,10 @@ PrefabInstance:
       propertyPath: mySoytari
       value: 
       objectReference: {fileID: 848182631}
+    - target: {fileID: 7345127441330900446, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
+      propertyPath: CastleTransform
+      value: 
+      objectReference: {fileID: 1515314776}
     - target: {fileID: 7345127441330900447, guid: aeb5116d2c0b4fe41bf17c15f49ce44e, type: 3}
       propertyPath: m_LocalPosition.z
       value: -40.05
