@@ -15,7 +15,7 @@ public class Slime : MonoBehaviour
     }
     public void yoyoYoYo()
     {
-        transform.DOMoveY(2, 1f, false).SetLoops(-1, LoopType.Yoyo);
+        transform.DOMoveY(6f,1f, false).SetLoops(-1, LoopType.Yoyo);
     }
     
 }

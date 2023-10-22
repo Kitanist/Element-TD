@@ -22,14 +22,14 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: DistortionPoint
   m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
-  m_ValidKeywords:
-  - _EMISSION
-  - _NORMALMAP
-  - _SURFACE_TYPE_TRANSPARENT
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - EFFECT_BUMP
   - _ALPHABLEND_ON
+  - _EMISSION
   - _FLIPBOOKBLENDING_OFF
+  - _NORMALMAP
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1

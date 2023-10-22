@@ -168,7 +168,6 @@ GameObject:
   - component: {fileID: 8206401191070304154}
   - component: {fileID: 8206401191070304153}
   - component: {fileID: 8206401191070304152}
-  - component: {fileID: 1964716171643550227}
   m_Layer: 6
   m_Name: NormalUnitEnemy Speeder
   m_TagString: Enemy
@@ -283,6 +282,13 @@ MonoBehaviour:
   isIlkDarbeUse: 0
   isImBurning: 0
   isImBurningII: 0
+  don: 0
+  coss: 0
+  isBass: 0
+  fireParticle: {fileID: 0}
+  waterParticle: {fileID: 0}
+  earthParticle: {fileID: 0}
+  airParticle: {fileID: 0}
 --- !u!114 &8206401191070304153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,9 +306,10 @@ MonoBehaviour:
   myPoolIndex: 31
   speed: 5
   maxSpeed: 5
-  cost: 50
   price: 5
   unitName: 
+  nextPathNode: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!54 &8206401191070304152
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -319,19 +326,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1964716171643550227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8206401191070304159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7be82eedc1d2274c8273d728fb178be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathCreator: {fileID: 0}
 --- !u!1 &8206401191276877871
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 2437270008180210437}
   - component: {fileID: 2437270008180210438}
   - component: {fileID: 2437270008180210439}
-  - component: {fileID: 5436971463806191244}
   m_Layer: 7
   m_Name: 'WatterUnitArmored '
   m_TagString: Enemy
@@ -157,6 +156,8 @@ MonoBehaviour:
   maxSpeed: 2
   price: 10
   unitName: 
+  nextPathNode: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!54 &2437270008180210439
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -173,19 +174,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &5436971463806191244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2437270008180210432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7be82eedc1d2274c8273d728fb178be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathCreator: {fileID: 0}
 --- !u!1 &2437270008514700464
 GameObject:
   m_ObjectHideFlags: 0

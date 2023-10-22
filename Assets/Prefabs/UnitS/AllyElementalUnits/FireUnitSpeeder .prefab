@@ -358,7 +358,6 @@ GameObject:
   - component: {fileID: 2447599239046512208}
   - component: {fileID: 2447599239046512211}
   - component: {fileID: 2447599239046512210}
-  - component: {fileID: 5427244505754747865}
   m_Layer: 7
   m_Name: 'FireUnitSpeeder '
   m_TagString: Enemy
@@ -500,6 +499,8 @@ MonoBehaviour:
   maxSpeed: 5
   price: 10
   unitName: 
+  nextPathNode: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!54 &2447599239046512210
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -516,19 +517,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &5427244505754747865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2447599239046512213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7be82eedc1d2274c8273d728fb178be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathCreator: {fileID: 0}
 --- !u!1001 &2894188210333114482
 PrefabInstance:
   m_ObjectHideFlags: 0

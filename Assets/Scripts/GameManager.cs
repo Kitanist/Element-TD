@@ -29,10 +29,13 @@ public class GameManager : MonoSingeleton<GameManager>
 public AudioSource asource;
 public AudioClip buttonClik1;
 public AudioClip buttonClik2;
-  public PathCreator levelPathCreator;
-  public PathCreator attackPathCreator;
+  //public PathCreator levelPathCreator;
+ // public PathCreator attackPathCreator;
 
-  public bool currentCamIsMineTerritory=true;
+    public PathNode startUnitNode;
+    public PathNode endUnitNode;
+
+    public bool currentCamIsMineTerritory=true;
 [Header("SKILL POINT")]
  [Space(5)]
 public int skillPoint=0;

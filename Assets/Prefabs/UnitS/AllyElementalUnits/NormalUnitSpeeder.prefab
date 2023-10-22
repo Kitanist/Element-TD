@@ -168,7 +168,6 @@ GameObject:
   - component: {fileID: 1055818249809139439}
   - component: {fileID: 1055818249809139436}
   - component: {fileID: 1055818249809139437}
-  - component: {fileID: 7206297679669652326}
   m_Layer: 7
   m_Name: NormalUnitSpeeder
   m_TagString: Enemy
@@ -279,6 +278,17 @@ MonoBehaviour:
   mesh: {fileID: 0}
   damageMatarial: {fileID: 2100000, guid: 6cd34cf2f0eedb2438c203b3c893fdc3, type: 2}
   hitSound: {fileID: 8300000, guid: 0c7d87dba5d5a5047ae6b871c522132f, type: 3}
+  isIlkDarbe: 0
+  isIlkDarbeUse: 0
+  isImBurning: 0
+  isImBurningII: 0
+  don: 0
+  coss: 0
+  isBass: 0
+  fireParticle: {fileID: 0}
+  waterParticle: {fileID: 0}
+  earthParticle: {fileID: 0}
+  airParticle: {fileID: 0}
 --- !u!114 &1055818249809139436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,9 +305,11 @@ MonoBehaviour:
   unitDamage: 5
   myPoolIndex: 28
   speed: 5
-  cost: 50
+  maxSpeed: 5
   price: 10
   unitName: 
+  nextPathNode: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!54 &1055818249809139437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -314,19 +326,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &7206297679669652326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055818249809139434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7be82eedc1d2274c8273d728fb178be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathCreator: {fileID: 0}
 --- !u!1 &1055818249893512680
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4535507078065905746}
   - component: {fileID: 4535507078065905745}
   - component: {fileID: 4535507078065905744}
-  - component: {fileID: 6077527698961505755}
   m_Layer: 7
   m_Name: NormalUnitNormal
   m_TagString: Enemy
@@ -129,6 +128,14 @@ MonoBehaviour:
   isIlkDarbe: 0
   isIlkDarbeUse: 0
   isImBurning: 0
+  isImBurningII: 0
+  don: 0
+  coss: 0
+  isBass: 0
+  fireParticle: {fileID: 0}
+  waterParticle: {fileID: 0}
+  earthParticle: {fileID: 0}
+  airParticle: {fileID: 0}
 --- !u!114 &4535507078065905745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,9 +153,10 @@ MonoBehaviour:
   myPoolIndex: 27
   speed: 3
   maxSpeed: 3
-  cost: 50
   price: 10
   unitName: 
+  nextPathNode: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!54 &4535507078065905744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,19 +173,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &6077527698961505755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4535507078065905751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7be82eedc1d2274c8273d728fb178be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathCreator: {fileID: 0}
 --- !u!1 &4535507078245774165
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7068647148250268567}
   - component: {fileID: 7068647148250268564}
   - component: {fileID: 7068647148250268565}
-  - component: {fileID: 629956068840635934}
   m_Layer: 6
   m_Name: WatterUnitEnemy  1
   m_TagString: Enemy
@@ -157,6 +156,8 @@ MonoBehaviour:
   maxSpeed: 3
   price: 10
   unitName: 
+  nextPathNode: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!54 &7068647148250268565
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -173,19 +174,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &629956068840635934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7068647148250268562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7be82eedc1d2274c8273d728fb178be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathCreator: {fileID: 0}
 --- !u!1 &7068647148374560912
 GameObject:
   m_ObjectHideFlags: 0

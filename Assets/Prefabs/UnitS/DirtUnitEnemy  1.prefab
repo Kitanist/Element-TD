@@ -168,7 +168,6 @@ GameObject:
   - component: {fileID: 7158970769593097276}
   - component: {fileID: 7158970769593097279}
   - component: {fileID: 7158970769593097278}
-  - component: {fileID: 720339999007023541}
   m_Layer: 6
   m_Name: DirtUnitEnemy  1
   m_TagString: Enemy
@@ -310,6 +309,8 @@ MonoBehaviour:
   maxSpeed: 3
   price: 10
   unitName: 
+  nextPathNode: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!54 &7158970769593097278
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -326,19 +327,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &720339999007023541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7158970769593097273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7be82eedc1d2274c8273d728fb178be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathCreator: {fileID: 0}
 --- !u!1 &7158970769684877115
 GameObject:
   m_ObjectHideFlags: 0
