@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PathCreation;
+
 
   public enum Element_Type{
     None,
@@ -29,11 +29,10 @@ public class GameManager : MonoSingeleton<GameManager>
 public AudioSource asource;
 public AudioClip buttonClik1;
 public AudioClip buttonClik2;
-  //public PathCreator levelPathCreator;
- // public PathCreator attackPathCreator;
 
-    public PathNode startUnitNode;
-    public PathNode endUnitNode;
+
+    public PathNode[] startUnitNode;
+    public PathNode[] endUnitNode;
 
     public bool currentCamIsMineTerritory=true;
 [Header("SKILL POINT")]

@@ -5,8 +5,8 @@ using System;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
- 
 public class WaveManager : MonoSingeleton<WaveManager>
 {
     [Serializable]
@@ -92,6 +92,7 @@ public void EndWave () {
 }
 public void decreseRemainTime () {
         
+       
     if(remainingTime>0 && !GameManager.Instance.playerIsAttack){
          remainingTime--;
          if(remainingTime>=4 ){
@@ -152,8 +153,8 @@ IEnumerator UnitSawnWait(int waveCount){
           
             unit.transform.position = unitSpawnTransform.position;
             //  unit.GetComponent<Movement>().pathCreator=GameManager.Instance.levelPathCreator;
-            unit.GetComponent<Unit>().
-                nextPathNode = GameManager.Instance.startUnitNode;
+            var rand = Random.Range(0, GameManager.Instance.startUnitNode.Length);
+            unit.GetComponent<Unit>().nextPathNode = GameManager.Instance.startUnitNode[rand];
 
             nextUnitIndex++;
      StartCoroutine(UnitSawnWait(currentWaveCount));

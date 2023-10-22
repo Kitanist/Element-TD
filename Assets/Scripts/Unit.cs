@@ -43,7 +43,7 @@ public class Unit : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("WaitArea") && gameObject.layer==7){
                 gameObject.SetActive(false);
-                Debug.Log("spriseee");
+               
         }
     }
     
