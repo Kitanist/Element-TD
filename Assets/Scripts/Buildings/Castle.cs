@@ -38,7 +38,8 @@ private void OnTriggerEnter(Collider other) {
      if(!isSoytariActive){
         isSoytariActive=true;
         GameManager.Instance.mySoytari.SetActive(true);
-       
+                StartCoroutine(ResetSoytarı());
+
     }
      }
      else{
@@ -53,7 +54,12 @@ private void OnTriggerEnter(Collider other) {
     
       
 }
-
+    IEnumerator ResetSoytarı()
+    {
+        yield return new WaitForSeconds(8);
+        isSoytariActive = false;
+        GameManager.Instance.mySoytari.SetActive(false);
+    }
 
 
 }

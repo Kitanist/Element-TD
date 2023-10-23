@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,8 +38,12 @@ public AudioClip buttonClik2;
 [Header("SKILL POINT")]
  [Space(5)]
 public int skillPoint=0;
+public int aqumentCount = 1; //aqument count arttıkca çıkacak eklenti sayısı artar
+public int aqumentCountMax = 3;
+public int aqumentRollCount = 1; //aqument roll sayısı gelisimi ve max rolleme sayısı
+public int aqumentRollCountMax = 3;
 
- [Header("MAP")]
+    [Header("MAP")]
  [Space(5)]
  public bool []levelsOpen;
  public float []levelStartGolds;

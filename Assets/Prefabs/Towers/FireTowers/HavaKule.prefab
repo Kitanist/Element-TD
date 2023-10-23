@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4851753239540852479}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &6822764135410117522
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -257,8 +257,7 @@ MonoBehaviour:
   upgradeCostforNextLevel: 1000
   targets: []
   towerIsPlayer: 1
-  particles:
-  - {fileID: 7627460614140884146, guid: 3f86d5286cb7fe34d8341157810b4fc6, type: 3}
+  particles: {fileID: 0}
 --- !u!1 &6433023777251045494
 GameObject:
   m_ObjectHideFlags: 0

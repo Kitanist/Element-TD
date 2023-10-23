@@ -137,6 +137,7 @@ MonoBehaviour:
   waterParticle: {fileID: 4924508274929071776, guid: 0edef91621bb6b34384ccc9dbb98729c, type: 3}
   earthParticle: {fileID: 6823302871133167919, guid: 3138a83bedbd6ad4481ba0b061da2eb6, type: 3}
   airParticle: {fileID: 2944396702758532163, guid: e190bf97c041e58448af6b043116cba0, type: 3}
+  EffectTransform: {fileID: 2808195241697048346}
 --- !u!114 &138770360201571283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +158,8 @@ MonoBehaviour:
   price: 10
   unitName: 
   nextPathNode: {fileID: 0}
-  agent: {fileID: 0}
+  isBackPath: 0
+  turnSpeed: 0.1
 --- !u!54 &138770360201571282
 Rigidbody:
   m_ObjectHideFlags: 0

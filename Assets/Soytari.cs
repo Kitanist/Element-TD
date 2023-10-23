@@ -19,6 +19,7 @@ private void OnEnable() {
          GetComponent<Animator>().SetTrigger("Dance3");
         break;
     }
+        
 }
 
 }

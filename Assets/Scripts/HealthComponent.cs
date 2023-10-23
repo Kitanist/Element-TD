@@ -36,6 +36,7 @@ public class HealthComponent : MonoBehaviour
     public GameObject waterParticle;
     public GameObject earthParticle;
     public GameObject airParticle;
+    public Transform EffectTransform;
     private void Start() {
     mesh=GetComponent<MeshRenderer>();
     firstMatarial=mesh.material;
@@ -239,24 +240,24 @@ public class HealthComponent : MonoBehaviour
            case Element_Type.None:
                break;
            case Element_Type.Fire:
-               GameObject obj1=Instantiate(fireParticle, transform.position, Quaternion.identity);
+               GameObject obj1=Instantiate(fireParticle,EffectTransform.position, Quaternion.identity);
                Destroy(obj1.gameObject,1);
             
                break;
            case Element_Type.Watter:
-               GameObject obj2=Instantiate(waterParticle, transform.position, Quaternion.identity);
+               GameObject obj2=Instantiate(waterParticle,  EffectTransform.position, Quaternion.identity);
                
                Destroy(obj2.gameObject,1);
             
                break;
            case Element_Type.Dirt:
-               GameObject obj3= Instantiate(earthParticle, transform.position, Quaternion.identity);
+               GameObject obj3= Instantiate(earthParticle, EffectTransform.position, Quaternion.identity);
                
                Destroy(obj3.gameObject,1);
             
                break;
            case Element_Type.Air:
-               GameObject obj4=  Instantiate(airParticle, transform.position, Quaternion.identity);
+               GameObject obj4=  Instantiate(airParticle, EffectTransform.position, Quaternion.identity);
                
                Destroy(obj4.gameObject,1);
               

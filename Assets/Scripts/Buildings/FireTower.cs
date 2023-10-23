@@ -25,10 +25,11 @@ public class FireTower :Tower
         reset = false; //yar� eksen gerekiyormu� everlap box da dikkat edilmeli
         if (firePos)
         {      
-            targets= Physics.OverlapSphere(firePos.position,attackRadius);
+            targets= Physics.OverlapSphere(firePos.position,attackRadius,EnemyMask);
             foreach (var obj in targets)
             {
                 //hasar ver
+               
 
                 obj.GetComponent<HealthComponent>().GetDamage(damage, element_Type);
                 if (isIamBurningII)
@@ -55,7 +56,7 @@ public class FireTower :Tower
                 target = null;
             }
         }*/
-        Debug.Log("Hasar");
+       
 
     }
     private void FixedUpdate()

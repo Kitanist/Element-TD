@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-466037152031234849
+--- !u!114 &-7190808863821818770
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Electro
+  m_Name: Trail67 1
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
   - _ALPHABLEND_ON
@@ -35,12 +35,15 @@ Material:
   stringTagMap:
     RenderType: Transparent
   disabledShaderPasses:
+  - GRABPASS
   - ALWAYS
+  - DepthOnly
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: ede7b7fc6b09fcc41892be0d6935c8cf, type: 3}
+        m_Texture: {fileID: 2800000, guid: c4f655f5d01f55547a23a546b58afd04, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -64,7 +67,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ede7b7fc6b09fcc41892be0d6935c8cf, type: 3}
+        m_Texture: {fileID: 2800000, guid: c4f655f5d01f55547a23a546b58afd04, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -119,10 +122,10 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 6.347921, g: 6.347921, b: 6.347921, a: 1}
+    - _BaseColor: {r: 4.7547174, g: 4.7547174, b: 4.7547174, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.8207547, g: 0.70059824, b: 0.16647384, a: 1}
+    - _Color: {r: 0.3033108, g: 0.37612233, b: 0.9056604, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
