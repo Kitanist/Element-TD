@@ -499,7 +499,6 @@ Transform:
   - {fileID: 7437381131110099611}
   - {fileID: 7437381131490822090}
   - {fileID: 7437381130146951315}
-  - {fileID: 7437381130374755462}
   - {fileID: 7437381130517010618}
   - {fileID: 7437381130122749070}
   m_Father: {fileID: 0}
@@ -3082,7 +3081,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5560079549064043604}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7437381130122749069
 MonoBehaviour:
@@ -5261,65 +5260,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &7437381130374755460
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7437381130374755462}
-  - component: {fileID: 7437381130374755461}
-  - component: {fileID: 7437381130374755463}
-  m_Layer: 0
-  m_Name: FormationArmy
-  m_TagString: Untagged
-  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7437381130374755462
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7437381130374755460}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.11126, y: 16.287012, z: -41.855145}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5560079549064043604}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7437381130374755461
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7437381130374755460}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.4888077, y: 1, z: 5.010195}
-  m_Center: {x: 1.3297768, y: 0, z: -0.01223278}
---- !u!114 &7437381130374755463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7437381130374755460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 116e0779068213341855f7adb71d3c82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_event: {fileID: 11400000, guid: 3eaaf66921715ae44af998ec7428e888, type: 2}
 --- !u!1 &7437381130453641323
 GameObject:
   m_ObjectHideFlags: 0
@@ -5571,7 +5511,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5560079549064043604}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7437381130517010617
 MonoBehaviour:
@@ -8814,6 +8754,8 @@ MonoBehaviour:
   remainingTime: 5
   MotherlandCam: {fileID: 0}
   EnemySideCam: {fileID: 0}
+  MotherTargetCamOffset: {fileID: 0}
+  EnemyTargetCamOffset: {fileID: 0}
   WaveCountDownText: {fileID: 7437381131024269732}
   MoneyText: {fileID: 7437381130994963702}
   WaveLeft: {fileID: 7437381130301973431}

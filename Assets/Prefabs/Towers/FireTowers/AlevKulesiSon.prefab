@@ -219,7 +219,7 @@ MonoBehaviour:
   damage: 2
   poolIndex: 0
   JumpForce: 5
-  attackRadius: 30
+  attackRadius: 25
   bulletSpeed: 3
   fireRate: 0.5
   EnemyMask:
@@ -370,6 +370,18 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.g
       value: 0.2235294
       objectReference: {fileID: 0}
+    - target: {fileID: 6059681292046567560, guid: 3355f6bfa6db8b24281b827de929694c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059681292046567560, guid: 3355f6bfa6db8b24281b827de929694c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059681292046567560, guid: 3355f6bfa6db8b24281b827de929694c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6281197938758783077, guid: 3355f6bfa6db8b24281b827de929694c, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
       value: 0.27701166
@@ -422,31 +434,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7957833072274404953, guid: 3355f6bfa6db8b24281b827de929694c, type: 3}
   m_PrefabInstance: {fileID: 2598669616112570810}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8303256733302620635 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6281197938758783073, guid: 3355f6bfa6db8b24281b827de929694c, type: 3}
-  m_PrefabInstance: {fileID: 2598669616112570810}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &287204322416991621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8303256733302620635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &2861431891091220038
 PrefabInstance:
   m_ObjectHideFlags: 0

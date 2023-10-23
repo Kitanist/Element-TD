@@ -235,8 +235,7 @@ MonoBehaviour:
   upgradeCostforNextLevel: 1000
   targets: []
   towerIsPlayer: 1
-  particles:
-  - {fileID: 7627460614140884146, guid: 620a169a928e64b4b844d8984bcf9f34, type: 3}
+  particles: {fileID: 0}
 --- !u!1 &4601695124506555559
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +328,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16aa0ad9570ae664c82dff1e91adff78, type: 2}
+  - {fileID: 2100000, guid: 6e0fa2382d8d9f84eb00e847551218d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

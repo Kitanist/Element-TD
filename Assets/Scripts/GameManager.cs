@@ -21,6 +21,7 @@ public class GameManager : MonoSingeleton<GameManager>
 
    public GameObject myCastle;
    public GameObject mySoytari;
+    public float skySpeed = .5f;
    [SerializeField]private float gold=0;
    public Transform CastleTransform;
    public bool playerIsAttack=false;
@@ -49,8 +50,11 @@ public int aqumentRollCountMax = 3;
  public float []levelStartGolds;
 
  public Map chosenLevel;
-
-  public float Gold
+    private void Update()
+    {
+        RenderSettings.skybox.SetFloat("_Rotation", Time.deltaTime * skySpeed);
+    }
+    public float Gold
  {
      get { return gold; }
      set

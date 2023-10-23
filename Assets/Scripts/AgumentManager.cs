@@ -239,7 +239,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     {
         if (isIn)
         {
-            Debug.Log("hiii");
+          
             if (GameManager.Instance.Gold > 10)
             {
                 if (isUnitTabOpen)

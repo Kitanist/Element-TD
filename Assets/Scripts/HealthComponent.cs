@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,7 +19,7 @@ public class HealthComponent : MonoBehaviour
    public bool isUnit=true;
    public bool isPlayerBase=false;
     GameObject text;
-    public MeshRenderer mesh;
+    public SkinnedMeshRenderer mesh;
     public Material damageMatarial;
     Material firstMatarial;
     public AudioClip hitSound;
@@ -39,13 +39,18 @@ public class HealthComponent : MonoBehaviour
     public GameObject airParticle;
     public Transform EffectTransform;
     private void Start() {
-    mesh=GetComponent<MeshRenderer>();
-    firstMatarial=mesh.material;
+        if (isUnit)
+        {
+            mesh = transform.GetChild(1).GetChild(1).GetComponent<SkinnedMeshRenderer>(); // hasar yerken slime fpx e ulaşıp mataryeli değiştiriyor
+            firstMatarial = mesh.material;
+        }
+   
 }
     public void GetFloatingText (string damage) {
          text=ObjectPool.Instance.GetPooledObject(26);
         text.transform.SetParent(this.transform);
         text.transform.position=transform.position;
+        if (text.GetComponent<TextMesh>())
         text.GetComponent<TextMesh>().text=damage;
     
     }

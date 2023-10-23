@@ -276,7 +276,7 @@ MonoBehaviour:
   isUnit: 1
   isPlayerBase: 0
   mesh: {fileID: 0}
-  damageMatarial: {fileID: 2100000, guid: 6cd34cf2f0eedb2438c203b3c893fdc3, type: 2}
+  damageMatarial: {fileID: 2100000, guid: d6d82eb17fc82634590c56e637cee518, type: 2}
   hitSound: {fileID: 8300000, guid: 0c7d87dba5d5a5047ae6b871c522132f, type: 3}
   isIlkDarbe: 0
   isIlkDarbeUse: 0
@@ -289,6 +289,7 @@ MonoBehaviour:
   waterParticle: {fileID: 0}
   earthParticle: {fileID: 0}
   airParticle: {fileID: 0}
+  EffectTransform: {fileID: 0}
 --- !u!114 &1055818249809139436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +310,8 @@ MonoBehaviour:
   price: 10
   unitName: 
   nextPathNode: {fileID: 0}
-  agent: {fileID: 0}
+  isBackPath: 0
+  turnSpeed: 0.1
 --- !u!54 &1055818249809139437
 Rigidbody:
   m_ObjectHideFlags: 0

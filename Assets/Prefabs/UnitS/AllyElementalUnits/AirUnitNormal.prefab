@@ -124,7 +124,7 @@ MonoBehaviour:
   isUnit: 1
   isPlayerBase: 0
   mesh: {fileID: 0}
-  damageMatarial: {fileID: 2100000, guid: 6cd34cf2f0eedb2438c203b3c893fdc3, type: 2}
+  damageMatarial: {fileID: 2100000, guid: d6d82eb17fc82634590c56e637cee518, type: 2}
   hitSound: {fileID: 8300000, guid: 0c7d87dba5d5a5047ae6b871c522132f, type: 3}
   isIlkDarbe: 0
   isIlkDarbeUse: 0
@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.5200086}
+  m_AnchoredPosition: {x: 0, y: 7}
   m_SizeDelta: {x: 640, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4535507078396215267
