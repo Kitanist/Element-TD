@@ -9,6 +9,9 @@ public class CameraRotator : MonoSingeleton<CameraRotator>
     private Vector3 previosPositoion;
     public Transform target;
     public float offset=-10;
+    public float zoomSense = .6f;
+    public bool isCamChange=false;
+    
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -23,6 +26,7 @@ public class CameraRotator : MonoSingeleton<CameraRotator>
         
            target.transform.Rotate(new Vector3(1, 0, 0), direction.y * 180);
            target.transform.Rotate(new Vector3(0, 1, 0), -direction.x * 180, Space.World);
+           
            LimitRot();
      
             //cam.transform.Translate(new Vector3(0, 0, offset));
@@ -33,12 +37,29 @@ public class CameraRotator : MonoSingeleton<CameraRotator>
 
             previosPositoion = cam.ScreenToViewportPoint(Input.mousePosition);
         }
+        if(Input.GetAxis("Mouse ScrollWheel") > 0 &&offset<-20)
+        {
+         
+            offset += zoomSense;
+            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, offset);
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0 && offset > -40)
+        {
+            
+            offset -= zoomSense;
+            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cam.transform.localPosition.y, offset);
+        }
+        if (isCamChange)
+        {
+            offset = cam.transform.position.z;
+            isCamChange = false;
+        }
     }
     public void LimitRot()
     {
         Vector3 eulerAngels = target.transform.rotation.eulerAngles;
         eulerAngels.x = (eulerAngels.x > 180) ? eulerAngels.x - 360 : eulerAngels.x;
-        eulerAngels.x = Mathf.Clamp(eulerAngels.x, -30, 60);
+        eulerAngels.x = Mathf.Clamp(eulerAngels.x, -25, 60);
         target.transform.rotation = Quaternion.Euler(eulerAngels);
 
     }

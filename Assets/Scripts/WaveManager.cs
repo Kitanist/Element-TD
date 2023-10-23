@@ -57,6 +57,7 @@ public AudioClip dangerClip;
         EnemySideCam.enabled = false;
         CameraRotator.Instance.cam = MotherlandCam;
         CameraRotator.Instance.target = MotherTargetCamOffset;
+        CameraRotator.Instance.isCamChange = true;
         
         UIUpdate();
         remainingTime =waveWaitTime;
@@ -190,6 +191,7 @@ public void SetCamerVision () {
                 EnemySideCam.enabled = true;
             CameraRotator.Instance.cam = EnemySideCam;
             CameraRotator.Instance.target = EnemyTargetCamOffset;
+            CameraRotator.Instance.isCamChange = true;
         }
          else{
                     GameManager.Instance.currentCamIsMineTerritory = true;
@@ -197,6 +199,7 @@ public void SetCamerVision () {
                 EnemySideCam.enabled = false;
             CameraRotator.Instance.cam = MotherlandCam;
             CameraRotator.Instance.target = MotherTargetCamOffset;
+            CameraRotator.Instance.isCamChange = true;
         }
                 //kamera açısı değişir rakip alanı görürüz
 }
