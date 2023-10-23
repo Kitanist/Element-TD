@@ -26,6 +26,7 @@ public class WaveManager : MonoSingeleton<WaveManager>
    
     public float remainingTime;
     public Camera MotherlandCam, EnemySideCam;
+    public Transform MotherTargetCamOffset, EnemyTargetCamOffset;
     [Header("Textler")]
     public TextMeshProUGUI WaveCountDownText;
     public TextMeshProUGUI MoneyText;
@@ -54,6 +55,9 @@ public AudioClip dangerClip;
    private void Start() {
         MotherlandCam.enabled = true;
         EnemySideCam.enabled = false;
+        CameraRotator.Instance.cam = MotherlandCam;
+        CameraRotator.Instance.target = MotherTargetCamOffset;
+        
         UIUpdate();
         remainingTime =waveWaitTime;
       StartCoroutine(WaitWave());
@@ -77,7 +81,7 @@ public AudioClip dangerClip;
 public void EndWave () {
     // dalgayı bitir ve 30 sn bekle
     //eğer dalgadaki bütün düşmanlar ölmüşse diğer dalgaya  hazırlık yap
-        Debug.Log(waves[currentWaveCount].WaveUnits.Count);
+       // Debug.Log(waves[currentWaveCount].WaveUnits.Count);
        
         StartCoroutine(WaitWave());
        GameManager.Instance.myCastle.GetComponent<Castle>().isSoytariActive=false;
@@ -184,12 +188,16 @@ public void SetCamerVision () {
         GameManager.Instance.currentCamIsMineTerritory = false;
               MotherlandCam.enabled = false;
                 EnemySideCam.enabled = true;
-         }
+            CameraRotator.Instance.cam = EnemySideCam;
+            CameraRotator.Instance.target = EnemyTargetCamOffset;
+        }
          else{
                     GameManager.Instance.currentCamIsMineTerritory = true;
              MotherlandCam.enabled = true;
                 EnemySideCam.enabled = false;
-         }
+            CameraRotator.Instance.cam = MotherlandCam;
+            CameraRotator.Instance.target = MotherTargetCamOffset;
+        }
                 //kamera açısı değişir rakip alanı görürüz
 }
 public void Attack() {

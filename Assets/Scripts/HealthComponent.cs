@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using static LTGUI;
 using static UnityEngine.GraphicsBuffer;
+using UnityEngine.SceneManagement;
 
 public class HealthComponent : MonoBehaviour
 {
@@ -225,10 +226,12 @@ public class HealthComponent : MonoBehaviour
     else{
          if(isPlayerBase){
         Debug.Log("kaybettiniz");
+        SceneManager.LoadScene(0);
     }
     else{
          Debug.Log("kazandiniz");
-    }
+          SceneManager.LoadScene(0);
+       }
     
     }
    
