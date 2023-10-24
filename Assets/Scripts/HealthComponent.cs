@@ -69,7 +69,7 @@ public class HealthComponent : MonoBehaviour
         if (this.gameObject.activeInHierarchy)
             mesh.material=firstMatarial;
     }
-   public void GetDamage (float damage,Element_Type damagerType) {
+   public void GetDamage (float damage,Element_Type damagerType,Color col) {
     
     float _damage=SetElementDamage(damage,damagerType);
     if(isUnit && myElement!=Element_Type.None)
@@ -109,8 +109,11 @@ public class HealthComponent : MonoBehaviour
             GetComponent<Unit>().speed = -GetComponent<Unit>().maxSpeed;
             StartCoroutine(ReturnNormalSpeed(.3f));
         }
+        if(damage>0)
         GetFloatingText("-"+_damage.ToString());
-    text.GetComponent<TextMesh>().color=Color.cyan;
+        else
+        GetFloatingText("+" + _damage.ToString());
+        text.GetComponent<TextMesh>().color=col;
     GameManager.Instance.asource.PlayOneShot(hitSound);
     if(Health<=_damage){
         Health=0;      
@@ -118,6 +121,11 @@ public class HealthComponent : MonoBehaviour
 
         Die();
     }
+    else if (Health > maxHealth)
+        {
+            Health = maxHealth;
+            HealtBar.DOValue(1, .5f, false);
+        }
     else{
         if(isUnit && gameObject.activeInHierarchy){
             mesh.material=damageMatarial;

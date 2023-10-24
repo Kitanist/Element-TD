@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d30b320a5ffaf7468a31186caf79115, type: 3}
+  m_Name: SuBasic
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6433023776911228997, guid: 05eeb5ec16a6b6947874a123631c4417, type: 3}
+  sprite: {fileID: 21300000, guid: f41130715d897a84ca4d52bbe813f829, type: 3}
+  agumentName: Su Okcusu
+  agumentDescription: Su elementli oklar atar
+  aqumentType: 0
+  elemetType: 2
+  AmountSoldier: 0
+  Cost: 50

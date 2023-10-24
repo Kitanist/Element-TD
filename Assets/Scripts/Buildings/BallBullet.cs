@@ -11,7 +11,7 @@ public class BallBullet : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         Collider [] objects =Physics.OverlapSphere(transform.position,radius,mask);
         foreach(var obj in objects) {
-            obj.GetComponent<HealthComponent>().GetDamage(damage,element_Type);
+            obj.GetComponent<HealthComponent>().GetDamage(damage,element_Type,Color.cyan);
         }
         
       this.gameObject.SetActive(false);

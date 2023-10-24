@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoldMine : Tower
+public class GoldMine : MonoBehaviour
 {
     public float speed=5;
     public float collectRate=20;
     public float collectAmount=1;
-    
+    private float fireRate;
+
+
     private void Start() {
         GetGold();
     }
@@ -20,32 +22,7 @@ public class GoldMine : Tower
     GameManager.Instance.Gold+=collectAmount;
     StartCoroutine(ColletGold());
    }
-   public override void LevelUp () {
+
+
    
-      if(level<maxLevel){
-            int openLevelIndex=level-1;
-            level++;
-            collectAmount+=2;
-            speed++;
-            
-        }
-   }
-  private void OnTriggerEnter(Collider other) {
-    if(other.GetComponent<Unit>()){
-        if(other.gameObject.layer==LayerMask.NameToLayer("Enemy")){
-            Destroy(gameObject);
-            Debug.Log("GOLD MİNE YIKILIR");
-            //partickle effect girer
-        }
-
-    }
-  }
-
-   private void OnMouseDown() {
-   // TheUI.Instance.isButton=false;
-       //  TheUI.Instance.ShopUIClose();      
-        Invoke("OpenUIUpgrade",.6f);
-        BuildManager.Instance.currentUpgradementTower=this;
-         HUD.Instance.InitShopHud();
-    }
 }

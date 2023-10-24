@@ -43,6 +43,10 @@ public int aqumentCount = 1; //aqument count arttıkca çıkacak eklenti sayıs�
 public int aqumentCountMax = 3;
 public int aqumentRollCount = 1; //aqument roll sayısı gelisimi ve max rolleme sayısı
 public int aqumentRollCountMax = 3;
+ public bool isBomberPointOpen = false;
+    public bool isHealerPointOpen = false;
+    public bool isMinePointOpen = false;
+    public bool isTrapPointOpen = false;
 
     [Header("MAP")]
  [Space(5)]

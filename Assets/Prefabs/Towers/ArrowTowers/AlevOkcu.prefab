@@ -214,7 +214,7 @@ MonoBehaviour:
   element_Type: 1
   node: {fileID: 0}
   Name: Arrow Tower
-  damage: 3
+  damage: 6
   poolIndex: 0
   JumpForce: 1
   attackRadius: 18

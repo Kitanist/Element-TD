@@ -31,8 +31,8 @@ private void OnTriggerEnter(Collider other) {
   if(GetComponent<HealthComponent>().isPlayerBase){
       
          if(other.gameObject.layer==LayerMask.NameToLayer("Enemy")){
-        GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage,other.GetComponent<HealthComponent>().myElement);
-        other.GetComponent<HealthComponent>().GetDamage(other.GetComponent<HealthComponent>().maxHealth,Element_Type.None);// kendisi de hasar yiyerek ölsün
+        GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage,other.GetComponent<HealthComponent>().myElement, Color.cyan);
+        other.GetComponent<HealthComponent>().GetDamage(other.GetComponent<HealthComponent>().maxHealth*5,Element_Type.None, Color.cyan);// kendisi de hasar yiyerek ölsün
            
             }
      if(!isSoytariActive){
@@ -44,8 +44,8 @@ private void OnTriggerEnter(Collider other) {
      }
      else{
         if(other.gameObject.layer==LayerMask.NameToLayer("Ally")){
-        GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage,other.GetComponent<HealthComponent>().myElement);
-        other.GetComponent<HealthComponent>().GetDamage(other.GetComponent<HealthComponent>().maxHealth,Element_Type.None);// kendisi de hasar yiyerek ölsün
+        GetComponent<HealthComponent>().GetDamage(other.transform.GetComponent<Unit>().unitDamage,other.GetComponent<HealthComponent>().myElement, Color.cyan);
+        other.GetComponent<HealthComponent>().GetDamage(other.GetComponent<HealthComponent>().maxHealth*5,Element_Type.None, Color.cyan);// kendisi de hasar yiyerek ölsün
 
             }
 

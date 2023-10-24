@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
         float distanceFrame = speed * Time.deltaTime;
         if (dir.magnitude <= distanceFrame && target.GetComponent<HealthComponent>())
         {
-            target.GetComponent<HealthComponent>().GetDamage(damage, element_Type);
+            target.GetComponent<HealthComponent>().GetDamage(damage, element_Type, Color.cyan);
             if (isBurned)
             {
                 target.GetComponent<HealthComponent>().GetBurnedDamage(damage, element_Type);

@@ -3101,6 +3101,10 @@ MonoBehaviour:
   - {fileID: 8619926539031659043}
   - {fileID: 8619926538584424738}
   aquments:
+  - {fileID: 11400000, guid: 69ff1d5991fe29e4884d6d5841a19ef9, type: 2}
+  - {fileID: 11400000, guid: 6a4b1c62fde8a514ba2db6a9561a5df1, type: 2}
+  - {fileID: 11400000, guid: 057fa4146cf961a41bf3446fe64f071d, type: 2}
+  - {fileID: 11400000, guid: 14c1ac184edab9f4280e181f6c5230a2, type: 2}
   - {fileID: 11400000, guid: 0e062c6befe9d1444bfb0e8cb8013776, type: 2}
   - {fileID: 11400000, guid: 8513be66653c6e948b3b5911b41f79cc, type: 2}
   - {fileID: 11400000, guid: 7b4a2e07f359ae248bd2575203320d5f, type: 2}
@@ -8662,6 +8666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCastle: {fileID: 0}
   mySoytari: {fileID: 0}
+  skySpeed: 0.5
   gold: 2000
   CastleTransform: {fileID: 0}
   playerIsAttack: 0

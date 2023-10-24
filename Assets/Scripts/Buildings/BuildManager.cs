@@ -100,7 +100,7 @@ public class BuildManager : MonoSingeleton<BuildManager>
         if (towerToBuild.agumentName == "Tonla Hasar")
         {
             tower.isTonlaHasarEnabled = true;
-            GameManager.Instance.myCastle.GetComponent<HealthComponent>().GetDamage(GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health / 4, Element_Type.None);
+            GameManager.Instance.myCastle.GetComponent<HealthComponent>().GetDamage(GameManager.Instance.myCastle.GetComponent<HealthComponent>().Health / 4, Element_Type.None,Color.cyan);
             tower.damage += 4;
         }
         if (towerToBuild.agumentName == "Gecemezsin")

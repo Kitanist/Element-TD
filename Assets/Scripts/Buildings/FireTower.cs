@@ -31,7 +31,7 @@ public class FireTower :Tower
                 //hasar ver
                
 
-                obj.GetComponent<HealthComponent>().GetDamage(damage, element_Type);
+                obj.GetComponent<HealthComponent>().GetDamage(damage, element_Type, Color.cyan);
                 if (isIamBurningII)
                     obj.GetComponent<HealthComponent>().isImBurningII = true;
                 GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
