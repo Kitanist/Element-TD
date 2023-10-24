@@ -41,6 +41,11 @@ public class TowerBall : Tower
 
         reset = true;
     }
+    IEnumerator ResetLight()
+    {
+        yield return new WaitForSeconds(.3f);
+        Lights.SetActive(false);
+    }
     public override void LevelUp()
     {
         base.LevelUp();
@@ -59,6 +64,8 @@ public class TowerBall : Tower
                 item.GetComponent<Unit>().speed -= 1;
                 StartCoroutine(ReturnNormalSpeed(item));
             }
+            Lights.SetActive(true);
+            StartCoroutine(ResetLight());
         }
         else
         {
@@ -75,7 +82,11 @@ public class TowerBall : Tower
             {
                 bullet.GetComponent<BallBullet>().damage += damage;
                 isUseFirstImpact = true;
+                Lights.SetActive(true);
+                StartCoroutine(ResetLight());
             }
+            Lights.SetActive(true);
+            StartCoroutine(ResetLight());
         }
         
 

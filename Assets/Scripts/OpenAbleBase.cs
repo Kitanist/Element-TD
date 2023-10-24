@@ -175,7 +175,7 @@ public class OpenAbleBase : MonoBehaviour
             isOpen = false;
             bombreadyParticle.SetActive(false);
         }
-        if (GameManager.Instance.Gold > Cost &&!isOpen)
+       else if (GameManager.Instance.Gold > Cost &&!isOpen)
         {
 
             GameManager.Instance.Gold -= Cost;
@@ -235,7 +235,7 @@ public class OpenAbleBase : MonoBehaviour
     IEnumerator StopBase()
     {
         yield return new WaitForSeconds(workTimeLimit);
-      ;
+        StopAllCoroutines();
         StopCoroutine(ColletGold());
         StopCoroutine(Damager());
         StopCoroutine(Healer());
@@ -255,7 +255,7 @@ public class OpenAbleBase : MonoBehaviour
     IEnumerator Damager()
     { 
         yield return new WaitForSeconds(1);
-        Collider[]  Enemys = Physics.OverlapSphere(transform.position,10,targetMask);
+        Collider[]  Enemys = Physics.OverlapSphere(transform.position,7.5f,targetMask);
         foreach (var enemy in Enemys)
         {
             enemy.GetComponent<HealthComponent>().GetDamage(damage, Element, Color.cyan);
@@ -267,7 +267,7 @@ public class OpenAbleBase : MonoBehaviour
     IEnumerator Healer()
     {
         yield return new WaitForSeconds(1);
-        Collider[] Ally = Physics.OverlapBox(transform.position, new Vector3(5, 5, 10), Quaternion.identity, targetMask);
+        Collider[] Ally = Physics.OverlapSphere(transform.position, 7.5f, targetMask);
         foreach (var ally in Ally)
         {
             ally.GetComponent<HealthComponent>().GetDamage(-healAmount, Element_Type.None, Color.green);

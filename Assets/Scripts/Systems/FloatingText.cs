@@ -6,7 +6,7 @@ public class FloatingText : MonoBehaviour
 {
     public float time=2;
     public float speed=2;
-    void Start()
+    private void OnEnable()
     {
         StartCoroutine(InactiveText());
     }
@@ -16,8 +16,13 @@ public class FloatingText : MonoBehaviour
 
     IEnumerator InactiveText(){
         yield return new WaitForSeconds(time);
-        gameObject.SetActive(false);
-        gameObject.transform.SetParent(ObjectPool.Instance.gameObject.transform);
+        if (this.isActiveAndEnabled)
+        {
+            gameObject.SetActive(false);
+            gameObject.transform.SetParent(ObjectPool.Instance.gameObject.transform);
+        }
+        
     }
-    
+
+
 }

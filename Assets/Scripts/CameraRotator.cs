@@ -14,11 +14,11 @@ public class CameraRotator : MonoSingeleton<CameraRotator>
     
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             previosPositoion = cam.ScreenToViewportPoint(Input.mousePosition);
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             Vector3 direction = previosPositoion - cam.ScreenToViewportPoint(Input.mousePosition);
 

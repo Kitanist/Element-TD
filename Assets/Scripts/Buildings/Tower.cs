@@ -23,7 +23,7 @@ public class Tower : AqumentBase
     public Transform firePos;
     public GameObject rangeObject;
     public Element_Type element_Type;
-
+    public GameObject Lights;
     public Node node;
     public string Name = "Tower";
 
@@ -162,7 +162,8 @@ public class Tower : AqumentBase
 
         bullet.transform.position = firePos.position;
         bullet.GetComponent<Bullet>().Seek(target);
-
+        Lights.SetActive(true);
+        StartCoroutine(ResetLight());
         GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
         //bullet.transform.DOJump(target.position,JumpForce,0,(fireRate/bulletSpeed),false).SetEase(easeType);
 
@@ -203,6 +204,11 @@ public class Tower : AqumentBase
         yield return new WaitForSeconds(fireRate/3);
 
         reset = true;
+    }
+    IEnumerator ResetLight()
+    {
+        yield return new WaitForSeconds(.3f);
+        Lights.SetActive(false);
     }
     private void OnMouseEnter()
     {

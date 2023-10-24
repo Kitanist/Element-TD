@@ -36,6 +36,8 @@ public class FireTower :Tower
                     obj.GetComponent<HealthComponent>().isImBurningII = true;
                 GameManager.Instance.asource.PlayOneShot(bulletSoundClip);
             }
+            Lights.SetActive(true);
+            StartCoroutine(ResetLight());
 
         }
           
@@ -94,5 +96,10 @@ public class FireTower :Tower
 
 
         reset = true;
+    }
+    IEnumerator ResetLight()
+    {
+        yield return new WaitForSeconds(.3f);
+        Lights.SetActive(false);
     }
 }
