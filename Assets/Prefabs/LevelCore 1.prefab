@@ -3118,9 +3118,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 589d611b42dcc914193766d03a7c23bc, type: 2}
   - {fileID: 11400000, guid: 29805a26d0713764f907c5fe992de57f, type: 2}
   UnitAquments:
+  - {fileID: 11400000, guid: 9cee971e124582d4e981d6e4a87925f7, type: 2}
+  - {fileID: 11400000, guid: fa4e92c4caf633f41a4f6ae38f7c5f09, type: 2}
+  - {fileID: 11400000, guid: e4163ad26df9b84408dcf2adc0359346, type: 2}
+  - {fileID: 11400000, guid: fae21dfca5324384a93a2b15347d47ad, type: 2}
   - {fileID: 11400000, guid: 221b442345701294383a0923428dda34, type: 2}
   - {fileID: 11400000, guid: 81dd11ebff5e8d148860f0465b57149f, type: 2}
-  - {fileID: 11400000, guid: 9cee971e124582d4e981d6e4a87925f7, type: 2}
   - {fileID: 11400000, guid: e2496005928154243be073561586a474, type: 2}
   - {fileID: 11400000, guid: ea77a5bd7cb626248aa1e8d8581a6a8a, type: 2}
   - {fileID: 11400000, guid: 78605608c6c8f42448a53dc017e79661, type: 2}
@@ -3131,7 +3134,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cfa5ff611eb2ae040b0fb69e93f1fd26, type: 2}
   - {fileID: 11400000, guid: 4cd9e3960068ebd4fa05d2420e78600c, type: 2}
   - {fileID: 11400000, guid: 0d0e974daf515154583181bf4fe7d4c6, type: 2}
-  - {fileID: 11400000, guid: fa4e92c4caf633f41a4f6ae38f7c5f09, type: 2}
   - {fileID: 11400000, guid: 5dcaa19f32f23ac4a983fce070cb458e, type: 2}
   - {fileID: 11400000, guid: 5e997a9b564719d4a8ca816968a82869, type: 2}
   - {fileID: 11400000, guid: c7f102111f8455b4e86ac101b70d57f7, type: 2}
@@ -3139,7 +3141,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b0ce7223b0f4ad54794f328baec201cd, type: 2}
   - {fileID: 11400000, guid: d028992305679e54ea9b4355c1b2f984, type: 2}
   - {fileID: 11400000, guid: da44549f327eb654c91ab8fbd82fa0f5, type: 2}
-  - {fileID: 11400000, guid: e4163ad26df9b84408dcf2adc0359346, type: 2}
   - {fileID: 11400000, guid: f893b55f8318b20439b36e3d5fd877f2, type: 2}
   - {fileID: 11400000, guid: a141e1886fdc2e449a8622a48d9b672d, type: 2}
   - {fileID: 11400000, guid: 3c3d22c5c483b5d43ad1389618501469, type: 2}
@@ -3147,7 +3148,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e00257e7fb4698b47b47deee609a669b, type: 2}
   - {fileID: 11400000, guid: e8dfc60fe306aa44ca2730b2602f7eee, type: 2}
   - {fileID: 11400000, guid: 3ce76d942c1140d46a7acf06ad881fcc, type: 2}
-  - {fileID: 11400000, guid: fae21dfca5324384a93a2b15347d47ad, type: 2}
   - {fileID: 11400000, guid: 8b71d14b771d6994cac6af58e4d0b7fa, type: 2}
   - {fileID: 11400000, guid: 5101fb8ca4ddbd147948558eca2d880b, type: 2}
   - {fileID: 11400000, guid: 4f9e396a055c99a418881b73776099fb, type: 2}
@@ -8684,6 +8684,10 @@ MonoBehaviour:
   aqumentCountMax: 3
   aqumentRollCount: 1
   aqumentRollCountMax: 3
+  isBomberPointOpen: 0
+  isHealerPointOpen: 0
+  isMinePointOpen: 0
+  isTrapPointOpen: 0
   levelsOpen: 
   levelStartGolds: []
   chosenLevel: {fileID: 0}
