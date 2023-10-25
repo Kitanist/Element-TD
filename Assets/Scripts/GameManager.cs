@@ -48,6 +48,8 @@ public int aqumentRollCountMax = 3;
     public bool isMinePointOpen = false;
     public bool isTrapPointOpen = false;
 
+    public bool isAqumentCount1Open = false;
+
     [Header("MAP")]
  [Space(5)]
  public bool []levelsOpen;

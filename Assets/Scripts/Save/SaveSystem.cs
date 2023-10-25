@@ -25,7 +25,7 @@ public class SaveSystem : MonoSingeleton<SaveSystem>
         data.aqumentRollCount = GameManager.Instance.aqumentRollCount;
         data.aqumentCount = GameManager.Instance.aqumentCount;
         data.skillPoint = GameManager.Instance.skillPoint;
-
+        data.isAqumentCount1Open = GameManager.Instance.isAqumentCount1Open;
         string Str = JsonUtility.ToJson(data);
         File.WriteAllText(Application.dataPath + "/Saves/SaveStat.json", Str);
 
@@ -46,7 +46,7 @@ public class SaveSystem : MonoSingeleton<SaveSystem>
             GameManager.Instance.aqumentRollCount = data.aqumentRollCount ;
              GameManager.Instance.aqumentCount=data.aqumentCount;
          GameManager.Instance.skillPoint=data.skillPoint;
-
+            GameManager.Instance.isAqumentCount1Open = data.isAqumentCount1Open;
         }
         else
         {

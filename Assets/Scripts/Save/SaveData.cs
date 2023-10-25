@@ -14,6 +14,8 @@ public class SaveData
     public bool isHealerPointOpen = false;
     public bool isMinePointOpen = false;
     public bool isTrapPointOpen = false;
+
+    public bool isAqumentCount1Open = false;
     public SaveData( int sp,int ac,int arc, bool bomberPoint,bool healerPoint,bool minePoint,bool trapPoint)
     {
    
