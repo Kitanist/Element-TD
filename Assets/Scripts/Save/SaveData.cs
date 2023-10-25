@@ -16,6 +16,7 @@ public class SaveData
     public bool isTrapPointOpen = false;
 
     public bool isAqumentCount1Open = false;
+    public bool isAqumentCount2Open = false;
     public SaveData( int sp,int ac,int arc, bool bomberPoint,bool healerPoint,bool minePoint,bool trapPoint)
     {
    

@@ -18,6 +18,9 @@ public class SkillBar : MonoBehaviour
             case SkilType.AugmentCount1Type:
                 isOpen = GameManager.Instance.isAqumentCount1Open;
                 break;
+            case SkilType.AugmentCount2Type:
+                isOpen = GameManager.Instance.isAqumentCount2Open;
+                break;
 
 
         }
