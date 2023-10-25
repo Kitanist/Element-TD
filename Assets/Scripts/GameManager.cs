@@ -69,5 +69,10 @@ public int aqumentRollCountMax = 3;
             gold = value;
      }
  }
+    private void Start()
+    {
+
+        SaveSystem.Instance.JsonLoad();
+    }
 
 }

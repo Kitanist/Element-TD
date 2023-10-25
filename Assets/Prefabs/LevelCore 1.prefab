@@ -8626,6 +8626,7 @@ GameObject:
   - component: {fileID: 7437381131110099613}
   - component: {fileID: 7437381131110099612}
   - component: {fileID: 7437381131110099614}
+  - component: {fileID: 4056901333354705194}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8935,6 +8936,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4056901333354705194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7437381131110099814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c7ae4b0419fec4680ffd31acf60f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    skillPoint: 0
+    aqumentCount: 1
+    aqumentRollCount: 1
+    isBomberPointOpen: 0
+    isHealerPointOpen: 0
+    isMinePointOpen: 0
+    isTrapPointOpen: 0
 --- !u!1 &7437381131117483184
 GameObject:
   m_ObjectHideFlags: 0

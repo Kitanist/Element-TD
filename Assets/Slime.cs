@@ -12,6 +12,7 @@ public class Slime : MonoBehaviour
 
     private void Start() {
        yoyoYoYo(); 
+        
     }
     public void yoyoYoYo()
     {

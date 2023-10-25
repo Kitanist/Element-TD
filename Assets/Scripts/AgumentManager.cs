@@ -26,6 +26,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     public void OpenAugmentTAB()
     {
 
+
         if (isOpenTab)
         {
             return;
@@ -42,7 +43,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     }
     public void OpenUnitAugmentTAB()
     {
-
+       
         if (isOpenTab)
         {
             return;
