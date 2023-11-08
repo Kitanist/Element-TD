@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using DG.Tweening;
 
 public class AgumentManager : MonoSingeleton<AgumentManager>
 {
-    public GameObject augmentTab;
+    public GameObject exitButton;
     public GameObject[] augmentPrefabs;
     public Agument_SO[] aquments;
     public Agument_SO[] UnitAquments;
@@ -23,6 +23,9 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     public int augment1RollCont, augment2RolCont, augment3RollCont;
     public int Uaugment1RollCont, Uaugment2RolCont, Uaugment3RollCont;
     public bool isRooling=false;
+    public CanvasGroup aqumentCanvasGroup;
+    public RectTransform aqumentRectTransform;
+    public float fadeTimeAqument;
     public void OpenAugmentTAB()
     {
 
@@ -32,13 +35,10 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
             return;
         }
 
-        for (int i = 0; i < GameManager.Instance.aqumentCount; i++)
-        {
-            augmentPrefabs[i].SetActive(true);
-        }
+        exitButton.SetActive(true);
         isOpenTab = true;
         StartCoroutine(OpenAgumentTabEnum());
-
+    
 
     }
     public void OpenUnitAugmentTAB()
@@ -48,30 +48,24 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         {
             return;
         }
-        for (int i = 0; i < GameManager.Instance.aqumentCount; i++)
-        {
-            augmentPrefabs[i].SetActive(true);
-        }
+        exitButton.SetActive(true);
 
         isUnitTabOpen = true;
         isOpenTab = true;
         StartCoroutine(OpenAgumentUnitTabEnum());
-     
+        
 
     }
    
 
     public void CloseAugmentTAB()
     {
-        augmentTab.SetActive(false);
+        //augmentTab.SetActive(false);
         isOpenTab = false;
         isUnitTabOpen = false;
         isIn= false;
-        foreach(var prefabs in augmentPrefabs)
-        {
-            prefabs.SetActive(false);
-
-        }
+        exitButton.SetActive(false);
+        AqumentFadeOut();
     }
     public void IsRolling()
     {
@@ -478,11 +472,12 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     {
         // Openin animation enter and wait for anim end
         yield return new WaitForSeconds(.1f);
-
-        augmentTab.SetActive(true);
+      
+       // augmentTab.SetActive(true);
         AugmentUpdate();
         AugmentUpdate2();
         AugmentUpdate3();
+        AqumentFadeIn();
         isIn = true;
 
     }
@@ -492,16 +487,62 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         // Openin animation enter and wait for anim end
         yield return new WaitForSeconds(.1f);
 
-       augmentTab.SetActive(true);
-        
+        // augmentTab.SetActive(true);
+   
         UnitAugmentUpdate();
         UnitAugmentUpdate2();
         UnitAugmentUpdate3();
+        AqumentFadeIn();
         isIn = true;
     }
-    
 
+    public void AqumentFadeIn()
+    {
+        aqumentCanvasGroup.alpha = 0;
+        aqumentRectTransform.transform.localPosition = new Vector3(0, 1000, 0);
+        aqumentRectTransform.DOAnchorPos(new Vector2(0, 0), fadeTimeAqument, false).SetEase(Ease.OutElastic);
+        aqumentCanvasGroup.DOFade(1, fadeTimeAqument);
+        foreach (var prefabs in augmentPrefabs)
+        {
+            prefabs.SetActive(true);
+            prefabs.GetComponent<CanvasGroup>().DOFade(1, fadeTimeAqument);
+
+            prefabs.transform.DOShakeRotation(fadeTimeAqument,30,10,30,true,ShakeRandomnessMode.Full).SetEase(Ease.OutElastic);
+        }
+        StartCoroutine(FadeInAnim());
+
+    }
+    public void AqumentFadeOut()
+    {
+        aqumentCanvasGroup.alpha = 1;
+        aqumentRectTransform.transform.localPosition = new Vector3(0, 0, 0);
+        aqumentRectTransform.DOAnchorPos(new Vector2(0, 1000), fadeTimeAqument, false).SetEase(Ease.Linear);
+        aqumentCanvasGroup.DOFade(0, fadeTimeAqument);
+        foreach (var prefabs in augmentPrefabs)
+        {
+            prefabs.GetComponent<CanvasGroup>().DOFade(0, fadeTimeAqument);
+        
+        }
+    }
+    IEnumerator FadeInAnim()
+    {
+
+        foreach (var prefabs in augmentPrefabs)
+        {
+            prefabs.transform.localScale = Vector3.zero;
+         
+         }
+        foreach (var prefabs in augmentPrefabs)
+        {
+            prefabs.transform.DOScale(Vector3.one, fadeTimeAqument).SetEase(Ease.OutBounce);
+      
+            yield return new WaitForSeconds(.25f);
+        }
+
+      
+    }
 }
+
 
 public enum AqumentType
 {

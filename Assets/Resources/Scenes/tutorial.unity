@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18933144, g: 0.5368936, b: 0.8439126, a: 1}
+  m_IndirectSpecularColor: {r: 0.18933076, g: 0.53689206, b: 0.84391165, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -992,6 +992,66 @@ PrefabInstance:
       propertyPath: MotherTargetCamOffset
       value: 
       objectReference: {fileID: 893911459}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[0]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: ffce07c3a549cee46850992d0cbf9009, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[1]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: ffce07c3a549cee46850992d0cbf9009, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[2]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: ffce07c3a549cee46850992d0cbf9009, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[3]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: ffce07c3a549cee46850992d0cbf9009, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[4]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: ffce07c3a549cee46850992d0cbf9009, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[5]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: 8c210804373630b41a13035a16f7e4ce, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[6]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: 8c210804373630b41a13035a16f7e4ce, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[7]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: 8c210804373630b41a13035a16f7e4ce, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].WaveUnits.Array.data[8]
+      value: 
+      objectReference: {fileID: 3779743739193983278, guid: 8c210804373630b41a13035a16f7e4ce, type: 3}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].diffrentUnitCounts.Array.data[6]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].diffrentUnitCounts.Array.data[15]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].diffrentUnitCounts.Array.data[16]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].diffrentUnitCounts.Array.data[17]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437381131110099609, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
+      propertyPath: waves.Array.data[0].diffrentUnitCounts.Array.data[18]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7437381131110099610, guid: 4cbceb37c8ed06c4ca42d0f5dc839d68, type: 3}
       propertyPath: myCastle
       value: 

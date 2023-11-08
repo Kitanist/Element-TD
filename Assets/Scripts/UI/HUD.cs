@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class HUD :MonoSingeleton<HUD>
 {
     /*[Header ("ELEMENT")]
@@ -24,7 +25,7 @@ public class HUD :MonoSingeleton<HUD>
     public TMP_Text elementDirtCostText;
     */
  public Button setVisionOrAttackHUD;
- 
+
 
  [Header("UNİT")]
   [Space(5)]
@@ -123,6 +124,7 @@ public class HUD :MonoSingeleton<HUD>
              AllMyUnitCountTexts[2].transform.GetChild(0).GetComponent<TMP_Text>().text=" x"+ myUnitCounts[2].ToString();
               AllMyUnitCountTexts[2].GetComponent<Image>().sprite=fa_s;
        }
+           
     }
     else if(unit.GetComponent<HealthComponent>().myElement==Element_Type.Watter){
           if( unit.unitType==UnitType.Normal){

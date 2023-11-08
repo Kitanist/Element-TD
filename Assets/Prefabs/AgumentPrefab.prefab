@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 821929494992756518}
   - component: {fileID: 5709399497737748644}
   - component: {fileID: 2662803802784996068}
+  - component: {fileID: 265360838611724188}
   m_Layer: 5
   m_Name: AgumentPrefab
   m_TagString: Untagged
@@ -341,6 +342,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &265360838611724188
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195357430695169801}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1643167965973886005
 GameObject:
   m_ObjectHideFlags: 0
