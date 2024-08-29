@@ -228,26 +228,10 @@ public class Tower : AqumentBase
             Invoke("OpenUIUpgrade", .6f);
 
             BuildManager.Instance.node = node;
-            BuildManager.Instance.currentUpgradementTower = this;
-            HUD.Instance.InitShopHud();
+           
+           
         }
 
     }
-    public void OpenUIUpgrade()
-    {
-        //TheUI.Instance.isTurret = false;
-        //  TheUI.Instance.isUpgrade = true;
-        // TheUI.Instance.isArmy = false;
-        //TheUI.Instance.ShopUIOpen();
-        if (GetComponent<GoldMine>())
-        {
 
-            // TheUI.Instance.UShopButton3.interactable = false;
-        }
-        else
-        {
-
-            // TheUI.Instance.UShopButton3.interactable = true;
-        }
-    }
 }

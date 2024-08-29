@@ -11,10 +11,12 @@ public class BattleManager : MonoSingeleton<BattleManager>
    [SerializeField]private int spawnIndex=0;
    public List<GameObject> hideUnitObject;
   
-    public PathNode[]attackUnitNode;
+
     public bool isAttackedThisTurn = false;
     private int _killedPlayerUnitCount;
-
+    public PathNode[] startUnitNode;
+    public PathNode[] endUnitNode;
+    public PathNode[] StartAttackUnitNode;
     public int KilledPlayerUnitCount
     {
         get
@@ -51,7 +53,7 @@ public class BattleManager : MonoSingeleton<BattleManager>
             // unit.GetComponent<Movement>().pathCreator=GameManager.Instance.attackPathCreator;
             unit.transform.position = GameManager.Instance.myCastle.transform.position;
             unit.GetComponent<Unit>().isBackPath = true;
-            unit.GetComponent<Unit>().nextPathNode = GameManager.Instance.endUnitNode[Random.Range(0, GameManager.Instance.endUnitNode.Length)];
+            unit.GetComponent<Unit>().nextPathNode = endUnitNode[Random.Range(0,endUnitNode.Length)];
        // karakterimizin başlanılç noktası son nodumuz ve geridoğru hareket etmesini istiyoruz
 
         spawnIndex++;
@@ -65,7 +67,7 @@ public IEnumerator Fight(){
      hideUnitObject.Add(unit);
             //unit.GetComponent<Movement>().pathCreator=attackPathCreatorOtherSceene;
             unit.transform.position = attackTransform.position;
-            unit.GetComponent<Unit>().nextPathNode = attackUnitNode[Random.Range(0,attackUnitNode.Length)]; // attak yolunu takip etmesini istiyoruz
+            unit.GetComponent<Unit>().nextPathNode = StartAttackUnitNode[Random.Range(0, StartAttackUnitNode.Length)];  // attak yolunu takip etmesini istiyoruz
      spawnIndex++;
      StartCoroutine(Fight());
 

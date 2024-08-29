@@ -32,8 +32,7 @@ public AudioClip buttonClik1;
 public AudioClip buttonClik2;
 
 
-    public PathNode[] startUnitNode;
-    public PathNode[] endUnitNode;
+  
 
     public bool currentCamIsMineTerritory=true;
 [Header("SKILL POINT")]

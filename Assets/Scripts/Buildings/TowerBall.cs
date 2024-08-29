@@ -101,8 +101,8 @@ public class TowerBall : Tower
         // TheUI.Instance.isButton=false;
         // TheUI.Instance.ShopUIClose();      
         Invoke("OpenUIUpgrade", .6f);
-        BuildManager.Instance.currentUpgradementTower = this;
-        HUD.Instance.InitShopHud();
+     
+       
     }
     IEnumerator ReturnNormalSpeed(Collider targett )
     {

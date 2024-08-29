@@ -86,7 +86,7 @@ public void EndWave () {
        
         StartCoroutine(WaitWave());
        GameManager.Instance.myCastle.GetComponent<Castle>().isSoytariActive=false;
-        GameManager.Instance.mySoytari.SetActive(false);
+       
         destroyedUnitCount=0;
         Debugger.Instance.Debuger("Wait For Next Wave ");
         nextUnitIndex =0;
@@ -158,8 +158,8 @@ IEnumerator UnitSawnWait(int waveCount){
           
             unit.transform.position = unitSpawnTransform.position;
             //  unit.GetComponent<Movement>().pathCreator=GameManager.Instance.levelPathCreator;
-            var rand = Random.Range(0, GameManager.Instance.startUnitNode.Length);
-            unit.GetComponent<Unit>().nextPathNode = GameManager.Instance.startUnitNode[rand];
+            var rand = Random.Range(0, BattleManager.Instance.startUnitNode.Length);
+            unit.GetComponent<Unit>().nextPathNode = BattleManager.Instance.startUnitNode[rand];
 
             nextUnitIndex++;
      StartCoroutine(UnitSawnWait(currentWaveCount));

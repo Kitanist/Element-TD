@@ -8,15 +8,9 @@ public class BuildManager : MonoSingeleton<BuildManager>
 {
     public Agument_SO towerToBuild; // Tower from Agument
      
-    public Tower currentUpgradementTower; //For Upgrade Towers
-
     public Node node;
     
 
-    public GameObject ArrowTower;
-    public GameObject FireTower;
-    public GameObject BallTower;
-    public GameObject Mine;
 
     public bool CanBuild
     {
@@ -31,49 +25,33 @@ public class BuildManager : MonoSingeleton<BuildManager>
     public float PayBackRatio = 0.65f;
 
 
-    public void DestroyTowerOn()
-    {
-        if (node.turret)
-        {
-            GameManager.Instance.Gold += node.turret.GetComponent<TowerBlueprint>().cost * PayBackRatio;
-
-            if (UnityEngine.Random.Range(0, 2) == 1) // random sound effect
-                GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik1);
-            else
-                GameManager.Instance.asource.PlayOneShot(GameManager.Instance.buttonClik2);
-
-            Destroy(node.turret.gameObject);
-            currentUpgradementTower = null;
-            node.turret = null;
-
-            //  TheUI.Instance.isButton=true;
-            // TheUI.Instance.ShopUIClose();
-        }
-    }
+ 
 
     public void BuildTowerOn()
     {
-      // if (GameManager.Instance.Gold < node.cost)
-      // {
-      //     Debugger.Instance.Debuger("Not Enough Gold!");
-      //     return;
-      // }
+        if (!node.turret)
+        {
+            GameManager.Instance.Gold -= node.cost;
 
-        GameManager.Instance.Gold -= node.cost;
+            GameObject turret = Instantiate(towerToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
 
-        GameObject turret = Instantiate(towerToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-            
-        GameObject particle = ObjectPool.Instance.GetPooledObject(34);
-        particle.transform.position = node.GetBuildPosition();
-        GameManager.Instance.asource.PlayOneShot(turret.GetComponent<Tower>().buildSoundClip);
+            GameObject particle = ObjectPool.Instance.GetPooledObject(34);
+            particle.transform.position = node.GetBuildPosition();
+            GameManager.Instance.asource.PlayOneShot(turret.GetComponent<Tower>().buildSoundClip);
 
-        node.turret = turret;
-        turret.GetComponent<Tower>().node = node;
-       
-        OnEfect(turret.GetComponent<Tower>());
-        Debugger.Instance.Debuger("Tower is Builded: -", node.cost);
-        node.mrenderer.enabled = false;
-        //TheUI.Instance.ShopUIClose();
+            node.turret = turret;
+            turret.GetComponent<Tower>().node = node;
+
+            OnEfect(turret.GetComponent<Tower>());
+            Debugger.Instance.Debuger("Tower is Builded: -", node.cost);
+            node.mrenderer.enabled = false;
+
+            node = null;
+            towerToBuild = null;
+
+        }
+
+
     } // Before Call This Func Set towerToBuild
     public void OnEfect(Tower tower)
     {

@@ -14,15 +14,15 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     public Agument_SO Returner;
     public Image icon1, icon2, icon3;
     public TextMeshProUGUI Name1, Name2, Name3, Desc1, Desc2, Desc3, cost1, cost2, cost3, refreshCount1, refreshCount2, refreshCount3;
-    public int final1=-1, final2=-1, final3=-1;
+    public int final1 = -1, final2 = -1, final3 = -1;
     public int Ufinal1 = -1, Ufinal2 = -1, Ufinal3 = -1;
     public bool isOpenTab = false;
-    public bool isUnitTabOpen= false;
-    public bool isIn= false;
+    public bool isUnitTabOpen = false;
+    public bool isIn = false;
 
     public int augment1RollCont, augment2RolCont, augment3RollCont;
     public int Uaugment1RollCont, Uaugment2RolCont, Uaugment3RollCont;
-    public bool isRooling=false;
+    public bool isRooling = false;
     public CanvasGroup aqumentCanvasGroup;
     public RectTransform aqumentRectTransform;
     public float fadeTimeAqument;
@@ -38,12 +38,12 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         exitButton.SetActive(true);
         isOpenTab = true;
         StartCoroutine(OpenAgumentTabEnum());
-    
+
 
     }
     public void OpenUnitAugmentTAB()
     {
-       
+
         if (isOpenTab)
         {
             return;
@@ -53,19 +53,24 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         isUnitTabOpen = true;
         isOpenTab = true;
         StartCoroutine(OpenAgumentUnitTabEnum());
-        
+
 
     }
-   
+
 
     public void CloseAugmentTAB()
     {
         //augmentTab.SetActive(false);
-        isOpenTab = false;
+        Invoke(nameof(DelayOpenTabFalse), 1);
+        //isOpenTab = false;
         isUnitTabOpen = false;
-        isIn= false;
+        isIn = false;
         exitButton.SetActive(false);
         AqumentFadeOut();
+    }
+    public void DelayOpenTabFalse()
+    {
+        isOpenTab = false;
     }
     public void IsRolling()
     {
@@ -74,24 +79,24 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     public void AugmentUpdate()
 
     {
-        if(isIn)
+        if (isIn)
         {
-          
+
             if (GameManager.Instance.Gold > 10)
             {
                 if (isUnitTabOpen)
                 {
-                    if(final1==-1 || (isRooling && augment1RollCont < GameManager.Instance.aqumentRollCount))
+                    if (final1 == -1 || (isRooling && augment1RollCont < GameManager.Instance.aqumentRollCount))
                     {
                         final1 = Random.Range(0, UnitAquments.Length);
                         augment1RollCont++;
                     }
-                
+
                     icon1.sprite = UnitAquments[final1].sprite;
                     Desc1.text = UnitAquments[final1].agumentDescription;
                     Name1.text = UnitAquments[final1].agumentName;
                     cost1.text = UnitAquments[final1].Cost.ToString();
-                    refreshCount1.text = (GameManager.Instance.aqumentRollCount- augment1RollCont).ToString();
+                    refreshCount1.text = (GameManager.Instance.aqumentRollCount - augment1RollCont).ToString();
                 }
                 else
                 {
@@ -100,12 +105,12 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                         Ufinal1 = Random.Range(0, aquments.Length);
                         Uaugment1RollCont++;
                     }
-                    
+
                     icon1.sprite = aquments[Ufinal1].sprite;
                     Desc1.text = aquments[Ufinal1].agumentDescription;
                     Name1.text = aquments[Ufinal1].agumentName;
                     cost1.text = aquments[Ufinal1].Cost.ToString();
-                    refreshCount1.text =(GameManager.Instance.aqumentRollCount - Uaugment1RollCont).ToString();
+                    refreshCount1.text = (GameManager.Instance.aqumentRollCount - Uaugment1RollCont).ToString();
                 }
                 GameManager.Instance.Gold -= 10;
             }
@@ -114,40 +119,40 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
 
             }
         }
-          else
-         {
+        else
+        {
 
             if (isUnitTabOpen)
-             {
-                 if (final1 == -1 || (isRooling && augment1RollCont < GameManager.Instance.aqumentRollCount))
-                 {
-                     final1 = Random.Range(0, UnitAquments.Length);
-                     augment1RollCont++;
-                 }
+            {
+                if (final1 == -1 || (isRooling && augment1RollCont < GameManager.Instance.aqumentRollCount))
+                {
+                    final1 = Random.Range(0, UnitAquments.Length);
+                    augment1RollCont++;
+                }
 
-                 icon1.sprite = UnitAquments[
-                 final1].sprite;
-                 Desc1.text = UnitAquments[final1].agumentDescription;
-                 Name1.text = UnitAquments[final1].agumentName;
-                 cost1.text = UnitAquments[final1].Cost.ToString();
-                refreshCount1.text = (GameManager.Instance.aqumentRollCount- augment1RollCont).ToString();
+                icon1.sprite = UnitAquments[
+                final1].sprite;
+                Desc1.text = UnitAquments[final1].agumentDescription;
+                Name1.text = UnitAquments[final1].agumentName;
+                cost1.text = UnitAquments[final1].Cost.ToString();
+                refreshCount1.text = (GameManager.Instance.aqumentRollCount - augment1RollCont).ToString();
             }
-             else
-             {
+            else
+            {
 
-                 if (Ufinal1 == -1 || (isRooling && Uaugment1RollCont < GameManager.Instance.aqumentRollCount))
-                 {
-                     Ufinal1 = Random.Range(0, aquments.Length);
+                if (Ufinal1 == -1 || (isRooling && Uaugment1RollCont < GameManager.Instance.aqumentRollCount))
+                {
+                    Ufinal1 = Random.Range(0, aquments.Length);
                     // Uaugment1RollCont++; //buralarda arttırınca fazladan hata veriyor bu ilk açılış için olduğundan  ilk açılış için -1 se kontrolü zaten sağlanıyor
-                 }
+                }
 
-                 icon1.sprite = aquments[Ufinal1].sprite;
-                 Desc1.text = aquments[Ufinal1].agumentDescription;
-                 Name1.text = aquments[Ufinal1].agumentName;
-                 cost1.text = aquments[Ufinal1].Cost.ToString();
-                refreshCount1.text = (GameManager.Instance.aqumentRollCount- Uaugment1RollCont) .ToString();
+                icon1.sprite = aquments[Ufinal1].sprite;
+                Desc1.text = aquments[Ufinal1].agumentDescription;
+                Name1.text = aquments[Ufinal1].agumentName;
+                cost1.text = aquments[Ufinal1].Cost.ToString();
+                refreshCount1.text = (GameManager.Instance.aqumentRollCount - Uaugment1RollCont).ToString();
             }
-         }
+        }
 
 
         isRooling = false;
@@ -157,37 +162,37 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     {
         if (isIn)
         {
-   
+
             if (GameManager.Instance.Gold > 10)
             {
                 if (isUnitTabOpen)
                 {
-                    
-                    if (final2 == -1 || (isRooling && augment2RolCont< GameManager.Instance.aqumentRollCount))
+
+                    if (final2 == -1 || (isRooling && augment2RolCont < GameManager.Instance.aqumentRollCount))
                     {
-                        final2= Random.Range(0, UnitAquments.Length);
+                        final2 = Random.Range(0, UnitAquments.Length);
                         augment2RolCont++;
                     }
                     icon2.sprite = UnitAquments[final2].sprite;
                     Desc2.text = UnitAquments[final2].agumentDescription;
                     Name2.text = UnitAquments[final2].agumentName;
                     cost2.text = UnitAquments[final2].Cost.ToString();
-                    refreshCount2.text = (GameManager.Instance.aqumentRollCount- augment2RolCont).ToString();
+                    refreshCount2.text = (GameManager.Instance.aqumentRollCount - augment2RolCont).ToString();
 
                 }
                 else
                 {
-                    
+
                     if (Ufinal2 == -1 || (isRooling && Uaugment2RolCont < GameManager.Instance.aqumentRollCount))
                     {
                         Ufinal2 = Random.Range(0, aquments.Length);
-                       Uaugment2RolCont++;
+                        Uaugment2RolCont++;
                     }
                     icon2.sprite = aquments[Ufinal2].sprite;
                     Desc2.text = aquments[Ufinal2].agumentDescription;
                     Name2.text = aquments[Ufinal2].agumentName;
                     cost2.text = aquments[Ufinal2].Cost.ToString();
-                    refreshCount2.text =(GameManager.Instance.aqumentRollCount- Uaugment2RolCont) .ToString();
+                    refreshCount2.text = (GameManager.Instance.aqumentRollCount - Uaugment2RolCont).ToString();
                 }
                 GameManager.Instance.Gold -= 10;
             }
@@ -205,26 +210,26 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                 if (final2 == -1 || (isRooling && augment2RolCont < GameManager.Instance.aqumentRollCount))
                 {
                     final2 = Random.Range(0, UnitAquments.Length);
-                 augment2RolCont++;
+                    augment2RolCont++;
                 }
                 icon2.sprite = UnitAquments[final2].sprite;
                 Desc2.text = UnitAquments[final2].agumentDescription;
                 Name2.text = UnitAquments[final2].agumentName;
                 cost2.text = UnitAquments[final2].Cost.ToString();
-                refreshCount2.text = (GameManager.Instance.aqumentRollCount- augment2RolCont).ToString();
+                refreshCount2.text = (GameManager.Instance.aqumentRollCount - augment2RolCont).ToString();
             }
             else
             {
                 if (Ufinal2 == -1 || (isRooling && Uaugment2RolCont < GameManager.Instance.aqumentRollCount))
                 {
                     Ufinal2 = Random.Range(0, aquments.Length);
-               //  Uaugment2RolCont++;
+                    //  Uaugment2RolCont++;
                 }
                 icon2.sprite = aquments[Ufinal2].sprite;
                 Desc2.text = aquments[Ufinal2].agumentDescription;
                 Name2.text = aquments[Ufinal2].agumentName;
                 cost2.text = aquments[Ufinal2].Cost.ToString();
-                refreshCount2.text =(GameManager.Instance.aqumentRollCount- Uaugment2RolCont) .ToString();
+                refreshCount2.text = (GameManager.Instance.aqumentRollCount - Uaugment2RolCont).ToString();
             }
         }
 
@@ -234,12 +239,12 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
     {
         if (isIn)
         {
-          
+
             if (GameManager.Instance.Gold > 10)
             {
                 if (isUnitTabOpen)
                 {
-                    
+
                     if (final3 == -1 || (isRooling && augment3RollCont < GameManager.Instance.aqumentRollCount))
                     {
                         final3 = Random.Range(0, UnitAquments.Length);
@@ -249,21 +254,21 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                     Desc3.text = UnitAquments[final3].agumentDescription;
                     Name3.text = UnitAquments[final3].agumentName;
                     cost3.text = UnitAquments[final3].Cost.ToString();
-                    refreshCount3.text =(GameManager.Instance.aqumentRollCount- augment3RollCont) .ToString();
+                    refreshCount3.text = (GameManager.Instance.aqumentRollCount - augment3RollCont).ToString();
                 }
                 else
                 {
-                    
-                    if (Ufinal3 == -1 || (isRooling &&Uaugment3RollCont< GameManager.Instance.aqumentRollCount))
+
+                    if (Ufinal3 == -1 || (isRooling && Uaugment3RollCont < GameManager.Instance.aqumentRollCount))
                     {
                         Ufinal3 = Random.Range(0, aquments.Length);
-                      Uaugment3RollCont++;
+                        Uaugment3RollCont++;
                     }
                     icon3.sprite = aquments[Ufinal3].sprite;
                     Desc3.text = aquments[Ufinal3].agumentDescription;
                     Name3.text = aquments[Ufinal3].agumentName;
                     cost3.text = aquments[Ufinal3].Cost.ToString();
-                    refreshCount3.text = (GameManager.Instance.aqumentRollCount- Uaugment3RollCont).ToString();
+                    refreshCount3.text = (GameManager.Instance.aqumentRollCount - Uaugment3RollCont).ToString();
                 }
                 GameManager.Instance.Gold -= 10;
             }
@@ -285,27 +290,27 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                 Desc3.text = UnitAquments[final3].agumentDescription;
                 Name3.text = UnitAquments[final3].agumentName;
                 cost3.text = UnitAquments[final3].Cost.ToString();
-                refreshCount3.text =(GameManager.Instance.aqumentRollCount- augment3RollCont) .ToString();
+                refreshCount3.text = (GameManager.Instance.aqumentRollCount - augment3RollCont).ToString();
             }
             else
             {
                 if (Ufinal3 == -1 || (isRooling && Uaugment3RollCont < GameManager.Instance.aqumentRollCount))
                 {
                     Ufinal3 = Random.Range(0, aquments.Length);
-                  //  Uaugment3RollCont++;
+                    //  Uaugment3RollCont++;
                 }
                 icon3.sprite = aquments[Ufinal3].sprite;
                 Desc3.text = aquments[Ufinal3].agumentDescription;
                 Name3.text = aquments[Ufinal3].agumentName;
                 cost3.text = aquments[Ufinal3].Cost.ToString();
-                refreshCount3.text = (GameManager.Instance.aqumentRollCount- Uaugment3RollCont).ToString();
+                refreshCount3.text = (GameManager.Instance.aqumentRollCount - Uaugment3RollCont).ToString();
             }
         }
         isRooling = false;
     }
 
 
-   public void UnitAugmentUpdate()
+    public void UnitAugmentUpdate()
     {
 
 
@@ -313,13 +318,13 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         {
 
             final1 = Random.Range(0, UnitAquments.Length);
-          // augment1RollCont++;
+            // augment1RollCont++;
         }
         icon1.sprite = UnitAquments[final1].sprite;
-            Desc1.text = UnitAquments[final1].agumentDescription;
-            Name1.text = UnitAquments[final1].agumentName;
-            cost1.text = UnitAquments[final1].Cost.ToString();
-          refreshCount1.text =(GameManager.Instance.aqumentRollCount - augment1RollCont).ToString();
+        Desc1.text = UnitAquments[final1].agumentDescription;
+        Name1.text = UnitAquments[final1].agumentName;
+        cost1.text = UnitAquments[final1].Cost.ToString();
+        refreshCount1.text = (GameManager.Instance.aqumentRollCount - augment1RollCont).ToString();
 
         isRooling = false;
     }
@@ -328,18 +333,18 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         if (final2 == -1 || (isRooling && augment2RolCont < GameManager.Instance.aqumentRollCount))
         {
             final2 = Random.Range(0, UnitAquments.Length);
-          //  augment2RolCont++;
+            //  augment2RolCont++;
         }
         icon2.sprite = UnitAquments[final2].sprite;
         Desc2.text = UnitAquments[final2].agumentDescription;
         Name2.text = UnitAquments[final2].agumentName;
         cost1.text = UnitAquments[final2].Cost.ToString();
-        refreshCount2.text = (GameManager.Instance.aqumentRollCount- augment2RolCont).ToString();
+        refreshCount2.text = (GameManager.Instance.aqumentRollCount - augment2RolCont).ToString();
         isRooling = false;
     }
     public void UnitAugmentUpdate3()
     {
-      
+
         if (final3 == -1 || (isRooling && augment3RollCont < GameManager.Instance.aqumentRollCount))
         {
             final3 = Random.Range(0, UnitAquments.Length);
@@ -350,7 +355,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         Desc3.text = UnitAquments[final3].agumentDescription;
         Name3.text = UnitAquments[final3].agumentName;
         cost1.text = UnitAquments[final3].Cost.ToString();
-        refreshCount3.text = (GameManager.Instance.aqumentRollCount- augment3RollCont).ToString();
+        refreshCount3.text = (GameManager.Instance.aqumentRollCount - augment3RollCont).ToString();
         isRooling = false;
     }
     public void OnClickAuqments(int index)
@@ -358,41 +363,47 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         switch (index)
         {
             case 0:
-                 if(isUnitTabOpen)
+                if (isUnitTabOpen)
                 {
-                    if(GameManager.Instance.Gold >= UnitAquments[final1].Cost)
+                    if (GameManager.Instance.Gold >= UnitAquments[final1].Cost)
                     {
                         GameManager.Instance.Gold -= UnitAquments[final1].Cost;
-                      
+
                         for (int i = 0; i < UnitAquments[final1].AmountSoldier; i++)
                         {
-                           
+
                             HUD.Instance.TakeUnit(UnitAquments[final1].prefab.GetComponent<Unit>());
                             CloseAugmentTAB();
 
                         }
                         final1 = -1;
                     }
-                  
+
                 }
                 else
                 {
                     if (GameManager.Instance.Gold >= aquments[Ufinal1].Cost)
                     {
-                      
+
                         GameManager.Instance.Gold -= aquments[Ufinal1].Cost;
-                    
 
-                        BuildManager.Instance.towerToBuild = aquments[Ufinal1];
+                        if (!BuildManager.Instance.node.turret)
+                        {
+                            BuildManager.Instance.towerToBuild = aquments[Ufinal1];
 
-                        BuildManager.Instance.BuildTowerOn();
+                            BuildManager.Instance.BuildTowerOn();
+                            CloseAugmentTAB();
+                            Ufinal1 = -1;
+                        }
 
-                        CloseAugmentTAB();
+
+
+                       
                     }
-                    Ufinal1 = -1;
+                   
 
                 }
-              
+
 
 
                 break;
@@ -405,7 +416,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                         GameManager.Instance.Gold -= UnitAquments[final2].Cost;
                         for (int i = 0; i < UnitAquments[final2].AmountSoldier; i++)
                         {
-                           
+
                             HUD.Instance.TakeUnit(UnitAquments[final2].prefab.GetComponent<Unit>());
                             CloseAugmentTAB();
 
@@ -419,61 +430,72 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
                     {
                         GameManager.Instance.Gold -= aquments[Ufinal2].Cost;
 
-                        BuildManager.Instance.towerToBuild = aquments[Ufinal2];
+                        if (!BuildManager.Instance.node.turret)
+                        {
+                            BuildManager.Instance.towerToBuild = aquments[Ufinal2];
 
-                        BuildManager.Instance.BuildTowerOn();
-                        CloseAugmentTAB();
-                        Ufinal2 = -1;
+                            BuildManager.Instance.BuildTowerOn();
+                            CloseAugmentTAB();
+                            Ufinal2 = -1;
+                        }
+
+                      
                     }
-                    
+
                 }
-     
+
 
                 break;
             case 2:
                 if (isUnitTabOpen)
                 {
 
-                    if (GameManager.Instance.Gold >= UnitAquments[final3].Cost) 
+                    if (GameManager.Instance.Gold >= UnitAquments[final3].Cost)
                     {
                         GameManager.Instance.Gold -= UnitAquments[final3].Cost;
                         for (int i = 0; i < UnitAquments[final3].AmountSoldier; i++)
                         {
-                         
+
                             HUD.Instance.TakeUnit(UnitAquments[final3].prefab.GetComponent<Unit>());
 
                             CloseAugmentTAB();
                         }
                         final3 = -1;
                     }
-                
+
                 }
                 else
                 {
                     if (GameManager.Instance.Gold >= aquments[Ufinal3].Cost)
                     {
                         GameManager.Instance.Gold -= aquments[Ufinal3].Cost;
-                        BuildManager.Instance.towerToBuild = aquments[Ufinal3];
+                        if (!BuildManager.Instance.node.turret)
+                        {
 
-                        BuildManager.Instance.BuildTowerOn();
-                        CloseAugmentTAB();
-                        Ufinal3 = -1;
+                            BuildManager.Instance.towerToBuild = aquments[Ufinal3];
+
+                            BuildManager.Instance.BuildTowerOn();
+                            CloseAugmentTAB();
+                            Ufinal3 = -1;
+                        }
+
+                 
                     }
-                  
+
                 }
-      
+
                 break;
             default:
                 break;
         }
-        CloseAugmentTAB(); 
+        CloseAugmentTAB();
     }
-    public IEnumerator OpenAgumentTabEnum() 
+    public IEnumerator OpenAgumentTabEnum()
     {
         // Openin animation enter and wait for anim end
         yield return new WaitForSeconds(.1f);
-      
-       // augmentTab.SetActive(true);
+
+        // augmentTab.SetActive(true);
         AugmentUpdate();
         AugmentUpdate2();
         AugmentUpdate3();
@@ -488,7 +510,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         yield return new WaitForSeconds(.1f);
 
         // augmentTab.SetActive(true);
-   
+
         UnitAugmentUpdate();
         UnitAugmentUpdate2();
         UnitAugmentUpdate3();
@@ -507,7 +529,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
             prefabs.SetActive(true);
             prefabs.GetComponent<CanvasGroup>().DOFade(1, fadeTimeAqument);
 
-            prefabs.transform.DOShakeRotation(fadeTimeAqument,30,10,30,true,ShakeRandomnessMode.Full).SetEase(Ease.OutElastic);
+            prefabs.transform.DOShakeRotation(fadeTimeAqument, 30, 10, 30, true, ShakeRandomnessMode.Full).SetEase(Ease.OutElastic);
         }
         StartCoroutine(FadeInAnim());
 
@@ -521,7 +543,7 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         foreach (var prefabs in augmentPrefabs)
         {
             prefabs.GetComponent<CanvasGroup>().DOFade(0, fadeTimeAqument);
-        
+
         }
     }
     IEnumerator FadeInAnim()
@@ -530,16 +552,16 @@ public class AgumentManager : MonoSingeleton<AgumentManager>
         foreach (var prefabs in augmentPrefabs)
         {
             prefabs.transform.localScale = Vector3.zero;
-         
-         }
+
+        }
         foreach (var prefabs in augmentPrefabs)
         {
             prefabs.transform.DOScale(Vector3.one, fadeTimeAqument).SetEase(Ease.OutBounce);
-      
+
             yield return new WaitForSeconds(.25f);
         }
 
-      
+
     }
 }
 
